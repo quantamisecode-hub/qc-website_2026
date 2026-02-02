@@ -115,21 +115,21 @@ export default function TechStackInteractive() {
     return (
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
             {/* Sidebar / Tabs */}
-            <div className="lg:w-1/3 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 scrollbar-hide">
+            <div className="lg:w-1/3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-3 lg:gap-4 pb-4 lg:pb-0">
                 {techCategories.map((category) => (
                     <button
                         key={category.id}
                         onClick={() => setActiveTab(category)}
-                        className={`flex items-center gap-2 sm:gap-4 p-2 sm:p-4 rounded-lg transition-all duration-300 text-left min-w-[140px] sm:min-w-[200px] lg:min-w-0 ${activeTab.id === category.id
-                            ? "bg-[#3A0F67] text-white shadow-xl scale-105"
+                        className={`flex items-center gap-2 sm:gap-4 p-2 sm:p-4 rounded-lg transition-all duration-300 text-left w-full ${activeTab.id === category.id
+                            ? "bg-[#3A0F67] text-white shadow-xl lg:scale-105"
                             : "bg-white text-slate-500 hover:bg-slate-50 border border-slate-100"
                             }`}
                     >
-                        <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-colors ${activeTab.id === category.id ? "bg-white/10 text-white" : "bg-slate-100 text-slate-400"
+                        <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-colors shrink-0 ${activeTab.id === category.id ? "bg-white/10 text-white" : "bg-slate-100 text-slate-400"
                             }`}>
                             <category.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                         </div>
-                        <span className="font-bold text-sm sm:text-lg">{category.title}</span>
+                        <span className="font-bold text-sm sm:text-lg truncate">{category.title}</span>
                     </button>
                 ))}
             </div>
@@ -163,7 +163,7 @@ export default function TechStackInteractive() {
                             {activeTab.techs.map((tech, idx) => (
                                 <motion.div
                                     key={tech.name}
-                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    initial={{ opacity: 0, scale: 1 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: idx * 0.05 }}
                                     className="bg-white p-4 rounded-lg border border-slate-200/60 shadow-sm flex flex-col items-center justify-center text-center gap-3 font-semibold text-[#3A0F67] hover:border-[#eb56f6]/30 hover:shadow-md transition-all duration-300 group"
