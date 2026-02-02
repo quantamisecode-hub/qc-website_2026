@@ -4,7 +4,7 @@ import * as motion from "framer-motion/client";
 
 export default function Hero() {
     return (
-        <section className="relative h-screen pt-32 pb-20 lg:pt-55 lg:pb-22 bg-white overflow-hidden">
+        <section className="relative min-h-screen pt-32 pb-20 lg:pt-55 lg:pb-22 bg-white overflow-hidden">
             <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-0 relative z-10">
                 <div className="max-w-7xl mx-auto text-center">
 
@@ -65,7 +65,7 @@ export default function Hero() {
                                     45+
                                 </div>
                                 <div className="text-lg font-bold text-[#2A2A2A] mb-2">Projects Delivered</div>
-                                <p className="text-sm text-gray-600 max-w-[250px] mx-auto leading-relaxed">
+                                <p className="text-sm text-gray-600 max-w-xs mx-auto leading-relaxed">
                                     Delivering outstanding work and exceeding expectations on every project.
                                 </p>
                             </div>
@@ -76,7 +76,7 @@ export default function Hero() {
                                     5+
                                 </div>
                                 <div className="text-lg font-bold text-[#2A2A2A] mb-2">Years of Experience</div>
-                                <p className="text-sm text-gray-600 max-w-[250px] mx-auto leading-relaxed">
+                                <p className="text-sm text-gray-600 max-w-xs mx-auto leading-relaxed">
                                     A highly skilled and passionate team dedicated to your success.
                                 </p>
                             </div>
@@ -87,7 +87,7 @@ export default function Hero() {
                                     98%
                                 </div>
                                 <div className="text-lg font-bold text-[#2A2A2A] mb-2">Success Rate</div>
-                                <p className="text-sm text-gray-600 max-w-[250px] mx-auto leading-relaxed">
+                                <p className="text-sm text-gray-600 max-w-xs mx-auto leading-relaxed">
                                     Consistently trusted and highly rated by satisfied clients worldwide.
                                 </p>
                             </div>

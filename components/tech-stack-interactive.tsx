@@ -120,16 +120,16 @@ export default function TechStackInteractive() {
                     <button
                         key={category.id}
                         onClick={() => setActiveTab(category)}
-                        className={`flex items-center gap-4 p-4 rounded-lg transition-all duration-300 text-left min-w-[200px] lg:min-w-0 ${activeTab.id === category.id
+                        className={`flex items-center gap-2 sm:gap-4 p-2 sm:p-4 rounded-lg transition-all duration-300 text-left min-w-[140px] sm:min-w-[200px] lg:min-w-0 ${activeTab.id === category.id
                             ? "bg-[#3A0F67] text-white shadow-xl scale-105"
                             : "bg-white text-slate-500 hover:bg-slate-50 border border-slate-100"
                             }`}
                     >
-                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${activeTab.id === category.id ? "bg-white/10 text-white" : "bg-slate-100 text-slate-400"
+                        <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-colors ${activeTab.id === category.id ? "bg-white/10 text-white" : "bg-slate-100 text-slate-400"
                             }`}>
-                            <category.icon className="w-5 h-5" />
+                            <category.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                         </div>
-                        <span className="font-bold text-lg">{category.title}</span>
+                        <span className="font-bold text-sm sm:text-lg">{category.title}</span>
                     </button>
                 ))}
             </div>

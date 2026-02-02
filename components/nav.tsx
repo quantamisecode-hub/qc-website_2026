@@ -39,9 +39,9 @@ export default function Nav() {
                             alt="Quantamise Logo"
                             width={200}
                             height={40}
-                            className="h-16 w-auto object-contain"
+                            className={`h-16 w-auto object-contain transition-all duration-300 ${isOpen ? "brightness-0 invert" : ""}`}
                         />
-                        <span className="text-[#2A2A2A] font-extrabold text-xl hover:text-[#6366f1] transition-colors hidden sm:block">
+                        <span className={`font-extrabold text-xl hover:text-[#6366f1] transition-colors hidden sm:block ${isOpen ? "text-white" : "text-[#2A2A2A]"}`}>
                             Quantamise code
                         </span>
                     </Link>
