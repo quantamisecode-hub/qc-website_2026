@@ -51,82 +51,72 @@ export default function CTAPopup() {
                             <X className="w-5 h-5" />
                         </button>
 
-                        <div className="p-8 md:p-10">
-                            <div className="text-center mb-8">
-                                <h3 className="text-2xl md:text-3xl font-extrabold text-[#3A0F67] mb-3">
+                        <div className="p-6 md:p-10">
+                            <div className="text-center mb-6 md:mb-8">
+                                <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#3A0F67] mb-2 leading-tight">
                                     Get Your Free Consultation
                                 </h3>
-                                <p className="text-[#4A4A4A] max-w-md mx-auto">
+                                <p className="text-sm sm:text-base text-[#4A4A4A] max-w-md mx-auto leading-relaxed">
                                     Fill out the form below and our team will get back to you within 24 hours.
                                 </p>
                             </div>
 
-                            <form className="space-y-5">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <form className="space-y-4 md:space-y-5">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
                                     <div>
-                                        <label htmlFor="popup-name" className="block text-sm font-bold text-[#3A0F67] mb-2">Your Name</label>
+                                        <label htmlFor="popup-name" className="block text-xs sm:text-sm font-bold text-[#3A0F67] mb-1.5">Your Name</label>
                                         <input
                                             type="text"
                                             id="popup-name"
-                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A]"
+                                            className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
                                             placeholder="John Doe"
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="popup-email" className="block text-sm font-bold text-[#3A0F67] mb-2">Email Address</label>
+                                        <label htmlFor="popup-email" className="block text-xs sm:text-sm font-bold text-[#3A0F67] mb-1.5">Email Address</label>
                                         <input
                                             type="email"
                                             id="popup-email"
-                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A]"
+                                            className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
                                             placeholder="john@example.com"
                                         />
                                     </div>
                                 </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
                                     <div>
-                                        <label htmlFor="popup-country" className="block text-sm font-bold text-[#3A0F67] mb-2">Country</label>
-                                        <input
-                                            type="text"
-                                            id="popup-country"
-                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A]"
-                                            placeholder="USA"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="popup-phone" className="block text-sm font-bold text-[#3A0F67] mb-2">Phone Number</label>
+                                        <label htmlFor="popup-phone" className="block text-xs sm:text-sm font-bold text-[#3A0F67] mb-1.5">Phone Number</label>
                                         <input
                                             type="tel"
                                             id="popup-phone"
-                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A]"
+                                            className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
                                             placeholder="+1 (555) 000-0000"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="popup-company" className="block text-xs sm:text-sm font-bold text-[#3A0F67] mb-1.5">Company Name</label>
+                                        <input
+                                            type="text"
+                                            id="popup-company"
+                                            className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
+                                            placeholder="Your Company Ltd."
                                         />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="popup-company" className="block text-sm font-bold text-[#3A0F67] mb-2">Company Name</label>
-                                    <input
-                                        type="text"
-                                        id="popup-company"
-                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A]"
-                                        placeholder="Your Company Ltd."
-                                    />
-                                </div>
-
-                                <div>
-                                    <label htmlFor="popup-message" className="block text-sm font-bold text-[#3A0F67] mb-2">Message</label>
+                                    <label htmlFor="popup-message" className="block text-xs sm:text-sm font-bold text-[#3A0F67] mb-1.5">Message</label>
                                     <textarea
                                         id="popup-message"
                                         rows={3}
-                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none resize-none text-[#2A2A2A]"
+                                        className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none resize-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
                                         placeholder="Tell us about your project..."
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full py-4 rounded-xl bg-[#3A0F67] text-white font-bold text-lg hover:bg-[#520d91] transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-[#3A0F67]/20"
+                                    className="w-full py-3 sm:py-4 rounded-xl bg-[#3A0F67] text-white font-bold text-base sm:text-lg hover:bg-[#520d91] transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-[#3A0F67]/20"
                                 >
                                     <span>Send Message</span>
                                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

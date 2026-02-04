@@ -9,6 +9,7 @@ import ServicesShowcase from "@/components/services-showcase";
 import Process from "@/components/process";
 import TechStack from "@/components/tech-stack";
 import WhyChooseUs from "@/components/why-choose-us";
+import CaseStudies from "@/components/case-studies";
 import FAQ from "@/components/faq";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
@@ -60,6 +61,10 @@ export default function Home() {
 
       <RevealOnScroll>
         <WhyChooseUs />
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <CaseStudies />
       </RevealOnScroll>
 
       <RevealOnScroll>
