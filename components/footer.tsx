@@ -4,88 +4,94 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "luc
 
 export default function Footer() {
     return (
-        <footer className="bg-[#6366f1] text-white pt-20 pb-10">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <footer className="relative bg-slate-950 text-slate-300 pt-20 pb-10 overflow-hidden" style={{ fontFamily: "var(--font-geist-sans)" }}>
+            {/* Subtle Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#3A0F67]/20 to-transparent pointer-events-none" />
+
+            {/* Decorative Top Border */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                     {/* Brand Column */}
                     <div>
                         <Link href="/" className="flex items-center gap-2 mb-6">
-                            {/* Assuming logo might need a white version or filter, 
-                                but using text for now or existing logo with brightness filter if needed. 
-                                For now keeping text simple or using the image if it works on dark bg. */}
-                            <span className="font-extrabold text-2xl">Quantamise Code</span>
+                            <span className="font-extrabold text-2xl text-white">Quantamise Code</span>
                         </Link>
-                        <p className="text-white/80 leading-relaxed mb-6">
+                        <p className="text-slate-400 leading-relaxed mb-6">
                             Empowering businesses with secure, scalable, and intelligent digital solutions. Your partner in digital transformation.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#6366f1] transition-all duration-300">
-                                <Linkedin className="w-5 h-5" />
+                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
+                                <Linkedin className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#6366f1] transition-all duration-300">
-                                <Twitter className="w-5 h-5" />
+                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
+                                <Twitter className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#6366f1] transition-all duration-300">
-                                <Instagram className="w-5 h-5" />
+                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
+                                <Instagram className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#6366f1] transition-all duration-300">
-                                <Facebook className="w-5 h-5" />
+                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
+                                <Facebook className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
 
                     {/* Services Column */}
                     <div>
-                        <h3 className="text-lg font-bold mb-6">Services</h3>
+                        <h3 className="text-lg font-bold mb-6 text-white">Services</h3>
                         <ul className="space-y-4">
-                            <li><Link href="#" className="text-white/80 hover:text-white transition-colors">AI & Machine Learning</Link></li>
-                            <li><Link href="#" className="text-white/80 hover:text-white transition-colors">Web Development</Link></li>
-                            <li><Link href="#" className="text-white/80 hover:text-white transition-colors">Mobile App Development</Link></li>
-                            <li><Link href="#" className="text-white/80 hover:text-white transition-colors">Cloud Solutions</Link></li>
-                            <li><Link href="#" className="text-white/80 hover:text-white transition-colors">UI/UX Design</Link></li>
-                            <li><Link href="#" className="text-white/80 hover:text-white transition-colors">SaaS Development</Link></li>
+                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">AI & Machine Learning</Link></li>
+                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Web Development</Link></li>
+                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Mobile App Development</Link></li>
+                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Cloud Solutions</Link></li>
+                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">UI/UX Design</Link></li>
+                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">SaaS Development</Link></li>
                         </ul>
                     </div>
 
                     {/* Company Column */}
                     <div>
-                        <h3 className="text-lg font-bold mb-6">Company</h3>
+                        <h3 className="text-lg font-bold mb-6 text-white">Company</h3>
                         <ul className="space-y-4">
-                            <li><Link href="/about" className="text-white/80 hover:text-white transition-colors">About Us</Link></li>
-                            <li><Link href="/case-studies" className="text-white/80 hover:text-white transition-colors">Case Studies</Link></li>
-                            <li><Link href="/blogs" className="text-white/80 hover:text-white transition-colors">Blogs</Link></li>
-                            <li><Link href="#" className="text-white/80 hover:text-white transition-colors">Careers</Link></li>
-                            <li><Link href="/contact" className="text-white/80 hover:text-white transition-colors">Contact Us</Link></li>
-                            <li><Link href="#" className="text-white/80 hover:text-white transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/about" className="hover:text-[#eb56f6] transition-colors">About Us</Link></li>
+                            <li><Link href="/case-studies" className="hover:text-[#eb56f6] transition-colors">Case Studies</Link></li>
+                            <li><Link href="/blogs" className="hover:text-[#eb56f6] transition-colors">Blogs</Link></li>
+                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Careers</Link></li>
+                            <li><Link href="/contact" className="hover:text-[#eb56f6] transition-colors">Contact Us</Link></li>
+                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Privacy Policy</Link></li>
                         </ul>
                     </div>
 
                     {/* Contact Column */}
                     <div>
-                        <h3 className="text-lg font-bold mb-6">Contact Info</h3>
+                        <h3 className="text-lg font-bold mb-6 text-white">Contact Info</h3>
                         <ul className="space-y-6">
-                            <li className="flex items-start gap-4">
-                                <MapPin className="w-6 h-6 text-white/60 mt-1" />
-                                <span className="text-white/80">
+                            <li className="flex items-start gap-4 text-slate-400">
+                                <MapPin className="w-5 h-5 text-[#eb56f6] mt-1 shrink-0" />
+                                <span>
                                     123 Innovation Drive,<br />
                                     Tech City, TC 90210
                                 </span>
                             </li>
-                            <li className="flex items-center gap-4">
-                                <Phone className="w-5 h-5 text-white/60" />
-                                <span className="text-white/80">+1 (555) 123-4567</span>
+                            <li className="flex items-center gap-4 text-slate-400">
+                                <Phone className="w-5 h-5 text-[#eb56f6] shrink-0" />
+                                <span>+1 (555) 123-4567</span>
                             </li>
-                            <li className="flex items-center gap-4">
-                                <Mail className="w-5 h-5 text-white/60" />
-                                <span className="text-white/80">hello@quantamisecode.com</span>
+                            <li className="flex items-center gap-4 text-slate-400">
+                                <Mail className="w-5 h-5 text-[#eb56f6] shrink-0" />
+                                <span>hello@quantamisecode.com</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
-                    <p>&copy; {new Date().getFullYear()} Quantamise Code. All rights reserved.</p>
+                <div className="border-t border-white/10 pt-8 mt-12 mb-8">
+                    <p className="text-slate-500 text-xs leading-relaxed max-w-full mb-6">
+                        We use cookies and similar technologies to improve your experience on our website and services, including when you contact us through chat. These help us analyze website traffic, personalize content, and support our marketing activities. By continuing to browse or use our website, you consent to the use of cookies and similar technologies by us and our trusted partners. You can manage or disable cookies anytime through your browser settings. For more details, please review our <Link href="#" className="underline hover:text-[#eb56f6] transition-colors">Cookie Policy</Link> and <Link href="#" className="underline hover:text-[#eb56f6] transition-colors">Privacy Policy</Link>.
+                    </p>
+                    <p className="text-slate-500 text-sm">&copy; {new Date().getFullYear()} Quantamise Code. All rights reserved.</p>
                 </div>
             </div>
         </footer>

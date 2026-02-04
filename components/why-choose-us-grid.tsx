@@ -70,14 +70,27 @@ export default function WhyChooseUsGrid() {
                     key={index}
                     variants={itemVariants}
                     className="group"
+                    whileHover="hover"
                 >
                     <div className="flex items-center gap-4 mb-3">
-                        <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center text-white shrink-0 group-hover:bg-white group-hover:text-[#6366f1] transition-colors duration-300">
+                        <motion.div
+                            variants={{
+                                hover: { rotate: 360, scale: 1.1 }
+                            }}
+                            transition={{ duration: 0.6, type: "spring" }}
+                            className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center text-white shrink-0 group-hover:bg-white group-hover:text-[#6366f1] transition-colors duration-300"
+                        >
                             <reason.icon className="w-6 h-6" />
-                        </div>
-                        <h3 className="text-lg font-bold text-white group-hover:text-white/90 transition-colors">
+                        </motion.div>
+                        <motion.h3
+                            variants={{
+                                hover: { x: 5 }
+                            }}
+                            transition={{ duration: 0.2 }}
+                            className="text-lg font-bold text-white group-hover:text-white/90 transition-colors"
+                        >
                             {reason.title}
-                        </h3>
+                        </motion.h3>
                     </div>
                     <p className="text-white/70 text-sm leading-relaxed pl-[64px]">
                         {reason.description}

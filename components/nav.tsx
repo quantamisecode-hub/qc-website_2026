@@ -28,7 +28,7 @@ export default function Nav() {
     }, [isOpen]);
 
     return (
-        <nav className="fixed w-full z-50 bg-white">
+        <nav className="fixed w-full z-50 bg-white border-b border-gray-200" style={{ fontFamily: "var(--font-geist-sans)" }}>
             <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20 md:h-24">
 
@@ -38,11 +38,11 @@ export default function Nav() {
                             src="/assets/logo.png"
                             alt="Quantamise Logo"
                             width={200}
-                            height={40}
-                            className={`h-16 w-auto object-contain transition-all duration-300 ${isOpen ? "brightness-0 invert" : ""}`}
+                            height={200}
+                            className={`h-24 w-auto object-contain transition-all duration-300 ${isOpen ? "brightness-0 invert" : ""}`}
                         />
                         <span className={`font-extrabold text-xl hover:text-[#6366f1] transition-colors hidden sm:block ${isOpen ? "text-white" : "text-[#2A2A2A]"}`}>
-                            Quantamise code
+                            Quantamise Code
                         </span>
                     </Link>
 

@@ -24,14 +24,14 @@ export default function TrustedBy() {
     ];
 
     return (
-        <section className="py-10 bg-[#6267f1] overflow-hidden">
+        <section className="pb-10 pt-0 bg-[#6267f1] overflow-hidden">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8 pt-10">
                     <p className="text-white/80 text-sm font-semibold tracking-wider uppercase">Trusted by Startups & Enterprises</p>
                 </div>
 

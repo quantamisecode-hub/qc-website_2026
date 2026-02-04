@@ -8,9 +8,11 @@ import {
     SiNodedotjs, SiPython, SiGo, SiExpress, SiDjango,
     SiFlutter, SiReact, SiSwift, SiKotlin, SiExpo, SiGooglecloud, SiDocker, SiKubernetes, SiTerraform,
     SiTensorflow, SiPytorch, SiOpenai, SiPandas, SiScikitlearn,
-    SiPostgresql, SiMongodb, SiRedis, SiMysql, SiSupabase, SiFirebase,
-    SiAmazon,
+    SiPostgresql, SiMongodb, SiMysql, SiSupabase, SiFirebase,
+    SiAmazon, SiFramer,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { DiRedis } from "react-icons/di";
 
 const techCategories = [
     {
@@ -24,7 +26,7 @@ const techCategories = [
             { name: "Vue.js", icon: SiVuedotjs },
             { name: "Angular", icon: SiAngular },
             { name: "Tailwind CSS", icon: SiTailwindcss },
-            { name: "Framer Motion", icon: SiAngular }
+            { name: "Framer Motion", icon: SiFramer }
         ],
         gradient: "from-blue-500 to-cyan-500",
         bg: "bg-blue-50"
@@ -37,7 +39,7 @@ const techCategories = [
         techs: [
             { name: "Node.js", icon: SiNodedotjs },
             { name: "Python", icon: SiPython },
-            { name: "Java", icon: SiPython },
+            { name: "Java", icon: FaJava },
             { name: "Go", icon: SiGo },
             { name: "Express", icon: SiExpress },
             { name: "Django", icon: SiDjango }
@@ -99,7 +101,7 @@ const techCategories = [
         techs: [
             { name: "PostgreSQL", icon: SiPostgresql },
             { name: "MongoDB", icon: SiMongodb },
-            { name: "Redis", icon: SiRedis },
+            { name: "Redis", icon: DiRedis },
             { name: "MySQL", icon: SiMysql },
             { name: "Supabase", icon: SiSupabase },
             { name: "Firebase", icon: SiFirebase }

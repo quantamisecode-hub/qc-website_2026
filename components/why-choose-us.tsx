@@ -5,7 +5,7 @@ import aboutImg from "../public/assets/aboutImg.jpeg"; // Reusing about image or
 export default function WhyChooseUs() {
     return (
         <section className="bg-[#6366f1] overflow-hidden">
-            <div className="flex flex-col lg:flex-row min-h-[600px] lg:h-[800px]">
+            <div className="flex flex-col lg:flex-row min-h-[600px] lg:min-h-[800px]">
                 {/* Left Side: Image */}
                 <div className="w-full lg:w-1/2 relative min-h-[400px]">
                     <Image

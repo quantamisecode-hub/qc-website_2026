@@ -21,7 +21,9 @@ export default function FAQ() {
                 </div>
 
                 {/* Interactive FAQ List */}
-                <FAQInteractive />
+                <div className="mx-auto">
+                    <FAQInteractive />
+                </div>
             </div>
         </section>
     );

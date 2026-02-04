@@ -7,6 +7,8 @@ import {
     Palette
 } from "lucide-react";
 import * as motion from "framer-motion/client";
+import { useMotionValue, useSpring, useTransform } from "framer-motion";
+import { MouseEvent } from "react";
 
 const services = [
     {
@@ -103,15 +105,17 @@ export default function Services() {
                         <motion.div
                             key={index}
                             variants={itemVariants}
-                            className={`p-8 rounded-2xl border ${service.bg}`}
+                            whileHover={{ y: -10, scale: 1.02 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                            className={`p-8 rounded-2xl border ${service.bg} hover:shadow-2xl hover:border-[#eb56f6]/50 transition-all duration-300 group cursor-pointer`}
                         >
-                            <div className="w-14 h-14 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6 text-[#eb56f6]">
+                            <div className="w-14 h-14 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6 text-[#eb56f6] group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                                 <service.icon className="w-7 h-7" />
                             </div>
-                            <h3 className="text-xl font-bold text-[#3A0F67] mb-3">
+                            <h3 className="text-xl font-bold text-[#3A0F67] mb-3 group-hover:text-[#eb56f6] transition-colors">
                                 {service.title}
                             </h3>
-                            <p className="text-[#2A2A2A] leading-relaxed">
+                            <p className="text-[#2A2A2A] leading-relaxed group-hover:text-slate-600">
                                 {service.description}
                             </p>
                         </motion.div>

@@ -16,12 +16,12 @@ import * as motion from "framer-motion/client";
 import { AnimatePresence } from "framer-motion";
 
 // Images (Assumed paths are correct based on previous read)
-import fintechImage from "../public/assets/finTechImg.jpg"
+import fintechImage from "../public/assets/finTechImg.png"
 import healthcareImage from "../public/assets/national-cancer-institute-NFvdKIhxYlU-unsplash.jpg"
 import educationImage from "../public/assets/educationImage.jpg"
 import ecommerceImage from "../public/assets/ecommerceImage.jpg"
 import logisticsImage from "../public/assets/logisticImage.jpg"
-import realestateImage from "../public/assets/realestateImage.jpg"
+import realestateImage from "../public/assets/realestateImage.png"
 
 // Data Structure (Moved here as it contains icon components)
 const industries = [
@@ -211,27 +211,52 @@ export default function IndustriesInteractive() {
                             </p>
 
                             {/* Bullets */}
-                            <ul className="space-y-3 mb-10">
+                            <motion.ul
+                                className="space-y-3 mb-10"
+                                initial="hidden"
+                                animate="visible"
+                                variants={{
+                                    hidden: { opacity: 0 },
+                                    visible: {
+                                        opacity: 1,
+                                        transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+                                    }
+                                }}
+                            >
                                 {activeData.bullets.map((bullet, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-[#3A0F67] font-semibold text-sm sm:text-base">
+                                    <motion.li
+                                        key={i}
+                                        variants={{
+                                            hidden: { opacity: 0, x: -10 },
+                                            visible: { opacity: 1, x: 0 }
+                                        }}
+                                        className="flex items-center gap-3 text-[#3A0F67] font-semibold text-sm sm:text-base"
+                                    >
                                         <span className="w-2 h-2 rounded-full bg-[#eb56f6]"></span>
                                         {bullet}
-                                    </li>
+                                    </motion.li>
                                 ))}
-                            </ul>
+                            </motion.ul>
                         </div>
 
                         {/* Right: Main Image */}
                         <div className="w-full lg:w-1/2">
                             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                                <Image
-                                    src={activeData.mainImage}
-                                    alt={activeData.name}
-                                    fill
-                                    className="object-cover"
-                                />
+                                <motion.div
+                                    className="relative w-full h-full"
+                                    initial={{ scale: 1 }}
+                                    animate={{ scale: 1.05 }}
+                                    transition={{ duration: 6, ease: "linear" }}
+                                >
+                                    <Image
+                                        src={activeData.mainImage}
+                                        alt={activeData.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </motion.div>
                                 {/* Decorative Badge */}
-                                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-6 py-3 rounded-sm shadow-lg">
+                                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-6 py-3 rounded-sm shadow-lg z-10">
                                     <p className="text-[#3A0F67] font-extrabold text-lg">
                                         {activeData.name} Solutions
                                     </p>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com", // You should update this with the real domain later
+    url: "https://www.quantamisecode.com/",
     title: "Quantamise Code | Building AI-Driven Software Solutions",
     description: "Transforming ideas into powerful digital realities with cutting-edge AI and software development expertise.",
     siteName: "Quantamise Code",
@@ -54,7 +54,13 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: "/favicon.jpg",
+  },
 };
+
+import CTAPopup from "@/components/cta-popup";
+import CookieConsent from "@/components/cookie-consent";
 
 export default function RootLayout({
   children,
@@ -66,6 +72,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <CTAPopup />
+        <CookieConsent />
         {children}
       </body>
     </html>

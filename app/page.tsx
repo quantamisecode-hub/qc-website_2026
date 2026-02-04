@@ -11,6 +11,8 @@ import FAQ from "@/components/faq";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 
+import Stats from "@/components/stats";
+
 export default function Home() {
   return (
     <div className="bg-white">
@@ -18,6 +20,7 @@ export default function Home() {
       <Hero />
       <TrustedBy />
       <About />
+      <Stats />
       <Industries />
       <Services />
       <Process />
