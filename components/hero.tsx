@@ -76,7 +76,7 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0 }}
-                                className="absolute top-10 -left-50 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
+                                className="absolute top-10 md:-left-4 lg:-left-24 xl:-left-50 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
                                 <div className="w-8 h-8 rounded-full bg-[#eb56f6]/10 flex items-center justify-center text-[#eb56f6]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
@@ -88,7 +88,7 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -12, 0] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                className="absolute bottom-20 -right-60 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
+                                className="absolute bottom-20 md:-right-4 lg:-right-32 xl:-right-60 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
                                 <div className="w-8 h-8 rounded-full bg-[#6366f1]/10 flex items-center justify-center text-[#6366f1]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
@@ -100,7 +100,7 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -8, 0] }}
                                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                                className="absolute top-20 -right-50 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
+                                className="absolute top-20 md:-right-4 lg:-right-24 xl:-right-50 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
                                 <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
@@ -112,7 +112,7 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                                className="absolute bottom-32 -left-60 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
+                                className="absolute bottom-32 md:-left-8 lg:-left-32 xl:-left-60 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
                                 <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 14a2 2 0 1 0-2-2 2 2 0 0 0 2 2z"></path><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -124,7 +124,7 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -9, 0] }}
                                 transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-                                className="absolute top-40 -left-70 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
+                                className="absolute top-40 md:-left-10 lg:-left-40 xl:-left-70 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
                                 <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
@@ -136,7 +136,7 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -11, 0] }}
                                 transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-                                className="absolute top-60 -right-70 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
+                                className="absolute top-60 md:-right-10 lg:-right-40 xl:-right-70 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
                                 <div className="w-8 h-8 rounded-full bg-sky-500/10 flex items-center justify-center text-sky-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
