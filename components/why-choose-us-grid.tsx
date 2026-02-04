@@ -2,38 +2,28 @@
 
 import React from "react";
 import * as motion from "framer-motion/client";
-import { Target, Users, MessageSquare, Zap, ShieldCheck, Headphones } from "lucide-react";
+import { TrendingUp, Users, ShieldCheck, Headphones } from "lucide-react";
 
 const reasons = [
     {
-        title: "Business-centric development approach",
-        icon: Target,
-        description: "We align our technical strategies with your business goals."
+        title: "Proven Track Record",
+        icon: TrendingUp,
+        description: "Consistently delivering high-impact digital solutions that drive growth."
     },
     {
-        title: "Experienced and certified professionals",
+        title: "Industry Experts",
         icon: Users,
-        description: "Vetted experts dedicated to high coding standards."
+        description: "A team of certified professionals with deep domain knowledge."
     },
     {
-        title: "Transparent communication",
-        icon: MessageSquare,
-        description: "Clear, constant communication throughout the project."
-    },
-    {
-        title: "Agile delivery framework",
-        icon: Zap,
-        description: "Adaptive planning and iterative development."
-    },
-    {
-        title: "Enterprise-grade security",
+        title: "Guaranteed Results",
         icon: ShieldCheck,
-        description: "Security baked in to protect against threats."
+        description: "We define clear KPIs and don't stop until we achieve them."
     },
     {
-        title: "Dedicated post-launch support",
+        title: "24/7 Support",
         icon: Headphones,
-        description: "Ongoing support to keep your software running smoothly."
+        description: "Always available to ensure your business never faces downtime."
     }
 ];
 
@@ -48,10 +38,10 @@ const containerVariants = {
 };
 
 const itemVariants = {
-    hidden: { opacity: 0, x: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
         opacity: 1,
-        x: 0,
+        y: 0,
         transition: { duration: 0.5, ease: "easeOut" as const }
     }
 };
@@ -69,32 +59,26 @@ export default function WhyChooseUsGrid() {
                 <motion.div
                     key={index}
                     variants={itemVariants}
-                    className="group"
-                    whileHover="hover"
+                    className="group flex items-start gap-4"
                 >
-                    <div className="flex items-center gap-4 mb-3">
-                        <motion.div
-                            variants={{
-                                hover: { rotate: 360, scale: 1.1 }
-                            }}
-                            transition={{ duration: 0.6, type: "spring" }}
-                            className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center text-white shrink-0 group-hover:bg-white group-hover:text-[#6366f1] transition-colors duration-300"
-                        >
-                            <reason.icon className="w-6 h-6" />
-                        </motion.div>
-                        <motion.h3
-                            variants={{
-                                hover: { x: 5 }
-                            }}
-                            transition={{ duration: 0.2 }}
-                            className="text-lg font-bold text-white group-hover:text-white/90 transition-colors"
-                        >
+                    <motion.div
+                        variants={{
+                            hover: { scale: 1.1, rotate: 10 }
+                        }}
+                        transition={{ duration: 0.4, type: "spring" }}
+                        className="w-14 h-14 rounded-full bg-[#6366f1] flex items-center justify-center text-white shrink-0 shadow-lg shadow-[#6366f1]/30"
+                    >
+                        <reason.icon className="w-7 h-7" />
+                    </motion.div>
+
+                    <div className="flex flex-col">
+                        <h3 className="text-xl font-bold text-[#3A0F67] mb-2">
                             {reason.title}
-                        </motion.h3>
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                            {reason.description}
+                        </p>
                     </div>
-                    <p className="text-white/70 text-sm leading-relaxed pl-[64px]">
-                        {reason.description}
-                    </p>
                 </motion.div>
             ))}
         </motion.div>

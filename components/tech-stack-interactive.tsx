@@ -6,7 +6,7 @@ import { Layout, Server, Smartphone, Cloud, Brain, Database } from "lucide-react
 import {
     SiNextdotjs, SiVuedotjs, SiAngular, SiTailwindcss,
     SiNodedotjs, SiPython, SiGo, SiExpress, SiDjango,
-    SiFlutter, SiReact, SiSwift, SiKotlin, SiExpo, SiGooglecloud, SiDocker, SiKubernetes, SiTerraform,
+    SiFlutter, SiReact, SiSwift, SiKotlin, SiGooglecloud, SiDocker, SiKubernetes, SiTerraform,
     SiTensorflow, SiPytorch, SiOpenai, SiPandas, SiScikitlearn,
     SiPostgresql, SiMongodb, SiMysql, SiSupabase, SiFirebase,
     SiAmazon, SiFramer,
@@ -57,7 +57,7 @@ const techCategories = [
             { name: "React Native", icon: SiReact },
             { name: "Swift", icon: SiSwift },
             { name: "Kotlin", icon: SiKotlin },
-            { name: "Expo", icon: SiExpo }
+
         ],
         gradient: "from-purple-500 to-pink-500",
         bg: "bg-purple-50"

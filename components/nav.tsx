@@ -39,7 +39,7 @@ export default function Nav() {
                             alt="Quantamise Logo"
                             width={200}
                             height={200}
-                            className={`h-24 w-auto object-contain transition-all duration-300 ${isOpen ? "brightness-0 invert" : ""}`}
+                            className={`h-18 w-auto object-contain transition-all duration-300 ${isOpen ? "brightness-0 invert" : ""}`}
                         />
                         <span className={`font-extrabold text-xl hover:text-[#6366f1] transition-colors hidden sm:block ${isOpen ? "text-white" : "text-[#2A2A2A]"}`}>
                             Quantamise Code
@@ -47,7 +47,7 @@ export default function Nav() {
                     </Link>
 
                     {/* Center Section: Desktop Navigation (Restored Design) */}
-                    <div className="hidden lg:flex items-center space-x-8">
+                    <div className="hidden xl:flex items-center space-x-8">
                         <Link href="/" className="text-[#6366f1] font-extrabold text-md hover:text-[#6366f1] transition-colors">
                             Home
                         </Link>
@@ -75,7 +75,7 @@ export default function Nav() {
                     </div>
 
                     {/* Right Section: CTA Button (Restored Design) */}
-                    <div className="hidden lg:flex items-center gap-2">
+                    <div className="hidden xl:flex items-center gap-2">
                         <Link
                             href="/contact"
                             className="group rounded-sm px-8 py-2 bg-[#4f46e5] text-white font-extrabold flex items-center gap-2 hover:bg-[#3A0F67] transition-colors duration-300"
@@ -90,7 +90,7 @@ export default function Nav() {
                     {/* Mobile Menu Toggle */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="lg:hidden z-50 p-2 text-[#3A0F67] relative focus:outline-none"
+                        className="xl:hidden z-50 p-2 text-[#3A0F67] relative focus:outline-none"
                     >
                         <div className="relative w-6 h-6">
                             <AnimatePresence mode="wait">
@@ -132,7 +132,7 @@ export default function Nav() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="fixed inset-0 z-40 bg-[#3A0F67] lg:hidden flex flex-col pt-32 px-6"
+                        className="fixed inset-0 z-40 bg-[#3A0F67] xl:hidden flex flex-col pt-32 px-6"
                     >
                         <div className="flex flex-col gap-6">
                             {navLinks.map((link, index) => (

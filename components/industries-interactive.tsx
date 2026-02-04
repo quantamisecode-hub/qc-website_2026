@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import {
     Landmark,
     HeartPulse,
@@ -10,20 +9,14 @@ import {
     Truck,
     Building2,
     Factory,
-    Laptop
+    Laptop,
+    ChevronDown,
+    ArrowRight
 } from "lucide-react";
 import * as motion from "framer-motion/client";
 import { AnimatePresence } from "framer-motion";
 
-// Images (Assumed paths are correct based on previous read)
-import fintechImage from "../public/assets/finTechImg.png"
-import healthcareImage from "../public/assets/national-cancer-institute-NFvdKIhxYlU-unsplash.jpg"
-import educationImage from "../public/assets/educationImage.jpg"
-import ecommerceImage from "../public/assets/ecommerceImage.jpg"
-import logisticsImage from "../public/assets/logisticImage.jpg"
-import realestateImage from "../public/assets/realestateImage.png"
-
-// Data Structure (Moved here as it contains icon components)
+// Data Structure
 const industries = [
     {
         id: "fintech",
@@ -37,7 +30,6 @@ const industries = [
             "Fraud Detection Systems",
             "Automated Trading Platforms"
         ],
-        mainImage: fintechImage,
     },
     {
         id: "healthcare",
@@ -51,7 +43,6 @@ const industries = [
             "AI-Powered Diagnostics",
             "IoT for Remote Monitoring"
         ],
-        mainImage: healthcareImage,
     },
     {
         id: "education",
@@ -65,7 +56,6 @@ const industries = [
             "Gamified Learning Apps",
             "Student Information Systems"
         ],
-        mainImage: educationImage,
     },
     {
         id: "ecommerce",
@@ -79,7 +69,6 @@ const industries = [
             "Inventory & Supply Chain Tools",
             "AI-Driven Personalization"
         ],
-        mainImage: ecommerceImage,
     },
     {
         id: "logistics",
@@ -93,7 +82,6 @@ const industries = [
             "Warehouse Automation",
             "Route Optimization Algorithms"
         ],
-        mainImage: logisticsImage,
     },
     {
         id: "realestate",
@@ -107,7 +95,6 @@ const industries = [
             "Real Estate Marketplaces",
             "Smart Building Solutions"
         ],
-        mainImage: realestateImage,
     },
     {
         id: "manufacturing",
@@ -121,7 +108,6 @@ const industries = [
             "Production Line Automation",
             "Digital Twin Technology"
         ],
-        mainImage: "https://placehold.co/800x600/D35400/white?text=Smart+Factory"
     },
     {
         id: "saas",
@@ -135,138 +121,87 @@ const industries = [
             "Cloud Native Solutions",
             "API First Development"
         ],
-        mainImage: "https://placehold.co/800x600/2980B9/white?text=SaaS+Platform",
     }
 ];
 
 export default function IndustriesInteractive() {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(0); // Start with first open or null for closed
 
-    const startInterval = () => {
-        if (intervalRef.current) clearInterval(intervalRef.current);
-        intervalRef.current = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % industries.length);
-        }, 7000); // 7 Seconds
+    const handleToggle = (index: number) => {
+        setActiveIndex(activeIndex === index ? null : index);
     };
-
-    useEffect(() => {
-        startInterval();
-        return () => {
-            if (intervalRef.current) clearInterval(intervalRef.current);
-        };
-    }, []);
-
-    const handleTabClick = (index: number) => {
-        setActiveIndex(index);
-        startInterval(); // Reset timer on manual interaction
-    };
-
-    const activeData = industries[activeIndex];
 
     return (
-        <>
-            {/* Tabs Navigation */}
-            <div className="flex overflow-x-auto pb-4 mb-10 gap-2 no-scrollbar sm:flex-wrap">
-                {industries.map((industry, index) => {
-                    const Icon = industry.icon;
-                    const isActive = index === activeIndex;
-                    return (
+        <div className="flex flex-col border-t border-gray-200">
+            {industries.map((industry, index) => {
+                const isActive = activeIndex === index;
+                const paddedIndex = (index + 1).toString().padStart(2, '0');
+
+                return (
+                    <div key={industry.id} className="border-b border-gray-200">
+                        {/* Header Row */}
                         <button
-                            key={industry.id}
-                            onClick={() => handleTabClick(index)}
-                            className={`
-                                flex items-center gap-2 px-6 py-3 rounded-md text-sm sm:text-base font-bold whitespace-nowrap transition-all duration-300
-                                ${isActive
-                                    ? "bg-[#eb56f6]/10 text-[#eb56f6] border border-[#eb56f6]"
-                                    : "bg-white text-gray-500 border border-gray-200 hover:bg-gray-50 hover:text-gray-900"}
-                            `}
+                            onClick={() => handleToggle(index)}
+                            className="w-full flex items-center justify-between py-8 sm:py-10 text-left group transition-all"
                         >
-                            <Icon className={`w-5 h-5 ${isActive ? "text-[#eb56f6]" : "text-gray-400"}`} />
-                            {industry.name}
-                        </button>
-                    );
-                })}
-            </div>
-
-            {/* Content Area */}
-            <div className="relative min-h-[500px]">
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeIndex}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
-                        className="flex flex-col lg:flex-row gap-12 lg:gap-16 w-full"
-                    >
-
-                        {/* Left: Text Content */}
-                        <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#2A2A2A] mb-6">
-                                {activeData.heading}
-                            </h3>
-                            <p className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
-                                {activeData.description}
-                            </p>
-
-                            {/* Bullets */}
-                            <motion.ul
-                                className="space-y-3 mb-10"
-                                initial="hidden"
-                                animate="visible"
-                                variants={{
-                                    hidden: { opacity: 0 },
-                                    visible: {
-                                        opacity: 1,
-                                        transition: { staggerChildren: 0.1, delayChildren: 0.2 }
-                                    }
-                                }}
-                            >
-                                {activeData.bullets.map((bullet, i) => (
-                                    <motion.li
-                                        key={i}
-                                        variants={{
-                                            hidden: { opacity: 0, x: -10 },
-                                            visible: { opacity: 1, x: 0 }
-                                        }}
-                                        className="flex items-center gap-3 text-[#3A0F67] font-semibold text-sm sm:text-base"
-                                    >
-                                        <span className="w-2 h-2 rounded-full bg-[#eb56f6]"></span>
-                                        {bullet}
-                                    </motion.li>
-                                ))}
-                            </motion.ul>
-                        </div>
-
-                        {/* Right: Main Image */}
-                        <div className="w-full lg:w-1/2">
-                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                                <motion.div
-                                    className="relative w-full h-full"
-                                    initial={{ scale: 1 }}
-                                    animate={{ scale: 1.05 }}
-                                    transition={{ duration: 6, ease: "linear" }}
-                                >
-                                    <Image
-                                        src={activeData.mainImage}
-                                        alt={activeData.name}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </motion.div>
-                                {/* Decorative Badge */}
-                                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-6 py-3 rounded-sm shadow-lg z-10">
-                                    <p className="text-[#3A0F67] font-extrabold text-lg">
-                                        {activeData.name} Solutions
-                                    </p>
-                                </div>
+                            <div className="flex items-center gap-6 sm:gap-10">
+                                <span className={`text-xl sm:text-2xl font-bold transition-colors ${isActive ? "text-[#eb56f6]" : "text-gray-300 group-hover:text-gray-400"}`}>
+                                    {paddedIndex}.
+                                </span>
+                                <span className={`text-xl sm:text-3xl font-extrabold transition-colors ${isActive ? "text-[#3A0F67]" : "text-[#2A2A2A] group-hover:text-[#6366f1]"}`}>
+                                    {industry.name}
+                                </span>
                             </div>
-                        </div>
+                            <div className={`
+                                w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 flex items-center justify-center transition-all duration-300
+                                ${isActive ? "bg-[#3A0F67] border-[#3A0F67] text-white rotate-180" : "border-gray-300 text-gray-400 group-hover:border-[#6366f1] group-hover:text-[#6366f1]"}
+                            `}>
+                                <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6" />
+                            </div>
+                        </button>
 
-                    </motion.div>
-                </AnimatePresence>
-            </div>
-        </>
+                        {/* Expanded Content */}
+                        <AnimatePresence>
+                            {isActive && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                                    className="overflow-hidden"
+                                >
+                                    <div className="pb-12 pt-2 flex flex-col gap-8 pl-0 sm:pl-[70px] max-w-4xl"> {/* Indent to align with text */}
+
+                                        {/* Text Section - Full Width */}
+                                        <div className="w-full flex flex-col justify-center">
+                                            <h3 className="text-xl sm:text-2xl font-bold text-[#3A0F67] mb-4">
+                                                {industry.heading}
+                                            </h3>
+                                            <p className="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
+                                                {industry.description}
+                                            </p>
+                                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                                                {industry.bullets.map((bullet, i) => (
+                                                    <li key={i} className="flex items-center gap-2 text-[#2A2A2A] font-medium text-sm sm:text-base">
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-[#eb56f6] shrink-0" />
+                                                        {bullet}
+                                                    </li>
+                                                ))}
+                                            </ul>
+
+                                            <a href="#" className="inline-flex items-center text-[#6366f1] font-bold hover:text-[#3A0F67] transition-colors group/link">
+                                                Learn more about {industry.name}
+                                                <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                );
+            })}
+        </div>
     );
 }
