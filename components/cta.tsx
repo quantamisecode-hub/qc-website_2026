@@ -108,9 +108,15 @@ export default function CTA() {
                                             <label htmlFor="email" className="block text-sm font-bold text-[#3A0F67] mb-1.5">Email <span className="text-red-500">*</span></label>
                                             <input type="email" id="email" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 placeholder:text-gray-400" placeholder="john@example.com" />
                                         </div>
-                                        <div>
-                                            <label htmlFor="company" className="block text-sm font-bold text-[#3A0F67] mb-1.5">Company Name (Optional)</label>
-                                            <input type="text" id="company" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 placeholder:text-gray-400" placeholder="Your Company" />
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                            <div>
+                                                <label htmlFor="phone" className="block text-sm font-bold text-[#3A0F67] mb-1.5">Phone <span className="text-red-500">*</span></label>
+                                                <input type="tel" id="phone" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 placeholder:text-gray-400" placeholder="+1 (555) 000-0000" />
+                                            </div>
+                                            <div>
+                                                <label htmlFor="company" className="block text-sm font-bold text-[#3A0F67] mb-1.5">Company Name (Optional)</label>
+                                                <input type="text" id="company" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 placeholder:text-gray-400" placeholder="Your Company" />
+                                            </div>
                                         </div>
                                         <div>
                                             <label htmlFor="message" className="block text-sm font-bold text-[#3A0F67] mb-1.5">Message <span className="text-red-500">*</span></label>

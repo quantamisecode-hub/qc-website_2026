@@ -30,7 +30,7 @@ export default function Footer() {
                             Empowering businesses with secure, scalable, and intelligent digital solutions. Your partner in digital transformation.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
+                            <a href="https://www.linkedin.com/company/quantamise/" target="_blank" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
                                 <Linkedin className="w-4 h-4" />
                             </a>
                             <a href="https://www.instagram.com/quantamise/" target="_blank" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
