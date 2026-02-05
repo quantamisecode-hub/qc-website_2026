@@ -4,7 +4,9 @@
 import React from "react";
 import * as motion from "framer-motion/client";
 import Image from "next/image";
-import aboutImg from "../public/assets/aboutImg.jpeg"; // Using as placeholder
+import FintechPaymentPlatform from "../public/assets/FinTechPaymentPlatform.jpg";
+import HealthcareTelemedicineApp from "../public/assets/HealthcareTelemedicineApp.jpg";
+import ECommerceMarketplace from "../public/assets/E-CommerceMarketplace.jpg";
 
 const blogs = [
     {
@@ -12,21 +14,24 @@ const blogs = [
         tag: "Finance",
         title: "FinTech Payment Platform",
         description: "Built a secure, PCI-compliant payment processing platform handling $50M+ monthly transactions with 99.99% uptime.",
-        imageOverlay: "from-purple-600/90 to-blue-600/90"
+        imageOverlay: "from-purple-600 to-purple-200",
+        image: FintechPaymentPlatform
     },
     {
         id: 2,
         tag: "Healthcare",
         title: "Healthcare Telemedicine App",
         description: "Developed a HIPAA-compliant telemedicine platform connecting 10,000+ patients with doctors for virtual consultations.",
-        imageOverlay: "from-emerald-500/90 to-teal-600/90"
+        imageOverlay: "from-green-500 to-green-200",
+        image: HealthcareTelemedicineApp
     },
     {
         id: 3,
         tag: "Retail",
         title: "E-Commerce Marketplace",
         description: "Created a multi-vendor marketplace with AI-powered recommendations, increasing conversion rates by 35%.",
-        imageOverlay: "from-orange-400/90 to-red-500/90"
+        imageOverlay: "from-red-400 to-orange-200",
+        image: ECommerceMarketplace
     }
 ];
 
@@ -58,7 +63,7 @@ export default function Blogs() {
                             <div className="relative h-48 sm:h-56 w-full overflow-hidden shrink-0">
                                 {/* Placeholder Image */}
                                 <Image
-                                    src={aboutImg}
+                                    src={blog.image}
                                     alt={blog.title}
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-500"

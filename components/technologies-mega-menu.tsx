@@ -141,7 +141,7 @@ const technologiesData = [
 export default function TechnologiesMegaMenu() {
     return (
         <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 w-[90vw] max-w-6xl pt-6 z-[100]">
-            <div className="bg-white rounded-xl shadow-2xl border border-gray-100 p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative overflow-hidden divide-y md:divide-y-0 md:divide-x divide-gray-200">
+            <div className="bg-white rounded-xl shadow-2xl border border-gray-100 p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative overflow-hidden divide-y md:divide-y-0 md:divide-x divide-gray-200 max-h-[75vh] overflow-y-auto">
 
                 {/* Decorative Top Border using Brand Gradient */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#3A0F67] via-[#6366f1] to-[#EA56F7]" />

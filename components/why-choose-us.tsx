@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import WhyChooseUsGrid from "./why-choose-us-grid";
-import aboutImg from "../public/assets/aboutImg.jpeg";
+import whyChooseUsImg from "../public/assets/whyChooseUsImg.jpeg";
 
 export default function WhyChooseUs() {
     return (
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
                     {/* Right Side: Image */}
                     <div className="w-full lg:w-1/2 relative min-h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                         <Image
-                            src={aboutImg}
+                            src={whyChooseUsImg}
                             alt="Why Choose Quantamise Code - Office"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-700"

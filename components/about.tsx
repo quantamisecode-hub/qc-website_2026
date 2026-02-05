@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import * as motion from "framer-motion/client";
 import { Counter } from "./counter";
+import aboutImg from "../public/assets/aboutImg.jpeg";
 
 export default function About() {
     return (
@@ -118,7 +119,7 @@ export default function About() {
 
                             <div className="relative rounded-lg overflow-hidden shadow-2xl z-10">
                                 <Image
-                                    src="/assets/aboutImg.jpeg"
+                                    src={aboutImg}
                                     alt="Quantamise Team at work"
                                     width={600}
                                     height={700}

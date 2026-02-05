@@ -1,7 +1,21 @@
+"use client";
+
 import { Send, Phone, Mail, MapPin } from "lucide-react";
 import * as motion from "framer-motion/client";
+import { useState, useEffect } from "react";
+import { getCalApi } from "@calcom/embed-react";
+import Cal from "@calcom/embed-react";
 
 export default function CTA() {
+    const [activeTab, setActiveTab] = useState<"contact" | "schedule">("contact");
+
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi({ "namespace": "30min" });
+            cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+        })();
+    }, []);
+
     return (
         <section className="py-24 bg-[#f8f9fa] relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -27,8 +41,8 @@ export default function CTA() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 font-semibold">Email Us</p>
-                                    <a href="mailto:hello@quantamisecode.com" className="text-[#3A0F67] font-bold text-lg hover:text-[#6366f1] transition-colors">
-                                        hello@quantamisecode.com
+                                    <a href="mailto:business@quantamisecode.com" className="text-[#3A0F67] font-bold text-lg hover:text-[#6366f1] transition-colors">
+                                        business@quantamisecode.com
                                     </a>
                                 </div>
                             </div>
@@ -39,83 +53,91 @@ export default function CTA() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 font-semibold">Call Us</p>
-                                    <a href="tel:+15550000000" className="text-[#3A0F67] font-bold text-lg hover:text-[#6366f1] transition-colors">
-                                        +1 (555) 000-0000
+                                    <a href="tel:080-29554662" className="text-[#3A0F67] font-bold text-lg hover:text-[#6366f1] transition-colors">
+                                        080-29554662
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Right Side: Form */}
+                    {/* Right Side: Form / Calendar Toggle */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="lg:w-5/12 bg-white rounded-3xl shadow-xl p-8 lg:p-10 border border-gray-100"
+                        className="lg:w-5/12 bg-white rounded-3xl shadow-xl p-8 lg:p-10 border border-gray-100 flex flex-col items-center"
                     >
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div>
-                                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">Name</label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 transition-all outline-none text-gray-800 placeholder:text-gray-400"
-                                        placeholder="John Doe"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 transition-all outline-none text-gray-800 placeholder:text-gray-400"
-                                        placeholder="john@example.com"
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div>
-                                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">Phone</label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 transition-all outline-none text-gray-800 placeholder:text-gray-400"
-                                        placeholder="+1 (555) 000-0000"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">Company</label>
-                                    <input
-                                        type="text"
-                                        id="company"
-                                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 transition-all outline-none text-gray-800 placeholder:text-gray-400"
-                                        placeholder="Company Name"
-                                    />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
-                                <textarea
-                                    id="message"
-                                    rows={4}
-                                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 transition-all outline-none resize-none text-gray-800 placeholder:text-gray-400"
-                                    placeholder="Tell us about your project..."
-                                />
-                            </div>
-
+                        {/* Toggle Switch */}
+                        <div className="bg-gray-100 p-1.5 rounded-xl flex w-full mb-8 relative">
                             <button
-                                type="submit"
-                                className="w-full py-4 rounded-xl bg-[#6366f1] text-white font-bold text-lg hover:bg-[#5053ca] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-[#6366f1]/25 group"
+                                onClick={() => setActiveTab("contact")}
+                                className={`flex-1 py-3 text-sm font-bold rounded-lg transition-all duration-300 z-10 ${activeTab === "contact" ? "bg-[#6366f1] text-white shadow-md" : "text-gray-500 hover:text-gray-700"
+                                    }`}
                             >
-                                <span>Send Message</span>
-                                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                Contact Us
                             </button>
-                        </form>
+                            <button
+                                onClick={() => setActiveTab("schedule")}
+                                className={`flex-1 py-3 text-sm font-bold rounded-lg transition-all duration-300 z-10 ${activeTab === "schedule" ? "bg-[#6366f1] text-white shadow-md" : "text-gray-500 hover:text-gray-700"
+                                    }`}
+                            >
+                                Schedule Meeting
+                            </button>
+                        </div>
+
+                        {/* Content Area */}
+                        <div className="w-full">
+                            {activeTab === "contact" ? (
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <div className="text-center mb-6">
+                                        <h3 className="text-2xl font-bold text-[#3A0F67] mb-2">Fill a Form</h3>
+                                        <p className="text-gray-500 text-sm">We'll get back to you as soon as possible</p>
+                                    </div>
+                                    <form className="space-y-5">
+                                        <div>
+                                            <label htmlFor="name" className="block text-sm font-bold text-[#3A0F67] mb-1.5">Your Name <span className="text-red-500">*</span></label>
+                                            <input type="text" id="name" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 placeholder:text-gray-400" placeholder="John Doe" />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="email" className="block text-sm font-bold text-[#3A0F67] mb-1.5">Email <span className="text-red-500">*</span></label>
+                                            <input type="email" id="email" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 placeholder:text-gray-400" placeholder="john@example.com" />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="company" className="block text-sm font-bold text-[#3A0F67] mb-1.5">Company Name (Optional)</label>
+                                            <input type="text" id="company" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 placeholder:text-gray-400" placeholder="Your Company" />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="message" className="block text-sm font-bold text-[#3A0F67] mb-1.5">Message <span className="text-red-500">*</span></label>
+                                            <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none resize-none text-gray-800 placeholder:text-gray-400" placeholder="How can we help you?" />
+                                        </div>
+                                        <button type="submit" className="w-full py-4 rounded-xl bg-[#6366f1] text-white font-bold text-lg hover:bg-[#5053ca] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#6366f1]/25 group">
+                                            <span>Send Message</span>
+                                            <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                        </button>
+                                    </form>
+                                </motion.div>
+                            ) : (
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="h-[550px] w-full"
+                                >
+                                    <Cal
+                                        namespace="30min"
+                                        calLink="quantamise/30min"
+                                        style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                                        config={{ layout: "month_view" }}
+                                    />
+                                </motion.div>
+                            )}
+                        </div>
                     </motion.div>
 
                 </div>
