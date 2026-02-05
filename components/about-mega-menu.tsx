@@ -65,21 +65,6 @@ export default function AboutMegaMenu() {
                             </div>
                         </div>
                     </div>
-
-                    {/* Footer / Career Link */}
-                    <div className="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                            <div className="p-2 bg-[#6366f1]/10 rounded-lg text-[#6366f1]">
-                                <Users className="w-5 h-5" />
-                            </div>
-                            <div>
-                                <Link href="/careers" className="font-bold text-[#3A0F67] hover:text-[#6366f1] transition-colors flex items-center gap-1">
-                                    Career <ArrowRight className="w-4 h-4" />
-                                </Link>
-                                <p className="text-xs text-gray-400">Join our dynamic team</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
