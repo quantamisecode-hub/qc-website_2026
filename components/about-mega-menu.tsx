@@ -48,7 +48,7 @@ export default function AboutMegaMenu() {
                         {/* Stats Grid */}
                         <div className="grid grid-cols-2 gap-4">
                             <div className="p-4 rounded-lg bg-[#F9FAFC] border border-gray-100 hover:border-[#6366f1]/30 transition-colors group">
-                                <div className="text-3xl font-extrabold text-[#6366f1] mb-1 group-hover:scale-110 transition-transform origin-left">5+</div>
+                                <div className="text-3xl font-extrabold text-[#6366f1] mb-1 group-hover:scale-110 transition-transform origin-left">8+</div>
                                 <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">Years in Market</p>
                             </div>
                             <div className="p-4 rounded-lg bg-[#F9FAFC] border border-gray-100 hover:border-[#6366f1]/30 transition-colors group">

@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_0.75fr_0.75fr_1.5fr] gap-12 mb-16">
 
                     {/* Brand Column */}
                     <div>
@@ -68,13 +68,12 @@ export default function Footer() {
                     {/* Contact Column */}
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-white">Contact Info</h3>
-                        <ul className="space-y-6">
+                        <ul className="space-y-6 text-sm">
                             <li className="flex items-start gap-4 text-slate-400">
                                 <MapPin className="w-5 h-5 text-[#eb56f6] mt-1 shrink-0" />
                                 <span>
-                                    A-207, KSSIDC Complex, Phase 1,<br />
-                                    Electronics City, Bengaluru,<br />
-                                    Karnataka - 560100
+                                    <span className="whitespace-nowrap">A-207, KSSIDC Complex, Phase 1, Electronics City,</span><br />
+                                    Bengaluru, Karnataka - 560100
                                 </span>
                             </li>
                             <li className="flex items-center gap-4 text-slate-400">
