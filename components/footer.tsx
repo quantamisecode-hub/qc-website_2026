@@ -16,15 +16,15 @@ export default function Footer() {
 
                     {/* Brand Column */}
                     <div>
-                        <Link href="/" className="flex items-center justify-start gap-3 mb-6">
+                        <Link href="/" className="flex flex-row items-center justify-start gap-3 mb-6 flex-nowrap">
                             <Image
                                 src="/assets/logo.png"
                                 alt="Quantamise Code Logo"
                                 width={180}
                                 height={60}
-                                className="h-8 w-auto object-contain brightness-0 invert"
+                                className="h-8 w-auto object-contain brightness-0 invert shrink-0"
                             />
-                            <span className="font-extrabold text-lg text-white">Quantamise Code</span>
+                            <span className="font-extrabold text-lg text-white pb-1 whitespace-nowrap">Quantamise Code</span>
                         </Link>
                         <p className="text-slate-400 leading-relaxed mb-6">
                             Empowering businesses with secure, scalable, and intelligent digital solutions. Your partner in digital transformation.
