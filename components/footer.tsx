@@ -16,8 +16,15 @@ export default function Footer() {
 
                     {/* Brand Column */}
                     <div>
-                        <Link href="/" className="flex items-center gap-2 mb-6">
-                            <span className="font-extrabold text-2xl text-white">Quantamise Code</span>
+                        <Link href="/" className="flex items-center justify-start gap-3 mb-6">
+                            <Image
+                                src="/assets/logo.png"
+                                alt="Quantamise Code Logo"
+                                width={180}
+                                height={60}
+                                className="h-8 w-auto object-contain brightness-0 invert"
+                            />
+                            <span className="font-extrabold text-lg text-white">Quantamise Code</span>
                         </Link>
                         <p className="text-slate-400 leading-relaxed mb-6">
                             Empowering businesses with secure, scalable, and intelligent digital solutions. Your partner in digital transformation.
@@ -26,14 +33,8 @@ export default function Footer() {
                             <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
                                 <Linkedin className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
-                                <Twitter className="w-4 h-4" />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
+                            <a href="https://www.instagram.com/quantamise/" target="_blank" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
                                 <Instagram className="w-4 h-4" />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#eb56f6] hover:text-white transition-all duration-300">
-                                <Facebook className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
@@ -71,17 +72,18 @@ export default function Footer() {
                             <li className="flex items-start gap-4 text-slate-400">
                                 <MapPin className="w-5 h-5 text-[#eb56f6] mt-1 shrink-0" />
                                 <span>
-                                    123 Innovation Drive,<br />
-                                    Tech City, TC 90210
+                                    A-207, KSSIDC Complex, Phase 1,<br />
+                                    Electronics City, Bengaluru,<br />
+                                    Karnataka - 560100
                                 </span>
                             </li>
                             <li className="flex items-center gap-4 text-slate-400">
                                 <Phone className="w-5 h-5 text-[#eb56f6] shrink-0" />
-                                <span>+1 (555) 123-4567</span>
+                                <span>080-29554662</span>
                             </li>
                             <li className="flex items-center gap-4 text-slate-400">
                                 <Mail className="w-5 h-5 text-[#eb56f6] shrink-0" />
-                                <span>hello@quantamisecode.com</span>
+                                <span>business@quantamisecode.com</span>
                             </li>
                         </ul>
                     </div>

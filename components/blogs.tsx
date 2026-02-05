@@ -1,7 +1,8 @@
 
+"use client";
+
 import React from "react";
 import * as motion from "framer-motion/client";
-import { TrendingUp, Activity, Users, Clock, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import aboutImg from "../public/assets/aboutImg.jpeg"; // Using as placeholder
 
@@ -11,33 +12,21 @@ const blogs = [
         tag: "Finance",
         title: "FinTech Payment Platform",
         description: "Built a secure, PCI-compliant payment processing platform handling $50M+ monthly transactions with 99.99% uptime.",
-        imageOverlay: "from-purple-600/90 to-blue-600/90",
-        stats: [
-            { label: "Transaction Volume", value: "$50M+/mo", icon: TrendingUp, color: "text-[#eb56f6]" },
-            { label: "Uptime", value: "99.99%", icon: Clock, color: "text-[#eb56f6]" }
-        ]
+        imageOverlay: "from-purple-600/90 to-blue-600/90"
     },
     {
         id: 2,
         tag: "Healthcare",
         title: "Healthcare Telemedicine App",
         description: "Developed a HIPAA-compliant telemedicine platform connecting 10,000+ patients with doctors for virtual consultations.",
-        imageOverlay: "from-emerald-500/90 to-teal-600/90",
-        stats: [
-            { label: "Active Users", value: "10,000+", icon: Users, color: "text-[#eb56f6]" },
-            { label: "Avg. Wait Time", value: "<5 min", icon: Clock, color: "text-[#eb56f6]" }
-        ]
+        imageOverlay: "from-emerald-500/90 to-teal-600/90"
     },
     {
         id: 3,
         tag: "Retail",
         title: "E-Commerce Marketplace",
         description: "Created a multi-vendor marketplace with AI-powered recommendations, increasing conversion rates by 35%.",
-        imageOverlay: "from-orange-400/90 to-red-500/90",
-        stats: [
-            { label: "Conversion Lift", value: "+35%", icon: TrendingUp, color: "text-[#eb56f6]" },
-            { label: "Vendors", value: "500+", icon: Users, color: "text-[#eb56f6]" }
-        ]
+        imageOverlay: "from-orange-400/90 to-red-500/90"
     }
 ];
 
@@ -63,7 +52,7 @@ export default function Blogs() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-white rounded-lg border border-gray-100 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
+                            className="bg-white rounded-xl border border-gray-100 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
                         >
                             {/* Image Header */}
                             <div className="relative h-48 sm:h-56 w-full overflow-hidden shrink-0">
@@ -72,7 +61,7 @@ export default function Blogs() {
                                     src={aboutImg}
                                     alt={blog.title}
                                     fill
-                                    className="object-cover"
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                                 />
                                 {/* Gradient Overlay */}
                                 <div className={`absolute inset-0 bg-gradient-to-br ${blog.imageOverlay} mix-blend-multiply opacity-90 transition-opacity duration-300 group-hover:opacity-100`}></div>
@@ -84,27 +73,11 @@ export default function Blogs() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-8 flex flex-col flex-grow">
-                                <h3 className="text-2xl font-bold text-[#3A0F67] leading-tight group-hover:text-[#6366f1] transition-colors">{blog.title}</h3>
+                            <div className="p-8 h-52 flex flex-col flex-grow">
+                                <h3 className="text-2xl font-bold text-[#3A0F67] mb-3 leading-tight group-hover:text-[#6366f1] transition-colors">{blog.title}</h3>
                                 <p className="text-gray-600 leading-relaxed mb-8 text-sm sm:text-base flex-grow">
                                     {blog.description}
                                 </p>
-
-                                {/* Stats Divider */}
-                                <div className="border-t border-gray-100 my-4"></div>
-
-                                {/* Stats Grid */}
-                                <div className="grid grid-cols-2 gap-4 pt-2">
-                                    {blog.stats.map((stat, i) => (
-                                        <div key={i} className="flex flex-col">
-                                            <div className="flex items-center gap-2 mb-1">
-                                                <stat.icon className={`w-4 h-4 ${stat.color}`} />
-                                                <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">{stat.label}</span>
-                                            </div>
-                                            <span className="text-xl font-extrabold text-[#3A0F67]">{stat.value}</span>
-                                        </div>
-                                    ))}
-                                </div>
                             </div>
                         </motion.div>
                     ))}

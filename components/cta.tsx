@@ -53,7 +53,7 @@ export default function CTA() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="lg:w-1/2 bg-white rounded-3xl shadow-xl p-8 lg:p-10 border border-gray-100"
+                        className="lg:w-5/12 bg-white rounded-3xl shadow-xl p-8 lg:p-10 border border-gray-100"
                     >
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
