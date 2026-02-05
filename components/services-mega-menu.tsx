@@ -14,26 +14,27 @@ import {
     RefreshCw,
     Users,
     Database,
-    Briefcase,
     Activity,
+    Cpu,
     Palette,
+    Brain,
 } from "lucide-react";
 
 export const servicesData = [
     {
         category: "Development Services",
         items: [
-            { name: "AI Development", icon: Bot, href: "/services/ai-development" },
-            { name: "Web Development", icon: Globe, href: "/services/web-development" },
-            { name: "SaaS Development", icon: Layers, href: "/services/saas-development" },
-            { name: "Cloud Solutions", icon: Cloud, href: "/services/cloud-solutions" },
-            { name: "UX/UI Design", icon: Palette, href: "/services/ui-ux-design" },
+            { name: "Full Stack Development", icon: Globe, href: "/full-stack-development" },
+            { name: "SaaS Development", icon: Layers, href: "/saas-development" },
+            { name: "E-Commerce Development", icon: ShoppingCart, href: "/ecommerce-development" },
+            { name: "UX/UI Design", icon: Palette, href: "/ui-ux-design" },
+            { name: "IIoT Development", icon: Cpu, href: "/iiot-development" },
         ],
     },
     {
         category: "Specialized Development",
         items: [
-            { name: "Mobile Application Development", icon: Smartphone, href: "/services/mobile-app" },
+            { name: "Mobile Application Development", icon: Smartphone, href: "/mobile-app-development" },
             { name: "Next.js Development", icon: Zap, href: "/services/nextjs" },
             { name: "Dedicated Development Team", icon: Users, href: "/services/dedicated-team" },
         ],
@@ -41,7 +42,7 @@ export const servicesData = [
     {
         category: "AI & Data",
         items: [
-            { name: "AI Solutions", icon: Bot, href: "/services/ai-solutions" },
+            { name: "AI Solutions", icon: Brain, href: "/ai-solutions" },
             { name: "Data Engineering", icon: Database, href: "/services/data-engineering" },
         ],
     },
