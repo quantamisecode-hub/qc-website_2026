@@ -50,13 +50,13 @@ export default function IiotHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#10b981]/10 text-[#10b981] text-xs font-bold uppercase tracking-wider mb-6">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6366f1]/10 text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-6">
                         <Cpu className="w-4 h-4" />
                         <span>Connected Intelligence</span>
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#3A0F67] mb-6 tracking-tight leading-[1.15]">
-                        Industrial <span className="text-[#10b981]">IoT</span><br className="hidden sm:block" />
+                        Industrial <span className="text-[#6366f1]">IoT</span><br className="hidden sm:block" />
                         Development
                     </h1>
 
@@ -74,7 +74,7 @@ export default function IiotHero() {
                         </Link>
                         <Link
                             href="#roadmap"
-                            className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-white border-2 border-[#10b981] text-[#10b981] font-bold text-base hover:bg-[#F9FAFC] transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-white border-2 border-[#6366f1] text-[#6366f1] font-bold text-base hover:bg-[#F9FAFC] transition-all flex items-center justify-center gap-2"
                         >
                             IIoT Solutions
                         </Link>

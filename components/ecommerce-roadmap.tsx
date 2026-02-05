@@ -42,11 +42,11 @@ export default function EcommerceRoadmap() {
         <section id="roadmap" className="py-24 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center mb-20">
-                    <span className="text-[#eb56f6] font-bold tracking-widest uppercase text-sm mb-4 block">
+                    <span className="text-[#6366f1] font-bold tracking-widest uppercase text-sm mb-4 block">
                         OUR WORKFLOW
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        From Products to <span className="text-[#eb56f6]">Profits</span>
+                        From Products to <span className="text-[#6366f1]">Profits</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         A seamless process to launch your online business.
@@ -54,7 +54,7 @@ export default function EcommerceRoadmap() {
                 </div>
 
                 <div className="relative">
-                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#eb56f6]/20 via-[#eb56f6] to-[#eb56f6]/20 md:-translate-x-1/2" />
+                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#6366f1]/20 via-[#6366f1] to-[#6366f1]/20 md:-translate-x-1/2" />
 
                     <div className="space-y-12 md:space-y-24">
                         {roadmapSteps.map((step, index) => {
@@ -77,7 +77,7 @@ export default function EcommerceRoadmap() {
                                         </p>
                                     </div>
 
-                                    <div className="absolute left-0 md:left-1/2 -translate-y-1/2 md:-translate-x-1/2 flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white border-2 border-[#eb56f6]/20 shadow-lg text-[#eb56f6] z-10 top-0 md:top-1/2">
+                                    <div className="absolute left-0 md:left-1/2 -translate-y-1/2 md:-translate-x-1/2 flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white border-2 border-[#6366f1]/20 shadow-lg text-[#6366f1] z-10 top-0 md:top-1/2">
                                         <step.icon className="w-5 h-5 md:w-7 md:h-7" />
                                     </div>
 

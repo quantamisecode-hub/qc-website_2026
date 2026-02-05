@@ -57,7 +57,7 @@ export default function EcommerceTechStack() {
                         transition={{ duration: 0.5 }}
                         className="text-3xl lg:text-4xl font-extrabold text-[#3A0F67] mb-4"
                     >
-                        Tools for <span className="text-[#eb56f6]">Growth</span>
+                        Tools for <span className="text-[#6366f1]">Growth</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}

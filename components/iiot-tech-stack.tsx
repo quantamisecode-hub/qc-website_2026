@@ -63,7 +63,7 @@ export default function IiotTechStack() {
                         transition={{ duration: 0.5 }}
                         className="text-3xl lg:text-4xl font-extrabold text-[#3A0F67] mb-4"
                     >
-                        Industrial <span className="text-[#10b981]">Stack</span>
+                        Industrial <span className="text-[#6366f1]">Stack</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}

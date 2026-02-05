@@ -50,13 +50,13 @@ export default function EcommerceHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#eb56f6]/10 text-[#eb56f6] text-xs font-bold uppercase tracking-wider mb-6">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6366f1]/10 text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-6">
                         <ShoppingBag className="w-4 h-4" />
                         <span>High-Conversion Stores</span>
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#3A0F67] mb-6 tracking-tight leading-[1.15]">
-                        Next-Gen <span className="text-[#eb56f6]">E-Commerce</span><br className="hidden sm:block" />
+                        Next-Gen <span className="text-[#6366f1]">E-Commerce</span><br className="hidden sm:block" />
                         Solutions
                     </h1>
 
