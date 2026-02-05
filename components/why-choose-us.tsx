@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
                             WHY CHOOSE
                         </span>
 
-                        <h2 className="text-3xl sm:text-4xl w-150 lg:text-5xl font-extrabold text-[#3A0F67] mb-6 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6 leading-tight">
                             Why Businesses Choose <span className="text-[#6366f1]">Quantamise Code</span>
                         </h2>
 

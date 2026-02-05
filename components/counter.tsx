@@ -10,7 +10,7 @@ export function Counter({ from, to }: { from: number; to: number }) {
         damping: 60,
         stiffness: 100,
     });
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-10px" });
 
     useEffect(() => {
         if (isInView) {
@@ -26,5 +26,5 @@ export function Counter({ from, to }: { from: number; to: number }) {
         });
     }, [springValue]);
 
-    return <span ref={ref} />;
+    return <span ref={ref}>{from}</span>;
 }

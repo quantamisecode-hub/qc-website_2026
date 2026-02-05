@@ -32,10 +32,10 @@ export default function About() {
                                 {/* Experience Stat */}
                                 <div className="shrink-0 group">
                                     <div className="flex items-start leading-none">
-                                        <span className="text-[120px] font-bold text-[#6267f1] group-hover:text-[#3A0F67] transition-colors duration-300">
+                                        <span className="text-7xl sm:text-8xl lg:text-[120px] font-bold text-[#6267f1] group-hover:text-[#3A0F67] transition-colors duration-300">
                                             <Counter from={0} to={5} />
                                         </span>
-                                        <span className="text-6xl font-bold text-[#6267f1] mt-4">+</span>
+                                        <span className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#6267f1] mt-2 sm:mt-4">+</span>
                                     </div>
                                     <p className="text-[#3A0F67] font-bold text-lg tracking-wide pl-2 mt-[-10px]">
                                         Years Of Experience

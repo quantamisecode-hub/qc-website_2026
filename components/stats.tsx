@@ -11,7 +11,7 @@ function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
         damping: 30,
         stiffness: 70,
     });
-    const isInView = useInView(ref, { once: true, margin: "-50px" });
+    const isInView = useInView(ref, { once: true, margin: "-10px" });
 
     useEffect(() => {
         if (isInView) {
@@ -27,7 +27,7 @@ function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
         });
     }, [springValue, suffix]);
 
-    return <span ref={ref} />;
+    return <span ref={ref}>0{suffix}</span>;
 }
 
 export default function Stats() {

@@ -1,18 +1,21 @@
-"use client";
 
 import React from "react";
 import * as motion from "framer-motion/client";
-import { TrendingUp } from "lucide-react";
+import { TrendingUp, Activity, Users, Clock, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import aboutImg from "../public/assets/aboutImg.jpeg"; // Using as placeholder
 
-const caseStudies = [
+const blogs = [
     {
         id: 1,
         tag: "Finance",
         title: "FinTech Payment Platform",
         description: "Built a secure, PCI-compliant payment processing platform handling $50M+ monthly transactions with 99.99% uptime.",
         imageOverlay: "from-purple-600/90 to-blue-600/90",
+        stats: [
+            { label: "Transaction Volume", value: "$50M+/mo", icon: TrendingUp, color: "text-[#eb56f6]" },
+            { label: "Uptime", value: "99.99%", icon: Clock, color: "text-[#eb56f6]" }
+        ]
     },
     {
         id: 2,
@@ -20,6 +23,10 @@ const caseStudies = [
         title: "Healthcare Telemedicine App",
         description: "Developed a HIPAA-compliant telemedicine platform connecting 10,000+ patients with doctors for virtual consultations.",
         imageOverlay: "from-emerald-500/90 to-teal-600/90",
+        stats: [
+            { label: "Active Users", value: "10,000+", icon: Users, color: "text-[#eb56f6]" },
+            { label: "Avg. Wait Time", value: "<5 min", icon: Clock, color: "text-[#eb56f6]" }
+        ]
     },
     {
         id: 3,
@@ -27,10 +34,14 @@ const caseStudies = [
         title: "E-Commerce Marketplace",
         description: "Created a multi-vendor marketplace with AI-powered recommendations, increasing conversion rates by 35%.",
         imageOverlay: "from-orange-400/90 to-red-500/90",
+        stats: [
+            { label: "Conversion Lift", value: "+35%", icon: TrendingUp, color: "text-[#eb56f6]" },
+            { label: "Vendors", value: "500+", icon: Users, color: "text-[#eb56f6]" }
+        ]
     }
 ];
 
-export default function CaseStudies() {
+export default function Blogs() {
     return (
         <section className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -45,41 +56,55 @@ export default function CaseStudies() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {caseStudies.map((study, index) => (
+                    {blogs.map((blog, index) => (
                         <motion.div
-                            key={study.id}
+                            key={blog.id}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-white rounded-lg border border-gray-100 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+                            className="bg-white rounded-lg border border-gray-100 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
                         >
                             {/* Image Header */}
-                            <div className="relative h-48 sm:h-56 w-full overflow-hidden">
+                            <div className="relative h-48 sm:h-56 w-full overflow-hidden shrink-0">
                                 {/* Placeholder Image */}
                                 <Image
                                     src={aboutImg}
-                                    alt={study.title}
+                                    alt={blog.title}
                                     fill
                                     className="object-cover"
                                 />
                                 {/* Gradient Overlay */}
-                                <div className={`absolute inset-0 bg-gradient-to-br ${study.imageOverlay} mix-blend-multiply opacity-90 transition-opacity duration-300 group-hover:opacity-100`}></div>
+                                <div className={`absolute inset-0 bg-gradient-to-br ${blog.imageOverlay} mix-blend-multiply opacity-90 transition-opacity duration-300 group-hover:opacity-100`}></div>
 
                                 {/* Tag */}
                                 <div className="absolute top-6 left-6 bg-white px-4 py-1.5 rounded-full text-sm font-bold text-gray-800 shadow-sm z-10">
-                                    {study.tag}
+                                    {blog.tag}
                                 </div>
                             </div>
 
                             {/* Content */}
-                            <div className="p-8">
-                                <h3 className="text-2xl font-bold text-[#3A0F67] mb-3 leading-tight group-hover:text-[#6366f1] transition-colors">{study.title}</h3>
-                                <p className="text-gray-600 leading-relaxed mb-8 text-sm sm:text-base">
-                                    {study.description}
+                            <div className="p-8 flex flex-col flex-grow">
+                                <h3 className="text-2xl font-bold text-[#3A0F67] leading-tight group-hover:text-[#6366f1] transition-colors">{blog.title}</h3>
+                                <p className="text-gray-600 leading-relaxed mb-8 text-sm sm:text-base flex-grow">
+                                    {blog.description}
                                 </p>
 
+                                {/* Stats Divider */}
+                                <div className="border-t border-gray-100 my-4"></div>
 
+                                {/* Stats Grid */}
+                                <div className="grid grid-cols-2 gap-4 pt-2">
+                                    {blog.stats.map((stat, i) => (
+                                        <div key={i} className="flex flex-col">
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <stat.icon className={`w-4 h-4 ${stat.color}`} />
+                                                <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">{stat.label}</span>
+                                            </div>
+                                            <span className="text-xl font-extrabold text-[#3A0F67]">{stat.value}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </motion.div>
                     ))}
