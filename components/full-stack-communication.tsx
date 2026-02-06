@@ -84,13 +84,6 @@ export default function FullStackCommunication() {
                         </div>
                     ))}
                 </div>
-
-                {/* Footer Note */}
-                <div className="mt-20 pt-10 border-t border-slate-200 text-center">
-                    <p className="text-slate-500 italic">
-                        You stay informed and in control throughout the development lifecycle.
-                    </p>
-                </div>
             </div>
         </section>
     );

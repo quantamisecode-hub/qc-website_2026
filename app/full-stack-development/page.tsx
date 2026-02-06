@@ -31,6 +31,9 @@ export default function FullStackDevelopmentPage() {
             {/* Tech Stack Section */}
             <FullStackTechStack />
 
+            {/* Roadmap Section */}
+            <FullStackRoadmap />
+
             {/* Security Section */}
             <FullStackSecurity />
 

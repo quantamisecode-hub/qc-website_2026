@@ -1,6 +1,7 @@
 import Image from "next/image";
 import WhyChooseUsGrid from "./why-choose-us-grid";
 import whyChooseUsImg from "../public/assets/whyChooseUsImg.jpeg";
+import fullStackDevelopmentChooseImg from "../public/assets/fullStackDevelopmentChooseImg.jpeg"
 
 export default function FullStackWhyChooseUs() {
     return (
@@ -30,7 +31,7 @@ export default function FullStackWhyChooseUs() {
                     {/* Right Side: Image */}
                     <div className="w-full lg:w-1/2 relative min-h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                         <Image
-                            src={whyChooseUsImg}
+                            src={fullStackDevelopmentChooseImg}
                             alt="Why Choose Quantamise Code - Office"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-700"

@@ -1,46 +1,46 @@
 "use client";
 
 import React from "react";
-import { BadgeDollarSign, Users, Clock, Handshake } from "lucide-react";
+import { BadgeDollarSign, Users, Clock, Handshake, ArrowRight } from "lucide-react";
 
 const engagementModels = [
     {
+        id: "fixed",
         title: "Fixed-Price Projects",
-        description: "Clear scope, defined deliverables, and a set budget. Ideal for well-documented projects with specific requirements.",
+        description: "Clear scope, defined deliverables, and a set budget. Ideal for well-documented projects where requirements are stable and predictable.",
         icon: BadgeDollarSign,
         color: "text-blue-600",
-        bg: "bg-blue-50",
-        borderColor: "border-blue-100"
+        borderColor: "group-hover:border-blue-200"
     },
     {
+        id: "dedicated",
         title: "Dedicated Teams",
-        description: "Your own extended team of experts working exclusively on your project, offering complete control and flexibility.",
+        description: "Your own extended team of experts working exclusively on your project. Offers complete control, direct communication, and flexibility.",
         icon: Users,
         color: "text-indigo-600",
-        bg: "bg-indigo-50",
-        borderColor: "border-indigo-100"
+        borderColor: "group-hover:border-indigo-200"
     },
     {
+        id: "time",
         title: "Time & Material",
-        description: "Pay only for the hours worked. Perfect for agile projects with evolving requirements and undefined scope.",
+        description: "Pay only for the hours worked. Perfect for agile projects with evolving requirements, undefined scope, or research-heavy initiatives.",
         icon: Clock,
         color: "text-amber-600",
-        bg: "bg-amber-50",
-        borderColor: "border-amber-100"
+        borderColor: "group-hover:border-amber-200"
     },
     {
+        id: "partnership",
         title: "Long-Term Partnership",
-        description: "Ongoing strategic collaboration to drive digital transformation, innovation, and continuous improvement.",
+        description: "Continuous strategic collaboration to drive innovation. We act as your technical co-founder for long-term growth and success.",
         icon: Handshake,
         color: "text-emerald-600",
-        bg: "bg-emerald-50",
-        borderColor: "border-emerald-100"
+        borderColor: "group-hover:border-emerald-200"
     }
 ];
 
 export default function FullStackEngagement() {
     return (
-        <section className="py-24 bg-white border-t border-slate-50">
+        <section className="py-24 bg-gray-50 border-t border-slate-50">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -51,38 +51,41 @@ export default function FullStackEngagement() {
                         Engagement Models to <span className="text-[#6366f1]">Suit Your Needs</span>
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        We offer multiple engagement models to suit your business needs, helping you optimize cost while maintaining quality.
+                        Choose the model that best fits your project's stage, budget, and flexibility outcomes.
                     </p>
                 </div>
 
-                {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {engagementModels.map((model, index) => (
-                        <div
-                            key={index}
-                            className={`flex flex-col bg-white rounded-2xl p-6 border ${model.borderColor} shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}
-                        >
-                            {/* Icon */}
-                            <div className={`w-14 h-14 rounded-xl ${model.bg} ${model.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                <model.icon size={28} strokeWidth={1.5} />
+                {/* Unified Grid Layout */}
+                <div className="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                        {engagementModels.map((model, index) => (
+                            <div
+                                key={model.id}
+                                className={`
+                                    group relative p-10 md:p-12 transition-all duration-300 hover:bg-slate-50
+                                    ${index < 2 ? 'md:border-b border-slate-100' : ''}
+                                `}
+                            >
+                                {/* Icon */}
+                                <div className="mb-6 inline-block">
+                                    <model.icon size={40} className={`${model.color} mb-2 transition-transform duration-300 group-hover:scale-110`} strokeWidth={1.5} />
+                                </div>
+
+                                {/* Content */}
+                                <h3 className="text-2xl font-bold text-[#3A0F67] mb-4 group-hover:text-[#6366f1] transition-colors">
+                                    {model.title}
+                                </h3>
+                                <p className="text-slate-600 text-base leading-relaxed mb-6">
+                                    {model.description}
+                                </p>
+
+                                {/* Link */}
+                                <div className="flex items-center gap-2 font-semibold text-slate-900 group-hover:text-[#6366f1] transition-colors cursor-pointer w-fit">
+                                    Learn more <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                                </div>
                             </div>
-
-                            {/* Content */}
-                            <h3 className="text-lg font-bold text-[#3A0F67] mb-3 group-hover:text-[#6366f1] transition-colors">
-                                {model.title}
-                            </h3>
-                            <p className="text-slate-500 text-sm leading-relaxed flex-grow">
-                                {model.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Footer Note */}
-                <div className="mt-16 text-center">
-                    <p className="text-slate-500 italic">
-                        This flexibility helps you optimize cost while maintaining quality.
-                    </p>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

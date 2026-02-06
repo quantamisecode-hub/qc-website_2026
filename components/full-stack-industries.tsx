@@ -107,13 +107,6 @@ export default function FullStackIndustries() {
                         );
                     })}
                 </motion.div>
-
-                {/* Footer Note */}
-                <div className="mt-16 text-center">
-                    <p className="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
-                        Our experience across industries allows us to design solutions that meet both technical and regulatory requirements.
-                    </p>
-                </div>
             </div>
         </section>
     );
