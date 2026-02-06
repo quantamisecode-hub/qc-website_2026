@@ -38,7 +38,7 @@ const roadmapSteps = [
 
 export default function FullStackRoadmap() {
     return (
-        <section id="roadmap" className="py-12 bg-white relative overflow-hidden">
+        <section id="roadmap" className="py-12 bg-[#F9FBFA] relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center mb-20">
                     <span className="text-[#6366f1] font-bold tracking-widest uppercase text-sm mb-4 block">
