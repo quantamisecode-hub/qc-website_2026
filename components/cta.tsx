@@ -17,7 +17,7 @@ export default function CTA() {
     }, []);
 
     return (
-        <section className="py-24 bg-[#f8f9fa] relative overflow-hidden">
+        <section className="py-12 bg-[#f8f9fa] relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row gap-16 lg:items-start">
 

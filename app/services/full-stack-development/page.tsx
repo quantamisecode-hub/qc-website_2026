@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Full-Stack Development Services | Quantamise Code",
         description: "Transform your business with scalable, high-performance web and mobile applications developed by our expert full-stack engineers.",
-        url: "https://quantamise.com/full-stack-development",
+        url: "https://quantamise.com/services/full-stack-development",
         siteName: "Quantamise Code",
         images: [
             {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
     },
     alternates: {
-        canonical: "https://quantamise.com/full-stack-development",
+        canonical: "https://quantamise.com/services/full-stack-development",
     },
 };
 

@@ -2,7 +2,7 @@ import FAQInteractive from "./faq-interactive";
 
 export default function FAQ() {
     return (
-        <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+        <section className="py-12 lg:py-16 bg-slate-50 relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#eb56f6]/20 to-transparent"></div>
 

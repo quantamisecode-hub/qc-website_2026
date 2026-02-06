@@ -18,14 +18,14 @@ export default function FullStackHero() {
             <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-white to-transparent pointer-events-none" />
 
             {/* Floating Logos */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none hidden lg:block">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
                 {technologies.map((tech, index) => (
                     <motion.div
                         key={tech.name}
-                        className="absolute flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-slate-100/50"
-                        initial={{ opacity: 0, x: tech.initialX, y: tech.initialY }}
+                        initial={{ opacity: 0, scale: 0, x: tech.initialX, y: tech.initialY }}
                         animate={{
                             opacity: 0.8,
+                            scale: 1,
                             y: [tech.initialY, tech.initialY - 20, tech.initialY],
                         }}
                         transition={{
@@ -35,11 +35,16 @@ export default function FullStackHero() {
                             delay: index * 0.2,
                         }}
                         style={{
-                            left: tech.left,
-                            top: tech.top,
-                            right: tech.right,
-                            bottom: tech.bottom,
-                        }}
+                            '--mobile-left': tech.mobileLeft,
+                            '--mobile-top': tech.mobileTop,
+                            '--mobile-right': tech.mobileRight,
+                            '--mobile-bottom': tech.mobileBottom,
+                            '--desktop-left': tech.left,
+                            '--desktop-top': tech.top,
+                            '--desktop-right': tech.right,
+                            '--desktop-bottom': tech.bottom,
+                        } as React.CSSProperties}
+                        className="absolute flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-slate-100/50 left-[var(--mobile-left)] top-[var(--mobile-top)] right-[var(--mobile-right)] bottom-[var(--mobile-bottom)] lg:left-[var(--desktop-left)] lg:top-[var(--desktop-top)] lg:right-[var(--desktop-right)] lg:bottom-[var(--desktop-bottom)]"
                     >
                         <tech.icon className="w-5 h-5" style={{ color: tech.color }} />
                         <span className="text-xs font-semibold text-slate-700">{tech.name}</span>
@@ -59,7 +64,7 @@ export default function FullStackHero() {
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#3A0F67] mb-6 tracking-tight leading-[1.15]">
-                        Scalable <span className="text-[#6366f1]">Full-Stack</span><br className="hidden sm:block" />
+                        Scalable <span className="text-[#6366f1]">Full-Stack </span><br className="hidden sm:block" />
                         Applications
                     </h1>
 
@@ -89,18 +94,18 @@ export default function FullStackHero() {
 }
 
 const technologies = [
-    { name: "React", icon: SiReact, color: "#61DAFB", initialX: 0, initialY: 0, left: "10%", top: "15%" },
-    { name: "Next.js", icon: SiNextdotjs, color: "#000000", initialX: 0, initialY: 0, right: "15%", top: "12%" },
-    { name: "Python", icon: SiPython, color: "#3776AB", initialX: 0, initialY: 0, left: "5%", top: "45%" },
-    { name: "Node.js", icon: SiNodedotjs, color: "#339933", initialX: 0, initialY: 0, right: "8%", top: "40%" },
-    { name: "Express", icon: SiExpress, color: "#000000", initialX: 0, initialY: 0, left: "15%", bottom: "20%" },
-    { name: "Go", icon: SiGo, color: "#00ADD8", initialX: 0, initialY: 0, right: "20%", bottom: "25%" },
-    { name: "Django", icon: SiDjango, color: "#092E20", initialX: 0, initialY: 0, left: "25%", top: "10%" },
-    { name: "Angular", icon: SiAngular, color: "#DD0031", initialX: 0, initialY: 0, right: "28%", top: "18%" },
-    { name: "Vue", icon: SiVuedotjs, color: "#4FC08D", initialX: 0, initialY: 0, left: "8%", bottom: "40%" },
-    { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", initialX: 0, initialY: 0, right: "5%", bottom: "45%" },
-    { name: "MongoDB", icon: SiMongodb, color: "#47A248", initialX: 0, initialY: 0, left: "20%", top: "60%" },
-    { name: "Redis", icon: DiRedis, color: "#DC382D", initialX: 0, initialY: 0, right: "18%", top: "65%" },
-    { name: "Supabase", icon: SiSupabase, color: "#3ECF8E", initialX: 0, initialY: 0, left: "30%", bottom: "15%" },
-    { name: "Firebase", icon: SiFirebase, color: "#FFCA28", initialX: 0, initialY: 0, right: "32%", bottom: "12%" },
+    { name: "React", icon: SiReact, color: "#61DAFB", initialX: 0, initialY: 0, left: "10%", top: "15%", mobileLeft: "2%", mobileTop: "2%" },
+    { name: "Next.js", icon: SiNextdotjs, color: "#000000", initialX: 0, initialY: 0, right: "15%", top: "12%", mobileRight: "2%", mobileTop: "2%" },
+    { name: "Python", icon: SiPython, color: "#3776AB", initialX: 0, initialY: 0, left: "5%", top: "45%", mobileLeft: "8%", mobileTop: "12%" },
+    { name: "Node.js", icon: SiNodedotjs, color: "#339933", initialX: 0, initialY: 0, right: "8%", top: "40%", mobileRight: "8%", mobileTop: "12%" },
+    { name: "Express", icon: SiExpress, color: "#000000", initialX: 0, initialY: 0, left: "15%", bottom: "20%", mobileLeft: "45%", mobileBottom: "2%" },
+    { name: "Go", icon: SiGo, color: "#00ADD8", initialX: 0, initialY: 0, right: "20%", bottom: "25%", mobileRight: "25%", mobileBottom: "10%" },
+    { name: "Django", icon: SiDjango, color: "#092E20", initialX: 0, initialY: 0, left: "25%", top: "10%", mobileLeft: "30%", mobileTop: "1%" },
+    { name: "Angular", icon: SiAngular, color: "#DD0031", initialX: 0, initialY: 0, right: "28%", top: "18%", mobileRight: "30%", mobileTop: "1%" },
+    { name: "Vue", icon: SiVuedotjs, color: "#4FC08D", initialX: 0, initialY: 0, left: "8%", bottom: "40%", mobileLeft: "2%", mobileBottom: "15%" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", initialX: 0, initialY: 0, right: "5%", bottom: "45%", mobileRight: "2%", mobileBottom: "15%" },
+    { name: "MongoDB", icon: SiMongodb, color: "#47A248", initialX: 0, initialY: 0, left: "20%", top: "60%", mobileLeft: "15%", mobileBottom: "8%" },
+    { name: "Redis", icon: DiRedis, color: "#DC382D", initialX: 0, initialY: 0, right: "18%", top: "65%", mobileRight: "15%", mobileBottom: "8%" },
+    { name: "Supabase", icon: SiSupabase, color: "#3ECF8E", initialX: 0, initialY: 0, left: "30%", bottom: "15%", mobileLeft: "28%", mobileBottom: "2%" },
+    { name: "Firebase", icon: SiFirebase, color: "#FFCA28", initialX: 0, initialY: 0, right: "32%", bottom: "12%", mobileRight: "55%", mobileBottom: "3%" },
 ];

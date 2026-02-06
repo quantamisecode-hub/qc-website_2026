@@ -51,7 +51,7 @@ export default function CTAPopup() {
                             <X className="w-5 h-5" />
                         </button>
 
-                        <div className="p-6 md:p-10">
+                        <div className="px-6 pb-6 pt-14 md:p-10">
                             <div className="text-center mb-6 md:mb-8">
                                 <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#3A0F67] mb-2 leading-tight">
                                     Get Your Free Consultation
