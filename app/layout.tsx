@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://quantamise-code.vercel.app"),
   title: {
     default: "Quantamise Code | AI & Software Development Company",
     template: "%s | Quantamise Code",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Quantamise Code",
     images: [
       {
-        url: "/assets/og-image.jpg", // We need to ensure an OG image exists or use a logo placeholder
+        url: "/OG/logo.png",
         width: 1200,
         height: 630,
         alt: "Quantamise Code - AI & Software Development",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quantamise Code | AI & Software Development",
     description: "Building secure, scalable, and future-ready digital solutions.",
-    images: ["/assets/og-image.jpg"],
+    images: ["/OG/logo.png"],
   },
   robots: {
     index: true,
@@ -70,6 +71,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Quantamise Code",
+              url: "https://quantamisecode.com/",
+              logo: "https://quantamise-code.vercel.app/logo.png",
+              sameAs: [
+                "https://www.linkedin.com/company/quantamise-code",
+                "https://instagram.com/quantamise"
+              ],
+              description:
+                "AI-powered software development company specializing in web, mobile, and enterprise solutions."
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -77,6 +98,7 @@ export default function RootLayout({
         <CookieConsent />
         {children}
       </body>
+
     </html>
   );
 }
