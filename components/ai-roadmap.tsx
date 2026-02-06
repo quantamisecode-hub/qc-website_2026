@@ -1,59 +1,59 @@
 import React from "react";
 import * as motion from "framer-motion/client";
-import { Search, PenTool, Code, Rocket, TrendingUp, RefreshCw } from "lucide-react";
+import { Search, Database, Brain, Code, Rocket, Settings } from "lucide-react";
 
 const roadmapSteps = [
     {
         id: 1,
-        title: "Product Discovery",
-        description: "We work with you to define the target audience, core features, and monetization strategy.",
+        title: "Discovery & Strategy",
+        description: "We identify high-value use cases, assess your data readiness, and define the AI strategy to ensure maximum ROI.",
         icon: Search,
     },
     {
         id: 2,
-        title: "UX/UI Design",
-        description: "Creating intuitive workflows and dashboards that make complex data easy to understand.",
-        icon: PenTool,
+        title: "Data Preparation",
+        description: "Collecting, cleaning, and labeling data to create high-quality datasets that drive accurate model training.",
+        icon: Database,
     },
     {
         id: 3,
-        title: "MVP Development",
-        description: "Building the core functionality with a scalable backend to get early adopters on board.",
-        icon: Code,
+        title: "Model Development",
+        description: "Selecting architectures, training models (or fine-tuning LLMs), and optimizing hyperparameters for peak performance.",
+        icon: Brain,
     },
     {
         id: 4,
-        title: "Launch & Iterate",
-        description: "Deploying to production, monitoring user feedback, and releasing quick updates.",
-        icon: Rocket,
+        title: "Integration & Testing",
+        description: "Embedding the AI model into your existing software ecosystem and rigorously testing for accuracy and bias.",
+        icon: Code,
     },
     {
         id: 5,
-        title: "Growth & Scaling",
-        description: "Optimizing infrastructure for high traffic and adding enterprise features like SSO and audit logs.",
-        icon: TrendingUp,
+        title: "Deployment",
+        description: "Deploying models to production using scalable cloud infrastructure (MLOps) with real-time inference capabilities.",
+        icon: Rocket,
     },
     {
         id: 6,
-        title: "Maintenance",
-        description: "Regular security patches, library updates, and database optimization.",
-        icon: RefreshCw,
+        title: "Monitoring & Tuning",
+        description: "Continuous monitoring for model drift, retraining with new data, and refining performance over time.",
+        icon: Settings,
     }
 ];
 
-export default function SaasRoadmap() {
+export default function AiRoadmap() {
     return (
-        <section id="saas-roadmap" className="py-12 bg-[#F9FBFA] relative overflow-hidden">
+        <section id="ai-roadmap" className="py-12 bg-[#F9FBFA] relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center mb-20">
                     <span className="text-[#6366f1] font-bold tracking-widest uppercase text-sm mb-4 block">
                         OUR PROCESS
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        From Idea to <span className="text-[#6366f1]">Exit</span>
+                        From Data to <span className="text-[#6366f1]">Deployment</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        A proven methodology to build and scale successful SaaS businesses.
+                        A structured approach to building reliable AI solutions.
                     </p>
                 </div>
 

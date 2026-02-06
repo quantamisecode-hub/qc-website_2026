@@ -1,6 +1,3 @@
-
-import Link from "next/link";
-
 import {
     Smartphone,
     Bot,
@@ -24,7 +21,7 @@ export const servicesData = [
         category: "Development Services",
         items: [
             { name: "Full-Stack Development", icon: Globe, href: "/services/full-stack-development" },
-            { name: "SaaS Development", icon: Layers, href: "/saas-development" },
+            { name: "SaaS Development", icon: Layers, href: "/services/saas-development" },
             { name: "E-Commerce Development", icon: ShoppingCart, href: "/ecommerce-development" },
             { name: "UX/UI Design", icon: Palette, href: "/ui-ux-design" },
             { name: "IIoT Development", icon: Cpu, href: "/iiot-development" },
@@ -41,7 +38,7 @@ export const servicesData = [
     {
         category: "AI & Data",
         items: [
-            { name: "AI Solutions", icon: Brain, href: "/ai-solutions" },
+            { name: "AI Solutions", icon: Brain, href: "/services/ai-solutions" },
             { name: "Data Engineering", icon: Database, href: "/services/data-engineering" },
         ],
     },
@@ -69,7 +66,7 @@ export default function ServicesMegaMenu() {
                         <h3 className="font-extrabold text-lg text-[#3A0F67] mb-2">{section.category}</h3>
                         <div className="flex flex-col gap-3">
                             {section.items.map((item, itemIdx) => (
-                                <Link
+                                <a
                                     key={itemIdx}
                                     href={item.href}
                                     className="group flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
@@ -82,7 +79,7 @@ export default function ServicesMegaMenu() {
                                             {item.name}
                                         </span>
                                     </div>
-                                </Link>
+                                </a>
                             ))}
                         </div>
                     </div>

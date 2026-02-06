@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+// import Link from "next/link"; // Removed
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -16,7 +16,7 @@ export default function Footer() {
 
                     {/* Brand Column */}
                     <div>
-                        <Link href="/" className="flex flex-row items-center justify-start gap-3 mb-6 flex-nowrap">
+                        <a href="/" className="flex flex-row items-center justify-start gap-3 mb-6 flex-nowrap">
                             <Image
                                 src="/assets/logo.png"
                                 alt="Quantamise Code Logo"
@@ -25,7 +25,7 @@ export default function Footer() {
                                 className="h-8 w-auto object-contain brightness-0 invert shrink-0"
                             />
                             <span className="font-extrabold text-lg text-white pb-1 whitespace-nowrap">Quantamise Code</span>
-                        </Link>
+                        </a>
                         <p className="text-slate-400 leading-relaxed mb-6">
                             Empowering businesses with secure, scalable, and intelligent digital solutions. Your partner in digital transformation.
                         </p>
@@ -43,12 +43,12 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-white">Services</h3>
                         <ul className="space-y-4">
-                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">AI & Machine Learning</Link></li>
-                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Web Development</Link></li>
-                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Mobile App Development</Link></li>
-                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Cloud Solutions</Link></li>
-                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">UI/UX Design</Link></li>
-                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">SaaS Development</Link></li>
+                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">AI & Machine Learning</a></li>
+                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Web Development</a></li>
+                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Mobile App Development</a></li>
+                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Cloud Solutions</a></li>
+                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">UI/UX Design</a></li>
+                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">SaaS Development</a></li>
                         </ul>
                     </div>
 
@@ -56,12 +56,12 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-white">Company</h3>
                         <ul className="space-y-4">
-                            <li><Link href="/about" className="hover:text-[#eb56f6] transition-colors">About Us</Link></li>
-                            <li><Link href="/case-studies" className="hover:text-[#eb56f6] transition-colors">Case Studies</Link></li>
-                            <li><Link href="/blogs" className="hover:text-[#eb56f6] transition-colors">Blogs</Link></li>
-                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Careers</Link></li>
-                            <li><Link href="/contact" className="hover:text-[#eb56f6] transition-colors">Contact Us</Link></li>
-                            <li><Link href="#" className="hover:text-[#eb56f6] transition-colors">Privacy Policy</Link></li>
+                            <li><a href="/about" className="hover:text-[#eb56f6] transition-colors">About Us</a></li>
+                            <li><a href="/case-studies" className="hover:text-[#eb56f6] transition-colors">Case Studies</a></li>
+                            <li><a href="/blogs" className="hover:text-[#eb56f6] transition-colors">Blogs</a></li>
+                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Careers</a></li>
+                            <li><a href="/contact" className="hover:text-[#eb56f6] transition-colors">Contact Us</a></li>
+                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Privacy Policy</a></li>
                         </ul>
                     </div>
 
@@ -90,7 +90,7 @@ export default function Footer() {
 
                 <div className="border-t border-white/10 pt-8 mt-12 mb-8">
                     <p className="text-slate-500 text-xs leading-relaxed max-w-full mb-6">
-                        We use cookies and similar technologies to improve your experience on our website and services, including when you contact us through chat. These help us analyze website traffic, personalize content, and support our marketing activities. By continuing to browse or use our website, you consent to the use of cookies and similar technologies by us and our trusted partners. You can manage or disable cookies anytime through your browser settings. For more details, please review our <Link href="#" className="underline hover:text-[#eb56f6] transition-colors">Cookie Policy</Link> and <Link href="#" className="underline hover:text-[#eb56f6] transition-colors">Privacy Policy</Link>.
+                        We use cookies and similar technologies to improve your experience on our website and services, including when you contact us through chat. These help us analyze website traffic, personalize content, and support our marketing activities. By continuing to browse or use our website, you consent to the use of cookies and similar technologies by us and our trusted partners. You can manage or disable cookies anytime through your browser settings. For more details, please review our <a href="#" className="underline hover:text-[#eb56f6] transition-colors">Cookie Policy</a> and <a href="#" className="underline hover:text-[#eb56f6] transition-colors">Privacy Policy</a>.
                     </p>
                     <p className="text-slate-500 text-sm">&copy; {new Date().getFullYear()} Quantamise Code. All rights reserved.</p>
                 </div>

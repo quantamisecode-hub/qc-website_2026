@@ -1,49 +1,51 @@
 import React from "react";
 import {
-    SiReact, SiNextdotjs, SiVuedotjs,
-    SiNodedotjs, SiGo, SiPython,
+    SiPytorch, SiTensorflow, SiKeras, SiScikitlearn,
+    SiOpenai, SiHuggingface,
+    SiPandas, SiNumpy, SiApachespark, SiApachekafka,
     SiAmazon, SiGooglecloud,
-    SiDocker, SiKubernetes, SiTerraform,
-    SiStripe, SiAuth0, SiSupabase
+    SiDocker, SiKubernetes, SiMlflow
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
-import { ArrowRight, Cloud, Database, Globe } from "lucide-react";
+import { Bot, Brain, Database, ArrowRight } from "lucide-react";
 
 const techCategories = [
     {
-        title: "Frontend & UI",
-        description: "Fast, responsive, and engaging user interfaces.",
+        title: "AI & ML Frameworks",
+        description: "Deep Learning, Neural Networks, Computer Vision Models",
         techs: [
-            { name: "React", icon: SiReact, color: "#61DAFB" },
-            { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-            { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
+            { name: "PyTorch", icon: SiPytorch, color: "#EE4C2C" },
+            { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00" },
+            { name: "Keras", icon: SiKeras, color: "#D00000" },
+            { name: "Scikit-learn", icon: SiScikitlearn, color: "#F7931E" },
         ]
     },
     {
-        title: "Backend & Global Infrastructure",
-        description: "Scalable server-side logic and cloud infrastructure.",
+        title: "LLMs & Generative AI",
+        description: "Large Language Models, NLP, Prompt Engineering, RAG",
         techs: [
-            { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-            { name: "Go", icon: SiGo, color: "#00ADD8" },
-            { name: "AWS", icon: SiAmazon, color: "#FF9900" },
-            { name: "Azure", icon: VscAzure, color: "#0078D4" },
-            { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
-            { name: "Terraform", icon: SiTerraform, color: "#623CE4" },
+            { name: "OpenAI API", icon: SiOpenai, color: "#412991" },
+            { name: "Hugging Face", icon: SiHuggingface, color: "#FFD21E" },
+            { name: "Llama 3", icon: Brain, color: "#0467DF" },
+            { name: "LangChain", icon: Bot, color: "#1C3C3C" },
         ]
     },
     {
-        title: "SaaS Essentials",
-        description: "Payments, Auth, and Database solutions.",
+        title: "Data Engineering & MLOps",
+        description: "Data Processing, Pipelines, Model Deployment & Monitoring",
         techs: [
-            { name: "Stripe", icon: SiStripe, color: "#008CDD" },
-            { name: "Auth0", icon: SiAuth0, color: "#EB5424" },
-            { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
+            { name: "Pandas", icon: SiPandas, color: "#150458" },
+            { name: "Spark", icon: SiApachespark, color: "#E25A1C" },
+            { name: "Kafka", icon: SiApachekafka, color: "#231F20" },
+            { name: "MLflow", icon: SiMlflow, color: "#0194E2" },
+            { name: "AWS SageMaker", icon: SiAmazon, color: "#FF9900" },
+            { name: "Azure AI", icon: VscAzure, color: "#0078D4" },
             { name: "Docker", icon: SiDocker, color: "#2496ED" },
         ]
     }
 ];
 
-export default function SaasTechStack() {
+export default function AiTechStack() {
     return (
         <section className="py-12 bg-white relative overflow-hidden">
             {/* Background Decoration */}
@@ -52,11 +54,11 @@ export default function SaasTechStack() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
                 <div className="text-left mb-20">
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6 leading-tight">
-                        Built on a Robust <br />
-                        <span className="text-[#6366f1]">Cloud Foundation</span>
+                        Cutting-Edge <br />
+                        <span className="text-[#6366f1]">AI Technology Stack</span>
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl">
-                        We choose battle-tested technologies that ensure your SaaS is secure, scalable, and easy to maintain.
+                        We leverage the most advanced AI frameworks and models to build intelligent, scalable, and future-proof solutions.
                     </p>
                 </div>
 

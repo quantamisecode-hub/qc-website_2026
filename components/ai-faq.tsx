@@ -7,36 +7,36 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        question: "What is the difference between single-tenant and multi-tenant architecture?",
-        answer: "Single-tenant means each customer gets their own database and server instance (more secure, harder to maintain). Multi-tenant means all customers share the same infrastructure but their data is logically separated (more scalable, cost-effective). We help you choose the right approach."
+        question: "How do you handle data privacy and security in AI projects?",
+        answer: "We prioritize data security by implementing anonymization, encryption, and strict access controls. We ensure compliance with GDPR, HIPAA, and other relevant regulations, often processing sensitive data locally or in secure private clouds."
     },
     {
-        question: "How long does it take to build an MVP for a SaaS product?",
-        answer: "A typical SaaS MVP takes 8-12 weeks. We focus on the core value proposition, user authentication, and the primary payment flow to get you to market quickly for validation."
+        question: "Can you integrate AI into our existing software?",
+        answer: "Yes, we specialize in seamless AI integration. Whether it's adding a chatbot to your website, embedding predictive analytics into your dashboard, or automating workflows via APIs, we enhance your existing systems without disrupting operations."
     },
     {
-        question: "Do you help with Stripe or payment integration?",
-        answer: "Yes, we have deep expertise in integrating Stripe Connect, subscriptions, metered billing, and invoicing. We ensure your revenue logic is secure and compliant with global tax regulations."
+        question: "Do I need a massive dataset to start with AI?",
+        answer: "Not necessarily. While more data is better, we can start with pre-trained models (LLMs) and fine-tune them on your smaller, specific datasets (Transfer Learning). We also help with data augmentation and synthetic data generation."
     },
     {
-        question: "How do you ensure data security in a multi-tenant environment?",
-        answer: "We use Row-Level Security (RLS) policies in databases like PostgreSQL, strict API authorization checks, and logical isolation to ensure one tenant can never access another's data."
+        question: "What is the timeline for an AI Proof of Concept (PoC)?",
+        answer: "A typical AI PoC takes 4-6 weeks. We focus on defining a clear problem statement, gathering initial data, and building a prototype to validate feasibility and business value before full-scale development."
     },
     {
-        question: "Can you help migrate my legacy app to a SaaS model?",
-        answer: "Absolutely. We can re-platform your legacy software into a modern cloud-native SaaS, enabling you to sell subscriptions and scale to thousands of users without manual installations."
+        question: "What AI technologies do you use?",
+        answer: "We use state-of-the-art tools including Python, PyTorch, TensorFlow, OpenAI's GPT models, LangChain for orchestration, and vector databases like Pinecone or Milvus for semantic search."
     },
     {
-        question: "What tech stack do you recommend for SaaS?",
-        answer: "We typically recommend Next.js (Frontend) + Node.js/Go (Backend) + PostgreSQL (Database) + AWS/Vercel (Hosting). This stack is battle-tested, scalable, and has a huge developer ecosystem."
+        question: "Do you offer post-deployment monitoring for AI models?",
+        answer: "Yes. AI models can drift over time. We set up MLOps pipelines to continuously monitor model performance, detect data drift, and retrain models to ensure they remain accurate and effective."
     },
     {
-        question: "Do you offer ongoing maintenance after launch?",
-        answer: "Yes. SaaS products need continuous improvement. We offer retainer packages for feature updates, bug fixes, performance monitoring, and infrastructure cost optimization."
+        question: "How much does a custom AI solution cost?",
+        answer: "Costs vary based on complexity, data availability, and required computational resources. We typically start with a discovery phase to provide a detailed estimate and often recommend starting with a high-impact MVP."
     },
     {
-        question: "Who owns the code?",
-        answer: "You do. Upon project completion and final payment, you own 100% of the intellectual property, source code, and design assets."
+        question: "Can you build generative AI tools for internal use?",
+        answer: "Absolutely. We build secure, internal knowledge bases and RAG (Retrieval-Augmented Generation) systems that allow your employees to query company documents and data safely without exposing information to public models."
     }
 ];
 
@@ -124,7 +124,7 @@ const FAQItem = ({
     );
 };
 
-export default function SaasFAQ() {
+export default function AiFAQ() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const toggleFAQ = (index: number) => {
@@ -146,7 +146,7 @@ export default function SaasFAQ() {
                         Common <span className="text-[#6366f1]">Questions</span>
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Answers to your questions about building scalable SaaS products.
+                        Answers to your questions about implementation, data, and security.
                     </p>
                 </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link"; // Removed
 import {
     Layout,
     Server,
@@ -9,10 +9,6 @@ import {
     Database,
     Cloud,
     Bot,
-    ArrowRight,
-    Star,
-    TrendingUp,
-    CheckCircle2
 } from "lucide-react";
 import { DiRedis } from "react-icons/di";
 import {
@@ -155,7 +151,7 @@ export default function TechnologiesMegaMenu() {
                         </div>
                         <div className="flex flex-col gap-1">
                             {section.techs.map((item, itemIdx) => (
-                                <Link
+                                <a
                                     key={itemIdx}
                                     href={`/technologies/${section.id}/${item.name.toLowerCase().replace(/ /g, "-").replace(/\./g, "").replace(/\+/g, "cpp").replace(/\#/g, "sharp")}`}
                                     className="group flex items-center gap-3 p-1.5 rounded-lg hover:bg-gray-50 transition-colors"
@@ -168,7 +164,7 @@ export default function TechnologiesMegaMenu() {
                                             {item.name}
                                         </span>
                                     </div>
-                                </Link>
+                                </a>
                             ))}
                         </div>
                     </div>

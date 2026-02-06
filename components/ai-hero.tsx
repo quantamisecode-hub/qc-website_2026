@@ -1,16 +1,16 @@
 "use client";
 
 import * as motion from "framer-motion/client";
-import { ArrowRight, Cloud, Server } from "lucide-react";
+import { ArrowRight, Bot, Brain } from "lucide-react";
 import Link from "next/link";
 import {
-    SiAmazon, SiGooglecloud, SiDocker,
-    SiKubernetes, SiTerraform, SiStripe, SiAuth0,
-    SiRedis, SiPostgresql, SiMongodb, SiNodedotjs, SiGo
+    SiPython, SiPytorch, SiTensorflow, SiOpenai,
+    SiHuggingface, SiScikitlearn, SiNvidia, SiPandas,
+    SiNumpy, SiKeras, SiOpencv, SiJupyter,
+    SiAnaconda
 } from "react-icons/si";
-import { VscAzure } from "react-icons/vsc";
 
-export default function SaasHero() {
+export default function AiHero() {
     return (
         <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
             {/* Background Effects */}
@@ -59,17 +59,17 @@ export default function SaasHero() {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6366f1]/10 text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-6">
-                        <OptionalCloudIcon className="w-4 h-4" />
-                        <span>Cloud-Native Solutions</span>
+                        <OptionalBrainIcon className="w-4 h-4" />
+                        <span>Intelligent Solutions</span>
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#3A0F67] mb-6 tracking-tight leading-[1.15]">
-                        Scalable <span className="text-[#6366f1]">SaaS Platform</span><br className="hidden sm:block" />
-                        Development
+                        We don’t just build <span className="text-[#6366f1]">AI models.</span><br className="hidden sm:block" />
+                        We deliver production-ready, business-impact AI systems.
                     </h1>
 
                     <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
-                        We build secure, multi-tenant SaaS applications designed for hyper-growth. From MVP to enterprise scale, we help you launch products that dominate the market.
+                        {/* Subheadline removed or integrated as requested, user text provided was treated as main content */}
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -77,11 +77,11 @@ export default function SaasHero() {
                             href="/contact"
                             className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#eb56f6] text-white font-bold text-base hover:bg-[#d035db] transition-all flex items-center justify-center gap-2"
                         >
-                            Build Your SaaS
+                            Start Your AI Journey
                             <ArrowRight className="w-5 h-5" />
                         </Link>
                         <Link
-                            href="#saas-roadmap"
+                            href="#ai-roadmap"
                             className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-white border-2 border-[#3A0F67] text-[#3A0F67] font-bold text-base hover:bg-[#F9FAFC] transition-all flex items-center justify-center gap-2"
                         >
                             Our Process
@@ -93,22 +93,23 @@ export default function SaasHero() {
     );
 }
 
-const OptionalCloudIcon = ({ className }: { className?: string }) => (
-    <Cloud className={className} />
+const OptionalBrainIcon = ({ className }: { className?: string }) => (
+    <Brain className={className} />
 );
 
 const technologies = [
-    { name: "AWS", icon: SiAmazon, color: "#FF9900", initialX: 0, initialY: 0, left: "10%", top: "15%", mobileLeft: "2%", mobileTop: "2%" },
-    { name: "Docker", icon: SiDocker, color: "#2496ED", initialX: 0, initialY: 0, right: "15%", top: "12%", mobileRight: "2%", mobileTop: "2%" },
-    { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5", initialX: 0, initialY: 0, left: "5%", top: "45%", mobileLeft: "8%", mobileTop: "12%" },
-    { name: "Stripe", icon: SiStripe, color: "#008CDD", initialX: 0, initialY: 0, right: "8%", top: "40%", mobileRight: "8%", mobileTop: "12%" },
-    { name: "Auth0", icon: SiAuth0, color: "#EB5424", initialX: 0, initialY: 0, left: "15%", bottom: "20%", mobileLeft: "45%", mobileBottom: "2%" },
-    { name: "Redis", icon: SiRedis, color: "#DC382D", initialX: 0, initialY: 0, right: "20%", bottom: "25%", mobileRight: "25%", mobileBottom: "10%" },
-    { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", initialX: 0, initialY: 0, left: "25%", top: "10%", mobileLeft: "30%", mobileTop: "1%" },
-    { name: "Node.js", icon: SiNodedotjs, color: "#339933", initialX: 0, initialY: 0, right: "28%", top: "18%", mobileRight: "30%", mobileTop: "1%" },
-    { name: "Terraform", icon: SiTerraform, color: "#623CE4", initialX: 0, initialY: 0, left: "8%", bottom: "40%", mobileLeft: "2%", mobileBottom: "15%" },
-    { name: "Go", icon: SiGo, color: "#00ADD8", initialX: 0, initialY: 0, right: "5%", bottom: "45%", mobileRight: "2%", mobileBottom: "15%" },
-    { name: "Google Cloud", icon: SiGooglecloud, color: "#4285F4", initialX: 0, initialY: 0, left: "20%", top: "60%", mobileLeft: "15%", mobileBottom: "8%" },
-    { name: "Azure", icon: VscAzure, color: "#0078D4", initialX: 0, initialY: 0, right: "18%", top: "65%", mobileRight: "15%", mobileBottom: "8%" },
-    { name: "MongoDB", icon: SiMongodb, color: "#47A248", initialX: 0, initialY: 0, left: "30%", bottom: "15%", mobileLeft: "28%", mobileBottom: "2%" },
+    { name: "Python", icon: SiPython, color: "#3776AB", initialX: 0, initialY: 0, left: "10%", top: "15%", mobileLeft: "2%", mobileTop: "2%" },
+    { name: "OpenAI", icon: SiOpenai, color: "#412991", initialX: 0, initialY: 0, right: "15%", top: "12%", mobileRight: "2%", mobileTop: "2%" },
+    { name: "PyTorch", icon: SiPytorch, color: "#EE4C2C", initialX: 0, initialY: 0, left: "5%", top: "45%", mobileLeft: "8%", mobileTop: "12%" },
+    { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00", initialX: 0, initialY: 0, right: "8%", top: "40%", mobileRight: "8%", mobileTop: "12%" },
+    { name: "HuggingFace", icon: SiHuggingface, color: "#FFD21E", initialX: 0, initialY: 0, left: "15%", bottom: "20%", mobileLeft: "45%", mobileBottom: "2%" },
+    { name: "NVIDIA", icon: SiNvidia, color: "#76B900", initialX: 0, initialY: 0, right: "20%", bottom: "25%", mobileRight: "25%", mobileBottom: "10%" },
+    { name: "Pandas", icon: SiPandas, color: "#150458", initialX: 0, initialY: 0, left: "25%", top: "10%", mobileLeft: "30%", mobileTop: "1%" },
+    { name: "Scikit-learn", icon: SiScikitlearn, color: "#F7931E", initialX: 0, initialY: 0, right: "28%", top: "18%", mobileRight: "30%", mobileTop: "1%" },
+    { name: "LangChain", icon: Bot, color: "#1C3C3C", initialX: 0, initialY: 0, left: "8%", bottom: "40%", mobileLeft: "2%", mobileBottom: "15%" },
+    { name: "NumPy", icon: SiNumpy, color: "#013243", initialX: 0, initialY: 0, right: "5%", bottom: "45%", mobileRight: "2%", mobileBottom: "15%" },
+    { name: "Keras", icon: SiKeras, color: "#D00000", initialX: 0, initialY: 0, left: "20%", top: "60%", mobileLeft: "15%", mobileBottom: "8%" },
+    { name: "OpenCV", icon: SiOpencv, color: "#5C3EE8", initialX: 0, initialY: 0, right: "18%", top: "65%", mobileRight: "15%", mobileBottom: "8%" },
+    { name: "Jupyter", icon: SiJupyter, color: "#F37626", initialX: 0, initialY: 0, left: "30%", bottom: "15%", mobileLeft: "28%", mobileBottom: "2%" },
+    { name: "Anaconda", icon: SiAnaconda, color: "#44A833", initialX: 0, initialY: 0, right: "32%", bottom: "12%", mobileRight: "55%", mobileBottom: "3%" },
 ];

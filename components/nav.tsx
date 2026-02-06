@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link"; // Removed
 import Image from "next/image";
 import { ArrowRight, Menu, X, ChevronDown, ChevronUp, LayoutGrid, Database, Cpu, Globe, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -43,7 +43,7 @@ export default function Nav() {
                 <div className="flex justify-between items-center h-20 md:h-24">
 
                     {/* Left Section: Logo */}
-                    <Link href="/" className="flex items-center gap-2 z-50 relative">
+                    <a href="/" className="flex items-center gap-2 z-50 relative">
                         <Image
                             src="/assets/logo.png"
                             alt="Quantamise Logo"
@@ -54,23 +54,23 @@ export default function Nav() {
                         <span className={`font-extrabold text-xl hover:text-[#6366f1] transition-colors hidden sm:block ${isOpen ? "text-white" : "text-[#2A2A2A]"}`}>
                             Quantamise Code
                         </span>
-                    </Link>
+                    </a>
 
                     {/* Center Section: Desktop Navigation (Restored Design) */}
                     <div className="hidden xl:flex items-center space-x-8">
 
-                        <Link href="/" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
+                        <a href="/" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Home
-                        </Link>
+                        </a>
                         <div
                             className="relative h-full flex items-center gap-1 cursor-pointer"
                             onMouseEnter={() => setHoveredItem("About")}
                             onMouseLeave={() => setHoveredItem(null)}
                         >
-                            <Link href="/about" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors flex items-center gap-1">
+                            <a href="/about" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors flex items-center gap-1">
                                 About
                                 <ChevronDown className={`w-4 h-4 text-[#2A2A2A] transition-transform duration-200 ${hoveredItem === "About" ? "rotate-180 text-[#6366f1]" : ""}`} />
-                            </Link>
+                            </a>
 
                             {hoveredItem === "About" && (
                                 <div className="fixed left-0 w-full top-20 md:top-24 z-[99]">
@@ -115,21 +115,21 @@ export default function Nav() {
                             )}
                         </div>
 
-                        <Link href="/case-studies" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
+                        <a href="/case-studies" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Case Studies
-                        </Link>
-                        <Link href="/blogs" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
+                        </a>
+                        <a href="/blogs" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Blogs
-                        </Link>
-                        <Link href="/contact" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
+                        </a>
+                        <a href="/contact" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Contact
-                        </Link>
-                        {/* <Link href="/stats" className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">Stats</Link> */}
+                        </a>
+                        {/* <a href="/stats" className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">Stats</a> */}
                     </div>
 
                     {/* Right Section: CTA Button (Restored Design) */}
                     <div className="hidden xl:flex items-center gap-2">
-                        <Link
+                        <a
                             href="/contact"
                             className="group rounded-sm px-8 py-2 bg-[#4f46e5] text-white font-extrabold flex items-center gap-2 hover:bg-[#3A0F67] transition-colors duration-300"
                         >
@@ -137,7 +137,7 @@ export default function Nav() {
                             <ArrowRight
                                 className="w-5 h-5 transition-transform duration-200 ease-in-out group-hover:rotate-0 rotate-[-45deg]"
                             />
-                        </Link>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Toggle */}
@@ -237,7 +237,7 @@ export default function Nav() {
                                                                         {/* Category Items */}
                                                                         <div className="pl-12 flex flex-col gap-3">
                                                                             {category.items.map((item, i) => (
-                                                                                <Link
+                                                                                <a
                                                                                     key={i}
                                                                                     href={item.href}
                                                                                     onClick={() => setIsOpen(false)}
@@ -247,7 +247,7 @@ export default function Nav() {
                                                                                     <span className="font-medium text-gray-300 group-hover:text-white text-sm transition-colors">
                                                                                         {item.name}
                                                                                     </span>
-                                                                                </Link>
+                                                                                </a>
                                                                             ))}
                                                                         </div>
                                                                     </div>
@@ -283,7 +283,7 @@ export default function Nav() {
                                                         >
                                                             <div className="pl-4 py-4 flex flex-col gap-3">
                                                                 {["Frontend", "Backend", "Full Stack", "Mobile", "Database", "Cloud", "AI & ML"].map((tech, idx) => (
-                                                                    <Link
+                                                                    <a
                                                                         key={tech}
                                                                         href={`/technologies/${tech.toLowerCase().replace(/ /g, "-").replace(/&/g, "and")}`}
                                                                         onClick={() => setIsOpen(false)}
@@ -293,7 +293,7 @@ export default function Nav() {
                                                                             <Cpu className="w-4 h-4" />
                                                                         </div>
                                                                         <span className="font-medium text-gray-300 group-hover:text-white text-lg">{tech}</span>
-                                                                    </Link>
+                                                                    </a>
                                                                 ))}
                                                             </div>
                                                         </motion.div>
@@ -342,7 +342,7 @@ export default function Nav() {
 
                                                                 {/* Text Content */}
                                                                 <div>
-                                                                    <Link
+                                                                    <a
                                                                         href="/about"
                                                                         onClick={() => setIsOpen(false)}
                                                                         className="flex items-center gap-2 mb-2 group"
@@ -351,7 +351,7 @@ export default function Nav() {
                                                                             About Quantamise Code
                                                                         </h3>
                                                                         <ArrowRight className="w-4 h-4 text-[#eb56f6] group-hover:translate-x-1 transition-transform" />
-                                                                    </Link>
+                                                                    </a>
                                                                     <p className="text-gray-300 text-sm leading-relaxed mb-4">
                                                                         Transforming businesses with innovative technology solutions.
                                                                     </p>
@@ -384,13 +384,13 @@ export default function Nav() {
                                                                             <Users className="w-5 h-5" />
                                                                         </div>
                                                                         <div>
-                                                                            <Link
+                                                                            <a
                                                                                 href="/careers"
                                                                                 onClick={() => setIsOpen(false)}
                                                                                 className="font-bold text-white hover:text-[#eb56f6] transition-colors flex items-center gap-1"
                                                                             >
                                                                                 Career <ArrowRight className="w-4 h-4" />
-                                                                            </Link>
+                                                                            </a>
                                                                             <p className="text-xs text-gray-400">Join our dynamic team</p>
                                                                         </div>
                                                                     </div>
@@ -401,26 +401,26 @@ export default function Nav() {
                                                 </AnimatePresence>
                                             </div>
                                         ) : (
-                                            <Link
+                                            <a
                                                 href={link.href}
                                                 onClick={() => setIsOpen(false)}
                                                 className="text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors block py-2 border-b border-white/10"
                                             >
                                                 {link.name}
-                                            </Link>
+                                            </a>
                                         )}
                                     </div>
                                 ))}
 
                                 <div className="mt-8">
-                                    <Link
+                                    <a
                                         href="/contact"
                                         onClick={() => setIsOpen(false)}
                                         className="w-full rounded-xl px-6 py-4 bg-white text-[#3A0F67] font-bold flex items-center justify-center gap-2 hover:bg-[#eb56f6] hover:text-white hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300"
                                     >
                                         Let&apos;s Talk
                                         <ArrowRight className="w-5 h-5" />
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>

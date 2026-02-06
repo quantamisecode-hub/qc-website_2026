@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link"; // Removed
 import { ArrowRight, Users, Trophy, Briefcase, Star } from "lucide-react";
 
 import navAboutImg from "@/public/assets/navAboutImg.jpeg";
@@ -35,12 +35,12 @@ export default function AboutMegaMenu() {
                 <div className="md:col-span-7 flex flex-col justify-between">
                     <div>
                         <div className="flex items-center gap-2 mb-2">
-                            <Link href="/about" className="group flex items-center gap-2">
+                            <a href="/about" className="group flex items-center gap-2">
                                 <h3 className="font-extrabold text-2xl text-[#3A0F67] group-hover:text-[#6366f1] transition-colors">
                                     About Quantamise Code
                                 </h3>
                                 <ArrowRight className="w-5 h-5 text-[#6366f1] group-hover:translate-x-1 transition-transform" />
-                            </Link>
+                            </a>
                         </div>
                         <p className="text-gray-600 mb-6 leading-relaxed">
                             Transforming businesses with innovative technology solutions. We partner with growth-driven businesses to deliver high-impact custom software.
