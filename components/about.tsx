@@ -34,7 +34,7 @@ export default function About() {
                                 <div className="shrink-0 group">
                                     <div className="flex items-start leading-none">
                                         <span className="text-7xl sm:text-8xl lg:text-[120px] font-bold text-[#6267f1] group-hover:text-[#3A0F67] transition-colors duration-300">
-                                            <Counter from={0} to={5} />
+                                            <Counter from={0} to={8} />
                                         </span>
                                         <span className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#6267f1] mt-2 sm:mt-4">+</span>
                                     </div>

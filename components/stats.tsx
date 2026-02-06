@@ -59,7 +59,7 @@ export default function Stats() {
                         className="p-4 pt-12 md:pt-4"
                     >
                         <div className="text-5xl sm:text-6xl font-extrabold mb-2 text-white">
-                            <Counter value={5} suffix="+" />
+                            <Counter value={8} suffix="+" />
                         </div>
                         <div className="text-lg font-medium text-white/80 uppercase tracking-widest">
                             Years of Experience

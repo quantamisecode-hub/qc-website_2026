@@ -27,7 +27,7 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         className="text-xl sm:text-xl lg:text-lg font-medium text-[#2A2A2A] mb-8 max-w-5xl mx-auto leading-relaxed"
                     >
-                        A trusted AI and software development company in India delivering secure, scalable, and future-ready digital solutions for startups and enterprises worldwide.
+                        A trusted AI and software partner, helping startups and businesses worldwide build secure, scalable and future-ready digital products.
                     </motion.p>
 
                     {/* CTAs */}

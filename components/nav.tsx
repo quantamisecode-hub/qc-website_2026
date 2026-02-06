@@ -58,7 +58,7 @@ export default function Nav() {
                     {/* Center Section: Desktop Navigation (Restored Design) */}
                     <div className="hidden xl:flex items-center space-x-8">
 
-                        <Link href="/" className="text-[#6366f1] font-extrabold text-md hover:text-[#6366f1] transition-colors">
+                        <Link href="/" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Home
                         </Link>
                         <div
@@ -66,7 +66,7 @@ export default function Nav() {
                             onMouseEnter={() => setHoveredItem("About")}
                             onMouseLeave={() => setHoveredItem(null)}
                         >
-                            <Link href="/about" className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors flex items-center gap-1">
+                            <Link href="/about" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors flex items-center gap-1">
                                 About
                                 <ChevronDown className={`w-4 h-4 text-[#2A2A2A] transition-transform duration-200 ${hoveredItem === "About" ? "rotate-180 text-[#6366f1]" : ""}`} />
                             </Link>
@@ -83,7 +83,7 @@ export default function Nav() {
                             onMouseEnter={() => setHoveredItem("Services")}
                             onMouseLeave={() => setHoveredItem(null)}
                         >
-                            <span className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">
+                            <span className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                                 Services
                             </span>
                             <ChevronDown className={`w-4 h-4 text-[#2A2A2A] transition-transform duration-200 ${hoveredItem === "Services" ? "rotate-180 text-[#6366f1]" : ""}`} />
@@ -101,7 +101,7 @@ export default function Nav() {
                             onMouseEnter={() => setHoveredItem("Technologies")}
                             onMouseLeave={() => setHoveredItem(null)}
                         >
-                            <span className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">
+                            <span className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                                 Technologies
                             </span>
                             <ChevronDown className={`w-4 h-4 text-[#2A2A2A] transition-transform duration-200 ${hoveredItem === "Technologies" ? "rotate-180 text-[#6366f1]" : ""}`} />
@@ -114,13 +114,13 @@ export default function Nav() {
                             )}
                         </div>
 
-                        <Link href="/case-studies" className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">
+                        <Link href="/case-studies" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Case Studies
                         </Link>
-                        <Link href="/blogs" className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">
+                        <Link href="/blogs" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Blogs
                         </Link>
-                        <Link href="/contact" className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">
+                        <Link href="/contact" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Contact
                         </Link>
                         {/* <Link href="/stats" className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">Stats</Link> */}
