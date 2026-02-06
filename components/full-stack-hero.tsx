@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import * as motion from "framer-motion/client";
 import { ArrowRight, Code2, Globe } from "lucide-react";
 import Link from "next/link";
@@ -19,7 +18,7 @@ export default function FullStackHero() {
             <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-white to-transparent pointer-events-none" />
 
             {/* Floating Logos */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none hidden lg:block">
                 {technologies.map((tech, index) => (
                     <motion.div
                         key={tech.name}
@@ -60,7 +59,7 @@ export default function FullStackHero() {
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#3A0F67] mb-6 tracking-tight leading-[1.15]">
-                        Scalable <span className="text-[#6366f1]">Full Stack</span><br className="hidden sm:block" />
+                        Scalable <span className="text-[#6366f1]">Full-Stack</span><br className="hidden sm:block" />
                         Applications
                     </h1>
 

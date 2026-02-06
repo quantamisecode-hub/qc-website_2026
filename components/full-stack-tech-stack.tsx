@@ -50,7 +50,7 @@ const techCategories = [
 
 export default function FullStackTechStack() {
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-12 bg-white relative overflow-hidden">
             {/* Background Decoration */}
             <div className="absolute inset-0 bg-[url('/assets/grid-pattern.svg')] opacity-[0.03]" />
 

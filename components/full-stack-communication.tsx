@@ -45,7 +45,7 @@ const communicationFeatures = [
 
 export default function FullStackCommunication() {
     return (
-        <section className="py-24 bg-[#F8FAFC]">
+        <section className="py-12 bg-[#F8FAFC]">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
                 {/* Header */}

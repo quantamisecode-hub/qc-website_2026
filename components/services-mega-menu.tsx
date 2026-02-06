@@ -24,7 +24,7 @@ export const servicesData = [
     {
         category: "Development Services",
         items: [
-            { name: "Full Stack Development", icon: Globe, href: "/full-stack-development" },
+            { name: "Full-Stack Development", icon: Globe, href: "/full-stack-development" },
             { name: "SaaS Development", icon: Layers, href: "/saas-development" },
             { name: "E-Commerce Development", icon: ShoppingCart, href: "/ecommerce-development" },
             { name: "UX/UI Design", icon: Palette, href: "/ui-ux-design" },

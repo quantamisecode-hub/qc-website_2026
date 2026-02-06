@@ -50,7 +50,7 @@ const businessValues = [
 
 export default function FullStackBusinessApproach() {
     return (
-        <section className="py-24 bg-[#F8FAFC]">
+        <section className="py-12 bg-[#F8FAFC]">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
                 {/* Header: Brand Design Language (Centered, Purple, Bold) */}
@@ -59,7 +59,7 @@ export default function FullStackBusinessApproach() {
                         OUR APPROACH
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        Business-Focused <span className="text-[#6366f1]">Development Strategy</span>
+                        Business-Focused <span className="text-[#6366f1]">Software Development</span> Strategy
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         We don’t just write code — we build solutions aligned with your business goals.

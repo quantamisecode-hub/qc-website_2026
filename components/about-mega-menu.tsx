@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Users, Trophy, Briefcase, Star } from "lucide-react";
+
+import navAboutImg from "@/public/assets/navAboutImg.jpeg";
 
 export default function AboutMegaMenu() {
     return (
@@ -16,7 +17,7 @@ export default function AboutMegaMenu() {
                 {/* Left Side: Image */}
                 <div className="md:col-span-5 relative rounded-lg overflow-hidden h-full min-h-[300px]">
                     <Image
-                        src="/assets/aboutImg.jpeg"
+                        src={navAboutImg}
                         alt="About Quantamise Code"
                         fill
                         className="object-cover hover:scale-105 transition-transform duration-500"

@@ -136,7 +136,7 @@ export default function FullStackFAQ() {
     const rightFaqs = faqs.filter((_, index) => index % 2 !== 0);
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-12 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <span className="text-[#6366f1] font-bold tracking-widest uppercase text-sm mb-4 block">
