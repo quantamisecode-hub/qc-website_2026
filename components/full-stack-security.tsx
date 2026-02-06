@@ -1,30 +1,45 @@
-import { CheckCircle2 } from "lucide-react";
+import { Lock, ShieldCheck, Zap, Server, Cloud } from "lucide-react";
 
 const securityFeatures = [
     {
         id: 1,
         title: "Secure Authentication",
         description: "Robust authentication and authorization systems ensuring only the right people have access.",
+        icon: Lock,
+        color: "text-indigo-600",
+        bg: "bg-indigo-100"
     },
     {
         id: 2,
         title: "Data Encryption",
         description: "End-to-end encryption and strict compliance best practices to protect sensitive user data.",
+        icon: ShieldCheck,
+        color: "text-emerald-600",
+        bg: "bg-emerald-100"
     },
     {
         id: 3,
         title: "Performance Optimization",
         description: "Code splitting, image optimization, and efficient algorithms for lightning-fast load times.",
+        icon: Zap,
+        color: "text-amber-600",
+        bg: "bg-amber-100"
     },
     {
         id: 4,
         title: "Load Balancing & Caching",
         description: "Advanced caching strategies and load balancing to handle high traffic without downtime.",
+        icon: Server,
+        color: "text-blue-600",
+        bg: "bg-blue-100"
     },
     {
         id: 5,
         title: "Scalable Cloud Infrastructure",
         description: "Auto-scaling architecture that grows seamlessly with your user base and business needs.",
+        icon: Cloud,
+        color: "text-cyan-600",
+        bg: "bg-cyan-100"
     }
 ];
 
@@ -46,12 +61,14 @@ export default function FullStackSecurity() {
                     </p>
                 </div>
 
-                {/* Feature List (Checkmark Style) */}
+                {/* Feature List (Icon Style) */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
                     {securityFeatures.map((feature) => (
-                        <div key={feature.id} className="flex items-start gap-4">
-                            {/* Checkmark Icon */}
-                            <CheckCircle2 className="w-7 h-7 text-[#6366f1] shrink-0 mt-1" strokeWidth={2} />
+                        <div key={feature.id} className="flex items-start gap-5">
+                            {/* Colorful Icon */}
+                            <div className={`w-12 h-12 rounded-xl shrink-0 flex items-center justify-center ${feature.bg} ${feature.color}`}>
+                                <feature.icon size={24} strokeWidth={2} />
+                            </div>
 
                             <div>
                                 <h3 className="text-xl font-bold text-[#3A0F67] mb-2">

@@ -46,7 +46,7 @@ export default function CTAPopup() {
                         {/* Close Button */}
                         <button
                             onClick={closePopup}
-                            className="absolute top-4 right-4 p-2 rounded-full bg-slate-50 text-slate-400 hover:bg-slate-100 hover:text-red-500 transition-colors z-10"
+                            className="absolute top-4 cursor-pointer right-4 p-2 rounded-full bg-slate-50 text-slate-400 hover:bg-slate-100 hover:text-red-500 transition-colors z-10"
                         >
                             <X className="w-5 h-5" />
                         </button>

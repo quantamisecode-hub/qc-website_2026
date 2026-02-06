@@ -78,11 +78,6 @@ export default function FullStackEngagement() {
                                 <p className="text-slate-600 text-base leading-relaxed mb-6">
                                     {model.description}
                                 </p>
-
-                                {/* Link */}
-                                <div className="flex items-center gap-2 font-semibold text-slate-900 group-hover:text-[#6366f1] transition-colors cursor-pointer w-fit">
-                                    Learn more <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-                                </div>
                             </div>
                         ))}
                     </div>

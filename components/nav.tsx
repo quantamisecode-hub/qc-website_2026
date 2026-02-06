@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ServicesMegaMenu, { servicesData } from "./services-mega-menu";
 import AboutMegaMenu from "./about-mega-menu";
 import TechnologiesMegaMenu from "./technologies-mega-menu";
+import aboutImg from "@/public/assets/navAboutImg.jpeg";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -327,7 +328,7 @@ export default function Nav() {
                                                                 {/* Image Section */}
                                                                 <div className="relative rounded-lg overflow-hidden h-48 w-full">
                                                                     <Image
-                                                                        src="/assets/aboutImg.jpeg"
+                                                                        src={aboutImg}
                                                                         alt="About Quantamise Code"
                                                                         fill
                                                                         className="object-cover"
