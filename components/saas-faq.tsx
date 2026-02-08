@@ -7,36 +7,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        question: "What is the difference between single-tenant and multi-tenant architecture?",
-        answer: "Single-tenant means each customer gets their own database and server instance (more secure, harder to maintain). Multi-tenant means all customers share the same infrastructure but their data is logically separated (more scalable, cost-effective). We help you choose the right approach."
+        question: "Do you build custom SaaS platforms from scratch?",
+        answer: "Yes, we develop fully customized SaaS products tailored to your business model, users, and growth plans."
     },
     {
-        question: "How long does it take to build an MVP for a SaaS product?",
-        answer: "A typical SaaS MVP takes 8-12 weeks. We focus on the core value proposition, user authentication, and the primary payment flow to get you to market quickly for validation."
+        question: "Can you help startups launch MVPs quickly?",
+        answer: "Yes, we offer rapid MVP programs designed to help founders validate ideas and secure early traction."
     },
     {
-        question: "Do you help with Stripe or payment integration?",
-        answer: "Yes, we have deep expertise in integrating Stripe Connect, subscriptions, metered billing, and invoicing. We ensure your revenue logic is secure and compliant with global tax regulations."
+        question: "Do you support billing and subscription systems?",
+        answer: "Absolutely. We integrate secure billing, payment gateways, and usage-based pricing systems."
     },
     {
-        question: "How do you ensure data security in a multi-tenant environment?",
-        answer: "We use Row-Level Security (RLS) policies in databases like PostgreSQL, strict API authorization checks, and logical isolation to ensure one tenant can never access another's data."
+        question: "Can you migrate legacy software to SaaS?",
+        answer: "Yes, we modernize on-premises or legacy systems into cloud-based SaaS platforms."
     },
     {
-        question: "Can you help migrate my legacy app to a SaaS model?",
-        answer: "Absolutely. We can re-platform your legacy software into a modern cloud-native SaaS, enabling you to sell subscriptions and scale to thousands of users without manual installations."
+        question: "Do you provide maintenance after launch?",
+        answer: "Yes, we offer continuous support, upgrades, and performance optimization services."
     },
     {
-        question: "What tech stack do you recommend for SaaS?",
-        answer: "We typically recommend Next.js (Frontend) + Node.js/Go (Backend) + PostgreSQL (Database) + AWS/Vercel (Hosting). This stack is battle-tested, scalable, and has a huge developer ecosystem."
-    },
-    {
-        question: "Do you offer ongoing maintenance after launch?",
-        answer: "Yes. SaaS products need continuous improvement. We offer retainer packages for feature updates, bug fixes, performance monitoring, and infrastructure cost optimization."
-    },
-    {
-        question: "Who owns the code?",
-        answer: "You do. Upon project completion and final payment, you own 100% of the intellectual property, source code, and design assets."
+        question: "How do you ensure my SaaS platform can scale as I grow?",
+        answer: "We design with scalability in mind from day one, using cloud-native architectures, microservices, and auto-scaling infrastructure to handle increased load seamlessly as your user base expands."
     }
 ];
 

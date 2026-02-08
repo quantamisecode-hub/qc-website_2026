@@ -1,0 +1,92 @@
+import React from "react";
+import { BadgeDollarSign, Users, Store, Rocket } from "lucide-react";
+
+const engagementModels = [
+    {
+        id: "launch",
+        title: "Store Launch Packages",
+        description: "Everything you need to get your online store up and running quickly and professionally.",
+        icon: Store,
+        color: "text-blue-600",
+        borderColor: "group-hover:border-blue-200"
+    },
+    {
+        id: "marketplace",
+        title: "Marketplace Development",
+        description: "Build robust multi-vendor marketplaces with advanced features and distinct vendor portals.",
+        icon: Users,
+        color: "text-indigo-600",
+        borderColor: "group-hover:border-indigo-200"
+    },
+    {
+        id: "teams",
+        title: "Dedicated Commerce Teams",
+        description: "Hire a dedicated team of experts to work exclusively on your e-commerce projects.",
+        icon: BadgeDollarSign,
+        color: "text-amber-600",
+        borderColor: "group-hover:border-amber-200"
+    },
+    {
+        id: "growth",
+        title: "Growth & Optimization",
+        description: "Ongoing strategies to improve conversion rates, SEO, and overall store performance.",
+        icon: Rocket,
+        color: "text-emerald-600",
+        borderColor: "group-hover:border-emerald-200"
+    }
+];
+
+export default function EcommerceEngagement() {
+    return (
+        <section className="py-12 bg-gray-50 border-t border-slate-50">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                {/* Header */}
+                <div className="text-center mb-16">
+                    <span className="text-gray-900 font-bold tracking-widest uppercase text-sm mb-4 block">
+                        PARTNERSHIP MODELS
+                    </span>
+                    <h2 className="text-3xl lg:text-4xl font-extrabold text-[#3A0F67] mb-6">
+                        Flexible Engagement <span className="text-[#6366f1]">Models</span>
+                    </h2>
+                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                        We offer engagement models tailored to retail and D2C companies.
+                    </p>
+                </div>
+
+                {/* Unified Grid Layout */}
+                <div className="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                        {engagementModels.map((model, index) => (
+                            <div
+                                key={model.id}
+                                className={`
+                                    group relative p-10 md:p-12 transition-all duration-300 hover:bg-slate-50
+                                    ${index < 2 ? 'md:border-b border-slate-100' : ''}
+                                `}
+                            >
+                                {/* Icon */}
+                                <div className="mb-6 inline-block">
+                                    <model.icon size={40} className={`${model.color} mb-2 transition-transform duration-300 group-hover:scale-110`} strokeWidth={1.5} />
+                                </div>
+
+                                {/* Content */}
+                                <h3 className="text-2xl font-bold text-[#3A0F67] mb-4 group-hover:text-[#6366f1] transition-colors">
+                                    {model.title}
+                                </h3>
+                                <p className="text-slate-600 text-base leading-relaxed mb-6">
+                                    {model.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                {/* Footer Text */}
+                <div className="text-center mt-12">
+                    <p className="text-lg text-gray-500 font-medium">
+                        This ensures maximum ROI and cost transparency.
+                    </p>
+                </div>
+            </div>
+        </section>
+    );
+}

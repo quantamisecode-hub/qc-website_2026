@@ -22,8 +22,8 @@ export const servicesData = [
         items: [
             { name: "Full-Stack Development", icon: Globe, href: "/services/full-stack-development" },
             { name: "SaaS Development", icon: Layers, href: "/services/saas-development" },
-            { name: "E-Commerce Development", icon: ShoppingCart, href: "/ecommerce-development" },
-            { name: "UX/UI Design", icon: Palette, href: "/ui-ux-design" },
+            { name: "E-Commerce Development", icon: ShoppingCart, href: "/services/ecommerce-development" },
+            { name: "UX/UI Design", icon: Palette, href: "/services/UX-UI-design" },
             { name: "IIoT Development", icon: Cpu, href: "/iiot-development" },
         ],
     },

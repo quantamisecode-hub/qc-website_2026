@@ -1,37 +1,38 @@
-import { Rocket, Cloud, BadgeDollarSign, TrendingUp, Users } from "lucide-react";
+import { icons } from "lucide-react";
+import { Sparkles, Search, Tag, TrendingUp, MessageSquare, Megaphone } from "lucide-react";
 
 const businessValues = [
     {
         id: 1,
-        title: "SaaS Product Strategy & MVP Acceleration",
-        description: "We help you validate ideas quickly and reduce time-to-market. Includes market analysis, MVP development, and concept validation to ensure your product is built on real user demand.",
-        icon: Rocket,
+        title: "Personalized Recommendations",
+        description: "AI-driven product suggestions tailored to individual user behavior and preferences.",
+        icon: Sparkles,
         color: "text-violet-600",
         bg: "bg-violet-50",
         borderColor: "border-violet-100"
     },
     {
         id: 2,
-        title: "Cloud-First, Multi-Tenant SaaS Architecture",
-        description: "We engineer SaaS platforms for scale with secure multi-tenant systems, microservices, and cost-optimized cloud infrastructure to keep your platform stable as you grow.",
-        icon: Cloud,
-        color: "text-sky-600",
-        bg: "bg-sky-50",
-        borderColor: "border-sky-100"
+        title: "Smart Search & Filtering",
+        description: "Advanced search capabilities that understand intent and deliver relevant results instantly.",
+        icon: Search,
+        color: "text-rose-600",
+        bg: "bg-rose-50",
+        borderColor: "border-rose-100"
     },
     {
         id: 3,
-        title: "Revenue Enablement & Monetization Engineering",
-        description: "We design systems for sustainable growth, implementing subscription billing, usage-based pricing, and payment integrations to convert users into long-term customers.",
-        icon: BadgeDollarSign,
-        color: "text-emerald-600",
-        bg: "bg-emerald-50",
-        borderColor: "border-emerald-100"
+        title: "Dynamic Pricing Optimization",
+        description: "AI-powered pricing strategies to maximize margins while remaining competitive.",
+        icon: Tag,
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+        borderColor: "border-pink-100"
     },
     {
         id: 4,
-        title: "User Retention & Product Optimization",
-        description: "We design for long-term engagement using behavior tracking, performance monitoring, and continuous UX improvements to reduce churn and maximize lifetime value.",
+        title: "Demand Forecasting",
+        description: "Predictive analytics to optimize inventory levels and prevent stockouts or overstocking.",
         icon: TrendingUp,
         color: "text-orange-600",
         bg: "bg-orange-50",
@@ -39,16 +40,25 @@ const businessValues = [
     },
     {
         id: 5,
-        title: "Long-Term Product Partnership Model",
-        description: "We support you beyond launch with dedicated engineers, agile planning, and scaling guidance. We grow with your product.",
-        icon: Users,
+        title: "Automated Chatbots",
+        description: "Intelligent support agents available 24/7 to assist customers and resolve queries.",
+        icon: MessageSquare,
         color: "text-indigo-600",
         bg: "bg-indigo-50",
         borderColor: "border-indigo-100"
+    },
+    {
+        id: 6,
+        title: "Marketing Automation",
+        description: "Behavior-based campaigns that engage customers at the right time with the right message.",
+        icon: Megaphone,
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+        borderColor: "border-cyan-100"
     }
 ];
 
-export default function SaasBusinessApproach() {
+export default function EcommerceBusinessApproach() {
     return (
         <section className="py-12 bg-[#F8FAFC]">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -56,13 +66,13 @@ export default function SaasBusinessApproach() {
                 {/* Header */}
                 <div className="text-center mb-20">
                     <span className="text-gray-900 font-bold tracking-widest uppercase text-sm mb-4 block">
-                        OUR STRATEGY
+                        INTELLIGENT COMMERCE
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        Growth-Oriented <span className="text-[#6366f1]">SaaS Architecture</span>
+                        Intelligent Commerce <span className="text-[#6366f1]">Solutions</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        We build platforms that not only function flawlessly but are engineered for business growth.
+                        We leverage artificial intelligence and automation to create smarter, more personalized shopping journeys.
                     </p>
                 </div>
 
@@ -87,6 +97,12 @@ export default function SaasBusinessApproach() {
                         </div>
                     ))}
 
+                </div>
+                {/* Footer Text */}
+                <div className="text-center mt-12">
+                    <p className="text-lg text-gray-500 font-medium">
+                        We help you convert visitors into loyal customers.
+                    </p>
                 </div>
             </div>
         </section>

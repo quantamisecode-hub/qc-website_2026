@@ -1,7 +1,7 @@
 import Image from "next/image";
-import whyChooseUsImg from "../public/assets/whyChooseUsImg.jpeg";
+import fullStackDevelopmentChooseImg from "../public/assets/fullStackDevelopmentChooseImg.jpeg"
 
-export default function SaasWhyChooseUs() {
+export default function UiUxWhyChooseUs() {
     return (
         <section className="bg-white py-12 lg:py-16 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,23 +14,23 @@ export default function SaasWhyChooseUs() {
                         </span>
 
                         <h2 className="text-3xl sm:text-4xl  lg:text-5xl font-extrabold text-[#3A0F67] mb-6 leading-tight">
-                            Why Choose Quantamise Code for <span className="text-[#6366f1]">Scalable SaaS Product Development?</span>
+                            Why Choose <span className="text-[#6366f1]">Quantamise Code</span> for AI-Ready UI/UX & Product Experience Design?
                         </h2>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                            At Quantamise Code, we design and develop high-performance SaaS products that help founders and enterprises launch faster, scale confidently, and monetize effectively. Our team blends product strategy, engineering excellence, and growth-focused architecture to build platforms that succeed in competitive markets.
+                            At Quantamise Code, we design intelligent, data-informed, and conversion-focused user experiences for AI-powered SaaS platforms and digital products. Our UI/UX solutions are crafted to simplify complex systems, enhance usability, and drive long-term user adoption.
                         </p>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-12">
-                            From early-stage MVPs to enterprise-grade SaaS ecosystems, we create software products optimized for reliability, usability, and long-term profitability.
+                            We help startups and enterprises transform advanced technology into intuitive, engaging, and revenue-generating digital experiences.
                         </p>
                     </div>
 
                     {/* Right Side: Image */}
                     <div className="w-full lg:w-1/2 relative min-h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                         <Image
-                            src={whyChooseUsImg}
-                            alt="Why Choose Quantamise Code - SaaS Development Team"
+                            src={fullStackDevelopmentChooseImg}
+                            alt="Why Choose Quantamise Code - Office"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-700"
                         />

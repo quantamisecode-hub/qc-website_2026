@@ -1,49 +1,49 @@
-import { Lock, ShieldCheck, Key, FileText, RefreshCw } from "lucide-react";
+import { Lock, ShieldCheck, CreditCard, Key, FileCheck } from "lucide-react";
 
 const securityFeatures = [
     {
         id: 1,
-        title: "Role-Based Access Control (RBAC)",
-        description: "Granular permission systems allowing your customers to manage their own team's access securely.",
-        icon: Lock,
-        color: "text-blue-600",
-        bg: "bg-blue-100"
+        title: "PCI-DSS Payment Systems",
+        description: "PCI-DSS compliant payment systems ensuring secure handling of transaction data.",
+        icon: CreditCard,
+        color: "text-indigo-600",
+        bg: "bg-indigo-100"
     },
     {
         id: 2,
-        title: "SSO & Identity Management",
-        description: "Seamless and secure login experiences using enterprise-grade identity providers (Auth0/Okta).",
-        icon: Key,
+        title: "Secure Checkout Flows",
+        description: "Optimized and encrypted checkout processes to protect sensitive customer information.",
+        icon: Lock,
         color: "text-emerald-600",
         bg: "bg-emerald-100"
     },
     {
         id: 3,
-        title: "Data Encryption",
-        description: "End-to-end encryption for data at rest and in transit to ensure complete privacy and compliance.",
+        title: "Fraud Detection",
+        description: "Advanced fraud detection algorithms to identify and prevent suspicious activities.",
         icon: ShieldCheck,
         color: "text-amber-600",
         bg: "bg-amber-100"
     },
     {
         id: 4,
-        title: "Compliance-Ready Infrastructure",
-        description: "Built-in adherence to GDPR, SOC2, and HIPAA standards to simplify your audit processes.",
-        icon: FileText,
-        color: "text-indigo-600",
-        bg: "bg-indigo-100"
+        title: "Data Encryption & APIs",
+        description: "End-to-end data encryption and secure API integrations for data safety.",
+        icon: Key,
+        color: "text-red-600",
+        bg: "bg-red-100"
     },
     {
         id: 5,
-        title: "Disaster Recovery Systems",
-        description: "Automated backups and failover mechanisms to guarantee business continuity and 99.9% uptime.",
-        icon: RefreshCw,
+        title: "GDPR & Privacy Compliance",
+        description: "Full compliance with GDPR and privacy regulations to build customer trust.",
+        icon: FileCheck,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
     }
 ];
 
-export default function SaasSecurity() {
+export default function EcommerceSecurity() {
     return (
         <section className="py-12 bg-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -51,17 +51,17 @@ export default function SaasSecurity() {
                 {/* Header */}
                 <div className="text-center mb-20">
                     <span className="text-gray-900 font-bold tracking-widest uppercase text-sm mb-4 block">
-                        ROBUST FOUNDATION
+                        SAFE & SECURE
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        Enterprise-Grade <span className="text-[#6366f1]">Security</span>
+                        Secure Payments, Compliance & <span className="text-[#6366f1]">Fraud Protection</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Security isn't an afterthought; it's a core feature of your SaaS.
+                        Security is critical in digital commerce.
                     </p>
                 </div>
 
-                {/* Feature List (Icon Style) */}
+                {/* Feature List */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
                     {securityFeatures.map((feature) => (
                         <div key={feature.id} className="flex items-start gap-5">
@@ -80,6 +80,12 @@ export default function SaasSecurity() {
                             </div>
                         </div>
                     ))}
+                </div>
+                {/* Footer Text */}
+                <div className="text-center mt-12">
+                    <p className="text-lg text-gray-500 font-medium">
+                        This builds trust and protects your business from financial risks.
+                    </p>
                 </div>
             </div>
         </section>

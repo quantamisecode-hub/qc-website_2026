@@ -1,44 +1,44 @@
 import React from "react";
 import {
-    SiReact, SiNextdotjs, SiVuedotjs,
-    SiNodedotjs, SiGo, SiPython,
+    SiReact, SiNextdotjs, SiTailwindcss,
+    SiNodedotjs, SiPython,
     SiAmazon, SiGooglecloud,
-    SiDocker, SiKubernetes, SiTerraform,
-    SiStripe, SiAuth0, SiSupabase
+    SiPostgresql, SiMongodb, SiRedis,
+    SiDocker // Keeping Docker as part of DevOps/Cloud implies containerization
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
+import { FaJava } from "react-icons/fa";
 import { ArrowRight, Cloud, Database, Globe } from "lucide-react";
 
 const techCategories = [
     {
-        title: "Frontend & UI",
-        description: "Fast, responsive, and engaging user interfaces.",
+        title: "Frontend & Product UI",
+        description: "Conversion-optimized dashboards and responsive web applications.",
         techs: [
-            { name: "React", icon: SiReact, color: "#61DAFB" },
+            { name: "React.js", icon: SiReact, color: "#61DAFB" },
             { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-            { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
+            { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
         ]
     },
     {
-        title: "Backend & Global Infrastructure",
-        description: "Scalable server-side logic and cloud infrastructure.",
+        title: "Backend & Platform Core",
+        description: "Scalable REST & GraphQL services and workflow automation.",
         techs: [
             { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-            { name: "Go", icon: SiGo, color: "#00ADD8" },
-            { name: "AWS", icon: SiAmazon, color: "#FF9900" },
-            { name: "Azure", icon: VscAzure, color: "#0078D4" },
-            { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
-            { name: "Terraform", icon: SiTerraform, color: "#623CE4" },
+            { name: "Python", icon: SiPython, color: "#3776AB" },
+            { name: "Java", icon: FaJava, color: "#007396" },
         ]
     },
     {
-        title: "SaaS Essentials",
-        description: "Payments, Auth, and Database solutions.",
+        title: "Cloud, DevOps & Data",
+        description: "Secure infrastructure, CI/CD pipelines, and high-performance databases.",
         techs: [
-            { name: "Stripe", icon: SiStripe, color: "#008CDD" },
-            { name: "Auth0", icon: SiAuth0, color: "#EB5424" },
-            { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
-            { name: "Docker", icon: SiDocker, color: "#2496ED" },
+            { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+            { name: "Azure", icon: VscAzure, color: "#0078D4" },
+            { name: "GCP", icon: SiGooglecloud, color: "#4285F4" },
+            { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+            { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+            { name: "Redis", icon: SiRedis, color: "#DC382D" },
         ]
     }
 ];

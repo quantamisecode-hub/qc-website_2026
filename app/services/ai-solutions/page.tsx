@@ -14,7 +14,7 @@ import AiEngagement from "@/components/ai-engagement";
 import AiSecurity from "@/components/ai-security";
 import AiCommunication from "@/components/ai-communication";
 import AiFAQ from "@/components/ai-faq";
-import AiCTA from "@/components/ai-cta";
+import CTA from "@/components/cta";
 
 export const metadata: Metadata = {
     title: "AI Solutions & Machine Learning Development | Quantamise Code",
@@ -35,16 +35,16 @@ export default function AiSolutionsPage() {
         <main className="min-h-screen bg-white">
             <Nav />
             <AiHero />
-            <AiTechStack />
             <AiWhyChooseUs />
-            <AiIndustries />
-            <AiRoadmap />
             <AiBusinessApproach />
-            <AiEngagement />
+            <AiTechStack />
+            <AiRoadmap />
             <AiSecurity />
             <AiCommunication />
+            <AiIndustries />
+            <AiEngagement />
             <AiFAQ />
-            <AiCTA />
+            <CTA />
             <Footer />
         </main>
     );

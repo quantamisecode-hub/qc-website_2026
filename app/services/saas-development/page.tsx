@@ -34,14 +34,14 @@ export default function SaasDevelopmentPage() {
         <main className="min-h-screen bg-white">
             <Nav />
             <SaasHero />
-            <SaasTechStack />
             <SaasWhyChooseUs />
-            <SaasIndustries />
-            <SaasRoadmap />
             <SaasBusinessApproach />
-            <SaasEngagement />
+            <SaasTechStack />
+            <SaasRoadmap />
             <SaasSecurity />
             <SaasCommunication />
+            <SaasIndustries />
+            <SaasEngagement />
             <SaasFAQ />
             <CTA />
 

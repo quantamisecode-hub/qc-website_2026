@@ -1,49 +1,49 @@
-import { Lock, ShieldCheck, Key, FileText, RefreshCw } from "lucide-react";
+import { Lock, ShieldCheck, Zap, Server, Cloud } from "lucide-react";
 
 const securityFeatures = [
     {
         id: 1,
-        title: "Role-Based Access Control (RBAC)",
-        description: "Granular permission systems allowing your customers to manage their own team's access securely.",
+        title: "WCAG Accessibility Compliance",
+        description: "Designing inclusive interfaces that meet WCAG 2.1 AA standards, ensuring usability for all abilities.",
         icon: Lock,
-        color: "text-blue-600",
-        bg: "bg-blue-100"
+        color: "text-indigo-600",
+        bg: "bg-indigo-100"
     },
     {
         id: 2,
-        title: "SSO & Identity Management",
-        description: "Seamless and secure login experiences using enterprise-grade identity providers (Auth0/Okta).",
-        icon: Key,
+        title: "Privacy-First Interface Patterns",
+        description: "UI patterns that prioritize user privacy, data minimization, and transparent data usage disclosures.",
+        icon: ShieldCheck,
         color: "text-emerald-600",
         bg: "bg-emerald-100"
     },
     {
         id: 3,
-        title: "Data Encryption",
-        description: "End-to-end encryption for data at rest and in transit to ensure complete privacy and compliance.",
-        icon: ShieldCheck,
+        title: "Secure Onboarding Flows",
+        description: "Frictionless yet secure user verification and onboarding processes that build trust from day one.",
+        icon: Zap,
         color: "text-amber-600",
         bg: "bg-amber-100"
     },
     {
         id: 4,
-        title: "Compliance-Ready Infrastructure",
-        description: "Built-in adherence to GDPR, SOC2, and HIPAA standards to simplify your audit processes.",
-        icon: FileText,
-        color: "text-indigo-600",
-        bg: "bg-indigo-100"
+        title: "Consent Management UI",
+        description: "Clear, granular, and user-friendly consent management interfaces for GDPR and CCPA compliance.",
+        icon: Server,
+        color: "text-blue-600",
+        bg: "bg-blue-100"
     },
     {
         id: 5,
-        title: "Disaster Recovery Systems",
-        description: "Automated backups and failover mechanisms to guarantee business continuity and 99.9% uptime.",
-        icon: RefreshCw,
+        title: "Error Prevention Mechanisms",
+        description: "Proactive UI design that prevents user errors before they happen, reducing frustration and support costs.",
+        icon: Cloud,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
     }
 ];
 
-export default function SaasSecurity() {
+export default function UiUxSecurity() {
     return (
         <section className="py-12 bg-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -54,10 +54,10 @@ export default function SaasSecurity() {
                         ROBUST FOUNDATION
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        Enterprise-Grade <span className="text-[#6366f1]">Security</span>
+                        Accessibility, Security <span className="text-[#6366f1]">& Compliance</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Security isn't an afterthought; it's a core feature of your SaaS.
+                        We design with inclusivity and governance in mind.
                     </p>
                 </div>
 

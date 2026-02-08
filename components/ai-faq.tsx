@@ -7,36 +7,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        question: "How do you handle data privacy and security in AI projects?",
-        answer: "We prioritize data security by implementing anonymization, encryption, and strict access controls. We ensure compliance with GDPR, HIPAA, and other relevant regulations, often processing sensitive data locally or in secure private clouds."
+        question: "What industries do you serve with AI solutions?",
+        answer: "We deliver AI systems for finance, healthcare, retail, logistics, manufacturing, and SaaS companies."
     },
     {
-        question: "Can you integrate AI into our existing software?",
-        answer: "Yes, we specialize in seamless AI integration. Whether it's adding a chatbot to your website, embedding predictive analytics into your dashboard, or automating workflows via APIs, we enhance your existing systems without disrupting operations."
+        question: "Do you offer custom AI model development?",
+        answer: "Yes, we design, train, and deploy custom machine learning and deep learning models tailored to specific business needs."
     },
     {
-        question: "Do I need a massive dataset to start with AI?",
-        answer: "Not necessarily. While more data is better, we can start with pre-trained models (LLMs) and fine-tune them on your smaller, specific datasets (Transfer Learning). We also help with data augmentation and synthetic data generation."
+        question: "How do you ensure data security in AI projects?",
+        answer: "We implement encryption, access controls, compliance frameworks, and secure cloud environments across all AI systems."
     },
     {
-        question: "What is the timeline for an AI Proof of Concept (PoC)?",
-        answer: "A typical AI PoC takes 4-6 weeks. We focus on defining a clear problem statement, gathering initial data, and building a prototype to validate feasibility and business value before full-scale development."
+        question: "Can you integrate AI into existing software?",
+        answer: "Absolutely. We specialize in integrating AI capabilities into legacy systems, SaaS platforms, and enterprise applications."
     },
     {
-        question: "What AI technologies do you use?",
-        answer: "We use state-of-the-art tools including Python, PyTorch, TensorFlow, OpenAI's GPT models, LangChain for orchestration, and vector databases like Pinecone or Milvus for semantic search."
+        question: "Do you provide ongoing AI maintenance?",
+        answer: "Yes, we offer continuous monitoring, model retraining, and performance optimization services."
     },
     {
-        question: "Do you offer post-deployment monitoring for AI models?",
-        answer: "Yes. AI models can drift over time. We set up MLOps pipelines to continuously monitor model performance, detect data drift, and retrain models to ensure they remain accurate and effective."
-    },
-    {
-        question: "How much does a custom AI solution cost?",
-        answer: "Costs vary based on complexity, data availability, and required computational resources. We typically start with a discovery phase to provide a detailed estimate and often recommend starting with a high-impact MVP."
-    },
-    {
-        question: "Can you build generative AI tools for internal use?",
-        answer: "Absolutely. We build secure, internal knowledge bases and RAG (Retrieval-Augmented Generation) systems that allow your employees to query company documents and data safely without exposing information to public models."
+        question: "How long does it take to implement an AI solution?",
+        answer: "Timelines depend on complexity, but typically a Proof of Concept (PoC) takes 4-6 weeks, while a full-scale production deployment can range from 3 to 6 months. We use agile sprints to ensure consistent progress and adaptation."
     }
 ];
 
