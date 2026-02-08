@@ -7,36 +7,44 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        question: "Why choose full-stack development over separate frontend and backend?",
-        answer: "Full-stack development ensures tighter integration, faster communication, and a unified vision for your project. It reduces overhead, streamlines deployment, and often results in faster time-to-market compared to managing separate teams."
+        question: "Do you design UI/UX for AI and SaaS products?",
+        answer: "Yes, we specialize in designing user experiences for AI-powered platforms, analytics tools, and SaaS products."
     },
     {
-        question: "How do you ensure scalability in full-stack applications?",
-        answer: "We design with scalability in mind from day one, using microservices or modular monolith architectures, efficient database indexing, caching strategies (Redis), and cloud-native solutions like modular serverless functions."
+        question: "Can you redesign existing SaaS products?",
+        answer: "Yes, we offer UX audits, redesign services, and experience optimization for existing platforms."
     },
     {
-        question: "What is your preferred tech stack for a new startup?",
-        answer: "For most startups, we recommend the MERN (MongoDB, Express, React, Node) or T3 (Next.js, TypeScript, Tailwind, Prisma) stack. These provide rapid development, huge community support, and easy scalability."
+        question: "How do you ensure usability for complex systems?",
+        answer: "We use research-driven design, prototyping, and usability testing to simplify complex workflows."
     },
     {
-        question: "Do you handle DevOps and deployment?",
-        answer: "Yes, we handle the entire CI/CD pipeline. We configure automated testing, Docker containerization, and seamless deployment to cloud providers like AWS, Vercel, or Azure."
+        question: "Do you provide developer-ready designs?",
+        answer: "Yes, we deliver complete design systems, Figma files, and implementation-ready specifications."
     },
     {
-        question: "Can you migrate my legacy application to a modern full-stack architecture?",
-        answer: "Absolutely. We specialize in legacy modernization, breaking down monolithic applications into modern, manageable microservices or migrating them to newer frameworks like Next.js without data loss."
+        question: "Do you support mobile and web platforms?",
+        answer: "Yes, we design responsive and cross-platform experiences for web, tablets, and mobile users."
     },
     {
-        question: "How do you handle data security and API protection?",
-        answer: "Security is paramount. We implement JWT/OAuth authentication, role-based access control (RBAC), data encryption at rest and in transit, and strictly follow OWASP security guidelines."
+        question: "What is your typical design process?",
+        answer: "Our process involves discovery, user research, wireframing, high-fidelity prototyping, and iterative testing to ensure the final design meets user needs and business goals."
     },
     {
-        question: "Do you provide post-launch maintenance?",
-        answer: "Yes, we offer tailored maintenance packages including 24/7 monitoring, security patches, performance optimization, and feature updates to keep your application running smoothly."
+        question: "How long does a UI/UX project usually take?",
+        answer: "Timelines vary based on scope, but a typical project can range from 4-8 weeks for an MVP to several months for a complex enterprise platform."
     },
     {
-        question: "What is the typical timeline for an MVP?",
-        answer: "A typical MVP timeline ranges from 4 to 8 weeks, depending on complexity. We focus on core features first to get your product to market quickly for user feedback."
+        question: "Do you work with startups or enterprise clients?",
+        answer: "We work with both! We help startups build MVPs and robust products from scratch, and we assist enterprises in scaling and modernizing their digital ecosystems."
+    },
+    {
+        question: "What tools do you use for design and collaboration?",
+        answer: "We primarily use Figma for design and prototyping. For communication and handoff, we use tools like Slack, Jira, and Zeplin to ensure seamless collaboration with developers."
+    },
+    {
+        question: "Do you offer branding and logo design services?",
+        answer: "Yes, we provide comprehensive branding services, including logo design, visual identity systems, and brand guidelines to ensure a cohesive look and feel across all touchpoints."
     }
 ];
 

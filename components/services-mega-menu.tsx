@@ -1,36 +1,22 @@
-import {
-    Smartphone,
-    Bot,
-    Cloud,
-    Layers,
-    Settings,
-    Globe,
-    ShoppingCart,
-    Zap,
-    RefreshCw,
-    Users,
-    Database,
-    Activity,
-    Cpu,
-    Palette,
-    Brain,
-} from "lucide-react";
+import Link from "next/link";
+import { ChevronDown, Globe, Layers, ShoppingCart, Palette, Smartphone, Cpu, BrainCircuit, ShieldCheck, Gamepad2, Blocks, LineChart, Megaphone, Terminal, FileCode, Server, Zap, Users, Brain, Database, Cloud, Activity } from "lucide-react";
 
 export const servicesData = [
     {
         category: "Development Services",
         items: [
             { name: "Full-Stack Development", icon: Globe, href: "/services/full-stack-development" },
+            { name: "Mobile App Development", icon: Smartphone, href: "/services/mobile-app-development" },
             { name: "SaaS Development", icon: Layers, href: "/services/saas-development" },
             { name: "E-Commerce Development", icon: ShoppingCart, href: "/services/ecommerce-development" },
             { name: "UX/UI Design", icon: Palette, href: "/services/UX-UI-design" },
-            { name: "IIoT Development", icon: Cpu, href: "/iiot-development" },
+            { name: "IIoT Development", icon: Cpu, href: "/services/IIOT" },
         ],
     },
     {
         category: "Specialized Development",
         items: [
-            { name: "Mobile Application Development", icon: Smartphone, href: "/mobile-app-development" },
+            { name: "Mobile Application Development", icon: Smartphone, href: "/services/mobile-app-development" },
             { name: "Next.js Development", icon: Zap, href: "/services/nextjs" },
             { name: "Dedicated Development Team", icon: Users, href: "/services/dedicated-team" },
         ],

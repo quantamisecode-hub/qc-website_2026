@@ -10,7 +10,7 @@ import {
 } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
 
-export default function IiotHero() {
+export default function MobileHero() {
     return (
         <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
             {/* Background Effects */}
@@ -60,16 +60,15 @@ export default function IiotHero() {
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6366f1]/10 text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-6">
                         <Code2 className="w-4 h-4" />
-                        <span>Smart Industrial Solutions</span>
+                        <span>End-to-End Solutions</span>
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#3A0F67] mb-6 tracking-tight leading-[1.15]">
-                        Trusted <span className="text-[#6366f1]">Industrial IoT</span> <br className="hidden sm:block" />
-                        Development Partner
+                        Mobile Apps for <span className="text-[#6366f1]">Startups & Enterprises</span>
                     </h1>
 
                     <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
-                        At Quantamise Code, we build intelligent, scalable, and secure Industrial IoT (IIoT) platforms that help manufacturers, logistics providers, energy companies, and industrial enterprises to optimize operations, reduce downtime, and unlock actionable insights from real-time data.
+                        At Quantamise Code, we design and develop intelligent, scalable, and high-performance mobile applications that help businesses engage users, automate processes, and generate sustainable revenue.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

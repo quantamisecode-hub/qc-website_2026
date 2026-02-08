@@ -1,54 +1,54 @@
 
 import React from "react";
 import * as motion from "framer-motion/client";
-import { Wifi, Cpu, Cloud, BarChart, LayoutDashboard } from "lucide-react";
+import { Search, PenTool, Code, TestTube, Rocket, Settings } from "lucide-react";
 
 const roadmapSteps = [
     {
         id: 1,
-        title: "Real-Time Connectivity & Device Management",
-        description: "Secure and reliable connectivity integrating industrial sensors, PLCs, MQTT, and wireless networks for real-time data capture.",
-        icon: Wifi,
+        title: "Modular Backend Systems",
+        description: "Decoupled architecture ensuring flexibility, easier maintenance, and independent scaling of components.",
+        icon: Settings,
     },
     {
         id: 2,
-        title: "Edge Computing & On-Device Intelligence",
-        description: "Processing data near the source to trigger alerts without latency, reduce bandwidth, and enable autonomous decision-making.",
-        icon: Cpu,
+        title: "API-First Development",
+        description: "Designing robust APIs first to ensure seamless integration between frontend, backend, and third-party services.",
+        icon: Code,
     },
     {
         id: 3,
-        title: "Cloud Integration & Scalable Architecture",
-        description: "Future-ready architecture with AWS/Azure/GCP IoT, serverless microservices, and scalable data lakes.",
-        icon: Cloud,
+        title: "Serverless Computing",
+        description: "Leveraging cloud functions to reduce infrastructure overhead and scale automatically with demand.",
+        icon: Search, // Using Search as abstract for 'Computing/Cloud' or change to Cloud if available
     },
     {
         id: 4,
-        title: "Advanced Analytics & AI-Enabled Insights",
-        description: "Transforming raw data into intelligence with anomaly detection, predictive models, and root cause analysis.",
-        icon: BarChart,
+        title: "Real-Time Data Synchronization",
+        description: "Ensuring users have the latest data instantly across all devices using WebSockets and sync protocols.",
+        icon: Rocket,
     },
     {
         id: 5,
-        title: "Custom Dashboards & Decision Support",
-        description: "User-friendly dashboards showing asset health, KPIs, and alerts to support operations and executive teams.",
-        icon: LayoutDashboard,
+        title: "High-Availability Infrastructure",
+        description: "Architecting for redundancy and fault tolerance to ensure your app remains online 24/7.",
+        icon: TestTube, // Using TestTube as placeholder or change to Shield/Server
     }
 ];
 
-export default function IiotRoadmap() {
+export default function MobileRoadmap() {
     return (
         <section id="roadmap" className="py-12 bg-[#F9FBFA] relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center mb-20">
                     <span className="text-[#6366f1] font-bold tracking-widest uppercase text-sm mb-4 block">
-                        CAPABILITIES
+                        ENGINEERING EXCELLENCE
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        Core Industrial <span className="text-[#6366f1]">IoT Capabilities</span>
+                        Scalable Architecture for <span className="text-[#6366f1]">Modern Mobile Products</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        End-to-end intelligent effective solutions for modern industry.
+                        We build mobile apps on cloud-native and microservices-based architectures to support rapid growth.
                     </p>
                 </div>
 

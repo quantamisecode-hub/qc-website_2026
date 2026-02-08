@@ -7,28 +7,36 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        question: "What is Industrial IoT (IIoT)?",
-        answer: "IIoT refers to connecting industrial devices and sensors to data networks to monitor, collect, and analyze operational data in real time for smarter decision-making."
+        question: "Do you develop for both iOS and Android?",
+        answer: "Yes, we develop native and cross-platform mobile applications for iOS and Android using modern frameworks and best practices."
     },
     {
-        question: "How does IIoT differ from regular IoT?",
-        answer: "IIoT is focused on industrial environments - manufacturing plants, logistics, energy grids - and emphasizes durability, real-time control, and deep analytics which differ from consumer-grade IoT."
+        question: "Can you build AI-powered mobile applications?",
+        answer: "Absolutely. We integrate machine learning, automation, analytics, and personalization features into mobile apps based on your business needs."
     },
     {
-        question: "What are common IIoT use cases?",
-        answer: "Predictive maintenance, remote monitoring, quality tracking, energy management, and automation control are popular IIoT applications that drive efficiency."
+        question: "Do you help startups build MVP mobile apps?",
+        answer: "Yes, we specialize in MVP development for startups, enabling rapid validation, investor pitching, and scalable growth."
     },
     {
-        question: "What technologies are used in IIoT platforms?",
-        answer: "Technologies include edge computing, MQTT/OPC-UA, cloud services (AWS IoT, Azure IoT), AI analytics, and real-time dashboards."
+        question: "How do you ensure mobile app performance and scalability?",
+        answer: "We use cloud-native architecture, optimized APIs, caching systems, and automated testing to ensure high performance under heavy load."
     },
     {
-        question: "How do I start an IIoT project?",
-        answer: "Begin with a pilot - identify key assets, define KPIs, install sensors, connect infrastructure, and build analytics dashboards with a trusted development partner."
+        question: "Do you provide app maintenance and post-launch support?",
+        answer: "Yes, we offer continuous monitoring, updates, security patches, and feature enhancements after launch."
     },
     {
-        question: "How quickly can I see ROI from an IIoT implementation?",
-        answer: "Many clients see actionable insights within the first few weeks of deployment. By focusing on high-impact areas like energy monitoring or downtime reduction, measurable ROI is often achieved within 3-6 months."
+        question: "Can you assist with App Store and Play Store deployment?",
+        answer: "Yes, we handle complete app publishing, compliance checks, store optimization, and version management."
+    },
+    {
+        question: "How long does it take to build a mobile application?",
+        answer: "Timelines depend on complexity, but most projects range from 8 to 24 weeks, including design, development, testing, and deployment."
+    },
+    {
+        question: "Do I own the source code and intellectual property of the app?",
+        answer: "Yes, once the project is completed and ongoing payments are settled, you retain 100% ownership of the source code, design assets, and intellectual property."
     }
 ];
 
@@ -116,7 +124,7 @@ const FAQItem = ({
     );
 };
 
-export default function IiotFAQ() {
+export default function MobileFAQ() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const toggleFAQ = (index: number) => {
@@ -138,7 +146,7 @@ export default function IiotFAQ() {
                         Common <span className="text-[#6366f1]">Questions</span>
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Everything you need to know about our industrial IoT development process.
+                        Everything you need to know about our mobile app development process.
                     </p>
                 </div>
 
