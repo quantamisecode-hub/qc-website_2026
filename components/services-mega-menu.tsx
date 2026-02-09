@@ -6,7 +6,6 @@ export const servicesData = [
         category: "Development Services",
         items: [
             { name: "Full-Stack Development", icon: Globe, href: "/services/full-stack-development" },
-            { name: "Mobile App Development", icon: Smartphone, href: "/services/mobile-app-development" },
             { name: "SaaS Development", icon: Layers, href: "/services/saas-development" },
             { name: "E-Commerce Development", icon: ShoppingCart, href: "/services/ecommerce-development" },
             { name: "UX/UI Design", icon: Palette, href: "/services/UX-UI-design" },
