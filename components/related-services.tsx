@@ -1,7 +1,7 @@
 import { ArrowRight, Cpu, Globe, Smartphone, Layers, ShoppingCart, Palette, Blocks } from "lucide-react";
 
 interface RelatedServicesProps {
-    currentService: "full-stack" | "mobile" | "saas" | "ai" | "ecommerce" | "ui-ux" | "iiot";
+    currentService: "full-stack" | "mobile" | "saas" | "ai" | "ecommerce" | "ui-ux" | "iiot" | "data-engineering" | "devops";
 }
 
 const allServices = [
@@ -74,6 +74,16 @@ const allServices = [
         color: "text-cyan-600",
         bg: "bg-cyan-50",
         border: "border-cyan-100"
+    },
+    {
+        id: "devops",
+        title: "DevOps Services",
+        description: "Automated CI/CD pipelines and cloud infrastructure management.",
+        icon: Layers, // Reusing Layers or maybe specialized icon if imported
+        href: "/services/devops",
+        color: "text-violet-600",
+        bg: "bg-violet-50",
+        border: "border-violet-100"
     }
 ];
 

@@ -16,7 +16,7 @@ export const servicesData = [
         category: "Specialized Development",
         items: [
             { name: "Mobile Application Development", icon: Smartphone, href: "/services/mobile-app-development" },
-            { name: "Next.js Development", icon: Zap, href: "/services/nextjs" },
+            { name: "Next.js Development", icon: Zap, href: "/services/nextjs-development" },
             { name: "Dedicated Development Team", icon: Users, href: "/services/dedicated-team" },
         ],
     },
