@@ -9,7 +9,7 @@ export const servicesData = [
             { name: "SaaS Development", icon: Layers, href: "/services/saas-development" },
             { name: "E-Commerce Development", icon: ShoppingCart, href: "/services/ecommerce-development" },
             { name: "UX/UI Design", icon: Palette, href: "/services/UX-UI-design" },
-            { name: "IIoT Development", icon: Cpu, href: "/services/IIOT" },
+            { name: "IIoT Development", icon: Cpu, href: "/services/industrial-iot-development" },
         ],
     },
     {

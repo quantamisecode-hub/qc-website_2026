@@ -15,9 +15,10 @@ import UiUxBusinessApproach from "@/components/ui-ux-business-approach";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "UX/UI Design Services | Custom Web & App Solutions",
-    description: "Leading UX/UI Design Agency specializing in custom web applications, SaaS, and enterprise software. Hire expert designers in India.",
+    title: "UI/UX Design Services & Product Design | Quantamise Code",
+    description: "User-centric UI/UX design services for web and mobile products. We create intuitive, engaging and conversion-focused digital experiences.",
     keywords: [
+        "UI UX Design Agency",
         "UX/UI Design company",
         "UX/UI Design services",
         "Custom web design",

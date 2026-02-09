@@ -16,24 +16,32 @@ import IiotBusinessApproach from "@/components/iiot-business-approach";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "IIOT Development Services | Custom Industrial IoT Solutions",
-    description: "Leading IIOT Development Company specializing in industrial IoT solutions, smart manufacturing, and connected devices. Hire expert IIOT developers.",
+    title: "Industrial IoT Development Services | Custom IIoT Solutions – Quantamise Code",
+    description: "Build secure, scalable Industrial IoT (IIoT) platforms with Quantamise Code. Optimize operations, enable predictive maintenance, and gain real-time insights with custom device-to-cloud solutions.",
     keywords: [
-        "IIOT development company",
-        "Industrial IoT services",
-        "Smart manufacturing solutions",
-        "IoT software development",
-        "IIOT developers",
-        "Connected devices",
-        "Industrial automation",
-        "Industry 4.0 solutions",
-        "Scalable IoT applications",
-        "Cloud-based IoT platforms"
+        "industrial IoT development",
+        "IIoT solutions",
+        "industrial IoT services",
+        "custom IIoT platform",
+        "IoT for manufacturing",
+        "predictive maintenance IoT",
+        "smart factory solutions",
+        "IIoT development company",
+        "edge computing IoT",
+        "real-time industrial monitoring",
+        "IoT device integration",
+        "industrial automation software",
+        "cloud IoT architecture",
+        "IoT analytics platform",
+        "asset tracking IoT",
+        "logistics IoT solutions",
+        "energy monitoring IoT",
+        "enterprise IoT development"
     ],
     openGraph: {
-        title: "IIOT Development Services | Quantamise Code",
-        description: "Transform your business with scalable, high-performance IIOT solutions developed by our expert engineers.",
-        url: "https://quantamise.com/services/IIOT",
+        title: "IIoT Development Services | Quantamise Code",
+        description: "Transform your business with scalable, high-performance IIoT solutions developed by our expert engineers.",
+        url: "https://quantamise.com/services/IIoT",
         siteName: "Quantamise Code",
         images: [
             {
@@ -48,19 +56,19 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "IIOT Development Services | Quantamise Code",
-        description: "Leading IIOT Development Company specializing in industrial IoT solutions.",
+        title: "IIoT Development Services | Quantamise Code",
+        description: "Leading IIoT Development Company specializing in industrial IoT solutions.",
         images: ["/assets/iiotDevelopmentChooseImg.jpeg"], // Placeholder
     },
     alternates: {
-        canonical: "https://quantamise.com/services/IIOT",
+        canonical: "https://quantamise.com/services/IIoT",
     },
 };
 
 const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "IIOT Development Services",
+    "name": "IIoT Development Services",
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
@@ -69,7 +77,7 @@ const jsonLd = {
     },
     "serviceType": "Software Development",
     "areaServed": "Global",
-    "description": "Custom IIOT development for industrial automation, smart factories, and connected enterprise solutions.",
+    "description": "Custom IIoT development for industrial automation, smart factories, and connected enterprise solutions.",
     "offers": {
         "@type": "Offer",
         "priceCurrency": "USD",

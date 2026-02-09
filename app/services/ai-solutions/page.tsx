@@ -15,9 +15,11 @@ import ServicesCTA from "@/components/services-cta";
 import RelatedServices from "@/components/related-services";
 
 export const metadata: Metadata = {
-    title: "AI Solutions & Machine Learning Development | Quantamise Code",
-    description: "Custom AI & Machine Learning solutions using Generative AI, NLP & Computer Vision. We build intelligent, scalable, and business-focused AI systems.",
+    title: "AI Solutions & Machine Learning Services | Quantamise Code",
+    description: "Build scalable AI solutions with Quantamise Code. We deliver custom machine learning, automation & enterprise AI systems that drive measurable business growth.",
     keywords: [
+        "AI Solutions",
+        "Machine Learning Services",
         "AI Development",
         "Machine Learning Solutions",
         "Generative AI",
@@ -27,7 +29,8 @@ export const metadata: Metadata = {
         "Enterprise AI",
         "Custom AI Solutions",
         "Deep Learning",
-        "Predictive Analytics"
+        "Predictive Analytics",
+        "AI Solutions", "Machine Learning Services"
     ],
     openGraph: {
         title: "AI Solutions & Machine Learning Development | Quantamise Code",

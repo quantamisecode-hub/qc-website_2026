@@ -16,9 +16,10 @@ import MobileBusinessApproach from "@/components/mobile-business-approach";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Mobile App Development Services | Custom iOS & Android Solutions",
-    description: "Leading Mobile App Development Company specializing in custom iOS, Android, and Cross-Platform applications. Hire expert mobile developers to build scalable products.",
+    title: "Mobile App Development Services | Quantamise Code",
+    description: "End-to-end mobile app development for iOS & Android. We design, build and scale high-performing mobile applications for startups and enterprises.",
     keywords: [
+        "Mobile App Development Company",
         "Mobile app development company",
         "iOS app development services",
         "Android app development",

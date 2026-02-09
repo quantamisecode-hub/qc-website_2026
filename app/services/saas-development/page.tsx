@@ -17,9 +17,10 @@ import SaasCommunication from "@/components/saas-communication";
 import SaasFAQ from "@/components/saas-faq";
 
 export const metadata: Metadata = {
-    title: "SaaS Development Company | Build Scalable Cloud Platforms | Quantamise Code",
-    description: "Launch and scale your SaaS product with our expert development services. We build secure, multi-tenant cloud applications optimized for growth and performance.",
+    title: "SaaS Product Development Company | Quantamise Code",
+    description: "Build scalable SaaS platforms with secure architecture and cloud deployment. We help startups launch, grow and monetize software products.",
     keywords: [
+        "SaaS Development Company",
         "SaaS Development",
         "Cloud Application Development",
         "Multi-tenant Architecture",

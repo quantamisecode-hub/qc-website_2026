@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Nav from "@/components/nav";
 import Hero from "@/components/hero";
-import InfinityMarquee from "@/components/infinity-marquee";
 import TrustedBy from "@/components/trusted-by";
 import About from "@/components/about";
 import Industries from "@/components/industries";
@@ -211,10 +210,6 @@ export default function Home() {
 
       <RevealOnScroll>
         <Industries />
-      </RevealOnScroll>
-
-      <RevealOnScroll delay={0.2}>
-        <InfinityMarquee />
       </RevealOnScroll>
 
       <RevealOnScroll>

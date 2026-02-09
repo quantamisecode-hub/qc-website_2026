@@ -16,9 +16,10 @@ import FullStackBusinessApproach from "@/components/full-stack-business-approach
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Full-Stack Development Services | Quantamise Code",
+    title: "Full Stack Development Services | Quantamise Code",
     description: "Custom full stack development services using React, Node.js & cloud technologies. We build scalable, secure and high-performance web applications.",
     keywords: [
+        "Full Stack Development Company",
         "Full-stack development company",
         "Full-stack development services",
         "Custom web application development",
