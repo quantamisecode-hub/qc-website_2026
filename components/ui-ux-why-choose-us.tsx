@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fullStackDevelopmentChooseImg from "../public/assets/fullStackDevelopmentChooseImg.jpeg"
+import UXUIWhyChooseImage from "../public/assets/UXUIWhyChooseImage.jpeg";
 
 export default function UiUxWhyChooseUs() {
     return (
@@ -13,28 +13,31 @@ export default function UiUxWhyChooseUs() {
                             WHY CHOOSE US
                         </span>
 
-                        <h2 className="text-3xl sm:text-4xl  lg:text-5xl font-extrabold text-[#3A0F67] mb-6 leading-tight">
-                            Why Choose <span className="text-[#6366f1]">Quantamise Code</span> for AI-Ready UI/UX & Product Experience Design?
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6 leading-tight">
+                            Why Choose <span className="text-[#6366f1]">Quantamise Code</span> for UX/UI Design?
                         </h2>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                            At Quantamise Code, we design intelligent, data-informed, and conversion-focused user experiences for AI-powered SaaS platforms and digital products. Our UI/UX solutions are crafted to simplify complex systems, enhance usability, and drive long-term user adoption.
+                            At Quantamise Code, we don't just design interfaces; we craft intuitive digital experiences that drive engagement and retention. Our designs are research-backed, user-centric, and visually stunning.
                         </p>
 
-                        <p className="text-lg text-gray-600 leading-relaxed mb-12">
-                            We help startups and enterprises transform advanced technology into intuitive, engaging, and revenue-generating digital experiences.
+                        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                            We combine aesthetic excellence with functional precision, ensuring that every interaction on your platform is seamless, accessible, and delightful for your users.
+                        </p>
+
+                        <p className="text-lg text-gray-600 mb-8">
+                            From complex enterprise dashboards to consumer-facing mobile apps, we transform your vision into a product that users love.
                         </p>
                     </div>
 
                     {/* Right Side: Image */}
-                    <div className="w-full lg:w-1/2 relative min-h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                    <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                         <Image
-                            src={fullStackDevelopmentChooseImg}
-                            alt="Why Choose Quantamise Code - Office"
+                            src={UXUIWhyChooseImage}
+                            alt="UX/UI Design Team"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-700"
                         />
-                        {/* Optional subtle overlay */}
                         <div className="absolute inset-0 bg-black/10" />
                     </div>
 

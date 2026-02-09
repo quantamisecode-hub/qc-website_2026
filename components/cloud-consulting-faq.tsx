@@ -7,28 +7,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        question: "What is data engineering and why is it important?",
-        answer: "Data engineering involves building systems that collect, process, and manage data at scale. It is essential for enabling analytics, AI, reporting, and data-driven decision-making."
+        question: "What are cloud consulting services?",
+        answer: "Cloud consulting services help organizations design, migrate, govern, and optimize cloud environments aligned with business goals."
     },
     {
-        question: "Do you help with cloud data migration?",
-        answer: "Yes, we specialize in migrating on-premise and legacy data systems to modern cloud platforms with minimal downtime and zero data loss."
+        question: "Do you support AWS, Azure, and Google Cloud?",
+        answer: "Yes, we provide vendor-neutral consulting for AWS, Microsoft Azure, and Google Cloud Platform."
     },
     {
-        question: "Can you build real-time analytics platforms?",
-        answer: "Absolutely. We design streaming data pipelines and real-time dashboards for use cases like fraud detection, IoT monitoring, and live business intelligence."
+        question: "Can you migrate legacy systems to the cloud?",
+        answer: "Absolutely. We manage secure and low-risk cloud migrations with minimal business disruption."
     },
     {
-        question: "How do you ensure data quality and reliability?",
-        answer: "We implement automated validation, monitoring, anomaly detection, and governance frameworks to ensure consistent data accuracy."
+        question: "How do you ensure cloud security and compliance?",
+        answer: "We implement governance frameworks, access controls, encryption, and compliance monitoring systems."
     },
     {
-        question: "Do you support AI and machine learning initiatives?",
-        answer: "Yes, we build AI-ready data pipelines, feature stores, and MLOps infrastructure to support machine learning and advanced analytics."
+        question: "Do you offer cloud cost optimization services?",
+        answer: "Yes, we use FinOps best practices to reduce waste and improve cloud ROI."
     },
     {
-        question: "Which industries do you serve?",
-        answer: "We serve FinTech, EdTech, Healthcare, SaaS, E-commerce, Manufacturing, and enterprise organizations."
+        question: "Can you support AI and data platforms on the cloud?",
+        answer: "Yes, we design cloud architectures optimized for AI, analytics, and data-intensive workloads."
     }
 ];
 
@@ -56,7 +56,6 @@ const itemVariants = {
     }
 };
 
-// Extracted component to prevent re-renders
 const FAQItem = ({
     faq,
     index,
@@ -116,14 +115,13 @@ const FAQItem = ({
     );
 };
 
-export default function DataEngFAQ() {
+export default function CloudConsultingFAQ() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const toggleFAQ = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
-    // Split FAQs into two columns: Even indexes (Left) and Odd indexes (Right)
     const leftFaqs = faqs.filter((_, index) => index % 2 === 0);
     const rightFaqs = faqs.filter((_, index) => index % 2 !== 0);
 
@@ -135,10 +133,10 @@ export default function DataEngFAQ() {
                         FAQ
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        Frequently Asked Questions
+                        Frequently Asked <span className="text-[#6366f1]">Questions</span>
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Everything you need to know about our Data Engineering & Consulting services.
+                        Common questions about our Cloud Consulting Services.
                     </p>
                 </div>
 
@@ -149,7 +147,6 @@ export default function DataEngFAQ() {
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
                 >
-                    {/* Left Column (Even Indexes: 0, 2, 4...) */}
                     <div className="flex flex-col gap-4 lg:gap-6 w-full md:w-1/2">
                         {leftFaqs.map((faq) => {
                             const originalIndex = faqs.indexOf(faq);
@@ -164,8 +161,6 @@ export default function DataEngFAQ() {
                             );
                         })}
                     </div>
-
-                    {/* Right Column (Odd Indexes: 1, 3, 5...) */}
                     <div className="flex flex-col gap-4 lg:gap-6 w-full md:w-1/2">
                         {rightFaqs.map((faq) => {
                             const originalIndex = faqs.indexOf(faq);
@@ -181,6 +176,19 @@ export default function DataEngFAQ() {
                         })}
                     </div>
                 </motion.div>
+
+                <div className="text-center mt-12 bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto">
+                    <p className="text-lg font-semibold text-[#3A0F67] mb-4">
+                        Have more questions about your cloud journey?
+                    </p>
+                    <a
+                        href="/contact"
+                        className="inline-flex items-center text-[#6366f1] font-bold hover:underline"
+                    >
+                        Speak with our Cloud Consultants
+                        <ChevronDown className="ml-2 w-4 h-4 rotate-[-90deg]" />
+                    </a>
+                </div>
             </div>
         </section>
     );

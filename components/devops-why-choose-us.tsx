@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fullStackDevelopmentChooseImg from "../public/assets/fullStackDevelopmentChooseImg.jpeg" // Using same image for now
+import DevOpsWhyChooseImg from "../public/assets/DevOpsWhyChooseImg.jpeg";
 
 export default function DevOpsWhyChooseUs() {
     return (
@@ -18,22 +18,22 @@ export default function DevOpsWhyChooseUs() {
                         </h2>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                            At Quantamise Code, we help organizations build high-performance DevOps ecosystems that enable faster development cycles, stable deployments, and resilient production environments.
+                            We don't just automate tasks; we transform your entire software delivery lifecycle. Our DevOps culture focuses on collaboration, efficiency, and continuous improvement.
                         </p>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                            Our DevOps services focus on eliminating manual processes, reducing deployment risks, and improving collaboration between development and operations teams. We create automated systems that support rapid innovation without compromising reliability or security.
+                            By implementing robust CI/CD pipelines, infrastructure as code, and proactive monitoring, we reduce time-to-market while increasing system stability and security.
                         </p>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-12">
-                            Whether you are launching a new SaaS platform or scaling an enterprise application, our DevOps engineers ensure your delivery pipelines are optimized for speed, quality, and consistency.
+                            Partner with us to build a resilient, scalable infrastructure that supports your business growth and innovation at speed.
                         </p>
                     </div>
 
                     {/* Right Side: Image */}
                     <div className="w-full lg:w-1/2 relative min-h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                         <Image
-                            src={fullStackDevelopmentChooseImg}
+                            src={DevOpsWhyChooseImg}
                             alt="DevOps Team"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-700"

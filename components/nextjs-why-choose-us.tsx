@@ -1,4 +1,6 @@
 import { Zap, Search, Layout, Database, Cloud, ShieldCheck, BarChart, Users } from "lucide-react";
+import Image from "next/image";
+import NextJsWhyChooseImage from "../public/assets/NextJsWhyChooseImage.png";
 
 const features = [
     {
@@ -71,20 +73,32 @@ export default function NextJsWhyChooseUs() {
     return (
         <section className="bg-white py-16 lg:py-24 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                {/* Intro Section */}
-                <div className="max-w-3xl mx-auto text-center mb-20">
-                    <span className="text-[#6366f1] font-bold tracking-widest uppercase text-sm mb-4 block">
-                        WHY CHOOSE QUANTAMISE CODE
-                    </span>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-8 leading-tight">
-                        Why Choose Quantamise Code for <span className="text-[#6366f1]">Next.js Services?</span>
-                    </h2>
-                    <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                        At Quantamise Code, we specialize in building high-performance, SEO-friendly, and scalable web applications using Next.js. We help startups, SaaS companies, and enterprises create fast-loading, conversion-optimized, and search-engine-ready digital platforms.
-                    </p>
-                    <p className="text-lg text-gray-600 leading-relaxed">
-                        From marketing websites and SaaS dashboards to enterprise portals and headless commerce platforms, we deliver modern web solutions engineered for speed, security, and long-term growth.
-                    </p>
+                {/* Intro Section with Image */}
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center mb-20">
+                    <div className="w-full lg:w-1/2 text-left">
+                        <span className="text-[#6366f1] font-bold tracking-widest uppercase text-sm mb-4 block">
+                            WHY CHOOSE QUANTAMISE CODE
+                        </span>
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-8 leading-tight">
+                            Why Choose Quantamise Code for <span className="text-[#6366f1]">Next.js Services?</span>
+                        </h2>
+                        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                            At Quantamise Code, we specialize in building high-performance, SEO-friendly, and scalable web applications using Next.js. We help startups, SaaS companies, and enterprises create fast-loading, conversion-optimized, and search-engine-ready digital platforms.
+                        </p>
+                        <p className="text-lg text-gray-600 leading-relaxed">
+                            From marketing websites and SaaS dashboards to enterprise portals and headless commerce platforms, we deliver modern web solutions engineered for speed, security, and long-term growth.
+                        </p>
+                    </div>
+
+                    <div className="w-full lg:w-1/2 relative min-h-[400px] lg:h-auto rounded-2xl overflow-hidden shadow-xl">
+                        <Image
+                            src={NextJsWhyChooseImage}
+                            alt="Next.js Development Team"
+                            fill
+                            className="object-cover hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-black/10" />
+                    </div>
                 </div>
 
                 {/* Features Grid */}

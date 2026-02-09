@@ -1,7 +1,7 @@
 import Image from "next/image";
-import DataEngineeringWhyChooseImage from "../public/assets/Data EngineeringWhyChooseImage.jpeg";
+import CloudWhyChooseImage from "../public/assets/CloudWhyChooseImage.jpeg";
 
-export default function DataEngWhyChooseUs() {
+export default function CloudConsultingWhyChooseUs() {
     return (
         <section className="bg-white py-12 lg:py-16 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,31 +14,30 @@ export default function DataEngWhyChooseUs() {
                         </span>
 
                         <h2 className="text-3xl sm:text-4xl  lg:text-5xl font-extrabold text-[#3A0F67] mb-6 leading-tight">
-                            Why Choose <span className="text-[#6366f1]">Quantamise Code</span> for Data Engineering & Consulting?
+                            Why Choose <span className="text-[#6366f1]">Quantamise Code</span> for Cloud Consulting Services?
                         </h2>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                            At Quantamise Code, we help organizations build modern, scalable, and AI-ready data ecosystems. Our data engineering and consulting services empower businesses to collect, process, analyze, and activate data across their entire digital infrastructure.
+                            At Quantamise Code, we help organizations adopt and scale cloud technologies with confidence. Our cloud consulting services focus on aligning your technology infrastructure with business goals, ensuring security, compliance, and long-term sustainability.
                         </p>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                            We partner with startups and enterprises to transform fragmented data systems into unified intelligence platforms that support real-time analytics, automation, and predictive decision-making.
+                            We work closely with leadership and engineering teams to design cloud strategies that reduce operational complexity, improve system performance, and maximize return on investment.
                         </p>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-12">
-                            Whether you are building a new data platform or modernizing legacy systems, our experts ensure your data environment is reliable, secure, and future-ready.
+                            From initial cloud assessment to enterprise-wide transformation, we guide you through every stage of your cloud journey.
                         </p>
                     </div>
 
                     {/* Right Side: Image */}
                     <div className="w-full lg:w-1/2 relative min-h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                         <Image
-                            src={DataEngineeringWhyChooseImage}
-                            alt="Data Engineering Team"
+                            src={CloudWhyChooseImage}
+                            alt="Cloud Consulting Team"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-700"
                         />
-                        {/* Optional subtle overlay */}
                         <div className="absolute inset-0 bg-black/10" />
                     </div>
 

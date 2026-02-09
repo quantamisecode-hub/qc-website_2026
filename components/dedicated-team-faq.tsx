@@ -5,30 +5,35 @@ import * as motion from "framer-motion/client";
 import { AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
+// Updated FAQs
 const faqs = [
     {
-        question: "What is data engineering and why is it important?",
-        answer: "Data engineering involves building systems that collect, process, and manage data at scale. It is essential for enabling analytics, AI, reporting, and data-driven decision-making."
+        question: "What is a dedicated development team?",
+        answer: "A dedicated development team is a group of full-time professionals assigned exclusively to your project, working as an extension of your in-house team."
     },
     {
-        question: "Do you help with cloud data migration?",
-        answer: "Yes, we specialize in migrating on-premise and legacy data systems to modern cloud platforms with minimal downtime and zero data loss."
+        question: "How is this different from project-based outsourcing?",
+        answer: "Unlike fixed projects, dedicated teams offer long-term collaboration, flexible scope, and complete control over priorities."
     },
     {
-        question: "Can you build real-time analytics platforms?",
-        answer: "Absolutely. We design streaming data pipelines and real-time dashboards for use cases like fraud detection, IoT monitoring, and live business intelligence."
+        question: "Can I interview and select developers?",
+        answer: "Yes, you can interview and approve every team member before onboarding."
     },
     {
-        question: "How do you ensure data quality and reliability?",
-        answer: "We implement automated validation, monitoring, anomaly detection, and governance frameworks to ensure consistent data accuracy."
+        question: "How quickly can a team be onboarded?",
+        answer: "Typically, within 2–4 weeks, depending on requirements."
     },
     {
-        question: "Do you support AI and machine learning initiatives?",
-        answer: "Yes, we build AI-ready data pipelines, feature stores, and MLOps infrastructure to support machine learning and advanced analytics."
+        question: "Do you offer IP protection and NDAs?",
+        answer: "Yes, all engagements include strict IP protection and confidentiality agreements."
     },
     {
-        question: "Which industries do you serve?",
-        answer: "We serve FinTech, EdTech, Healthcare, SaaS, E-commerce, Manufacturing, and enterprise organizations."
+        question: "Can I scale the team size anytime?",
+        answer: "Yes, teams can be scaled up or down based on evolving project needs."
+    },
+    {
+        question: "Do you support AI and SaaS product teams?",
+        answer: "Absolutely. We specialize in building dedicated teams for AI-driven and SaaS platforms."
     }
 ];
 
@@ -116,7 +121,7 @@ const FAQItem = ({
     );
 };
 
-export default function DataEngFAQ() {
+export default function DedicatedTeamFAQ() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const toggleFAQ = (index: number) => {
@@ -135,10 +140,10 @@ export default function DataEngFAQ() {
                         FAQ
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        Frequently Asked Questions
+                        Common <span className="text-[#6366f1]">Questions</span>
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Everything you need to know about our Data Engineering & Consulting services.
+                        Answers to your questions about hiring dedicated development teams.
                     </p>
                 </div>
 

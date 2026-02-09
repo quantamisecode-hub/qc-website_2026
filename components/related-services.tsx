@@ -1,7 +1,7 @@
 import { ArrowRight, Cpu, Globe, Smartphone, Layers, ShoppingCart, Palette, Blocks } from "lucide-react";
 
 interface RelatedServicesProps {
-    currentService: "full-stack" | "mobile" | "saas" | "ai" | "ecommerce" | "ui-ux" | "iiot" | "data-engineering" | "devops";
+    currentService: "full-stack" | "mobile" | "saas" | "ai" | "ecommerce" | "ui-ux" | "iiot" | "data-engineering" | "devops" | "dedicated-team" | "cloud-consulting";
 }
 
 const allServices = [
@@ -14,6 +14,26 @@ const allServices = [
         color: "text-blue-600",
         bg: "bg-blue-50",
         border: "border-blue-100"
+    },
+    {
+        id: "dedicated-team",
+        title: "Dedicated Team",
+        description: "Hire pre-vetted, expert developers to scale your engineering team effortlessly.",
+        icon: Globe, // Reusing Globe or find a better icon like Users
+        href: "/services/dedicated-team",
+        color: "text-indigo-600",
+        bg: "bg-indigo-50",
+        border: "border-indigo-100"
+    },
+    {
+        id: "cloud-consulting",
+        title: "Cloud Consulting",
+        description: "Expert cloud migration, modernization, and optimization services.",
+        icon: Globe, // Reusing icon or find better
+        href: "/services/cloud-consulting",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+        border: "border-cyan-100"
     },
     {
         id: "mobile",
