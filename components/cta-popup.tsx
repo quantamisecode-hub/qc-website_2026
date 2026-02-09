@@ -1,15 +1,27 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FormEvent } from "react";
 import * as motion from "framer-motion/client";
 import { AnimatePresence } from "framer-motion";
-import { Send, X } from "lucide-react";
+import { Send, X, Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { submitCTA, CTAData } from "@/lib/api";
 
 export default function CTAPopup() {
     const [isVisible, setIsVisible] = useState(false);
+    const [formData, setFormData] = useState<CTAData>({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: "",
+    });
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const timer = setTimeout(() => {
+            // Check if user has already submitted or dismissed recently (optional logic can be added here)
             setIsVisible(true);
         }, 7000); // 7 seconds
 
@@ -32,6 +44,38 @@ export default function CTAPopup() {
         setIsVisible(false);
     };
 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({ ...formData, [e.target.id.replace('popup-', '')]: e.target.value });
+    };
+
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        setError(null);
+        setSuccess(false);
+
+        const result = await submitCTA(formData);
+
+        if (result.success) {
+            setSuccess(true);
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                company: "",
+                message: "",
+            });
+            // Close popup after success with a delay
+            setTimeout(() => {
+                setIsVisible(false);
+                setSuccess(false); // Reset for next time if triggering logic allows
+            }, 3000);
+        } else {
+            setError(result.message);
+        }
+        setLoading(false);
+    };
+
     return (
         <AnimatePresence>
             {isVisible && (
@@ -41,7 +85,7 @@ export default function CTAPopup() {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
                         transition={{ duration: 0.4, ease: "easeOut" }}
-                        className="relative w-full max-w-lg bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden"
+                        className="relative w-full max-w-lg bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden max-h-[90vh] overflow-y-auto"
                     >
                         {/* Close Button */}
                         <button
@@ -61,13 +105,16 @@ export default function CTAPopup() {
                                 </p>
                             </div>
 
-                            <form className="space-y-4 md:space-y-5">
+                            <form className="space-y-4 md:space-y-5" onSubmit={handleSubmit}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
                                     <div>
                                         <label htmlFor="popup-name" className="block text-xs sm:text-sm font-bold text-[#3A0F67] mb-1.5">Your Name</label>
                                         <input
                                             type="text"
                                             id="popup-name"
+                                            required
+                                            value={formData.name}
+                                            onChange={handleChange}
                                             className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
                                             placeholder="John Doe"
                                         />
@@ -77,6 +124,9 @@ export default function CTAPopup() {
                                         <input
                                             type="email"
                                             id="popup-email"
+                                            required
+                                            value={formData.email}
+                                            onChange={handleChange}
                                             className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
                                             placeholder="john@example.com"
                                         />
@@ -89,6 +139,9 @@ export default function CTAPopup() {
                                         <input
                                             type="tel"
                                             id="popup-phone"
+                                            required
+                                            value={formData.phone}
+                                            onChange={handleChange}
                                             className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
                                             placeholder="+1 (555) 000-0000"
                                         />
@@ -98,6 +151,8 @@ export default function CTAPopup() {
                                         <input
                                             type="text"
                                             id="popup-company"
+                                            value={formData.company}
+                                            onChange={handleChange}
                                             className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
                                             placeholder="Your Company Ltd."
                                         />
@@ -109,17 +164,46 @@ export default function CTAPopup() {
                                     <textarea
                                         id="popup-message"
                                         rows={3}
+                                        required
+                                        value={formData.message}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#eb56f6] focus:ring-4 focus:ring-[#eb56f6]/10 transition-all outline-none resize-none text-[#2A2A2A] text-sm sm:text-base placeholder:text-gray-400"
                                         placeholder="Tell us about your project..."
                                     />
                                 </div>
 
+                                {/* Status Messages for Popup Form */}
+                                {error && (
+                                    <div className="flex items-center gap-2 text-red-600 bg-red-50 p-2 rounded-lg text-xs sm:text-sm">
+                                        <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                                        <p>{error}</p>
+                                    </div>
+                                )}
+                                {success && (
+                                    <div className="flex items-center gap-2 text-green-600 bg-green-50 p-2 rounded-lg text-xs sm:text-sm">
+                                        <CheckCircle className="w-4 h-4 flex-shrink-0" />
+                                        <p>Message sent successfully!</p>
+                                    </div>
+                                )}
+
                                 <button
                                     type="submit"
-                                    className="w-full py-3 sm:py-4 rounded-xl bg-[#3A0F67] text-white font-bold text-base sm:text-lg hover:bg-[#520d91] transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-[#3A0F67]/20"
+                                    disabled={loading || success}
+                                    className="w-full py-3 sm:py-4 rounded-xl bg-[#3A0F67] text-white font-bold text-base sm:text-lg hover:bg-[#520d91] transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-[#3A0F67]/20 disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
-                                    <span>Send Message</span>
-                                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    {loading ? (
+                                        <>
+                                            <Loader2 className="w-5 h-5 animate-spin" />
+                                            <span>Sending...</span>
+                                        </>
+                                    ) : success ? (
+                                        <span>Sent!</span>
+                                    ) : (
+                                        <>
+                                            <span>Send Message</span>
+                                            <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                        </>
+                                    )}
                                 </button>
                             </form>
                         </div>
