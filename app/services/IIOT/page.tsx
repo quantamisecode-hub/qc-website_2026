@@ -1,7 +1,8 @@
 
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
-import CTA from "@/components/cta";
+import ServicesCTA from "@/components/services-cta";
+import RelatedServices from "@/components/related-services";
 import IiotHero from "@/components/iiot-hero";
 import IiotRoadmap from "@/components/iiot-roadmap";
 import IiotTechStack from "@/components/iiot-tech-stack";
@@ -77,12 +78,71 @@ const jsonLd = {
     }
 };
 
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is Industrial IoT (IIoT)?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "IIoT refers to connecting industrial devices and sensors to data networks to monitor, collect, and analyze operational data in real time for smarter decision-making."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does IIoT differ from regular IoT?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "IIoT is focused on industrial environments - manufacturing plants, logistics, energy grids - and emphasizes durability, real-time control, and deep analytics which differ from consumer-grade IoT."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are common IIoT use cases?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Predictive maintenance, remote monitoring, quality tracking, energy management, and automation control are popular IIoT applications that drive efficiency."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What technologies are used in IIoT platforms?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technologies include edge computing, MQTT/OPC-UA, cloud services (AWS IoT, Azure IoT), AI analytics, and real-time dashboards."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I start an IIoT project?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Begin with a pilot - identify key assets, define KPIs, install sensors, connect infrastructure, and build analytics dashboards with a trusted development partner."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How quickly can I see ROI from an IIoT implementation?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many clients see actionable insights within the first few weeks of deployment. By focusing on high-impact areas like energy monitoring or downtime reduction, measurable ROI is often achieved within 3-6 months."
+            }
+        }
+    ]
+};
+
 export default function IiotDevelopmentPage() {
     return (
         <main className="min-h-screen bg-white">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <Nav />
             <br /><br /><br />
@@ -117,8 +177,11 @@ export default function IiotDevelopmentPage() {
             {/* FAQ Section */}
             <IiotFAQ />
 
+            {/* Related Services Section */}
+            <RelatedServices currentService="iiot" />
+
             {/* CTA Section */}
-            <CTA />
+            <ServicesCTA />
 
             <Footer />
         </main>

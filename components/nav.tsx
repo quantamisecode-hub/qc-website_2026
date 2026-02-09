@@ -18,7 +18,6 @@ const navLinks = [
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blogs", href: "/blogs" },
     { name: "Contact", href: "/contact" },
-    // { name: "Stats", href: "/stats" },
 ];
 
 export default function Nav() {
@@ -200,7 +199,7 @@ export default function Nav() {
                                             <div className="flex flex-col">
                                                 <button
                                                     onClick={() => setIsServicesExpanded(!isServicesExpanded)}
-                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-2 border-b border-white/10"
+                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-2 border-b border-white/10 cursor-pointer"
                                                 >
                                                     {link.name}
                                                     {isServicesExpanded ? (
@@ -262,7 +261,7 @@ export default function Nav() {
                                             <div className="flex flex-col">
                                                 <button
                                                     onClick={() => setIsTechnologiesExpanded(!isTechnologiesExpanded)}
-                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-2 border-b border-white/10"
+                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-2 border-b border-white/10 cursor-pointer"
                                                 >
                                                     {link.name}
                                                     {isTechnologiesExpanded ? (
@@ -305,7 +304,7 @@ export default function Nav() {
                                             <div className="flex flex-col">
                                                 <button
                                                     onClick={() => setIsAboutExpanded(!isAboutExpanded)}
-                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-2 border-b border-white/10"
+                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-2 border-b border-white/10 cursor-pointer"
                                                 >
                                                     {link.name}
                                                     {isAboutExpanded ? (
@@ -373,25 +372,6 @@ export default function Nav() {
                                                                         <div className="p-3 rounded-lg bg-white/10 border border-white/5">
                                                                             <div className="text-2xl font-extrabold text-[#eb56f6] mb-0.5">4.9/5</div>
                                                                             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wide">Rating</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                {/* Footer / Career Link */}
-                                                                <div className="pt-4 border-t border-white/10">
-                                                                    <div className="flex items-center gap-3">
-                                                                        <div className="p-2 bg-white/10 rounded-lg text-[#eb56f6]">
-                                                                            <Users className="w-5 h-5" />
-                                                                        </div>
-                                                                        <div>
-                                                                            <a
-                                                                                href="/careers"
-                                                                                onClick={() => setIsOpen(false)}
-                                                                                className="font-bold text-white hover:text-[#eb56f6] transition-colors flex items-center gap-1"
-                                                                            >
-                                                                                Career <ArrowRight className="w-4 h-4" />
-                                                                            </a>
-                                                                            <p className="text-xs text-gray-400">Join our dynamic team</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
