@@ -1,4 +1,4 @@
-import { UserCheck, MessageSquare, BarChart, RefreshCcw, LifeBuoy } from "lucide-react";
+import { UserCheck, MessageSquare, BarChart, RefreshCcw, LifeBuoy, BookOpen } from "lucide-react";
 
 const communicationFeatures = [
     {
@@ -40,6 +40,14 @@ const communicationFeatures = [
         icon: LifeBuoy,
         color: "text-cyan-600",
         bg: "bg-cyan-50",
+    },
+    {
+        id: 6,
+        title: "Knowledge Transfer Workshops",
+        description: "Training your internal team to manage and maintain the AI solution independently.",
+        icon: BookOpen,
+        color: "text-rose-600",
+        bg: "bg-rose-50",
     }
 ];
 

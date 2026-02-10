@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "UX/UI Design Services | Quantamise Code",
         description: "Transform your business with scalable, high-performance web and mobile applications designed by our expert designers.",
-        url: "https://quantamise.com/services/ui-ux-design",
+        url: "https://www.quantamisecode.com/services/ui-ux-design",
         siteName: "Quantamise Code",
         images: [
             {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
     },
     alternates: {
-        canonical: "https://quantamise.com/services/ui-ux-design",
+        canonical: "https://www.quantamisecode.com/services/ui-ux-design",
     },
 };
 
@@ -64,8 +64,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://quantamise.com",
-        "logo": "https://quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "Design",
     "areaServed": "Global",

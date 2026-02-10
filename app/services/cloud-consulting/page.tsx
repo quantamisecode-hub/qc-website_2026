@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/cloud-consulting",
+        canonical: "https://www.quantamisecode.com/services/cloud-consulting",
     },
 };
 

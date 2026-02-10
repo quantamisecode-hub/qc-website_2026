@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "E-commerce Development Services | Quantamise Code",
         description: "Scale your business with high-conversion e-commerce stores built by expert developers.",
-        url: "https://quantamise.com/services/ecommerce-development",
+        url: "https://www.quantamisecode.com/services/ecommerce-development",
         siteName: "Quantamise",
         images: [
             {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         images: ["/images/og-image.jpg"],
     },
     alternates: {
-        canonical: "https://quantamise.com/services/ecommerce-development",
+        canonical: "https://www.quantamisecode.com/services/ecommerce-development",
     },
 };
 
@@ -61,8 +61,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://quantamise.com",
-        "logo": "https://quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "E-commerce Development",
     "areaServed": "Global",

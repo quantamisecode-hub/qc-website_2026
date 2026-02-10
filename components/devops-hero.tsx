@@ -78,12 +78,7 @@ export default function DevOpsHero() {
                             Get a Free DevOps Assessment
                             <ArrowRight className="w-5 h-5" />
                         </Link>
-                        <button
-                            onClick={() => window.dispatchEvent(new CustomEvent('open-cta-popup'))}
-                            className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-white text-[#3A0F67] border border-slate-200 font-bold text-base hover:bg-slate-50 transition-all flex items-center justify-center gap-2 cursor-pointer"
-                        >
-                            Talk to a DevOps Expert
-                        </button>
+
                     </div>
                 </motion.div>
             </div>

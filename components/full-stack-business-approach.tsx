@@ -1,4 +1,4 @@
-import { Zap, Layout, Users, ShieldCheck, TrendingUp, ArrowUpRight } from "lucide-react";
+import { Zap, Layout, Users, ShieldCheck, TrendingUp, Rocket } from "lucide-react";
 
 const businessValues = [
     {
@@ -45,6 +45,15 @@ const businessValues = [
         color: "text-indigo-600",
         bg: "bg-indigo-50",
         borderColor: "border-indigo-100"
+    },
+    {
+        id: 6,
+        title: "Agile Delivery",
+        description: "Adopting flexible workflows to accelerate launch times and respond swiftly to market feedback.",
+        icon: Rocket,
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+        borderColor: "border-cyan-100"
     }
 ];
 

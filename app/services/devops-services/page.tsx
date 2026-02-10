@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "DevOps Services | Quantamise Code",
         description: "Accelerate your software delivery with our expert DevOps services. Automation, Security, and Reliability at scale.",
-        url: "https://www.quantamise.com/services/devops-services",
+        url: "https://www.quantamisecode.com/services/devops-services",
         siteName: "Quantamise Code",
         images: [
             {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         images: ["/assets/devops-meta.jpg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/devops-services",
+        canonical: "https://www.quantamisecode.com/services/devops-services",
     },
 };
 
@@ -64,8 +64,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://quantamise.com",
-        "logo": "https://quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "IT Infrastructure Management",
     "areaServed": "Global",

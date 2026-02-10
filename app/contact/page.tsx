@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Contact Us | Quantamise Code',
         description: 'Ready to build something great? Contact our team for a free consultation.',
-        url: 'https://www.quantamise.com/contact',
+        url: 'https://www.quantamisecode.com/contact',
         siteName: 'Quantamise Code',
         images: [
             {
@@ -36,6 +36,9 @@ export const metadata: Metadata = {
         ],
         locale: 'en_US',
         type: 'website',
+    },
+    alternates: {
+        canonical: 'https://www.quantamisecode.com/contact',
     },
 };
 

@@ -90,11 +90,7 @@ export default function EcommerceRoadmap() {
                             );
                         })}
                     </div>
-                    <div className="text-center mt-24">
-                        <p className="text-lg text-gray-500 font-medium">
-                            This enables predictable and scalable revenue growth.
-                        </p>
-                    </div>
+
                 </div>
             </div>
         </section>

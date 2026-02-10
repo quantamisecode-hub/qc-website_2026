@@ -1,4 +1,4 @@
-import { UserCheck, MessageSquare, Calendar, RefreshCcw, LifeBuoy } from "lucide-react";
+import { UserCheck, MessageSquare, Calendar, RefreshCcw, LifeBuoy, ClipboardCheck } from "lucide-react";
 
 const communicationFeatures = [
     {
@@ -40,6 +40,14 @@ const communicationFeatures = [
         icon: LifeBuoy,
         color: "text-cyan-600",
         bg: "bg-cyan-50",
+    },
+    {
+        id: 6,
+        title: "Design Handover & QA",
+        description: "Reviewing implementation to ensure the final product matches the design pixel-perfectly.",
+        icon: ClipboardCheck,
+        color: "text-rose-600",
+        bg: "bg-rose-50",
     }
 ];
 

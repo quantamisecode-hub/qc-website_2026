@@ -1,4 +1,4 @@
-import { Rocket, Cloud, BadgeDollarSign, TrendingUp, Users } from "lucide-react";
+import { Rocket, Cloud, BadgeDollarSign, TrendingUp, Users, PieChart } from "lucide-react";
 
 const businessValues = [
     {
@@ -45,6 +45,15 @@ const businessValues = [
         color: "text-indigo-600",
         bg: "bg-indigo-50",
         borderColor: "border-indigo-100"
+    },
+    {
+        id: 6,
+        title: "Data-Driven Iteration",
+        description: "Using analytics to continuously refine features and improve user satisfaction.",
+        icon: PieChart,
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+        borderColor: "border-cyan-100"
     }
 ];
 

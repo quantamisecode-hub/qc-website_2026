@@ -81,11 +81,7 @@ export default function EcommerceEngagement() {
                     </div>
                 </div>
                 {/* Footer Text */}
-                <div className="text-center mt-12">
-                    <p className="text-lg text-gray-500 font-medium">
-                        This ensures maximum ROI and cost transparency.
-                    </p>
-                </div>
+
             </div>
         </section>
     );

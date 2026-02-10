@@ -1,4 +1,4 @@
-import { UserCheck, MessageSquare, Calendar, RefreshCcw, LifeBuoy } from "lucide-react";
+import { UserCheck, MessageSquare, Calendar, RefreshCcw, LifeBuoy, Smartphone } from "lucide-react";
 
 const communicationFeatures = [
     {
@@ -40,6 +40,14 @@ const communicationFeatures = [
         icon: LifeBuoy,
         color: "text-cyan-600",
         bg: "bg-cyan-50",
+    },
+    {
+        id: 6,
+        title: "App Store Optimization",
+        description: "Guidance on store listings, keywords, and updates to maximize app visibility.",
+        icon: Smartphone,
+        color: "text-rose-600",
+        bg: "bg-rose-50",
     }
 ];
 

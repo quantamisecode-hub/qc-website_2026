@@ -1,4 +1,4 @@
-import { Zap, Database, CheckCircle, TrendingUp, Layers } from "lucide-react";
+import { Zap, Database, CheckCircle, TrendingUp, Layers, ShieldCheck } from "lucide-react";
 
 const businessValues = [
     {
@@ -45,6 +45,15 @@ const businessValues = [
         color: "text-indigo-600",
         bg: "bg-indigo-50",
         borderColor: "border-indigo-100"
+    },
+    {
+        id: 6,
+        title: "Automated Governance",
+        description: "Built-in compliance and security policies ensuring data integrity across all pipelines.",
+        icon: ShieldCheck,
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+        borderColor: "border-cyan-100"
     }
 ];
 

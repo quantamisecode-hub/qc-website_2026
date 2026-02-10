@@ -1,4 +1,4 @@
-import { UserCheck, MessageSquare, Calendar, RefreshCcw, LifeBuoy } from "lucide-react";
+import { UserCheck, MessageSquare, Calendar, RefreshCcw, LifeBuoy, FileCode } from "lucide-react";
 
 const communicationFeatures = [
     {
@@ -40,6 +40,14 @@ const communicationFeatures = [
         icon: LifeBuoy,
         color: "text-cyan-600",
         bg: "bg-cyan-50",
+    },
+    {
+        id: 6,
+        title: "Full IP & Code Ownership",
+        description: "You retain 100% intellectual property rights with a complete, clean code handover.",
+        icon: FileCode,
+        color: "text-rose-600",
+        bg: "bg-rose-50",
     }
 ];
 

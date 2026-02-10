@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Dedicated Development Teams for Scalable, High-Performance Digital Products",
         description: "Build your extended engineering team with pre-vetted, full-time developers, architects, and AI specialists.",
-        url: "https://www.quantamise.com/services/dedicated-development-team",
+        url: "https://www.quantamisecode.com/services/dedicated-development-team",
         siteName: "Quantamise Code",
         images: [
             {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/dedicated-development-team",
+        canonical: "https://www.quantamisecode.com/services/dedicated-development-team",
     },
 };
 
@@ -68,8 +68,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://quantamise.com",
-        "logo": "https://quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "Software Development Outsourcing",
     "areaServed": "Global",

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { BadgeDollarSign, Users, Clock, Handshake, ArrowRight } from "lucide-react";
+import { Users, Clock, Handshake } from "lucide-react";
 
 // Icons mapped to models loosely
 const engagementModels = [
@@ -29,14 +29,7 @@ const engagementModels = [
         color: "text-amber-600",
         borderColor: "group-hover:border-amber-200"
     },
-    {
-        id: "hybrid",
-        title: "Hybrid Delivery Model",
-        description: "Combination of onsite and offshore resources for optimal cost-efficiency and collaboration.",
-        icon: BadgeDollarSign,
-        color: "text-emerald-600",
-        borderColor: "group-hover:border-emerald-200"
-    },
+
     {
         id: "bot",
         title: "Build-Operate-Transfer (BOT)",
@@ -66,13 +59,14 @@ export default function DedicatedTeamEngagement() {
 
                 {/* Unified Grid Layout */}
                 <div className="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden">
-                    <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                    <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 divide-slate-100">
                         {engagementModels.map((model, index) => (
                             <div
                                 key={model.id}
                                 className={`
                                     group relative p-10 md:p-12 transition-all duration-300 hover:bg-slate-50
-                                    ${(index < engagementModels.length - 1 && index % 2 === 0) ? 'md:border-b border-slate-100' : ''}
+                                    ${index % 2 === 0 ? 'md:border-r border-slate-100' : ''}
+                                    ${index < engagementModels.length - 2 ? 'md:border-b border-slate-100' : ''}
                                 `}
                             >
                                 {/* Icon */}

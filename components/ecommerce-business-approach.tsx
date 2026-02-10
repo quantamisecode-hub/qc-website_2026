@@ -99,11 +99,7 @@ export default function EcommerceBusinessApproach() {
 
                 </div>
                 {/* Footer Text */}
-                <div className="text-center mt-12">
-                    <p className="text-lg text-gray-500 font-medium">
-                        We help you convert visitors into loyal customers.
-                    </p>
-                </div>
+
             </div>
         </section>
     );

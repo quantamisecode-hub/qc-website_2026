@@ -1,4 +1,4 @@
-import { UserCheck, MessageSquare, BarChart, RefreshCcw, LifeBuoy } from "lucide-react";
+import { UserCheck, MessageSquare, BarChart, RefreshCcw, LifeBuoy, CheckSquare } from "lucide-react";
 
 const communicationFeatures = [
     {
@@ -40,6 +40,14 @@ const communicationFeatures = [
         icon: LifeBuoy,
         color: "text-cyan-600",
         bg: "bg-cyan-50",
+    },
+    {
+        id: 6,
+        title: "Launch Readiness Reviews",
+        description: "Comprehensive audits before go-live to ensure stability, security, and scalability.",
+        icon: CheckSquare,
+        color: "text-rose-600",
+        bg: "bg-rose-50",
     }
 ];
 

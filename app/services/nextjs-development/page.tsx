@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Next.js Development Services | Quantamise Code",
         description: "Transform your ideas into high-performance, SEO-optimized web applications with our expert Next.js developers.",
-        url: "https://www.quantamise.com/services/nextjs-development",
+        url: "https://www.quantamisecode.com/services/nextjs-development",
         siteName: "Quantamise Code",
         images: [
             {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/nextjs-development",
+        canonical: "https://www.quantamisecode.com/services/nextjs-development",
     },
 };
 
@@ -62,8 +62,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://quantamise.com",
-        "logo": "https://quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "Web Development",
     "areaServed": "Global",

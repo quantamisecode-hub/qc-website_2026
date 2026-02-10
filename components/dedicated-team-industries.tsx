@@ -32,6 +32,12 @@ const industries = [
         title: "Product Companies",
         icon: ShoppingBag,
         description: "Launching new solutions and maintaining competitive advantage in the market."
+    },
+    {
+        id: "agencies",
+        title: "Agencies & Consultancies",
+        icon: Building2,
+        description: "Scaling delivery capabilities for agencies requiring specialized technical talent."
     }
 ];
 
@@ -73,7 +79,7 @@ export default function DedicatedTeamIndustries() {
 
                 {/* Grid Layout matching Homepage */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center" // added justify-center for odd number of items
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"

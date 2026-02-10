@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Data Engineering Services | Quantamise Code",
         description: "Transform your raw information into actionable intelligence with our scalable data engineering solutions.",
-        url: "https://www.quantamise.com/services/data-engineering-consulting",
+        url: "https://www.quantamisecode.com/services/data-engineering-consulting",
         siteName: "Quantamise Code",
         images: [
             {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/data-engineering-consulting",
+        canonical: "https://www.quantamisecode.com/services/data-engineering-consulting",
     },
 };
 
@@ -67,8 +67,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://quantamise.com",
-        "logo": "https://quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "Data Engineering",
     "areaServed": "Global",

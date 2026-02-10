@@ -1,4 +1,4 @@
-import { Zap, Layout, Users, ShieldCheck, TrendingUp, ArrowUpRight } from "lucide-react";
+import { Zap, Layout, Users, ShieldCheck, TrendingUp, ArrowUpRight, Tag } from "lucide-react";
 
 const businessValues = [
     {
@@ -45,6 +45,15 @@ const businessValues = [
         color: "text-indigo-600",
         bg: "bg-indigo-50",
         borderColor: "border-indigo-100"
+    },
+    {
+        id: 6,
+        title: "Brand Consistency",
+        description: "Ensuring every interaction reinforces your brand identity and values.",
+        icon: Tag,
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+        borderColor: "border-cyan-100"
     }
 ];
 

@@ -72,12 +72,7 @@ export default function EcommerceHero() {
                             Launch Your Store
                             <ArrowRight className="w-5 h-5" />
                         </Link>
-                        <Link
-                            href="#roadmap"
-                            className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-white border-2 border-[#3A0F67] text-[#3A0F67] font-bold text-base hover:bg-[#F9FAFC] transition-all flex items-center justify-center gap-2"
-                        >
-                            Our Process
-                        </Link>
+
                     </div>
                 </motion.div>
             </div>

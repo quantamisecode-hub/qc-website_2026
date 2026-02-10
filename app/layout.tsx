@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://quantamise-code.vercel.app"),
+  metadataBase: new URL("https://www.quantamisecode.com"),
   title: {
     default: "Quantamise Code | AI & Software Development Company",
     template: "%s | Quantamise Code",
@@ -79,8 +79,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Quantamise Code",
-              url: "https://quantamisecode.com/",
-              logo: "https://quantamise-code.vercel.app/logo.png",
+              url: "https://www.quantamisecode.com/",
+              logo: "https://www.quantamisecode.com/logo.png",
               sameAs: [
                 "https://www.linkedin.com/company/quantamise-code",
                 "https://instagram.com/quantamise"

@@ -32,6 +32,12 @@ const industries = [
         title: "Enterprise Ecosystems",
         icon: Building2,
         description: "Secure, compliant, and integrated cloud systems for large-scale global operations."
+    },
+    {
+        id: "iot",
+        title: "IoT & Edge Computing",
+        icon: Activity,
+        description: "Low-latency edge processing architectures for real-time device management."
     }
 ];
 
@@ -71,7 +77,7 @@ export default function CloudConsultingIndustries() {
                 </div>
 
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"

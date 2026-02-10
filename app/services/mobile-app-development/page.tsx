@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Mobile App Development Services | Quantamise Code",
         description: "Transform your business with intelligent, scalable mobile applications. Expert iOS, Android, and Cross-Platform development services.",
-        url: "https://quantamise.com/services/mobile-app-development",
+        url: "https://www.quantamisecode.com/services/mobile-app-development",
         siteName: "Quantamise Code",
         images: [
             {
-                url: "https://quantamise.com/assets/mobile-development-og.jpg", // Assuming generic or specific image
+                url: "https://www.quantamisecode.com/assets/mobile-development-og.jpg", // Assuming generic or specific image
                 width: 1200,
                 height: 630,
                 alt: "Mobile App Development Services",
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Mobile App Development Services | Quantamise Code",
         description: "Leading Mobile App Development Company specializing in custom iOS, Android, and Cross-Platform applications.",
-        images: ["https://quantamise.com/assets/mobile-development-og.jpg"],
+        images: ["https://www.quantamisecode.com/assets/mobile-development-og.jpg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/mobile-app-development",
+        canonical: "https://www.quantamisecode.com/services/mobile-app-development",
     },
 };
 
@@ -64,8 +64,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://quantamise.com",
-        "logo": "https://quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "Software Development",
     "areaServed": "Global",

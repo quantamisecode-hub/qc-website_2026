@@ -1,4 +1,4 @@
-import { UserCheck, MessageSquare, Calendar, RefreshCcw, LifeBuoy } from "lucide-react";
+import { UserCheck, MessageSquare, Calendar, RefreshCcw, LifeBuoy, ShieldCheck } from "lucide-react";
 
 const communicationFeatures = [
     {
@@ -40,6 +40,14 @@ const communicationFeatures = [
         icon: LifeBuoy,
         color: "text-cyan-600",
         bg: "bg-cyan-50",
+    },
+    {
+        id: 6,
+        title: "Data Governance Seminars",
+        description: "Workshops to establish best practices for data handling and compliance.",
+        icon: ShieldCheck,
+        color: "text-rose-600",
+        bg: "bg-rose-50",
     }
 ];
 

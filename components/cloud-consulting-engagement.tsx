@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CloudCog, Scale, ArrowLeftRight, TrendingDown, ClipboardCheck } from "lucide-react";
+import { CloudCog, Scale, ArrowLeftRight, TrendingDown, ClipboardCheck, ShieldCheck } from "lucide-react";
 
 const engagementModels = [
     {
@@ -43,6 +43,14 @@ const engagementModels = [
         icon: ClipboardCheck,
         color: "text-purple-600",
         borderColor: "group-hover:border-purple-200"
+    },
+    {
+        id: "security",
+        title: "Security & Compliance Audits",
+        description: "Comprehensive assessments ensuring your cloud infrastructure meets industry standards.",
+        icon: ShieldCheck,
+        color: "text-rose-600",
+        borderColor: "group-hover:border-rose-200"
     }
 ];
 
@@ -62,15 +70,12 @@ export default function CloudConsultingEngagement() {
                     </p>
                 </div>
 
-                <div className="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                <div className="bg-slate-100 rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-100">
                         {engagementModels.map((model, index) => (
                             <div
                                 key={model.id}
-                                className={`
-                                    group relative p-10 md:p-12 transition-all duration-300 hover:bg-slate-50
-                                    ${(index < engagementModels.length - 1) ? 'border-b md:border-b-0 border-slate-100' : ''}
-                                `}
+                                className="group relative p-10 md:p-12 bg-white transition-all duration-300 hover:bg-slate-50"
                             >
                                 <div className="mb-6 inline-block">
                                     <model.icon size={40} className={`${model.color} mb-2 transition-transform duration-300 group-hover:scale-110`} strokeWidth={1.5} />

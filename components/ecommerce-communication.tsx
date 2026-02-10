@@ -1,4 +1,4 @@
-import { UserCheck, Palette, Server, Calendar, TrendingUp } from "lucide-react";
+import { UserCheck, Palette, Server, Calendar, TrendingUp, Rocket } from "lucide-react";
 
 const communicationFeatures = [
     {
@@ -40,6 +40,14 @@ const communicationFeatures = [
         icon: TrendingUp,
         color: "text-cyan-600",
         bg: "bg-cyan-50",
+    },
+    {
+        id: 6,
+        title: "Launch & Growth Strategy",
+        description: "Post-launch marketing and feature roadmap planning to ensure sustained growth.",
+        icon: Rocket,
+        color: "text-rose-600",
+        bg: "bg-rose-50",
     }
 ];
 
@@ -85,11 +93,7 @@ export default function EcommerceCommunication() {
                     ))}
                 </div>
                 {/* Footer Text */}
-                <div className="text-center mt-12">
-                    <p className="text-lg text-gray-500 font-medium">
-                        We support your growth at every stage.
-                    </p>
-                </div>
+
             </div>
         </section>
     );

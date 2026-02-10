@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "IIoT Development Services | Quantamise Code",
         description: "Transform your business with scalable, high-performance IIoT solutions developed by our expert engineers.",
-        url: "https://quantamise.com/services/IIoT",
+        url: "https://www.quantamisecode.com/services/IIoT",
         siteName: "Quantamise Code",
         images: [
             {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         images: ["/assets/iiotDevelopmentChooseImg.jpeg"], // Placeholder
     },
     alternates: {
-        canonical: "https://quantamise.com/services/IIoT",
+        canonical: "https://www.quantamisecode.com/services/IIoT",
     },
 };
 
@@ -72,8 +72,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://quantamise.com",
-        "logo": "https://quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "Software Development",
     "areaServed": "Global",

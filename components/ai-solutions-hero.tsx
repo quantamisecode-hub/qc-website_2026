@@ -72,12 +72,7 @@ export default function AiSolutionsHero() {
                             Start AI Project
                             <ArrowRight className="w-5 h-5" />
                         </Link>
-                        <Link
-                            href="#roadmap"
-                            className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-white border-2 border-[#6366f1] text-[#6366f1] font-bold text-base hover:bg-[#F9FAFC] transition-all flex items-center justify-center gap-2"
-                        >
-                            Our Process
-                        </Link>
+
                     </div>
                 </motion.div>
             </div>

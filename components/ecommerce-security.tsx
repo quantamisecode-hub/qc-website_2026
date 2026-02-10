@@ -82,11 +82,7 @@ export default function EcommerceSecurity() {
                     ))}
                 </div>
                 {/* Footer Text */}
-                <div className="text-center mt-12">
-                    <p className="text-lg text-gray-500 font-medium">
-                        This builds trust and protects your business from financial risks.
-                    </p>
-                </div>
+
             </div>
         </section>
     );

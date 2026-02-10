@@ -1,4 +1,4 @@
-import { UserCheck, Waypoints, ShieldAlert, TrendingDown, Users } from "lucide-react";
+import { UserCheck, Waypoints, ShieldAlert, TrendingDown, Users, ClipboardList } from "lucide-react";
 
 const partnershipRoles = [
     {
@@ -40,6 +40,14 @@ const partnershipRoles = [
         icon: Users,
         color: "text-cyan-600",
         bg: "bg-cyan-50",
+    },
+    {
+        id: 6,
+        title: "Quarterly Business Reviews",
+        description: "Strategic alignment meetings to ensure our cloud services evolve with your business.",
+        icon: ClipboardList,
+        color: "text-rose-600",
+        bg: "bg-rose-50",
     }
 ];
 

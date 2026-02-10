@@ -118,11 +118,7 @@ export default function EcommerceTechStack() {
                             </div>
                         ))}
                     </div>
-                    <div className="text-center mt-8">
-                        <p className="text-sm text-slate-500 font-medium">
-                            Ensuring fast load times and high uptime, even during peak sales.
-                        </p>
-                    </div>
+
                 </div>
 
 
@@ -174,11 +170,7 @@ export default function EcommerceTechStack() {
                         </div>
                     ))}
                 </div>
-                <div className="text-center mt-12">
-                    <p className="text-lg text-gray-500 font-medium">
-                        Every component is optimized for speed, reliability, and revenue growth.
-                    </p>
-                </div>
+
             </div>
         </section>
     );

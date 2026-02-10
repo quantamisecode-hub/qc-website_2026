@@ -1,4 +1,4 @@
-import { Zap, Layout, Users, ShieldCheck, TrendingUp } from "lucide-react";
+import { Zap, Layout, Users, ShieldCheck, TrendingUp, Lock } from "lucide-react";
 
 const businessValues = [
     {
@@ -45,6 +45,15 @@ const businessValues = [
         color: "text-indigo-600",
         bg: "bg-indigo-50",
         borderColor: "border-indigo-100"
+    },
+    {
+        id: 6,
+        title: "Security First (DevSecOps)",
+        description: "Integrating security best practices early in the development lifecycle to prevent vulnerabilities.",
+        icon: Lock,
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+        borderColor: "border-cyan-100"
     }
 ];
 

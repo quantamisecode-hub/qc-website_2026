@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "SaaS Development Company | Build Scalable Cloud Platforms | Quantamise Code",
         description: "Launch and scale your SaaS product with our expert development services. We build secure, multi-tenant cloud applications optimized for growth.",
-        url: "https://www.quantamise.com/services/saas-development",
+        url: "https://www.quantamisecode.com/services/saas-development",
         siteName: "Quantamise Code",
         images: [
             {
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         images: ["/assets/saas-development-og.jpg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/saas-development",
+        canonical: "https://www.quantamisecode.com/services/saas-development",
     },
 };
 
@@ -66,8 +66,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://www.quantamise.com",
-        "logo": "https://www.quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "Software Development",
     "areaServed": "Global",

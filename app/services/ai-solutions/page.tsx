@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "AI Solutions & Machine Learning Development | Quantamise Code",
         description: "Transform your business with intelligent, scalable AI & Machine Learning solutions developed by our expert engineers.",
-        url: "https://www.quantamise.com/services/ai-solutions",
+        url: "https://www.quantamisecode.com/services/ai-solutions",
         siteName: "Quantamise Code",
         images: [
             {

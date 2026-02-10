@@ -3,12 +3,106 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Menu, X, ChevronDown, ChevronUp, LayoutGrid, Database, Cpu, Globe, Users } from "lucide-react";
+import { ArrowRight, Menu, X, ChevronDown, ChevronUp, LayoutGrid, Database, Cpu, Globe, Users, Layout, Server, Smartphone, Cloud, Bot } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ServicesMegaMenu, { servicesData } from "./services-mega-menu";
 import AboutMegaMenu from "./about-mega-menu";
 import TechnologiesMegaMenu from "./technologies-mega-menu";
-import aboutImg from "@/public/assets/navAboutImg.jpeg";
+import { DiRedis } from "react-icons/di";
+import {
+    SiReact, SiNextdotjs, SiVuedotjs, SiAngular, SiTailwindcss, SiTypescript,
+    SiNodedotjs, SiPython, SiGo, SiDotnet, SiGraphql,
+    SiMongodb, SiJamstack, SiFlutter, SiSwift, SiKotlin,
+    SiPostgresql, SiMysql, SiAmazon, SiGooglecloud, SiDocker,
+    SiKubernetes, SiOpenai, SiTensorflow, SiPytorch
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { VscAzure } from "react-icons/vsc";
+
+const technologiesData = [
+    {
+        id: "frontend",
+        label: "Frontend",
+        icon: Layout,
+        techs: [
+            { name: "React", icon: SiReact },
+            { name: "Next.js", icon: SiNextdotjs },
+            { name: "Vue.js", icon: SiVuedotjs },
+            { name: "Angular", icon: SiAngular },
+            { name: "Tailwind CSS", icon: SiTailwindcss },
+            { name: "TypeScript", icon: SiTypescript },
+        ]
+    },
+    {
+        id: "backend",
+        label: "Backend",
+        icon: Server,
+        techs: [
+            { name: "Node.js", icon: SiNodedotjs },
+            { name: "Python", icon: SiPython },
+            { name: "Go", icon: SiGo },
+            { name: "Java", icon: FaJava },
+            { name: ".NET Core", icon: SiDotnet },
+            { name: "GraphQL", icon: SiGraphql },
+        ]
+    },
+    {
+        id: "fullstack",
+        label: "Full Stack",
+        icon: Layout,
+        techs: [
+            { name: "MERN Stack", icon: SiMongodb },
+            { name: "MEAN Stack", icon: SiAngular },
+            { name: "Jamstack", icon: SiJamstack },
+            { name: "T3 Stack", icon: SiNextdotjs },
+        ]
+    },
+    {
+        id: "mobile",
+        label: "Mobile",
+        icon: Smartphone,
+        techs: [
+            { name: "React Native", icon: SiReact },
+            { name: "Flutter", icon: SiFlutter },
+            { name: "iOS (Swift)", icon: SiSwift },
+            { name: "Android (Kotlin)", icon: SiKotlin },
+        ]
+    },
+    {
+        id: "database",
+        label: "Database",
+        icon: Database,
+        techs: [
+            { name: "PostgreSQL", icon: SiPostgresql },
+            { name: "MongoDB", icon: SiMongodb },
+            { name: "Redis", icon: DiRedis },
+            { name: "MySQL", icon: SiMysql },
+        ]
+    },
+    {
+        id: "cloud",
+        label: "Cloud",
+        icon: Cloud,
+        techs: [
+            { name: "AWS", icon: SiAmazon },
+            { name: "Azure", icon: VscAzure },
+            { name: "Google Cloud", icon: SiGooglecloud },
+            { name: "Docker", icon: SiDocker },
+            { name: "Kubernetes", icon: SiKubernetes },
+        ]
+    },
+    {
+        id: "ai",
+        label: "AI & ML",
+        icon: Bot,
+        techs: [
+            { name: "OpenAI API", icon: SiOpenai },
+            { name: "TensorFlow", icon: SiTensorflow },
+            { name: "PyTorch", icon: SiPytorch },
+            { name: "Python", icon: SiPython },
+        ]
+    }
+];
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -25,7 +119,7 @@ export default function Nav() {
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
     const [isServicesExpanded, setIsServicesExpanded] = useState(false);
     const [isTechnologiesExpanded, setIsTechnologiesExpanded] = useState(false);
-    const [isAboutExpanded, setIsAboutExpanded] = useState(false);
+
 
     // Prevent body scroll when menu is open
     useEffect(() => {
@@ -218,7 +312,7 @@ export default function Nav() {
                                                             transition={{ duration: 0.3 }}
                                                             className="overflow-hidden bg-white/5 rounded-b-xl backdrop-blur-sm"
                                                         >
-                                                            <div className="pl-4 py-4 flex flex-col gap-6">
+                                                            <div className="pl-4 py-4 flex flex-col gap-6 max-h-[50vh] overflow-y-auto overflow-x-hidden">
                                                                 {servicesData.map((category, idx) => (
                                                                     <div key={idx} className="flex flex-col gap-3">
                                                                         {/* Category Header */}
@@ -280,106 +374,40 @@ export default function Nav() {
                                                             transition={{ duration: 0.3 }}
                                                             className="overflow-hidden bg-white/5 rounded-b-xl backdrop-blur-sm"
                                                         >
-                                                            <div className="pl-4 py-4 flex flex-col gap-3">
-                                                                {["Frontend", "Backend", "Full Stack", "Mobile", "Database", "Cloud", "AI & ML"].map((tech, idx) => (
-                                                                    <a
-                                                                        key={tech}
-                                                                        href={`/technologies/${tech.toLowerCase().replace(/ /g, "-").replace(/&/g, "and")}`}
-                                                                        onClick={() => setIsOpen(false)}
-                                                                        className="flex items-center gap-3 group"
-                                                                    >
-                                                                        <div className="p-1 rounded bg-white/10 text-[#eb56f6]">
-                                                                            <Cpu className="w-4 h-4" />
+                                                            <div className="pl-4 py-4 flex flex-col gap-6 max-h-[50vh] overflow-y-auto overflow-x-hidden">
+                                                                {technologiesData.map((category, idx) => (
+                                                                    <div key={idx} className="flex flex-col gap-3">
+                                                                        <div className="flex items-center gap-3">
+                                                                            <div className="p-2 rounded-lg bg-white/10 text-[#eb56f6]">
+                                                                                <category.icon className="w-5 h-5" />
+                                                                            </div>
+                                                                            <h4 className="font-bold text-lg text-white">{category.label}</h4>
                                                                         </div>
-                                                                        <span className="font-medium text-gray-300 group-hover:text-white text-lg">{tech}</span>
-                                                                    </a>
+                                                                        <div className="w-full h-[1px] bg-white/10 ml-12" />
+
+                                                                        <div className="pl-12 flex flex-col gap-3">
+                                                                            {category.techs.map((tech, i) => (
+                                                                                <a
+                                                                                    key={i}
+                                                                                    href={`/technologies/${tech.name.toLowerCase().replace(/ /g, "-").replace(/\./g, "").replace(/\(/g, "").replace(/\)/g, "")}`}
+                                                                                    onClick={() => setIsOpen(false)}
+                                                                                    className="flex items-center gap-3 group"
+                                                                                >
+                                                                                    <tech.icon className="w-5 h-5 text-[#eb56f6] group-hover:text-white transition-colors" />
+                                                                                    <span className="font-medium text-gray-300 group-hover:text-white text-sm transition-colors">
+                                                                                        {tech.name}
+                                                                                    </span>
+                                                                                </a>
+                                                                            ))}
+                                                                        </div>
+                                                                    </div>
                                                                 ))}
                                                             </div>
                                                         </motion.div>
                                                     )}
                                                 </AnimatePresence>
                                             </div>
-                                        ) : link.name === "About" ? (
-                                            // Mobile Accordion for About
-                                            <div className="flex flex-col">
-                                                <button
-                                                    onClick={() => setIsAboutExpanded(!isAboutExpanded)}
-                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-2 border-b border-white/10 cursor-pointer"
-                                                >
-                                                    {link.name}
-                                                    {isAboutExpanded ? (
-                                                        <ChevronUp className="w-6 h-6 text-[#eb56f6]" />
-                                                    ) : (
-                                                        <ChevronDown className="w-6 h-6 text-white" />
-                                                    )}
-                                                </button>
 
-                                                <AnimatePresence>
-                                                    {isAboutExpanded && (
-                                                        <motion.div
-                                                            initial={{ height: 0, opacity: 0 }}
-                                                            animate={{ height: "auto", opacity: 1 }}
-                                                            exit={{ height: 0, opacity: 0 }}
-                                                            transition={{ duration: 0.3 }}
-                                                            className="overflow-hidden bg-white/5 rounded-b-xl backdrop-blur-sm"
-                                                        >
-                                                            <div className="p-4 flex flex-col gap-6">
-                                                                {/* Image Section */}
-                                                                <div className="relative rounded-lg overflow-hidden h-48 w-full">
-                                                                    <Image
-                                                                        src={aboutImg}
-                                                                        alt="About Quantamise Code"
-                                                                        fill
-                                                                        className="object-cover"
-                                                                    />
-                                                                    <div className="absolute inset-0 bg-gradient-to-t from-[#3A0F67]/80 via-transparent to-transparent" />
-                                                                    <div className="absolute bottom-3 left-3 text-white">
-                                                                        <p className="font-bold">Our Culture</p>
-                                                                        <p className="text-xs text-gray-200">Building the future together</p>
-                                                                    </div>
-                                                                </div>
-
-                                                                {/* Text Content */}
-                                                                <div>
-                                                                    <a
-                                                                        href="/about"
-                                                                        onClick={() => setIsOpen(false)}
-                                                                        className="flex items-center gap-2 mb-2 group"
-                                                                    >
-                                                                        <h3 className="font-extrabold text-xl text-white group-hover:text-[#eb56f6] transition-colors">
-                                                                            About Quantamise Code
-                                                                        </h3>
-                                                                        <ArrowRight className="w-4 h-4 text-[#eb56f6] group-hover:translate-x-1 transition-transform" />
-                                                                    </a>
-                                                                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                                                                        Transforming businesses with innovative technology solutions.
-                                                                    </p>
-
-                                                                    {/* Stats Grid */}
-                                                                    <div className="grid grid-cols-2 gap-3">
-                                                                        <div className="p-3 rounded-lg bg-white/10 border border-white/5">
-                                                                            <div className="text-2xl font-extrabold text-[#eb56f6] mb-0.5">5+</div>
-                                                                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wide">Years</p>
-                                                                        </div>
-                                                                        <div className="p-3 rounded-lg bg-white/10 border border-white/5">
-                                                                            <div className="text-2xl font-extrabold text-[#eb56f6] mb-0.5">99%</div>
-                                                                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wide">Success</p>
-                                                                        </div>
-                                                                        <div className="p-3 rounded-lg bg-white/10 border border-white/5">
-                                                                            <div className="text-2xl font-extrabold text-[#eb56f6] mb-0.5">45+</div>
-                                                                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wide">Projects</p>
-                                                                        </div>
-                                                                        <div className="p-3 rounded-lg bg-white/10 border border-white/5">
-                                                                            <div className="text-2xl font-extrabold text-[#eb56f6] mb-0.5">4.9/5</div>
-                                                                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wide">Rating</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </motion.div>
-                                                    )}
-                                                </AnimatePresence>
-                                            </div>
                                         ) : (
                                             <a
                                                 href={link.href}
