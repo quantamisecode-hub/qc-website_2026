@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Cloud Consulting Services for Secure, Scalable & Cost-Efficient Digital Transformation",
         description: "We help organizations design, migrate, and optimize cloud environments that support business growth, innovation, and operational excellence.",
-        url: "https://www.quantamise.com/services/cloud-consulting",
+        url: "https://www.quantamisecode.com/services/cloud-consulting",
         siteName: "Quantamise Code",
         images: [
             {
@@ -62,24 +62,30 @@ export const metadata: Metadata = {
     },
 };
 
-const jsonLd = {
+const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Cloud Consulting Services",
-    "provider": {
+    name: "SaaS Product Development",
+    url: "https://www.quantamisecode.com/services/saas-development",
+    description:
+        "Scalable SaaS platform development services including MVP development, multi-tenant architecture, cloud infrastructure, monetization systems, and enterprise-grade security.",
+    provider: {
         "@type": "Organization",
-        "name": "Quantamise Code",
-        "url": "https://quantamise.com",
-        "logo": "https://quantamise.com/assets/logo.png"
+        name: "Quantamise Code",
+        url: "https://www.quantamisecode.com",
+        logo: "https://www.quantamisecode.com/logo.png"
     },
-    "serviceType": "Cloud Computing Services",
-    "areaServed": "Global",
-    "description": "We help organizations design, migrate, and optimize cloud environments that support business growth, innovation, and operational excellence.",
-    "offers": {
+    areaServed: {
+        "@type": "Place",
+        name: "Worldwide"
+    },
+    serviceType: "SaaS Development",
+    category: "Software Development",
+    offers: {
         "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "Custom",
-        "availability": "https://schema.org/InStock"
+        availability: "https://schema.org/InStock",
+        url: "https://www.quantamisecode.com/contact",
+        priceCurrency: "USD"
     }
 };
 
@@ -143,7 +149,7 @@ export default function CloudConsultingPage() {
         <main className="min-h-screen bg-white">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />
             <script
                 type="application/ld+json"

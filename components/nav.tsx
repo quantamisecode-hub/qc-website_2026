@@ -128,15 +128,15 @@ export default function Nav() {
 
                     {/* Right Section: CTA Button (Restored Design) */}
                     <div className="hidden xl:flex items-center gap-2">
-                        <Link
-                            href="/contact"
-                            className="group rounded-sm px-8 py-2 bg-[#4f46e5] text-white font-extrabold flex items-center gap-2 hover:bg-[#3A0F67] transition-colors duration-300"
+                        <button
+                            onClick={() => window.dispatchEvent(new CustomEvent('open-cta-popup'))}
+                            className="group rounded-sm px-8 py-2 bg-[#4f46e5] text-white font-extrabold flex items-center gap-2 hover:bg-[#3A0F67] transition-colors duration-300 cursor-pointer"
                         >
                             Let&apos;s Talk
                             <ArrowRight
                                 className="w-5 h-5 transition-transform duration-200 ease-in-out group-hover:rotate-0 rotate-[-45deg]"
                             />
-                        </Link>
+                        </button>
                     </div>
 
                     {/* Mobile Menu Toggle */}
@@ -393,14 +393,16 @@ export default function Nav() {
                                 ))}
 
                                 <div className="mt-8">
-                                    <a
-                                        href="/contact"
-                                        onClick={() => setIsOpen(false)}
-                                        className="w-full rounded-xl px-6 py-4 bg-white text-[#3A0F67] font-bold flex items-center justify-center gap-2 hover:bg-[#eb56f6] hover:text-white hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300"
+                                    <button
+                                        onClick={() => {
+                                            setIsOpen(false);
+                                            window.dispatchEvent(new CustomEvent('open-cta-popup'));
+                                        }}
+                                        className="w-full rounded-xl px-6 py-4 bg-white text-[#3A0F67] font-bold flex items-center justify-center gap-2 hover:bg-[#eb56f6] hover:text-white hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 cursor-pointer"
                                     >
                                         Let&apos;s Talk
                                         <ArrowRight className="w-5 h-5" />
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>

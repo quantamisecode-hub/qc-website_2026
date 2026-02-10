@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_0.75fr_0.75fr_1.5fr] gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_1.8fr_0.6fr_1.2fr] gap-8 lg:gap-12 mb-16">
 
                     {/* Brand Column */}
                     <div>
@@ -39,17 +39,28 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Services Column */}
+                    {/* Services Column (Split into 2) */}
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-white">Services</h3>
-                        <ul className="space-y-4">
-                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">AI & Machine Learning</a></li>
-                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Web Development</a></li>
-                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Mobile App Development</a></li>
-                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Cloud Solutions</a></li>
-                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">UI/UX Design</a></li>
-                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">SaaS Development</a></li>
-                        </ul>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
+                            <ul className="space-y-4">
+                                <li><a href="/services/ai-solutions" className="hover:text-[#eb56f6] transition-colors">AI & Machine Learning</a></li>
+                                <li><a href="/services/cloud-consulting" className="hover:text-[#eb56f6] transition-colors">Cloud Consulting</a></li>
+                                <li><a href="/services/data-engineering" className="hover:text-[#eb56f6] transition-colors">Data Engineering</a></li>
+                                <li><a href="/services/data-engineering-consulting" className="hover:text-[#eb56f6] transition-colors">Data Eng. Consulting</a></li>
+                                <li><a href="/services/dedicated-development-team" className="hover:text-[#eb56f6] transition-colors">Dedicated Team</a></li>
+                                <li><a href="/services/devops-services" className="hover:text-[#eb56f6] transition-colors">DevOps Services</a></li>
+                                <li><a href="/services/ecommerce-development" className="hover:text-[#eb56f6] transition-colors">E-commerce Dev</a></li>
+                            </ul>
+                            <ul className="space-y-4">
+                                <li><a href="/services/full-stack-development" className="hover:text-[#eb56f6] transition-colors">Full Stack Dev</a></li>
+                                <li><a href="/services/industrial-iot-development" className="hover:text-[#eb56f6] transition-colors">Industrial IoT</a></li>
+                                <li><a href="/services/mobile-app-development" className="hover:text-[#eb56f6] transition-colors">Mobile App Dev</a></li>
+                                <li><a href="/services/nextjs-development" className="hover:text-[#eb56f6] transition-colors">Next.js Development</a></li>
+                                <li><a href="/services/saas-development" className="hover:text-[#eb56f6] transition-colors">SaaS Development</a></li>
+                                <li><a href="/services/UX-UI-design" className="hover:text-[#eb56f6] transition-colors">UI/UX Design</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     {/* Company Column */}

@@ -45,7 +45,7 @@ export default function NextJsRoadmap() {
                         OUR PROCESS
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6">
-                        From Concept to <span className="text-[#6366f1]">Vercel Deployment</span>
+                        From Concept to <span className="text-[#6366f1]">Deployment</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         A structured Next.js development workflow ensuring speed, scalability, and SEO success.

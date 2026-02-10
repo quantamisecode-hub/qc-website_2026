@@ -3,7 +3,7 @@ import {
     SiPytorch, SiTensorflow, SiKeras, SiScikitlearn,
     SiOpenai, SiHuggingface,
     SiPandas, SiNumpy, SiApachespark, SiApachekafka,
-    SiAmazon, SiGooglecloud,
+    SiAmazon, SiGooglecloud, SiGooglegemini,
     SiDocker, SiKubernetes, SiMlflow
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
@@ -25,7 +25,7 @@ const techCategories = [
         description: "Large Language Models, NLP, Prompt Engineering, RAG",
         techs: [
             { name: "OpenAI API", icon: SiOpenai, color: "#412991" },
-            { name: "Hugging Face", icon: SiHuggingface, color: "#FFD21E" },
+            { name: "Gemini API", icon: SiGooglegemini, color: "#8E75B2" },
             { name: "Llama 3", icon: Brain, color: "#0467DF" },
             { name: "LangChain", icon: Bot, color: "#1C3C3C" },
         ]

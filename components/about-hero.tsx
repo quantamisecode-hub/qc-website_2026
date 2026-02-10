@@ -33,13 +33,13 @@ export default function AboutHero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link
-                            href="/contact"
-                            className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#eb56f6] text-white font-bold text-base hover:bg-[#d035db] transition-all flex items-center justify-center gap-2"
+                        <button
+                            onClick={() => window.dispatchEvent(new CustomEvent('open-cta-popup'))}
+                            className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#eb56f6] text-white font-bold text-base hover:bg-[#d035db] transition-all flex items-center justify-center gap-2 cursor-pointer"
                         >
                             Talk to Our Experts
                             <ArrowRight className="w-5 h-5" />
-                        </Link>
+                        </button>
                     </div>
                 </motion.div>
             </div>

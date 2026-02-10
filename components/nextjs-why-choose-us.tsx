@@ -106,7 +106,7 @@ export default function NextJsWhyChooseUs() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className={`flex flex-col p-8 rounded-3xl border border-slate-100 bg-white hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 group`}
+                            className={`flex flex-col p-8 rounded-3xl border border-slate-300 bg-white hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 group`}
                         >
                             {/* Icon */}
                             <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${feature.bg} ${feature.color} group-hover:scale-110 transition-transform duration-300`}>
@@ -124,11 +124,12 @@ export default function NextJsWhyChooseUs() {
                             </p>
 
                             {/* Bullets */}
-                            <ul className="space-y-2">
+                            <ul className="space-y-2 list-disc pl-5">
                                 {feature.bullets.map((bullet, idx) => (
-                                    <li key={idx} className="flex items-start gap-2 text-sm text-slate-500">
-                                        <span className={`mt-1.5 w-1.5 h-1.5 rounded-full ${feature.color.replace('text-', 'bg-')}`} />
-                                        {bullet}
+                                    <li key={idx} className={`text-sm ${feature.color}`}>
+                                        <span className="text-slate-500">
+                                            {bullet}
+                                        </span>
                                     </li>
                                 ))}
                             </ul>

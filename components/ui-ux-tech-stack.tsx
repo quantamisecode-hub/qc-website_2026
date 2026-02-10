@@ -1,49 +1,38 @@
 import React from "react";
 import {
-    SiReact, SiNextdotjs, SiVuedotjs,
-    SiNodedotjs, SiPython, SiPhp,
-    SiPostgresql, SiMongodb, SiMysql,
-    SiAmazon, SiGooglecloud,
-    SiDocker, SiKubernetes,
-    SiGraphql
+    SiFigma, SiAdobexd, SiSketch, SiFramer,
+    SiInvision, SiMiro, SiHotjar
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
-import { VscAzure } from "react-icons/vsc";
-import { ArrowRight } from "lucide-react";
+import { StickyNote, PenTool, PlayCircle, Layers, ArrowRight } from "lucide-react";
 
-const techCategories = [
+const toolsCategories = [
     {
-        title: "Frontend Technologies",
-        description: "Responsive UI/UX Design, Progressive Web Applications (PWA)",
-        techs: [
-            { name: "React.js", icon: SiReact, color: "#61DAFB" },
-            { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-            { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
+        title: "Design & Prototyping",
+        description: "Creating high-fidelity mockups, interactive prototypes, and scalable design systems.",
+        tools: [
+            { name: "Figma", icon: SiFigma, color: "#F24E1E" },
+            { name: "Adobe XD", icon: SiAdobexd, color: "#FF61F6" },
+            { name: "Sketch", icon: SiSketch, color: "#F7B500" },
+            { name: "Framer", icon: SiFramer, color: "#0055FF" },
+            { name: "InVision", icon: SiInvision, color: "#FF3366" },
+            { name: "ProtoPie", icon: PlayCircle, color: "#FA4D2C" },
         ]
     },
     {
-        title: "Backend Technologies",
-        description: "RESTful & GraphQL APIs, Microservices Architecture",
-        techs: [
-            { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-            { name: "Python", icon: SiPython, color: "#3776AB" },
-            { name: "Java", icon: FaJava, color: "#007396" },
-            { name: "PHP", icon: SiPhp, color: "#777BB4" },
-            { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
+        title: "Collaboration & Handoff",
+        description: "Streamlining communication between designers, developers, and stakeholders.",
+        tools: [
+            { name: "Miro", icon: SiMiro, color: "#050038" },
+            { name: "FigJam", icon: StickyNote, color: "#9747FF" },
+            { name: "Zeplin", icon: Layers, color: "#FDBD39" },
         ]
     },
     {
-        title: "Database & Cloud",
-        description: "Infrastructure, Data Storage & Containerization",
-        techs: [
-            { name: "MySQL", icon: SiMysql, color: "#4479A1" },
-            { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-            { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-            { name: "AWS", icon: SiAmazon, color: "#FF9900" },
-            { name: "Azure", icon: VscAzure, color: "#0078D4" },
-            { name: "Google Cloud", icon: SiGooglecloud, color: "#4285F4" },
-            { name: "Docker", icon: SiDocker, color: "#2496ED" },
-            { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
+        title: "Research & Wireframing",
+        description: "Gathering user insights and structural planning before high-fidelity design.",
+        tools: [
+            { name: "Balsamiq", icon: PenTool, color: "#CC0200" },
+            { name: "Hotjar", icon: SiHotjar, color: "#FD3A5C" },
         ]
     }
 ];
@@ -58,15 +47,15 @@ export default function UiUxTechStack() {
                 <div className="text-left mb-20">
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6 leading-tight">
                         Comprehensive UI/UX <br />
-                        <span className="text-[#6366f1]">Technology Expertise</span>
+                        <span className="text-[#6366f1]">Tools & Technologies</span>
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl">
-                        Our engineers work across the complete technology stack to deliver seamless and integrated systems.
+                        We leverage industry-leading design tools to craft intuitive, engaging, and scalable digital experiences.
                     </p>
                 </div>
 
                 <div className="flex flex-col gap-12 lg:gap-16">
-                    {techCategories.map((category) => (
+                    {toolsCategories.map((category) => (
                         <div key={category.title} className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start border-b border-slate-100 pb-12 last:border-0 last:pb-0">
                             {/* Left: Category Title */}
                             <div className="lg:col-span-1 flex items-center gap-4">
@@ -79,19 +68,19 @@ export default function UiUxTechStack() {
                                 </div>
                             </div>
 
-                            {/* Right: Tech List */}
+                            {/* Right: Tools List */}
                             <div className="lg:col-span-3 flex flex-wrap gap-4">
-                                {category.techs.map((tech) => (
+                                {category.tools.map((tool) => (
                                     <div
-                                        key={tech.name}
+                                        key={tool.name}
                                         className="flex items-center gap-3 bg-white px-5 py-3 rounded-full border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-100 hover:bg-slate-50 transition-all duration-300 group cursor-default"
                                     >
-                                        <tech.icon
+                                        <tool.icon
                                             className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
-                                            style={{ color: tech.color }}
+                                            style={{ color: tool.color }}
                                         />
                                         <span className="text-sm font-semibold text-slate-700 group-hover:text-[#3A0F67] transition-colors">
-                                            {tech.name}
+                                            {tool.name}
                                         </span>
                                     </div>
                                 ))}

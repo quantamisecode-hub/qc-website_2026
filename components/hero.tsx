@@ -47,9 +47,6 @@ export default function Hero() {
                                 />
                             </Link>
                         </div>
-                        <Link href="/company-profile" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-[#3A0F67] bg-white border-2 border-[#3A0F67] rounded-lg hover:bg-[#F9FAFC] hover:shadow-md transition-all duration-300">
-                            Download Company Profile <Download className="ml-2 w-5 h-5" />
-                        </Link>
                     </motion.div>
 
                     {/* Decorative Image */}

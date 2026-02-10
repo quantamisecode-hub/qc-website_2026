@@ -1,37 +1,37 @@
 import React from "react";
 import * as motion from "framer-motion/client";
-import { Search, PenTool, Code, Rocket, Settings } from "lucide-react";
+import { Search, PenTool, Map, Palette, RefreshCw } from "lucide-react";
 
 const roadmapSteps = [
     {
         id: 1,
-        title: "Discovery & Planning",
-        description: "We dive deep into your business goals, analyzing requirements and risks to architect a rock-solid project roadmap.",
+        title: "Research & Discovery",
+        description: "Understand business goals, target users, competitors, and problems to solve.",
         icon: Search,
     },
     {
         id: 2,
-        title: "Design & Prototyping",
-        description: "Our designers craft intuitive, high-fidelity wireframes and interactive prototypes that validate user flow and aesthetics.",
-        icon: PenTool,
+        title: "Information Architecture",
+        description: "Plan structure and user flow of the product.",
+        icon: Map,
     },
     {
         id: 3,
-        title: "Development & Testing",
-        description: "We build with clean, secure code, running rigorous automated tests to ensure performance, security, and scalability.",
-        icon: Code, // Using Code icon, could use something representing both dev & test if preferred
+        title: "Wireframing",
+        description: "Create low-fidelity layouts to define structure and usability.",
+        icon: PenTool,
     },
     {
         id: 4,
-        title: "Deployment & Launch",
-        description: "Using automated CI/CD pipelines, we deploy your solution seamlessly to the cloud with zero downtime strategies.",
-        icon: Rocket,
+        title: "UI Design & Prototyping",
+        description: "Design high-fidelity screens and interactive prototypes.",
+        icon: Palette,
     },
     {
         id: 5,
-        title: "Optimization & Growth",
-        description: "Post-launch, we provide 24/7 monitoring, real-time analytics, and continuous updates to keep you ahead.",
-        icon: Settings, // Using Settings/Cog for Optimization
+        title: "Testing & Iteration",
+        description: "Validate designs with users and improve continuously.",
+        icon: RefreshCw,
     }
 ];
 

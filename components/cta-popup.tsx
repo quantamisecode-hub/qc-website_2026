@@ -20,12 +20,26 @@ export default function CTAPopup() {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            // Check if user has already submitted or dismissed recently (optional logic can be added here)
-            setIsVisible(true);
-        }, 7000); // 7 seconds
+        // Event listener for custom trigger
+        const handleOpenPopup = () => setIsVisible(true);
+        window.addEventListener('open-cta-popup', handleOpenPopup);
 
-        return () => clearTimeout(timer);
+        // Check if user has already seen the popup in this session
+        const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
+
+        if (!hasSeenPopup) {
+            const timer = setTimeout(() => {
+                setIsVisible(true);
+                sessionStorage.setItem("hasSeenPopup", "true");
+            }, 7000); // 7 seconds
+
+            return () => {
+                clearTimeout(timer);
+                window.removeEventListener('open-cta-popup', handleOpenPopup);
+            };
+        }
+
+        return () => window.removeEventListener('open-cta-popup', handleOpenPopup);
     }, []);
 
     // Scroll Lock

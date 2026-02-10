@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         images: ["/assets/ai-solutions-og.jpg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/ai-solutions",
+        canonical: "https://www.quantamisecode.com/services/ai-solutions",
     },
 };
 
@@ -66,8 +66,8 @@ const jsonLd = {
     "provider": {
         "@type": "Organization",
         "name": "Quantamise Code",
-        "url": "https://www.quantamise.com",
-        "logo": "https://www.quantamise.com/assets/logo.png"
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png"
     },
     "serviceType": "Software Development",
     "areaServed": "Global",
