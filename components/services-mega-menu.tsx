@@ -17,21 +17,21 @@ export const servicesData = [
         items: [
             { name: "Mobile Application Development", icon: Smartphone, href: "/services/mobile-app-development" },
             { name: "Next.js Development", icon: Zap, href: "/services/nextjs-development" },
-            { name: "Dedicated Development Team", icon: Users, href: "/services/dedicated-team" },
+            { name: "Dedicated Development Team", icon: Users, href: "/services/dedicated-development-team" },
         ],
     },
     {
         category: "AI & Data",
         items: [
             { name: "AI Solutions", icon: Brain, href: "/services/ai-solutions" },
-            { name: "Data Engineering", icon: Database, href: "/services/data-engineering" },
+            { name: "Data Engineering", icon: Database, href: "/services/data-engineering-consulting" },
         ],
     },
     {
         category: "Infrastructure & Operations",
         items: [
             { name: "Cloud Consulting Services", icon: Cloud, href: "/services/cloud-consulting" },
-            { name: "DevOps Services", icon: Activity, href: "/services/devops" },
+            { name: "DevOps Services", icon: Activity, href: "/services/devops-services" },
         ],
     },
 ];

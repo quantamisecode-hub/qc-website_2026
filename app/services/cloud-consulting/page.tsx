@@ -16,8 +16,8 @@ import CloudConsultingBusinessApproach from "@/components/cloud-consulting-busin
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Cloud Consulting Services for Secure, Scalable & Cost-Efficient Digital Transformation",
-    description: "We help organizations design, migrate, and optimize cloud environments that support business growth, innovation, and operational excellence.",
+    title: "Cloud Consulting & Migration Services Experts",
+    description: "Expert cloud consulting, migration, and optimization services for secure, scalable, and cost-efficient digital transformation.",
     keywords: [
         "Cloud consulting services",
         "Cloud consulting company",

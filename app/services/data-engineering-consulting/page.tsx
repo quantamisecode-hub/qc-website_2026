@@ -16,8 +16,8 @@ import DataEngFAQ from "@/components/data-eng-faq";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Data Engineering Services | Quantamise Code",
-    description: "Expert data engineering and consulting services. We build scalable data pipelines, trusted data warehouses, and AI-ready infrastructure for business growth.",
+    title: "Data Engineering & Consulting Services",
+    description: "Scalable data engineering and consulting services for analytics, AI readiness, and business intelligence. Build modern data platforms with Quantamise Code.",
     keywords: [
         "Data engineering services",
         "Data engineering consulting",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Data Engineering Services | Quantamise Code",
         description: "Transform your raw information into actionable intelligence with our scalable data engineering solutions.",
-        url: "https://www.quantamise.com/services/data-engineering",
+        url: "https://www.quantamise.com/services/data-engineering-consulting",
         siteName: "Quantamise Code",
         images: [
             {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/data-engineering",
+        canonical: "https://www.quantamise.com/services/data-engineering-consulting",
     },
 };
 

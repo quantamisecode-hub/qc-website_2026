@@ -13,8 +13,8 @@ import NextJsWhyChooseUs from "@/components/nextjs-why-choose-us";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Next.js Development Services | Quantamise Code",
-    description: "Expert Next.js development services. We build high-performance, SEO-friendly, and scalable web applications using the latest Next.js features.",
+    title: "Next.js Development Services for Scalable Web Apps",
+    description: "Custom Next.js development services for high-performance, SEO-friendly, and scalable SaaS and enterprise web applications by Quantamise Code.",
     keywords: [
         "Next.js development company",
         "Next.js development services",
@@ -170,7 +170,7 @@ export default function NextJsDevelopmentPage() {
             <NextJsFAQ />
 
             {/* Related Services Section - Updating prop to nextjs if supported or just keeping as related */}
-            <RelatedServices currentService="full-stack" />
+            <RelatedServices currentService="nextjs" />
 
             {/* CTA Section */}
             <NextJsCTA />

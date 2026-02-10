@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-// import Link from "next/link"; // Removed
+import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Menu, X, ChevronDown, ChevronUp, LayoutGrid, Database, Cpu, Globe, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -66,10 +66,10 @@ export default function Nav() {
                             onMouseEnter={() => setHoveredItem("About")}
                             onMouseLeave={() => setHoveredItem(null)}
                         >
-                            <a href="/about" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors flex items-center gap-1">
+                            <Link href="/about" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors flex items-center gap-1">
                                 About
                                 <ChevronDown className={`w-4 h-4 text-[#2A2A2A] transition-transform duration-200 ${hoveredItem === "About" ? "rotate-180 text-[#6366f1]" : ""}`} />
-                            </a>
+                            </Link>
 
                             {hoveredItem === "About" && (
                                 <div className="fixed left-0 w-full top-20 md:top-24 z-[99]">
@@ -120,15 +120,15 @@ export default function Nav() {
                         <a href="/blogs" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Blogs
                         </a>
-                        <a href="/contact" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
+                        <Link href="/contact" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Contact
-                        </a>
+                        </Link>
                         {/* <a href="/stats" className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">Stats</a> */}
                     </div>
 
                     {/* Right Section: CTA Button (Restored Design) */}
                     <div className="hidden xl:flex items-center gap-2">
-                        <a
+                        <Link
                             href="/contact"
                             className="group rounded-sm px-8 py-2 bg-[#4f46e5] text-white font-extrabold flex items-center gap-2 hover:bg-[#3A0F67] transition-colors duration-300"
                         >
@@ -136,13 +136,13 @@ export default function Nav() {
                             <ArrowRight
                                 className="w-5 h-5 transition-transform duration-200 ease-in-out group-hover:rotate-0 rotate-[-45deg]"
                             />
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Toggle */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="xl:hidden z-50 p-2 text-[#3A0F67] relative focus:outline-none"
+                        className="xl:hidden z-50 p-2 text-[#3A0F67] relative focus:outline-none cursor-pointer"
                     >
                         <div className="relative w-6 h-6">
                             <AnimatePresence mode="wait">

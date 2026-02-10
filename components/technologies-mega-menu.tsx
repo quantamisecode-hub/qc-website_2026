@@ -151,9 +151,8 @@ export default function TechnologiesMegaMenu() {
                         </div>
                         <div className="flex flex-col gap-1">
                             {section.techs.map((item, itemIdx) => (
-                                <a
+                                <div
                                     key={itemIdx}
-                                    href={`/technologies/${section.id}/${item.name.toLowerCase().replace(/ /g, "-").replace(/\./g, "").replace(/\+/g, "cpp").replace(/\#/g, "sharp")}`}
                                     className="group flex items-center gap-3 p-1.5 rounded-lg hover:bg-gray-50 transition-colors"
                                 >
                                     <div className="p-1.5 rounded-md bg-[#F9FAFC] group-hover:bg-[#3A0F67]/10 transition-colors">
@@ -164,7 +163,7 @@ export default function TechnologiesMegaMenu() {
                                             {item.name}
                                         </span>
                                     </div>
-                                </a>
+                                </div>
                             ))}
                         </div>
                     </div>

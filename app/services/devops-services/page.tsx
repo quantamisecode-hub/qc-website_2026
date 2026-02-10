@@ -16,8 +16,8 @@ import DevOpsFAQ from "@/components/devops-faq";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "DevOps Services | Quantamise Code",
-    description: "Expert DevOps services to accelerate delivery, improve reliability, and automate infrastructure. CI/CD, Kubernetes, Cloud Migration & more.",
+    title: "DevOps Services & CI/CD Automation Experts",
+    description: "Accelerate software delivery with DevOps automation, CI/CD pipelines, and reliability engineering from Quantamise Code.",
     keywords: [
         "DevOps Services",
         "DevOps Consulting",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "DevOps Services | Quantamise Code",
         description: "Accelerate your software delivery with our expert DevOps services. Automation, Security, and Reliability at scale.",
-        url: "https://www.quantamise.com/services/devops",
+        url: "https://www.quantamise.com/services/devops-services",
         siteName: "Quantamise Code",
         images: [
             {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         images: ["/assets/devops-meta.jpg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/devops",
+        canonical: "https://www.quantamise.com/services/devops-services",
     },
 };
 

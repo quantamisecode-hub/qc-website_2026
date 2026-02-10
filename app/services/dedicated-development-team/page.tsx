@@ -16,8 +16,8 @@ import DedicatedTeamBusinessApproach from "@/components/dedicated-team-business-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Dedicated Development Teams for Scalable, High-Performance Digital Products",
-    description: "Build your extended engineering team with pre-vetted, full-time developers, architects, and AI specialists. Quantamise Code provides dedicated development teams that work exclusively on your projects—ensuring speed, quality, and complete transparency.",
+    title: "Hire Dedicated Development Team",
+    description: "Build your extended engineering team with dedicated developers, AI specialists, and full-stack experts from Quantamise Code.",
     keywords: [
         "Dedicated development team",
         "Dedicated software development team",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Dedicated Development Teams for Scalable, High-Performance Digital Products",
         description: "Build your extended engineering team with pre-vetted, full-time developers, architects, and AI specialists.",
-        url: "https://www.quantamise.com/services/dedicated-team",
+        url: "https://www.quantamise.com/services/dedicated-development-team",
         siteName: "Quantamise Code",
         images: [
             {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
     },
     alternates: {
-        canonical: "https://www.quantamise.com/services/dedicated-team",
+        canonical: "https://www.quantamise.com/services/dedicated-development-team",
     },
 };
 

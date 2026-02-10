@@ -1,7 +1,7 @@
-import { ArrowRight, Cpu, Globe, Smartphone, Layers, ShoppingCart, Palette, Blocks } from "lucide-react";
+import { ArrowRight, Cpu, Globe, Smartphone, Layers, ShoppingCart, Palette, Blocks, Database } from "lucide-react";
 
 interface RelatedServicesProps {
-    currentService: "full-stack" | "mobile" | "saas" | "ai" | "ecommerce" | "ui-ux" | "iiot" | "data-engineering" | "devops" | "dedicated-team" | "cloud-consulting";
+    currentService: "full-stack" | "mobile" | "saas" | "ai" | "ecommerce" | "ui-ux" | "iiot" | "data-engineering" | "devops" | "dedicated-team" | "cloud-consulting" | "nextjs";
 }
 
 const allServices = [
@@ -16,11 +16,21 @@ const allServices = [
         border: "border-blue-100"
     },
     {
+        id: "data-engineering",
+        title: "Data Engineering",
+        description: "Transform raw data into actionable insights with scalable pipelines and warehousing.",
+        icon: Database,
+        href: "/services/data-engineering-consulting",
+        color: "text-emerald-600", // Using emerald for data
+        bg: "bg-emerald-50",
+        border: "border-emerald-100"
+    },
+    {
         id: "dedicated-team",
-        title: "Dedicated Team",
+        title: "Dedicated Development Team",
         description: "Hire pre-vetted, expert developers to scale your engineering team effortlessly.",
         icon: Globe, // Reusing Globe or find a better icon like Users
-        href: "/services/dedicated-team",
+        href: "/services/dedicated-development-team",
         color: "text-indigo-600",
         bg: "bg-indigo-50",
         border: "border-indigo-100"
@@ -90,7 +100,7 @@ const allServices = [
         title: "IIoT Development",
         description: "Industrial IoT solutions for smart manufacturing and automation.",
         icon: Blocks,
-        href: "/services/IIOT",
+        href: "/services/industrial-iot-development",
         color: "text-cyan-600",
         bg: "bg-cyan-50",
         border: "border-cyan-100"
@@ -100,10 +110,20 @@ const allServices = [
         title: "DevOps Services",
         description: "Automated CI/CD pipelines and cloud infrastructure management.",
         icon: Layers, // Reusing Layers or maybe specialized icon if imported
-        href: "/services/devops",
+        href: "/services/devops-services",
         color: "text-violet-600",
         bg: "bg-violet-50",
         border: "border-violet-100"
+    },
+    {
+        id: "nextjs",
+        title: "Next.js Development",
+        description: "High-performance, SEO-friendly web apps using Next.js framework.",
+        icon: Globe, // Standard web icon
+        href: "/services/nextjs-development",
+        color: "text-gray-800",
+        bg: "bg-gray-50",
+        border: "border-gray-200"
     }
 ];
 
