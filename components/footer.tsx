@@ -68,11 +68,9 @@ export default function Footer() {
                         <h3 className="text-lg font-bold mb-6 text-white">Company</h3>
                         <ul className="space-y-4">
                             <li><a href="/about" className="hover:text-[#eb56f6] transition-colors">About Us</a></li>
-                            <li><a href="/case-studies" className="hover:text-[#eb56f6] transition-colors">Case Studies</a></li>
+                            {/* <li><a href="/case-studies" className="hover:text-[#eb56f6] transition-colors">Case Studies</a></li> */}
                             <li><a href="/blogs" className="hover:text-[#eb56f6] transition-colors">Blogs</a></li>
-                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Careers</a></li>
                             <li><a href="/contact" className="hover:text-[#eb56f6] transition-colors">Contact Us</a></li>
-                            <li><a href="#" className="hover:text-[#eb56f6] transition-colors">Privacy Policy</a></li>
                         </ul>
                     </div>
 

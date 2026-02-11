@@ -1,4 +1,4 @@
-import { Lock, ShieldCheck, Zap, Server, Cloud, UserCheck } from "lucide-react";
+import { Lock, ShieldCheck, Zap, Server, Cloud, UserCheck, Eye } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -40,6 +40,14 @@ const securityFeatures = [
         icon: Cloud,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
+    },
+    {
+        id: 6,
+        title: "Continuous Monitoring",
+        description: "24/7 security monitoring and threat detection to protect your development infrastructure.",
+        icon: Eye,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     }
 ];
 

@@ -176,19 +176,6 @@ export default function CloudConsultingFAQ() {
                         })}
                     </div>
                 </motion.div>
-
-                <div className="text-center mt-12 bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto">
-                    <p className="text-lg font-semibold text-[#3A0F67] mb-4">
-                        Have more questions about your cloud journey?
-                    </p>
-                    <a
-                        href="/contact"
-                        className="inline-flex items-center text-[#6366f1] font-bold hover:underline"
-                    >
-                        Speak with our Cloud Consultants
-                        <ChevronDown className="ml-2 w-4 h-4 rotate-[-90deg]" />
-                    </a>
-                </div>
             </div>
         </section>
     );

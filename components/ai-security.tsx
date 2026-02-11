@@ -1,4 +1,4 @@
-import { Lock, ShieldCheck, Zap, Database, Eye } from "lucide-react";
+import { Lock, ShieldCheck, Zap, Database, Eye, FileCheck } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -40,6 +40,14 @@ const securityFeatures = [
         icon: Eye,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
+    },
+    {
+        id: 6,
+        title: "Compliance & Governance",
+        description: "Automated policy enforcement for GDPR, CCPA, and AI ethics frameworks to ensure regulatory compliance.",
+        icon: FileCheck,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     }
 ];
 

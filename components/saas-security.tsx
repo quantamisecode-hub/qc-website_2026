@@ -1,4 +1,4 @@
-import { Lock, ShieldCheck, Key, FileText, RefreshCw } from "lucide-react";
+import { Lock, ShieldCheck, Key, FileText, RefreshCw, Gauge } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -40,6 +40,14 @@ const securityFeatures = [
         icon: RefreshCw,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
+    },
+    {
+        id: 6,
+        title: "API Rate Limiting",
+        description: "Intelligent throttling and abuse prevention to protect your infrastructure from overload.",
+        icon: Gauge,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     }
 ];
 

@@ -1,4 +1,4 @@
-import { Lock, ShieldCheck, Zap, Server, Cloud } from "lucide-react";
+import { Lock, ShieldCheck, Zap, Server, Cloud, Shield } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -40,6 +40,14 @@ const securityFeatures = [
         icon: Cloud,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
+    },
+    {
+        id: 6,
+        title: "API Security",
+        description: "Rate limiting, input validation, and secure API endpoints to protect against attacks.",
+        icon: Shield,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     }
 ];
 

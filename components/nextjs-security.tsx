@@ -1,4 +1,4 @@
-import { Lock, ShieldCheck, Zap, Globe, Smartphone } from "lucide-react";
+import { Lock, ShieldCheck, Zap, Globe, Smartphone, Search } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -40,6 +40,14 @@ const securityFeatures = [
         icon: Smartphone,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
+    },
+    {
+        id: 6,
+        title: "SEO Security",
+        description: "Secure server-side rendering and metadata management to protect against SEO attacks.",
+        icon: Search,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     }
 ];
 

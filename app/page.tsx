@@ -199,7 +199,6 @@ export default function Home() {
       </RevealOnScroll>
       <TrustedBy />
 
-
       <RevealOnScroll>
         <About />
       </RevealOnScroll>

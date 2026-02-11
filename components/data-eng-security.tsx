@@ -1,4 +1,4 @@
-import { Shield, Lock, FileKey, Eye, Scale } from "lucide-react";
+import { Shield, Lock, FileKey, Eye, Scale, UserX } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -41,6 +41,14 @@ const securityFeatures = [
         icon: Shield,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
+    },
+    {
+        id: 6,
+        title: "Data Masking & Anonymization",
+        description: "Advanced PII protection techniques to ensure sensitive data remains secure throughout processing.",
+        icon: UserX,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     }
 ];
 

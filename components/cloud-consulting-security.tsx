@@ -1,4 +1,4 @@
-import { ShieldCheck, UserCheck, Lock, Activity, AlertTriangle } from "lucide-react";
+import { ShieldCheck, UserCheck, Lock, Activity, AlertTriangle, Shield } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -40,6 +40,14 @@ const securityFeatures = [
         icon: AlertTriangle,
         color: "text-rose-600",
         bg: "bg-rose-100"
+    },
+    {
+        id: 6,
+        title: "Network Security",
+        description: "Private VPC endpoints, firewalls, and secure gateways to isolate your data infrastructure.",
+        icon: Shield,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     },
 ];
 

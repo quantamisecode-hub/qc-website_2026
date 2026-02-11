@@ -1,4 +1,4 @@
-import { Lock, ShieldCheck, Zap, Server, Cloud } from "lucide-react";
+import { Lock, ShieldCheck, Zap, Server, Cloud, Palette } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -40,6 +40,14 @@ const securityFeatures = [
         icon: Cloud,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
+    },
+    {
+        id: 6,
+        title: "Secure Design Patterns",
+        description: "Implementing security-first design patterns that guide users toward safe behaviors.",
+        icon: Palette,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     }
 ];
 

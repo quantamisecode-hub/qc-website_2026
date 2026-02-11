@@ -21,7 +21,7 @@ const clients = [
     { name: "BECIL", logo: becilLogo, size: "110px" },
     { name: "ACR", logo: acrLogo, size: "85px" },
     { name: "Freya", logo: freyaLogo, size: "70px" },
-    { name: "Lavendel Consulting", logo: lavendelLogo, size: "140px" },
+    { name: "Lavendel Consulting", logo: lavendelLogo, size: "2000px" },
 ];
 
 export default function TrustedBy() {
@@ -46,11 +46,12 @@ export default function TrustedBy() {
                         <div className="flex shrink-0 items-center gap-6 sm:gap-10 pr-6 sm:pr-10">
                             {clients.map((client, index) => (
                                 <div key={`logo-1-${index}`} className="flex items-center justify-center shrink-0">
-                                    <div className="relative h-28 w-auto min-w-[150px] sm:min-w-[200px] flex items-center justify-center filter brightness-0 invert opacity-70 hover:filter-none hover:opacity-100 transition-all duration-300 cursor-pointer">
+                                    <div className="relative w-auto min-w-[150px] sm:min-w-[200px] flex items-center justify-center filter brightness-0 invert opacity-70 hover:filter-none hover:opacity-100 transition-all duration-300 cursor-pointer">
                                         <Image
                                             src={client.logo}
                                             alt={`${client.name} Logo`}
-                                            style={{ maxHeight: client.size }}
+                                            height={parseInt(client.size)}
+                                            style={{ maxHeight: client.size, height: 'auto' }}
                                             className="w-auto object-contain"
                                         />
                                     </div>
@@ -62,11 +63,13 @@ export default function TrustedBy() {
                         <div className="flex shrink-0 items-center gap-6 sm:gap-10 pr-6 sm:pr-10">
                             {clients.map((client, index) => (
                                 <div key={`logo-2-${index}`} className="flex items-center justify-center shrink-0">
-                                    <div className="relative h-28 w-auto min-w-[150px] sm:min-w-[200px] flex items-center justify-center filter brightness-0 invert opacity-70 hover:filter-none hover:opacity-100 transition-all duration-300 cursor-pointer">
+                                    <div className="relative w-auto min-w-[150px] sm:min-w-[200px] flex items-center justify-center filter brightness-0 invert opacity-70 hover:filter-none hover:opacity-100 transition-all duration-300 cursor-pointer">
                                         <Image
                                             src={client.logo}
                                             alt={`${client.name} Logo`}
-                                            style={{ maxHeight: client.size }}
+                                            height={parseInt(client.size)}
+                                            width={300}
+                                            style={{ maxHeight: client.size, height: 'auto' }}
                                             className="w-auto object-contain"
                                         />
                                     </div>

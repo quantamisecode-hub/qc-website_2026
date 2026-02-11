@@ -1,4 +1,4 @@
-import { Lock, ShieldCheck, Zap, Server, Cloud } from "lucide-react";
+import { Lock, ShieldCheck, Zap, Server, Cloud, AlertTriangle } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -40,6 +40,14 @@ const securityFeatures = [
         icon: Cloud,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
+    },
+    {
+        id: 6,
+        title: "Incident Response",
+        description: "Automated incident detection and response protocols to quickly address security threats.",
+        icon: AlertTriangle,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     }
 ];
 

@@ -25,12 +25,14 @@ export default function CTAPopup() {
         window.addEventListener('open-cta-popup', handleOpenPopup);
 
         // Check if user has already seen the popup in this session
-        const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
+        const hasSeenPopup = sessionStorage.getItem("hasSeenCTAPopup");
 
+        // Only show popup if user hasn't seen it in this session
         if (!hasSeenPopup) {
             const timer = setTimeout(() => {
                 setIsVisible(true);
-                sessionStorage.setItem("hasSeenPopup", "true");
+                // Mark as seen for this session only
+                sessionStorage.setItem("hasSeenCTAPopup", "true");
             }, 7000); // 7 seconds
 
             return () => {

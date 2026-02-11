@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+@theme {
+  /* Custom font sizes - scaled to 90% of Tailwind defaults */
+  --font-size-xs: 10.8px;
+  /* 0.75rem * 0.9 = 12px * 0.9 */
+  --font-size-sm: 11.4px;
+  /* Custom: as requested */
+  --font-size-base: 14.4px;
+  /* 1rem * 0.9 = 16px * 0.9 */
+  --font-size-lg: 16.8px;
+  /* Custom: as requested */
+  --font-size-xl: 18px;
+  /* 1.25rem * 0.9 = 20px * 0.9 */
+  --font-size-2xl: 21.6px;
+  /* 1.5rem * 0.9 = 24px * 0.9 */
+  --font-size-3xl: 27px;
+  /* 1.875rem * 0.9 = 30px * 0.9 */
+  --font-size-4xl: 32.4px;
+  /* 2.25rem * 0.9 = 36px * 0.9 */
+  --font-size-5xl: 43.2px;
+  /* 3rem * 0.9 = 48px * 0.9 */
+  --font-size-6xl: 54px;
+  /* 3.75rem * 0.9 = 60px * 0.9 */
+  --font-size-7xl: 64.8px;
+  /* 4.5rem * 0.9 = 72px * 0.9 */
+  --font-size-8xl: 86.4px;
+  /* 6rem * 0.9 = 96px * 0.9 */
+  --font-size-9xl: 115.2px;
+  /* 8rem * 0.9 = 128px * 0.9 */
+}
+
 :root {
   --background: #F9FAFC;
   /* Cloud White */
@@ -62,4 +92,16 @@ body {
 
 html {
   scroll-behavior: smooth;
+  /* Base font-size for rem calculations - affects spacing (padding, margin, width, height) */
+  font-size: 14.4px !important;
+  /* 90% of default 16px - scales all rem-based spacing to 90% */
 }
+
+* {
+  box-sizing: border-box;
+}
+
+/* Note: Custom font sizes are defined in @theme above.
+   The html font-size: 14.4px scales all spacing utilities to 90%:
+   - Spacing: p-1, p-2, p-4, m-8, px-6, py-2, gap-4, space-x-2, etc.
+   - Dimensions: w-64, h-32, max-w-7xl, min-h-screen, etc. */

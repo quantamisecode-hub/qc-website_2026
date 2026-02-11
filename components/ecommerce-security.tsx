@@ -1,4 +1,4 @@
-import { Lock, ShieldCheck, CreditCard, Key, FileCheck } from "lucide-react";
+import { Lock, ShieldCheck, CreditCard, Key, FileCheck, UserCheck } from "lucide-react";
 
 const securityFeatures = [
     {
@@ -40,6 +40,14 @@ const securityFeatures = [
         icon: FileCheck,
         color: "text-cyan-600",
         bg: "bg-cyan-100"
+    },
+    {
+        id: 6,
+        title: "Session Management",
+        description: "Secure session handling with automatic timeout and multi-factor authentication support.",
+        icon: UserCheck,
+        color: "text-purple-600",
+        bg: "bg-purple-100"
     }
 ];
 
