@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/saas-development-og.jpg",
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "SaaS Development Services",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "SaaS Development Company | Build Scalable Cloud Platforms | Quantamise Code",
         description: "Launch and scale your SaaS product with our expert development services.",
-        images: ["/assets/saas-development-og.jpg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/saas-development",

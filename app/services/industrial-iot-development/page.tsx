@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/iiotDevelopmentChooseImg.jpeg", // Placeholder, user to update
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "IIOT Development Team",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "IIoT Development Services | Quantamise Code",
         description: "Leading IIoT Development Company specializing in industrial IoT solutions.",
-        images: ["/assets/iiotDevelopmentChooseImg.jpeg"], // Placeholder
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/IIoT",

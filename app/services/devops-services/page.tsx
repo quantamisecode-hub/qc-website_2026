@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/devops-meta.jpg", // Ensure this exists or use a generic one
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "DevOps Engineering Team",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "DevOps Services | Quantamise Code",
         description: "Accelerate your software delivery with our expert DevOps services.",
-        images: ["/assets/devops-meta.jpg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/devops-services",

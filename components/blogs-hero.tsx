@@ -1,11 +1,11 @@
 "use client";
 
-import * as motion from "framer-motion/client";
-import { ArrowRight, MessageSquare, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, BookOpen } from "lucide-react";
 import Link from "next/link";
-import { SiGooglemaps, SiGmail, SiWhatsapp, SiTelegram } from "react-icons/si";
 
-export default function ContactHero() {
+
+export default function BlogsHero() {
     return (
         <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
             {/* Background Effects */}
@@ -21,27 +21,26 @@ export default function ContactHero() {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6366f1]/10 text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-6">
-                        <MessageSquare className="w-4 h-4" />
-                        <span>Get in Touch</span>
+                        <BookOpen className="w-4 h-4" />
+                        <span>Technical Blog</span>
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-[#3A0F67] mb-6 tracking-tight leading-[1.15]">
-                        Let’s Discuss Your <span className="text-[#6366f1]">Project </span><br className="hidden sm:block" />
-                        & Growth Goals
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#3A0F67] mb-6 tracking-tight leading-[1.15]">
+                        Our Latest <span className="text-[#6366f1]">Insights</span>
                     </h1>
 
                     <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
-                        Have an idea, project, or technical challenge? Our experts are ready to help you design, build, and scale intelligent digital solutions.
+                        Deep dives into AI, full-stack development, and the future of technology. Stay ahead with our expert analysis, tutorials, and case studies.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <button
-                            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#eb56f6] text-white font-bold text-base hover:bg-[#d035db] transition-all flex items-center justify-center gap-2"
-                        >
-                            Start a Conversation
+                        <div className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#eb56f6] text-white font-bold text-base hover:bg-[#d035db] transition-all flex items-center justify-center gap-2 cursor-pointer" onClick={() => {
+                            const blogSection = document.getElementById('latest-posts');
+                            blogSection?.scrollIntoView({ behavior: 'smooth' });
+                        }}>
+                            Start Reading
                             <ArrowRight className="w-5 h-5" />
-                        </button>
+                        </div>
                     </div>
                 </motion.div>
             </div>

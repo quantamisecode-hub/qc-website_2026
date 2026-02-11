@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise",
         images: [
             {
-                url: "/images/og-image.jpg",
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "Quantamise - E-Commerce Development",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "E-Commerce Development | Scalable Online Store Solutions",
         description: "Launch and grow your online business with Quantamise's expert E-Commerce development services using Shopify, WooCommerce, and custom solutions.",
-        images: ["/images/og-image.jpg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/ecommerce-development",

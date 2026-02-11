@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Quantamise Code",
     images: [
       {
-        url: "https://www.quantamisecode.com/assets/og-image.jpg", // Replace with actual OG image URL
+        url: "/assets/logo.png",
         width: 1200,
         height: 630,
         alt: "Quantamise Code - Software Development & AI Solutions",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quantamise Code | Custom Software Development & AI Solutions",
     description: "Expert software development services: AI, Mobile, SaaS, and Full-Stack. Build your future with Quantamise Code.",
-    images: ["https://www.quantamisecode.com/assets/og-image.jpg"],
+    images: ["/assets/logo.png"],
   },
   alternates: {
     canonical: "https://www.quantamisecode.com",

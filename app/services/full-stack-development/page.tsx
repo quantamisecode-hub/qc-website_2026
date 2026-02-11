@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/fullStackDevelopmentChooseImg.jpeg",
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "Full Stack Development Team",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Full-Stack Development Services | Quantamise Code",
         description: "Leading Full-Stack Development Company specializing in custom web applications and SaaS.",
-        images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/full-stack-development",

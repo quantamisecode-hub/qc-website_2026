@@ -1,5 +1,5 @@
 import Image from "next/image";
-import whyChooseUsImg from "../public/assets/whyChooseUsImg.jpeg";
+import aiWhyChooseUsImg from '@/public/assets/AISolutionChooseImage.png'
 
 export default function AiWhyChooseUs() {
     return (
@@ -29,7 +29,7 @@ export default function AiWhyChooseUs() {
                     {/* Right Side: Image */}
                     <div className="w-full lg:w-1/2 relative min-h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                         <Image
-                            src={whyChooseUsImg}
+                            src={aiWhyChooseUsImg}
                             alt="Why Choose Quantamise Code - AI Team"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-700"

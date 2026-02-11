@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/fullStackDevelopmentChooseImg.jpeg",
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "Dedicated Development Team",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Dedicated Development Teams for Scalable, High-Performance Digital Products",
         description: "Build your extended engineering team with pre-vetted, full-time developers, architects, and AI specialists.",
-        images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/dedicated-development-team",

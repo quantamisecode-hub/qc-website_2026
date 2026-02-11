@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/fullStackDevelopmentChooseImg.jpeg", // Using same image for now
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "Next.js Development Team",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Next.js Development Services | Quantamise Code",
         description: "Leading Next.js Development Company specializing in App Router, SSR, and Vercel deployments.",
-        images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/nextjs-development",

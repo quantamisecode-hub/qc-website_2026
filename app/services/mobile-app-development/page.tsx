@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "https://www.quantamisecode.com/assets/mobile-development-og.jpg", // Assuming generic or specific image
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "Mobile App Development Services",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Mobile App Development Services | Quantamise Code",
         description: "Leading Mobile App Development Company specializing in custom iOS, Android, and Cross-Platform applications.",
-        images: ["https://www.quantamisecode.com/assets/mobile-development-og.jpg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/mobile-app-development",

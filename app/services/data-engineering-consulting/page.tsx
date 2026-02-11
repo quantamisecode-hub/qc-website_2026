@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/fullStackDevelopmentChooseImg.jpeg", // Using same image as placeholder
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "Data Engineering Team",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Data Engineering Services | Quantamise Code",
         description: "Leading Data Engineering Company specializing in cloud pipelines, data lakes, and BI solutions.",
-        images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/data-engineering-consulting",

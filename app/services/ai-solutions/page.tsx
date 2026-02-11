@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/ai-solutions-og.jpg",
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "AI Solutions & Machine Learning Development",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "AI Solutions & Machine Learning Development | Quantamise Code",
         description: "Leading AI Development Company specializing in custom Machine Learning, NLP, and Generative AI solutions.",
-        images: ["/assets/ai-solutions-og.jpg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/ai-solutions",

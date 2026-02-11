@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/fullStackDevelopmentChooseImg.jpeg", // Placeholder
+                url: "/assets/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "Cloud Consulting Services",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Cloud Consulting & Modernization Services",
         description: "Accelerate your cloud journey with our expert guidance.",
-        images: ["/assets/fullStackDevelopmentChooseImg.jpeg"],
+        images: ["/assets/logo.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/cloud-consulting",

@@ -208,9 +208,9 @@ export default function Nav() {
                             )}
                         </div>
 
-                        <a href="/case-studies" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
+                        {/* <a href="/case-studies" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Case Studies
-                        </a>
+                        </a> */}
                         <a href="/blogs" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Blogs
                         </a>
@@ -317,7 +317,7 @@ export default function Nav() {
                                                                     <div key={idx} className="flex flex-col gap-3">
                                                                         {/* Category Header */}
                                                                         <div className="flex items-center gap-3">
-                                                                            <div className="p-2 rounded-lg bg-white/10 text-[#eb56f6]">
+                                                                            <div className="p-2 rounded-lg bg-white/10 text-white">
                                                                                 {idx === 0 && <LayoutGrid className="w-5 h-5" />}
                                                                                 {idx === 1 && <Cpu className="w-5 h-5" />}
                                                                                 {idx === 2 && <Database className="w-5 h-5" />}
@@ -336,7 +336,7 @@ export default function Nav() {
                                                                                     onClick={() => setIsOpen(false)}
                                                                                     className="flex items-center gap-3 group"
                                                                                 >
-                                                                                    <item.icon className="w-5 h-5 text-[#eb56f6] group-hover:text-white transition-colors" />
+                                                                                    <item.icon className="w-5 h-5 text-white group-hover:text-white transition-colors" />
                                                                                     <span className="font-medium text-gray-300 group-hover:text-white text-sm transition-colors">
                                                                                         {item.name}
                                                                                     </span>
@@ -378,7 +378,7 @@ export default function Nav() {
                                                                 {technologiesData.map((category, idx) => (
                                                                     <div key={idx} className="flex flex-col gap-3">
                                                                         <div className="flex items-center gap-3">
-                                                                            <div className="p-2 rounded-lg bg-white/10 text-[#eb56f6]">
+                                                                            <div className="p-2 rounded-lg bg-white/10 text-white">
                                                                                 <category.icon className="w-5 h-5" />
                                                                             </div>
                                                                             <h4 className="font-bold text-lg text-white">{category.label}</h4>
@@ -393,7 +393,7 @@ export default function Nav() {
                                                                                     onClick={() => setIsOpen(false)}
                                                                                     className="flex items-center gap-3 group"
                                                                                 >
-                                                                                    <tech.icon className="w-5 h-5 text-[#eb56f6] group-hover:text-white transition-colors" />
+                                                                                    <tech.icon className="w-5 h-5 text-white group-hover:text-white transition-colors" />
                                                                                     <span className="font-medium text-gray-300 group-hover:text-white text-sm transition-colors">
                                                                                         {tech.name}
                                                                                     </span>

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         siteName: 'Quantamise Code',
         images: [
             {
-                url: '/assets/og-image.jpg',
+                url: '/assets/logo.png',
                 width: 1200,
                 height: 630,
                 alt: 'Contact Quantamise Code',
@@ -43,8 +43,70 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+    const contactSchema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Us | Quantamise Code",
+        "url": "https://www.quantamisecode.com/contact",
+        "description": "Get in touch with Quantamise Code for expert software development services.",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Quantamise Code",
+            "telephone": "080-29554662",
+            "email": "business@quantamisecode.com"
+        }
+    };
+
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Quantamise Code",
+        "url": "https://www.quantamisecode.com",
+        "logo": "https://www.quantamisecode.com/assets/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "080-29554662",
+            "contactType": "customer service",
+            "email": "business@quantamisecode.com",
+            "areaServed": "Global",
+            "availableLanguage": "English"
+        },
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "A-207, KSSIDC Complex, Phase 1, Electronics City",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560100",
+                "addressCountry": "IN"
+            },
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "Ground Floor, #5, Victoria Terrace, Gorkey Sadan",
+                "addressLocality": "Kolkata",
+                "addressRegion": "West Bengal",
+                "postalCode": "700020",
+                "addressCountry": "IN"
+            }
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/company/quantamise",
+            "https://twitter.com/quantamise",
+            "https://www.facebook.com/quantamise",
+            "https://www.instagram.com/quantamise"
+        ]
+    };
+
     return (
         <div className="bg-white min-h-screen">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+            />
             <Nav />
 
             <main>
