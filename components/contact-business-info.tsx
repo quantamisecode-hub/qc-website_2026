@@ -25,7 +25,7 @@ export default function ContactBusinessInfo() {
                 <div className="space-y-2">
                     <p className="text-sm text-slate-500 font-semibold uppercase tracking-wider">General Inquiries</p>
                     <a href="mailto:contact@quantamisecode.com" className="block text-xl font-bold text-slate-800 hover:text-[#eb56f6] transition-colors break-words">
-                        contact@quantamisecode.com
+                        business@quantamisecode.com
                     </a>
                 </div>
             </motion.div>
@@ -49,7 +49,7 @@ export default function ContactBusinessInfo() {
                 <div className="space-y-2">
                     <p className="text-sm text-slate-500 font-semibold uppercase tracking-wider">Support & Sales</p>
                     <a href="tel:+919876543210" className="block text-xl font-bold text-slate-800 hover:text-[#6366f1] transition-colors">
-                        +91-XXXXXXXXXX
+                        080-29554662
                     </a>
                 </div>
             </motion.div>

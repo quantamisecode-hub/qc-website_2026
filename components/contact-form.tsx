@@ -40,29 +40,18 @@ export default function ContactForm() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label className="block text-sm font-bold text-[#3A0F67] mb-1.5">Project Type</label>
-                        <select className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 transition-all">
-                            <option>Select a service</option>
-                            <option>Custom Software Development</option>
-                            <option>AI & Machine Learning</option>
-                            <option>Mobile App Development</option>
-                            <option>Web Development</option>
-                            <option>Cloud Consulting</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label className="block text-sm font-bold text-[#3A0F67] mb-1.5">Budget Range (Optional)</label>
-                        <select className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 transition-all">
-                            <option>Select a range</option>
-                            <option>$5k - $10k</option>
-                            <option>$10k - $25k</option>
-                            <option>$25k - $50k</option>
-                            <option>$50k+</option>
-                        </select>
-                    </div>
+                <div>
+                    <label className="block text-sm font-bold text-[#3A0F67] mb-1.5">Project Type</label>
+                    <select className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 transition-all">
+                        <option>free consultation</option>
+                        <option>Select a service</option>
+                        <option>Custom Software Development</option>
+                        <option>AI & Machine Learning</option>
+                        <option>Mobile App Development</option>
+                        <option>Web Development</option>
+                        <option>Cloud Consulting</option>
+                        <option>Other</option>
+                    </select>
                 </div>
 
                 <div>
