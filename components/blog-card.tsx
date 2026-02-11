@@ -79,9 +79,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
                 {/* Read More Link */}
                 <div className="mt-auto">
                     <Link
-                        href={post.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={`/blogs/${post.slug}`}
                         className="inline-flex items-center gap-2 text-sm font-bold text-[#eb56f6] hover:text-[#d035db] transition-colors"
                     >
                         Read Full Article

@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       { url: "/icon.png", type: "image/png", sizes: "192x192" }
     ],
     apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" }
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
     ],
   },
 };
@@ -80,7 +80,7 @@ export default function RootLayout({
         {/* Explicit favicon links for better browser compatibility */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="192x192" href="/icon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
         <script
           type="application/ld+json"
