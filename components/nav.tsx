@@ -390,18 +390,15 @@ export default function Nav() {
 
                                                                         <div className="pl-12 flex flex-col gap-5">
                                                                             {category.techs.map((tech, i) => (
-                                                                                <motion.a
+                                                                                <motion.div
                                                                                     key={i}
-                                                                                    href={`/technologies/${tech.name.toLowerCase().replace(/ /g, "-").replace(/\./g, "").replace(/\(/g, "").replace(/\)/g, "")}`}
-                                                                                    whileTap={{ scale: 0.95, x: 5 }}
-                                                                                    onClick={() => setIsOpen(false)}
-                                                                                    className="flex items-center gap-3 group cursor-pointer py-1"
+                                                                                    className="flex items-center gap-3 py-1"
                                                                                 >
-                                                                                    <tech.icon className="w-5 h-5 text-white group-hover:text-white transition-colors" />
-                                                                                    <span className="font-medium text-gray-300 group-hover:text-white text-base transition-colors">
+                                                                                    <tech.icon className="w-5 h-5 text-white transition-colors" />
+                                                                                    <span className="font-medium text-gray-300 text-base transition-colors">
                                                                                         {tech.name}
                                                                                     </span>
-                                                                                </motion.a>
+                                                                                </motion.div>
                                                                             ))}
                                                                         </div>
                                                                     </div>
