@@ -285,15 +285,16 @@ export default function Nav() {
 
                         {/* Scrollable Content Container */}
                         <div className="absolute inset-0 flex flex-col pt-24 px-6 overflow-y-auto overflow-x-hidden">
-                            <div className="flex flex-col gap-6 pb-10">
+                            <div className="flex flex-col gap-10 pb-10">
                                 {navLinks.map((link, index) => (
                                     <div key={link.name} className="w-full">
                                         {link.name === "Services" ? (
                                             // Mobile Accordion for Services
                                             <div className="flex flex-col">
-                                                <button
+                                                <motion.button
+                                                    whileTap={{ scale: 0.98, backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                                                     onClick={() => setIsServicesExpanded(!isServicesExpanded)}
-                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-2 border-b border-white/10 cursor-pointer"
+                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-4 border-b border-white/10 cursor-pointer text-left rounded-lg px-2"
                                                 >
                                                     {link.name}
                                                     {isServicesExpanded ? (
@@ -301,7 +302,7 @@ export default function Nav() {
                                                     ) : (
                                                         <ChevronDown className="w-6 h-6 text-white" />
                                                     )}
-                                                </button>
+                                                </motion.button>
 
                                                 <AnimatePresence>
                                                     {isServicesExpanded && (
@@ -312,9 +313,9 @@ export default function Nav() {
                                                             transition={{ duration: 0.3 }}
                                                             className="overflow-hidden bg-white/5 rounded-b-xl backdrop-blur-sm"
                                                         >
-                                                            <div className="pl-4 py-4 flex flex-col gap-6 max-h-[50vh] overflow-y-auto overflow-x-hidden">
+                                                            <div className="pl-4 py-6 flex flex-col gap-10 max-h-[50vh] overflow-y-auto overflow-x-hidden">
                                                                 {servicesData.map((category, idx) => (
-                                                                    <div key={idx} className="flex flex-col gap-3">
+                                                                    <div key={idx} className="flex flex-col gap-4">
                                                                         {/* Category Header */}
                                                                         <div className="flex items-center gap-3">
                                                                             <div className="p-2 rounded-lg bg-white/10 text-white">
@@ -328,19 +329,20 @@ export default function Nav() {
                                                                         <div className="w-full h-[1px] bg-white/10 ml-12" />
 
                                                                         {/* Category Items */}
-                                                                        <div className="pl-12 flex flex-col gap-3">
+                                                                        <div className="pl-12 flex flex-col gap-5">
                                                                             {category.items.map((item, i) => (
-                                                                                <a
+                                                                                <motion.a
                                                                                     key={i}
                                                                                     href={item.href}
+                                                                                    whileTap={{ scale: 0.95, x: 5 }}
                                                                                     onClick={() => setIsOpen(false)}
-                                                                                    className="flex items-center gap-3 group"
+                                                                                    className="flex items-center gap-3 group cursor-pointer py-1"
                                                                                 >
                                                                                     <item.icon className="w-5 h-5 text-white group-hover:text-white transition-colors" />
-                                                                                    <span className="font-medium text-gray-300 group-hover:text-white text-sm transition-colors">
+                                                                                    <span className="font-medium text-gray-300 group-hover:text-white text-base transition-colors">
                                                                                         {item.name}
                                                                                     </span>
-                                                                                </a>
+                                                                                </motion.a>
                                                                             ))}
                                                                         </div>
                                                                     </div>
@@ -353,9 +355,10 @@ export default function Nav() {
                                         ) : link.name === "Technologies" ? (
                                             // Mobile Accordion for Technologies
                                             <div className="flex flex-col">
-                                                <button
+                                                <motion.button
+                                                    whileTap={{ scale: 0.98, backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                                                     onClick={() => setIsTechnologiesExpanded(!isTechnologiesExpanded)}
-                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-2 border-b border-white/10 cursor-pointer"
+                                                    className="flex items-center justify-between w-full text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors py-4 border-b border-white/10 cursor-pointer text-left rounded-lg px-2"
                                                 >
                                                     {link.name}
                                                     {isTechnologiesExpanded ? (
@@ -363,7 +366,7 @@ export default function Nav() {
                                                     ) : (
                                                         <ChevronDown className="w-6 h-6 text-white" />
                                                     )}
-                                                </button>
+                                                </motion.button>
 
                                                 <AnimatePresence>
                                                     {isTechnologiesExpanded && (
@@ -374,9 +377,9 @@ export default function Nav() {
                                                             transition={{ duration: 0.3 }}
                                                             className="overflow-hidden bg-white/5 rounded-b-xl backdrop-blur-sm"
                                                         >
-                                                            <div className="pl-4 py-4 flex flex-col gap-6 max-h-[50vh] overflow-y-auto overflow-x-hidden">
+                                                            <div className="pl-4 py-6 flex flex-col gap-10 max-h-[50vh] overflow-y-auto overflow-x-hidden">
                                                                 {technologiesData.map((category, idx) => (
-                                                                    <div key={idx} className="flex flex-col gap-3">
+                                                                    <div key={idx} className="flex flex-col gap-4">
                                                                         <div className="flex items-center gap-3">
                                                                             <div className="p-2 rounded-lg bg-white/10 text-white">
                                                                                 <category.icon className="w-5 h-5" />
@@ -385,19 +388,20 @@ export default function Nav() {
                                                                         </div>
                                                                         <div className="w-full h-[1px] bg-white/10 ml-12" />
 
-                                                                        <div className="pl-12 flex flex-col gap-3">
+                                                                        <div className="pl-12 flex flex-col gap-5">
                                                                             {category.techs.map((tech, i) => (
-                                                                                <a
+                                                                                <motion.a
                                                                                     key={i}
                                                                                     href={`/technologies/${tech.name.toLowerCase().replace(/ /g, "-").replace(/\./g, "").replace(/\(/g, "").replace(/\)/g, "")}`}
+                                                                                    whileTap={{ scale: 0.95, x: 5 }}
                                                                                     onClick={() => setIsOpen(false)}
-                                                                                    className="flex items-center gap-3 group"
+                                                                                    className="flex items-center gap-3 group cursor-pointer py-1"
                                                                                 >
                                                                                     <tech.icon className="w-5 h-5 text-white group-hover:text-white transition-colors" />
-                                                                                    <span className="font-medium text-gray-300 group-hover:text-white text-sm transition-colors">
+                                                                                    <span className="font-medium text-gray-300 group-hover:text-white text-base transition-colors">
                                                                                         {tech.name}
                                                                                     </span>
-                                                                                </a>
+                                                                                </motion.a>
                                                                             ))}
                                                                         </div>
                                                                     </div>
@@ -409,28 +413,31 @@ export default function Nav() {
                                             </div>
 
                                         ) : (
-                                            <a
+                                            <motion.a
                                                 href={link.href}
+                                                whileTap={{ scale: 0.98, x: 5 }}
                                                 onClick={() => setIsOpen(false)}
-                                                className="text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors block py-2 border-b border-white/10"
+                                                className="text-2xl font-bold text-white hover:text-[#eb56f6] transition-colors block py-4 border-b border-white/10 cursor-pointer px-2 rounded-lg active:bg-white/5"
                                             >
                                                 {link.name}
-                                            </a>
+                                            </motion.a>
                                         )}
                                     </div>
                                 ))}
 
-                                <div className="mt-8">
-                                    <button
+                                <div className="mt-12 px-2">
+                                    <motion.button
+                                        whileTap={{ scale: 0.95 }}
+                                        whileHover={{ scale: 1.02 }}
                                         onClick={() => {
                                             setIsOpen(false);
                                             window.dispatchEvent(new CustomEvent('open-cta-popup'));
                                         }}
-                                        className="w-full rounded-xl px-6 py-4 bg-white text-[#3A0F67] font-bold flex items-center justify-center gap-2 hover:bg-[#eb56f6] hover:text-white hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 cursor-pointer"
+                                        className="w-full rounded-xl px-6 py-5 bg-white text-[#3A0F67] font-bold flex items-center justify-center gap-2 hover:bg-[#eb56f6] hover:text-white hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 cursor-pointer"
                                     >
                                         Let&apos;s Talk
                                         <ArrowRight className="w-5 h-5" />
-                                    </button>
+                                    </motion.button>
                                 </div>
                             </div>
                         </div>

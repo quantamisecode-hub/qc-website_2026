@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Lightbulb, Users, ShieldCheck, Search, BookOpen } from 'lucide-react';
+import { Lightbulb, Users, ShieldCheck, Search, BookOpen, Rocket } from 'lucide-react';
 
 const values = [
     {
@@ -43,6 +43,14 @@ const values = [
         color: "text-orange-600",
         bg: "bg-orange-50",
         borderColor: "border-orange-100"
+    },
+    {
+        icon: Rocket,
+        title: "Agile Delivery",
+        description: "Fast iterations and adaptive planning to meet your evolving needs.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+        borderColor: "border-emerald-100"
     }
 ];
 

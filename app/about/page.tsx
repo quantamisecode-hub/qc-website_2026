@@ -9,6 +9,7 @@ import AboutExpertise from '@/components/about-expertise';
 import AboutApproach from '@/components/about-approach';
 import AboutIndustries from '@/components/about-industries';
 import AboutWhyChooseUs from '@/components/about-why-choose-us';
+import AboutFaq from '@/components/about-faq';
 import AboutCta from '@/components/about-cta';
 
 export const metadata: Metadata = {
@@ -112,6 +113,7 @@ export default function AboutPage() {
                 <AboutApproach />
                 <AboutIndustries />
                 <AboutWhyChooseUs />
+                <AboutFaq />
                 <AboutCta />
             </main>
 

@@ -9,8 +9,7 @@ const industries = [
     { icon: HeartPulse, title: "HealthTech", description: "HIPAA-compliant platforms enhancing patient care." },
     { icon: Rocket, title: "SaaS & Startups", description: "Scalable architectures tailored for rapid growth." },
     { icon: ShoppingCart, title: "E-commerce", description: "High-conversion storefronts with seamless payments." },
-    { icon: Factory, title: "Manufacturing", description: "IoT integration and smart manufacturing solutions." },
-    { icon: ShieldCheck, title: "Enterprise IT", description: "Robust management solutions for large-scale operations." }
+    { icon: Factory, title: "Manufacturing", description: "IoT integration and smart manufacturing solutions." }
 ];
 
 const containerVariants = {
@@ -47,7 +46,7 @@ export default function AboutIndustries() {
                 </div>
 
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -57,7 +56,8 @@ export default function AboutIndustries() {
                         <motion.div
                             key={index}
                             variants={cardVariants}
-                            className="bg-white rounded-[1.5rem] border border-gray-100 p-6 hover:shadow-xl hover:shadow-[#6366f1]/10 transition-all duration-300 hover:-translate-y-1 group"
+                            whileTap={{ scale: 0.98 }}
+                            className="bg-white rounded-[1.5rem] border border-gray-100 p-6 hover:shadow-xl hover:shadow-[#6366f1]/10 transition-all duration-300 hover:-translate-y-1 group cursor-pointer"
                         >
                             <div className="w-12 h-12 rounded-2xl bg-[#ede9fe] text-[#6366f1] flex items-center justify-center mb-5 group-hover:bg-[#6366f1] group-hover:text-white transition-colors duration-300">
                                 <industry.icon className="w-6 h-6" />

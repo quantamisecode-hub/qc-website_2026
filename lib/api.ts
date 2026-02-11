@@ -7,7 +7,8 @@ export interface CTAData {
 }
 
 export const submitCTA = async (data: CTAData): Promise<{ success: boolean; message: string }> => {
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+    // Use environment variable for production, fallback to localhost for development
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
     try {
         const response = await fetch(`${API_URL}/cta`, {
@@ -20,7 +21,7 @@ export const submitCTA = async (data: CTAData): Promise<{ success: boolean; mess
 
         if (!response.ok) {
             const errorData = await response.json();
-            throw new Error(errorData.detail || "Something went wrong sending your message.");
+            throw new Error(errorData.message || errorData.error || "Something went wrong sending your message.");
         }
 
         return { success: true, message: "Message sent successfully!" };

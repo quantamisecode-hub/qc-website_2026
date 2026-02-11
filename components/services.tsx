@@ -106,6 +106,7 @@ export default function Services() {
                             key={index}
                             variants={itemVariants}
                             whileHover={{ y: -10, scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
                             className={`p-8 rounded-2xl border ${service.bg} hover:shadow-2xl hover:border-[#eb56f6]/50 transition-all duration-300 group cursor-pointer`}
                         >

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { ArrowRight, Cpu, Globe, Smartphone, Layers, ShoppingCart, Palette, Blocks, Database } from "lucide-react";
 
 interface RelatedServicesProps {
@@ -148,10 +149,12 @@ export default function RelatedServices({ currentService }: RelatedServicesProps
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {otherServices.map((service, index) => (
-                        <a
+                        <motion.a
                             key={index}
                             href={service.href}
-                            className={`group p-6 rounded-2xl border ${service.border} ${service.bg} hover:shadow-lg transition-all duration-300 flex flex-col h-full`}
+                            whileHover={{ y: -5, scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className={`group p-6 rounded-2xl border ${service.border} ${service.bg} hover:shadow-lg transition-all duration-300 flex flex-col h-full cursor-pointer`}
                         >
                             <div className="flex items-start justify-between mb-4">
                                 <div className={`p-3 rounded-xl bg-white shadow-sm ${service.color} group-hover:scale-110 transition-transform duration-300`}>
@@ -172,7 +175,7 @@ export default function RelatedServices({ currentService }: RelatedServicesProps
                             <span className={`text-sm font-bold ${service.color} group-hover:underline decoration-2 underline-offset-4 flex items-center gap-1 mt-auto`}>
                                 Learn More
                             </span>
-                        </a>
+                        </motion.a>
                     ))}
                 </div>
             </div>
