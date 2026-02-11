@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 export default function ContactForm() {
     return (
@@ -42,16 +43,19 @@ export default function ContactForm() {
 
                 <div>
                     <label className="block text-sm font-bold text-[#3A0F67] mb-1.5">Project Type</label>
-                    <select className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 transition-all">
-                        <option>free consultation</option>
-                        <option>Select a service</option>
-                        <option>Custom Software Development</option>
-                        <option>AI & Machine Learning</option>
-                        <option>Mobile App Development</option>
-                        <option>Web Development</option>
-                        <option>Cloud Consulting</option>
-                        <option>Other</option>
-                    </select>
+                    <div className="relative">
+                        <select className="w-full appearance-none px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20 outline-none text-gray-800 transition-all cursor-pointer">
+                            <option>Select a service</option>
+                            <option>Free Consultation</option>
+                            <option>Custom Software Development</option>
+                            <option>AI & Machine Learning</option>
+                            <option>Mobile App Development</option>
+                            <option>Web Development</option>
+                            <option>Cloud Consulting</option>
+                            <option>Other</option>
+                        </select>
+                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+                    </div>
                 </div>
 
                 <div>

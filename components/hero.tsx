@@ -15,7 +15,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-[#3A0F67] mb-6 leading-[1.15]">
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#3A0F67] mb-6 leading-[1.15]">
                             Building AI-Driven Software Solutions for <span className="text-[#6366f1]">High-Growth Businesses</span>
                         </h1>
                     </motion.div>

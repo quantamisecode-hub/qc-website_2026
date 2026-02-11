@@ -3,7 +3,8 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
-import aboutImg from '../public/assets/aboutImg.jpeg';
+
+import anoutChooseImage from '@/public/assets/aboutChooseImage.png'
 
 export default function AboutWhoWeAre() {
     return (
@@ -58,7 +59,7 @@ export default function AboutWhoWeAre() {
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                             <div className="aspect-[4/3] bg-gray-200 relative">
                                 <Image
-                                    src={aboutImg}
+                                    src={anoutChooseImage}
                                     alt="Quantamise Team"
                                     fill
                                     className="object-cover"

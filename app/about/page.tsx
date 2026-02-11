@@ -10,6 +10,7 @@ import AboutApproach from '@/components/about-approach';
 import AboutIndustries from '@/components/about-industries';
 import AboutWhyChooseUs from '@/components/about-why-choose-us';
 import AboutCta from '@/components/about-cta';
+import anoutChooseImage from '@/public/assets/aboutChooseImage.png'
 
 export const metadata: Metadata = {
     title: 'About Us | Quantamise Code - Building Intelligent Digital Solutions',
