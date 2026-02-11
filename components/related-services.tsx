@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ArrowRight, Cpu, Globe, Smartphone, Layers, ShoppingCart, Palette, Blocks, Database } from "lucide-react";
 
