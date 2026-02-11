@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Quantamise Code",
     images: [
       {
-        url: "/logo.png",
+        url: "https://www.quantamisecode.com/logo.png",
         width: 1200,
         height: 630,
         alt: "Quantamise Code - AI & Software Development",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quantamise Code | AI & Software Development",
     description: "Building secure, scalable, and future-ready digital solutions.",
-    images: ["/logo.png"],
+    images: ["https://www.quantamisecode.com/logo.png"],
   },
   robots: {
     index: true,
@@ -56,9 +56,13 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: ["/favicon.ico", "/logo.png"],
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" }
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" }
+    ],
   },
 };
 
@@ -73,6 +77,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Explicit favicon links for better browser compatibility */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
