@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Quantamise Code",
     images: [
       {
-        url: "/assets/logo.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Quantamise Code - AI & Software Development",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quantamise Code | AI & Software Development",
     description: "Building secure, scalable, and future-ready digital solutions.",
-    images: ["/assets/logo.png"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/assets/logo.png",
-    shortcut: "/assets/logo.png",
-    apple: "/assets/logo.png",
+    icon: ["/favicon.ico", "/logo.png"],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
