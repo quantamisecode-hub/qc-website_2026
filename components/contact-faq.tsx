@@ -25,6 +25,10 @@ const faqs = [
     {
         question: "What information should I prepare before contacting you?",
         answer: "Project goals, timeline, budget expectations, and technical requirements help us provide better guidance."
+    },
+    {
+        question: "Do you provide post-launch support and maintenance?",
+        answer: "Yes, we offer flexible post-launch support and maintenance packages. Whether it's bug fixes, security updates, or feature enhancements, we ensure your software remains secure and up-to-date."
     }
 ];
 

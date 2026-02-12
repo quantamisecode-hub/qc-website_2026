@@ -207,7 +207,7 @@ export default function RequirementForm({
                     <button
                         type="submit"
                         disabled={loading || success}
-                        className="w-full py-4.5 rounded-2xl bg-[#6366f1] text-white font-extrabold text-lg hover:bg-[#5053ca] transition-all flex items-center justify-center gap-3 shadow-[0_10px_25px_-5px_rgba(99,102,241,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(99,102,241,0.5)] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
+                        className="w-full py-4.5 rounded-2xl bg-[#6366f1] text-white font-extrabold text-lg hover:bg-[#5053ca] transition-all flex items-center justify-center gap-3 shadow-[0_10px_25px_-5px_rgba(99,102,241,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(99,102,241,0.5)] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                     >
                         {loading ? (
                             <>

@@ -74,14 +74,14 @@ export default function CTA() {
                         <div className="bg-gray-100 p-1.5 rounded-2xl flex w-full max-w-md mb-8 relative border border-gray-200 shadow-inner">
                             <button
                                 onClick={() => setActiveTab("contact")}
-                                className={`flex-1 py-3 text-sm font-extrabold rounded-xl transition-all duration-300 z-10 ${activeTab === "contact" ? "bg-white text-[#6366f1] shadow-lg" : "text-gray-500 hover:text-gray-700"
+                                className={`flex-1 py-3 text-sm font-extrabold rounded-xl transition-all duration-300 z-10 cursor-pointer ${activeTab === "contact" ? "bg-white text-[#6366f1] shadow-lg" : "text-gray-500 hover:text-gray-700"
                                     }`}
                             >
                                 Contact Us
                             </button>
                             <button
                                 onClick={() => setActiveTab("schedule")}
-                                className={`flex-1 py-3 text-sm font-extrabold rounded-xl transition-all duration-300 z-10 ${activeTab === "schedule" ? "bg-white text-[#6366f1] shadow-lg" : "text-gray-500 hover:text-gray-700"
+                                className={`flex-1 py-3 text-sm font-extrabold rounded-xl transition-all duration-300 z-10 cursor-pointer ${activeTab === "schedule" ? "bg-white text-[#6366f1] shadow-lg" : "text-gray-500 hover:text-gray-700"
                                     }`}
                             >
                                 Schedule Meeting
