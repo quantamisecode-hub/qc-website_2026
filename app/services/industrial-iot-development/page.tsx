@@ -13,6 +13,7 @@ import IiotIndustries from "@/components/iiot-industries";
 import IiotEngagement from "@/components/iiot-engagement";
 import IiotWhyChooseUs from "@/components/iiot-why-choose-us";
 import IiotBusinessApproach from "@/components/iiot-business-approach";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "IIOT Development Team",
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "IIoT Development Services | Quantamise Code",
         description: "Leading IIoT Development Company specializing in industrial IoT solutions.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/IIoT",
@@ -156,40 +157,64 @@ export default function IiotDevelopmentPage() {
             <br /><br /><br />
 
             {/* Hero Section */}
-            <IiotHero />
+            <RevealOnScroll>
+                <IiotHero />
+            </RevealOnScroll>
 
             {/* Why Choose Us Section */}
-            <IiotWhyChooseUs />
+            <RevealOnScroll>
+                <IiotWhyChooseUs />
+            </RevealOnScroll>
 
             {/* Business Focused Approach Section */}
-            <IiotBusinessApproach />
+            <RevealOnScroll>
+                <IiotBusinessApproach />
+            </RevealOnScroll>
 
             {/* Tech Stack Section */}
-            <IiotTechStack />
+            <RevealOnScroll>
+                <IiotTechStack />
+            </RevealOnScroll>
 
             {/* Roadmap Section */}
-            <IiotRoadmap />
+            <RevealOnScroll>
+                <IiotRoadmap />
+            </RevealOnScroll>
 
             {/* Security Section */}
-            <IiotSecurity />
+            <RevealOnScroll>
+                <IiotSecurity />
+            </RevealOnScroll>
 
             {/* Communication Section */}
-            <IiotCommunication />
+            <RevealOnScroll>
+                <IiotCommunication />
+            </RevealOnScroll>
 
             {/* Industries Section */}
-            <IiotIndustries />
+            <RevealOnScroll>
+                <IiotIndustries />
+            </RevealOnScroll>
 
             {/* Engagement Models Section */}
-            <IiotEngagement />
+            <RevealOnScroll>
+                <IiotEngagement />
+            </RevealOnScroll>
 
             {/* FAQ Section */}
-            <IiotFAQ />
+            <RevealOnScroll>
+                <IiotFAQ />
+            </RevealOnScroll>
 
             {/* Related Services Section */}
-            <RelatedServices currentService="iiot" />
+            <RevealOnScroll>
+                <RelatedServices currentService="iiot" />
+            </RevealOnScroll>
 
             {/* CTA Section */}
-            <ServicesCTA />
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>

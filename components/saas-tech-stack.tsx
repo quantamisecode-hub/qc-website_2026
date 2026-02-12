@@ -3,9 +3,10 @@ import {
     SiReact, SiNextdotjs, SiTailwindcss,
     SiNodedotjs, SiPython,
     SiAmazon, SiGooglecloud,
-    SiPostgresql, SiMongodb, SiRedis,
+    SiPostgresql, SiMongodb,
     SiDocker // Keeping Docker as part of DevOps/Cloud implies containerization
 } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
 import { VscAzure } from "react-icons/vsc";
 import { FaJava } from "react-icons/fa";
 import { ArrowRight, Cloud, Database, Globe } from "lucide-react";
@@ -38,7 +39,7 @@ const techCategories = [
             { name: "GCP", icon: SiGooglecloud, color: "#4285F4" },
             { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
             { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-            { name: "Redis", icon: SiRedis, color: "#DC382D" },
+            { name: "Redis", icon: DiRedis, color: "#DC382D" },
         ]
     }
 ];

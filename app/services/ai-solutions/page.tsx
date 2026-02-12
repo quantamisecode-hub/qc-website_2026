@@ -13,6 +13,7 @@ import AiCommunication from "@/components/ai-communication";
 import AiFAQ from "@/components/ai-faq";
 import ServicesCTA from "@/components/services-cta";
 import RelatedServices from "@/components/related-services";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 
 export const metadata: Metadata = {
     title: "AI Solutions & Machine Learning Services | Quantamise Code",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "AI Solutions & Machine Learning Development",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "AI Solutions & Machine Learning Development | Quantamise Code",
         description: "Leading AI Development Company specializing in custom Machine Learning, NLP, and Generative AI solutions.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/ai-solutions",
@@ -148,18 +149,42 @@ export default function AiSolutionsPage() {
             />
             <Nav />
             <br /><br /><br />
-            <AiHero />
-            <AiWhyChooseUs />
-            <AiBusinessApproach />
-            <AiTechStack />
-            <AiRoadmap />
-            <AiSecurity />
-            <AiCommunication />
-            <AiIndustries />
-            <AiEngagement />
-            <AiFAQ />
-            <RelatedServices currentService="ai" />
-            <ServicesCTA />
+            <RevealOnScroll>
+                <AiHero />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <AiWhyChooseUs />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <AiBusinessApproach />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <AiTechStack />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <AiRoadmap />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <AiSecurity />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <AiCommunication />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <AiIndustries />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <AiEngagement />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <AiFAQ />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <RelatedServices currentService="ai" />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
             <Footer />
         </main>
     );

@@ -67,8 +67,8 @@ export default function AiRoadmap() {
                             return (
                                 <motion.div
                                     key={step.id}
-                                    initial={{ opacity: 0, y: 50 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{ duration: 0.6, delay: index * 0.1 }}
                                     className={`relative flex flex-col md:flex-row items-center md:justify-between gap-8 md:gap-0 ${isEven ? "" : "md:flex-row-reverse"

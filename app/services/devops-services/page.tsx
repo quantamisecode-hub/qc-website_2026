@@ -13,6 +13,7 @@ import DevOpsCommunication from "@/components/devops-communication";
 import DevOpsIndustries from "@/components/devops-industries";
 import DevOpsEngagement from "@/components/devops-engagement";
 import DevOpsFAQ from "@/components/devops-faq";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "DevOps Engineering Team",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "DevOps Services | Quantamise Code",
         description: "Accelerate your software delivery with our expert DevOps services.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/devops-services",
@@ -149,40 +150,64 @@ export default function DevOpsPage() {
             <br /><br /><br />
 
             {/* Hero Section */}
-            <DevOpsHero />
+            <RevealOnScroll>
+                <DevOpsHero />
+            </RevealOnScroll>
 
             {/* Why Choose Us Section */}
-            <DevOpsWhyChooseUs />
+            <RevealOnScroll>
+                <DevOpsWhyChooseUs />
+            </RevealOnScroll>
 
             {/* Business Focused Approach Section */}
-            <DevOpsBusinessApproach />
+            <RevealOnScroll>
+                <DevOpsBusinessApproach />
+            </RevealOnScroll>
 
             {/* Tech Stack Section */}
-            <DevOpsTechStack />
+            <RevealOnScroll>
+                <DevOpsTechStack />
+            </RevealOnScroll>
 
             {/* Roadmap Section */}
-            <DevOpsRoadmap />
+            <RevealOnScroll>
+                <DevOpsRoadmap />
+            </RevealOnScroll>
 
             {/* Security Section */}
-            <DevOpsSecurity />
+            <RevealOnScroll>
+                <DevOpsSecurity />
+            </RevealOnScroll>
 
             {/* Communication Section */}
-            <DevOpsCommunication />
+            <RevealOnScroll>
+                <DevOpsCommunication />
+            </RevealOnScroll>
 
             {/* Industries Section */}
-            <DevOpsIndustries />
+            <RevealOnScroll>
+                <DevOpsIndustries />
+            </RevealOnScroll>
 
             {/* Engagement Models Section */}
-            <DevOpsEngagement />
+            <RevealOnScroll>
+                <DevOpsEngagement />
+            </RevealOnScroll>
 
             {/* FAQ Section */}
-            <DevOpsFAQ />
+            <RevealOnScroll>
+                <DevOpsFAQ />
+            </RevealOnScroll>
 
             {/* Related Services Section */}
-            <RelatedServices currentService="devops" />
+            <RevealOnScroll>
+                <RelatedServices currentService="devops" />
+            </RevealOnScroll>
 
             {/* CTA Section */}
-            <ServicesCTA />
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>

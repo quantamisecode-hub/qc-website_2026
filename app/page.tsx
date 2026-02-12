@@ -34,11 +34,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Quantamise Code | Custom Software Development & AI Solutions",
     description: "Partner with Quantamise Code for expert Full-Stack, Mobile, SaaS, and AI development services. Transforming ideas into scalable digital reality.",
-    url: "https://www.quantamisecode.com",
+    url: "https://www.quantamisecode.com/",
     siteName: "Quantamise Code",
     images: [
       {
-        url: "/assets/logo.png",
+        url: "/OG/og-image.png",
         width: 1200,
         height: 630,
         alt: "Quantamise Code - Software Development & AI Solutions",
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quantamise Code | Custom Software Development & AI Solutions",
     description: "Expert software development services: AI, Mobile, SaaS, and Full-Stack. Build your future with Quantamise Code.",
-    images: ["/assets/logo.png"],
+    images: ["/OG/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.quantamisecode.com",
+    canonical: "https://www.quantamisecode.com/",
   },
 };
 
@@ -78,7 +78,7 @@ const organizationSchema = {
   "logo": "https://www.quantamisecode.com/assets/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+91-9876543210", // Replace with actaul number
+    "telephone": "+91-9876543210",
     "contactType": "sales",
     "areaServed": "Global",
     "availableLanguage": "English"

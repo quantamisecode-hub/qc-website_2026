@@ -1,7 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import BlogCard from "./blog-card";
-import { AlertCircle, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { AlertCircle, ArrowRight, Loader2 } from "lucide-react";
 
 interface WpPost {
     id: number;
@@ -13,31 +14,42 @@ interface WpPost {
     _embedded?: any;
 }
 
-async function getLatestPosts(): Promise<WpPost[]> {
-    const API_URL = 'https://quantamisecode.com/blogs/wp-json/wp/v2/posts?_embed&per_page=3';
+export default function Blogs() {
+    const [posts, setPosts] = useState<WpPost[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    try {
-        const res = await fetch(API_URL, {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
-            next: { revalidate: 3600 } // Cache for 1 hour
-        });
+    useEffect(() => {
+        const fetchLatestPosts = async () => {
+            // Add a timestamp to prevent caching
+            const timestamp = new Date().getTime();
+            const API_URL = `https://quantamisecode.com/blogs/wp-json/wp/v2/posts?_embed&per_page=3&t=${timestamp}`;
 
-        if (!res.ok) {
-            console.error(`[HomeBlogFetchError] Status: ${res.status}`);
-            return [];
-        }
+            try {
+                const res = await fetch(API_URL, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' },
+                    cache: 'no-store'
+                });
 
-        const data = await res.json();
-        return Array.isArray(data) ? data : [];
-    } catch (error) {
-        console.error(`[HomeBlogFetchError] ${error instanceof Error ? error.message : 'Unknown error'}`);
-        return [];
-    }
-}
+                if (!res.ok) {
+                    console.error(`[HomeBlogFetchError] Status: ${res.status}`);
+                    return;
+                }
 
-export default async function Blogs() {
-    const posts = await getLatestPosts();
+                const data = await res.json();
+                if (Array.isArray(data)) {
+                    // strictly limit to 3 posts as requested
+                    setPosts(data.slice(0, 3));
+                }
+            } catch (error) {
+                console.error(`[HomeBlogFetchError] ${error instanceof Error ? error.message : 'Unknown error'}`);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchLatestPosts();
+    }, []);
 
     return (
         <section className="py-24 bg-white relative overflow-hidden">
@@ -57,16 +69,21 @@ export default async function Blogs() {
                         </p>
                     </div>
 
-                    <Link
-                        href="/blogs"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 text-white font-bold hover:bg-[#6366f1] transition-all duration-300 shadow-lg shadow-slate-200 hover:shadow-[#6366f1]/20 group"
+                    <a
+                        href="/blogs-post"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-900 text-white font-bold hover:bg-[#6366f1] transition-all duration-300 shadow-lg shadow-slate-200 hover:shadow-[#6366f1]/20 group"
                     >
                         View All Articles
                         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                    </Link>
+                    </a>
                 </div>
 
-                {posts.length > 0 ? (
+                {isLoading ? (
+                    <div className="flex justify-center items-center py-20 min-h-[400px]">
+                        <Loader2 className="w-10 h-10 text-indigo-600 animate-spin" />
+                        <span className="ml-3 text-slate-500 font-medium">Fetching latest insights...</span>
+                    </div>
+                ) : posts.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {posts.map((post) => (
                             <BlogCard key={post.id} post={post as any} />
@@ -81,12 +98,12 @@ export default async function Blogs() {
                         <p className="text-slate-500 max-w-md mx-auto mb-8">
                             We are preparing some amazing insights for you. Please check back in a few moments or visit our dedicated blog page.
                         </p>
-                        <Link
-                            href="/blogs"
+                        <a
+                            href="/blogs-post"
                             className="text-[#6366f1] font-bold hover:underline underline-offset-4"
                         >
                             Go to Blog Page →
-                        </Link>
+                        </a>
                     </div>
                 )}
             </div>

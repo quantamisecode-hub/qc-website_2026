@@ -71,16 +71,16 @@ export default function RequirementForm({
     };
 
     return (
-        <div className={`bg-white p-8 md:p-10 rounded-3xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 ${className}`}>
-            <div className="mb-10">
-                <h3 className="text-3xl font-extrabold text-[#3A0F67] mb-3 tracking-tight">{title}</h3>
-                <p className="text-slate-500 font-medium">{subtitle}</p>
+        <div className={`bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 ${className}`}>
+            <div className="mb-4 sm:mb-6">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#3A0F67] mb-1.5 sm:mb-2 tracking-tight">{title}</h3>
+                <p className="text-xs sm:text-sm text-slate-500 font-medium">{subtitle}</p>
             </div>
 
-            <form className="space-y-6" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form className="space-y-3 sm:space-y-4" onSubmit={handleSubmit}>
+                <div className="grid grid-cols-2 gap-3 sm:gap-6">
                     <div>
-                        <label htmlFor="name" className="block text-sm font-bold text-[#3A0F67] mb-2 px-1">
+                        <label htmlFor="name" className="block text-[10px] sm:text-sm font-bold text-[#3A0F67] mb-1 sm:mb-2 px-1">
                             Full Name <span className="text-red-500 font-bold">*</span>
                         </label>
                         <input
@@ -89,12 +89,12 @@ export default function RequirementForm({
                             required
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium"
+                            className="w-full px-3 sm:px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium text-xs sm:text-base"
                             placeholder="John Doe"
                         />
                     </div>
                     <div>
-                        <label htmlFor="company" className="block text-sm font-bold text-[#3A0F67] mb-2 px-1">
+                        <label htmlFor="company" className="block text-[10px] sm:text-sm font-bold text-[#3A0F67] mb-1 sm:mb-2 px-1">
                             Company Name
                         </label>
                         <input
@@ -102,15 +102,15 @@ export default function RequirementForm({
                             id="company"
                             value={formData.company || ""}
                             onChange={handleChange}
-                            className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium"
+                            className="w-full px-3 sm:px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium text-xs sm:text-base"
                             placeholder="Your Company"
                         />
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-3 sm:gap-6">
                     <div>
-                        <label htmlFor="email" className="block text-sm font-bold text-[#3A0F67] mb-2 px-1">
+                        <label htmlFor="email" className="block text-[10px] sm:text-sm font-bold text-[#3A0F67] mb-1 sm:mb-2 px-1">
                             Email Address <span className="text-red-500 font-bold">*</span>
                         </label>
                         <input
@@ -119,12 +119,12 @@ export default function RequirementForm({
                             required
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium"
+                            className="w-full px-3 sm:px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium text-xs sm:text-base"
                             placeholder="john@company.com"
                         />
                     </div>
                     <div>
-                        <label htmlFor="phone" className="block text-sm font-bold text-[#3A0F67] mb-2 px-1">
+                        <label htmlFor="phone" className="block text-[10px] sm:text-sm font-bold text-[#3A0F67] mb-1 sm:mb-2 px-1">
                             Phone Number <span className="text-red-500 font-bold">*</span>
                         </label>
                         <input
@@ -133,14 +133,14 @@ export default function RequirementForm({
                             required
                             value={formData.phone}
                             onChange={handleChange}
-                            className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium"
+                            className="w-full px-3 sm:px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium text-xs sm:text-base"
                             placeholder="+1 (555) 000-0000"
                         />
                     </div>
                 </div>
 
                 <div>
-                    <label htmlFor="projectType" className="block text-sm font-bold text-[#3A0F67] mb-2 px-1">
+                    <label htmlFor="projectType" className="block text-[10px] sm:text-sm font-bold text-[#3A0F67] mb-1 sm:mb-2 px-1">
                         Project Type
                     </label>
                     <div className="relative">
@@ -148,7 +148,7 @@ export default function RequirementForm({
                             id="projectType"
                             value={projectType}
                             onChange={(e) => setProjectType(e.target.value)}
-                            className="w-full appearance-none px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 transition-all cursor-pointer font-medium"
+                            className="w-full appearance-none px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 transition-all cursor-pointer font-medium text-sm sm:text-base"
                         >
                             <option>Select a service</option>
                             <option>Free Consultation</option>
@@ -167,7 +167,7 @@ export default function RequirementForm({
                 </div>
 
                 <div>
-                    <label htmlFor="message" className="block text-sm font-bold text-[#3A0F67] mb-2 px-1">
+                    <label htmlFor="message" className="block text-[10px] sm:text-sm font-bold text-[#3A0F67] mb-1 sm:mb-2 px-1">
                         Project Description <span className="text-red-500 font-bold">*</span>
                     </label>
                     <textarea
@@ -176,7 +176,7 @@ export default function RequirementForm({
                         required
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium resize-none min-h-[120px]"
+                        className="w-full px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#6366f1] focus:ring-4 focus:ring-[#6366f1]/10 outline-none text-slate-800 placeholder:text-slate-400 transition-all font-medium resize-none min-h-[80px] text-sm sm:text-base"
                         placeholder="Tell us about your project..."
                     />
                 </div>
@@ -207,7 +207,7 @@ export default function RequirementForm({
                     <button
                         type="submit"
                         disabled={loading || success}
-                        className="w-full py-4.5 rounded-2xl bg-[#6366f1] text-white font-extrabold text-lg hover:bg-[#5053ca] transition-all flex items-center justify-center gap-3 shadow-[0_10px_25px_-5px_rgba(99,102,241,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(99,102,241,0.5)] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                        className="w-full py-3 rounded-xl bg-[#6366f1] text-white font-extrabold text-sm sm:text-base hover:bg-[#5053ca] transition-all flex items-center justify-center gap-2 shadow-[0_10px_25px_-5px_rgba(99,102,241,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(99,102,241,0.5)] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                     >
                         {loading ? (
                             <>

@@ -37,8 +37,8 @@ export default function Stats() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
 
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                         className="p-4"
@@ -52,8 +52,8 @@ export default function Stats() {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="p-4 pt-12 md:pt-4"
@@ -67,8 +67,8 @@ export default function Stats() {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="p-4 pt-12 md:pt-4"

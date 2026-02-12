@@ -15,6 +15,7 @@ import SaasEngagement from "@/components/saas-engagement";
 import SaasSecurity from "@/components/saas-security";
 import SaasCommunication from "@/components/saas-communication";
 import SaasFAQ from "@/components/saas-faq";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 
 export const metadata: Metadata = {
     title: "SaaS Product Development Company | Quantamise Code",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "SaaS Development Services",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "SaaS Development Company | Build Scalable Cloud Platforms | Quantamise Code",
         description: "Launch and scale your SaaS product with our expert development services.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/saas-development",
@@ -148,18 +149,42 @@ export default function SaasDevelopmentPage() {
             />
             <Nav />
             <br /><br /><br />
-            <SaasHero />
-            <SaasWhyChooseUs />
-            <SaasBusinessApproach />
-            <SaasTechStack />
-            <SaasRoadmap />
-            <SaasSecurity />
-            <SaasCommunication />
-            <SaasIndustries />
-            <SaasEngagement />
-            <SaasFAQ />
-            <RelatedServices currentService="saas" />
-            <ServicesCTA />
+            <RevealOnScroll>
+                <SaasHero />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <SaasWhyChooseUs />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <SaasBusinessApproach />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <SaasTechStack />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <SaasRoadmap />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <SaasSecurity />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <SaasCommunication />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <SaasIndustries />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <SaasEngagement />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <SaasFAQ />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <RelatedServices currentService="saas" />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>

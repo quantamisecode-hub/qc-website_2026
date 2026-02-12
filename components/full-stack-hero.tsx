@@ -26,7 +26,7 @@ export default function FullStackHero() {
                         animate={{
                             opacity: 0.8,
                             scale: 1,
-                            y: [tech.initialY, tech.initialY - 20, tech.initialY],
+                            y: [tech.initialY, tech.initialY - 10, tech.initialY],
                         }}
                         transition={{
                             duration: 4 + Math.random() * 2,
@@ -54,8 +54,8 @@ export default function FullStackHero() {
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6366f1]/10 text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-6">

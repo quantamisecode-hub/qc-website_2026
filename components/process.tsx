@@ -42,8 +42,8 @@ export default function Process() {
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-28">
                     <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                     >
@@ -68,8 +68,8 @@ export default function Process() {
                         {steps.map((step, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 className={`flex flex-col lg:flex-row gap-8 lg:gap-0 items-start lg:items-center relative ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"

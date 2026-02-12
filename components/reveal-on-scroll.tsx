@@ -30,7 +30,7 @@ export default function RevealOnScroll({
         <div ref={ref} style={{ width }} className={className}>
             <motion.div
                 variants={{
-                    hidden: { opacity: 0, y: 30, filter: "blur(10px)" }, // Reduced y distance for subtler effect
+                    hidden: { opacity: 0, filter: "blur(10px)" }, // Removed y distance for cleaner appear effect
                     visible: { opacity: 1, y: 0, filter: "blur(0px)" },
                 }}
                 initial="hidden"

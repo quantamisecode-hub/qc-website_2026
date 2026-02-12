@@ -33,8 +33,8 @@ const faqs = [
 ];
 
 const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 100, damping: 15 } }
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { type: "spring" as const, stiffness: 100, damping: 15 } }
 };
 
 const FAQItem = ({ faq, index, activeIndex, toggleFAQ }: any) => {

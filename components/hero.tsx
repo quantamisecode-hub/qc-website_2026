@@ -11,8 +11,8 @@ export default function Hero() {
 
                     {/* Main Heading */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#3A0F67] mb-6 leading-[1.15]">
@@ -22,8 +22,8 @@ export default function Hero() {
 
                     {/* Subheading */}
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         className="text-xl sm:text-xl lg:text-lg font-medium text-[#2A2A2A] mb-8 max-w-5xl mx-auto leading-relaxed"
                     >
@@ -32,8 +32,8 @@ export default function Hero() {
 
                     {/* CTAs */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
                     >
@@ -51,8 +51,8 @@ export default function Hero() {
 
                     {/* Decorative Image */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.5 }}
                         className="relative z-10 flex justify-center"
                     >
@@ -71,7 +71,7 @@ export default function Hero() {
                             {/* Floating Service Chips */}
                             {/* Chip 1: Web Development (Top Left) */}
                             <motion.div
-                                animate={{ y: [0, -10, 0] }}
+                                animate={{ y: [0, -5, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0 }}
                                 className="absolute top-10 md:-left-4 lg:-left-24 xl:-left-50 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
@@ -83,7 +83,7 @@ export default function Hero() {
 
                             {/* Chip 2: App Development (Bottom Right) */}
                             <motion.div
-                                animate={{ y: [0, -12, 0] }}
+                                animate={{ y: [0, -6, 0] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                                 className="absolute bottom-20 md:-right-4 lg:-right-32 xl:-right-60 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
@@ -95,7 +95,7 @@ export default function Hero() {
 
                             {/* Chip 3: UI/UX Design (Top Right) */}
                             <motion.div
-                                animate={{ y: [0, -8, 0] }}
+                                animate={{ y: [0, -4, 0] }}
                                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                                 className="absolute top-20 md:-right-4 lg:-right-24 xl:-right-50 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
@@ -107,7 +107,7 @@ export default function Hero() {
 
                             {/* Chip 4: AI Solutions (Bottom Left) */}
                             <motion.div
-                                animate={{ y: [0, -10, 0] }}
+                                animate={{ y: [0, -5, 0] }}
                                 transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
                                 className="absolute bottom-32 md:-left-8 lg:-left-32 xl:-left-60 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
@@ -119,7 +119,7 @@ export default function Hero() {
 
                             {/* Chip 5: SaaS Development (Middle Left) */}
                             <motion.div
-                                animate={{ y: [0, -9, 0] }}
+                                animate={{ y: [0, -4, 0] }}
                                 transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
                                 className="absolute top-40 md:-left-10 lg:-left-40 xl:-left-70 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >
@@ -131,7 +131,7 @@ export default function Hero() {
 
                             {/* Chip 6: Cloud Solutions (Middle Right) */}
                             <motion.div
-                                animate={{ y: [0, -11, 0] }}
+                                animate={{ y: [0, -5, 0] }}
                                 transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
                                 className="absolute top-60 md:-right-10 lg:-right-40 xl:-right-70 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/40 hidden md:flex items-center gap-2 z-20"
                             >

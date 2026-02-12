@@ -6,8 +6,9 @@ import Link from "next/link";
 import {
     SiAmazon, SiGooglecloud, SiDocker,
     SiKubernetes, SiTerraform, SiStripe, SiAuth0,
-    SiRedis, SiPostgresql, SiMongodb, SiNodedotjs, SiGo
+    SiPostgresql, SiMongodb, SiNodedotjs, SiGo
 } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
 import { VscAzure } from "react-icons/vsc";
 
 export default function SaasHero() {
@@ -26,7 +27,7 @@ export default function SaasHero() {
                         animate={{
                             opacity: 0.8,
                             scale: 1,
-                            y: [tech.initialY, tech.initialY - 20, tech.initialY],
+                            y: [tech.initialY, tech.initialY - 10, tech.initialY],
                         }}
                         transition={{
                             duration: 4 + Math.random() * 2,
@@ -54,8 +55,8 @@ export default function SaasHero() {
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6366f1]/10 text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-6">
@@ -94,11 +95,11 @@ const OptionalCloudIcon = ({ className }: { className?: string }) => (
 
 const technologies = [
     { name: "AWS", icon: SiAmazon, color: "#FF9900", initialX: 0, initialY: 0, left: "10%", top: "15%", mobileLeft: "2%", mobileTop: "2%" },
-    { name: "Docker", icon: SiDocker, color: "#2496ED", initialX: 0, initialY: 0, right: "15%", top: "12%", mobileRight: "2%", mobileTop: "2%" },
+    { name: "Docker", icon: SiDocker, color: "#2496ED", initialX: 0, initialY: 0, right: "15%", top: "12%", mobileLeft: "2%", mobileTop: "2%" },
     { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5", initialX: 0, initialY: 0, left: "5%", top: "45%", mobileLeft: "8%", mobileTop: "12%" },
     { name: "Stripe", icon: SiStripe, color: "#008CDD", initialX: 0, initialY: 0, right: "8%", top: "40%", mobileRight: "8%", mobileTop: "12%" },
     { name: "Auth0", icon: SiAuth0, color: "#EB5424", initialX: 0, initialY: 0, left: "15%", bottom: "20%", mobileLeft: "45%", mobileBottom: "2%" },
-    { name: "Redis", icon: SiRedis, color: "#DC382D", initialX: 0, initialY: 0, right: "20%", bottom: "25%", mobileRight: "25%", mobileBottom: "10%" },
+    { name: "Redis", icon: DiRedis, color: "#DC382D", initialX: 0, initialY: 0, right: "20%", bottom: "25%", mobileRight: "25%", mobileBottom: "10%" },
     { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", initialX: 0, initialY: 0, left: "25%", top: "10%", mobileLeft: "30%", mobileTop: "1%" },
     { name: "Node.js", icon: SiNodedotjs, color: "#339933", initialX: 0, initialY: 0, right: "28%", top: "18%", mobileRight: "30%", mobileTop: "1%" },
     { name: "Terraform", icon: SiTerraform, color: "#623CE4", initialX: 0, initialY: 0, left: "8%", bottom: "40%", mobileLeft: "2%", mobileBottom: "15%" },

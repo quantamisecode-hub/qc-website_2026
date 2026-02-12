@@ -2,9 +2,10 @@
 import {
     SiShopify, SiWoocommerce, SiMagento,
     SiReact, SiNextdotjs,
-    SiMysql, SiPostgresql, SiRedis,
+    SiMysql, SiPostgresql,
     SiAmazon, SiGooglecloud,
 } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
 import { ArrowRight, Server, Globe, Cpu, Cloud, Zap, Smartphone, Palette, Code, CreditCard, Package, Database } from "lucide-react";
 
 // Scalable Architecture Data
@@ -76,7 +77,7 @@ const techCategories = [
         techs: [
             { name: "MySql", icon: SiMysql, color: "#4479A1" },
             { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-            { name: "Redis", icon: SiRedis, color: "#DC382D" },
+            { name: "Redis", icon: DiRedis, color: "#DC382D" },
             { name: "AWS", icon: SiAmazon, color: "#FF9900" },
             { name: "Azure", icon: Cloud, color: "#0078D4" },
             { name: "GCP", icon: SiGooglecloud, color: "#4285F4" },

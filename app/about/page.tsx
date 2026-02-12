@@ -11,6 +11,7 @@ import AboutIndustries from '@/components/about-industries';
 import AboutWhyChooseUs from '@/components/about-why-choose-us';
 import AboutFaq from '@/components/about-faq';
 import AboutCta from '@/components/about-cta';
+import RevealOnScroll from '@/components/reveal-on-scroll';
 
 export const metadata: Metadata = {
     title: 'About Us | Quantamise Code - Building Intelligent Digital Solutions',
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
         siteName: 'Quantamise Code',
         images: [
             {
-                url: '/assets/logo.png',
+                url: '/OG/og-image.png',
                 width: 1200,
                 height: 630,
                 alt: 'About Quantamise Code',
@@ -105,16 +106,36 @@ export default function AboutPage() {
             <Nav />
 
             <main>
-                <AboutHero />
-                <AboutWhoWeAre />
-                <AboutMissionVision />
-                <AboutCoreValues />
-                <AboutExpertise />
-                <AboutApproach />
-                <AboutIndustries />
-                <AboutWhyChooseUs />
-                <AboutFaq />
-                <AboutCta />
+                <RevealOnScroll>
+                    <AboutHero />
+                </RevealOnScroll>
+                <RevealOnScroll>
+                    <AboutWhoWeAre />
+                </RevealOnScroll>
+                <RevealOnScroll>
+                    <AboutMissionVision />
+                </RevealOnScroll>
+                <RevealOnScroll>
+                    <AboutCoreValues />
+                </RevealOnScroll>
+                <RevealOnScroll>
+                    <AboutExpertise />
+                </RevealOnScroll>
+                <RevealOnScroll>
+                    <AboutApproach />
+                </RevealOnScroll>
+                <RevealOnScroll>
+                    <AboutIndustries />
+                </RevealOnScroll>
+                <RevealOnScroll>
+                    <AboutWhyChooseUs />
+                </RevealOnScroll>
+                <RevealOnScroll>
+                    <AboutFaq />
+                </RevealOnScroll>
+                <RevealOnScroll>
+                    <AboutCta />
+                </RevealOnScroll>
             </main>
 
             <Footer />

@@ -6,8 +6,9 @@ import { ArrowRight, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import {
     SiShopify, SiWoocommerce, SiMagento, SiBigcommerce,
-    SiStripe, SiPaypal, SiReact, SiNextdotjs, SiNodedotjs, SiRedis
+    SiStripe, SiPaypal, SiReact, SiNextdotjs, SiNodedotjs
 } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
 
 export default function EcommerceHero() {
     return (
@@ -23,7 +24,7 @@ export default function EcommerceHero() {
                         initial={{ opacity: 0, x: tech.initialX, y: tech.initialY }}
                         animate={{
                             opacity: 0.8,
-                            y: [tech.initialY, tech.initialY - 20, tech.initialY],
+                            y: [tech.initialY, tech.initialY - 10, tech.initialY],
                         }}
                         transition={{
                             duration: 4 + Math.random() * 2,
@@ -46,8 +47,8 @@ export default function EcommerceHero() {
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6366f1]/10 text-[#6366f1] text-xs font-bold uppercase tracking-wider mb-6">
@@ -90,5 +91,5 @@ const technologies = [
     { name: "React", icon: SiReact, color: "#61DAFB", initialX: 0, initialY: 0, left: "25%", top: "10%" },
     { name: "Next.js", icon: SiNextdotjs, color: "#000000", initialX: 0, initialY: 0, right: "28%", top: "18%" },
     { name: "Node.js", icon: SiNodedotjs, color: "#339933", initialX: 0, initialY: 0, left: "8%", bottom: "35%" },
-    { name: "Redis", icon: SiRedis, color: "#DC382D", initialX: 0, initialY: 0, right: "5%", bottom: "45%" },
+    { name: "Redis", icon: DiRedis, color: "#DC382D", initialX: 0, initialY: 0, right: "5%", bottom: "45%" },
 ];

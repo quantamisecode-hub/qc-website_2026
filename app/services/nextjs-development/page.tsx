@@ -10,6 +10,7 @@ import NextJsFAQ from "@/components/nextjs-faq";
 import NextJsIndustries from "@/components/nextjs-industries";
 import NextJsEngagement from "@/components/nextjs-engagement";
 import NextJsWhyChooseUs from "@/components/nextjs-why-choose-us";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Next.js Development Team",
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Next.js Development Services | Quantamise Code",
         description: "Leading Next.js Development Company specializing in App Router, SSR, and Vercel deployments.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/nextjs-development",
@@ -146,34 +147,54 @@ export default function NextJsDevelopmentPage() {
             <br /><br /><br />
 
             {/* Hero Section */}
-            <NextJsHero />
+            <RevealOnScroll>
+                <NextJsHero />
+            </RevealOnScroll>
 
             {/* Why Choose Us Section - Expanded with Features */}
-            <NextJsWhyChooseUs />
+            <RevealOnScroll>
+                <NextJsWhyChooseUs />
+            </RevealOnScroll>
 
             {/* Tech Stack Section */}
-            <NextJsTechStack />
+            <RevealOnScroll>
+                <NextJsTechStack />
+            </RevealOnScroll>
 
             {/* Roadmap Section */}
-            <NextJsRoadmap />
+            <RevealOnScroll>
+                <NextJsRoadmap />
+            </RevealOnScroll>
 
             {/* Communication Section */}
-            <NextJsCommunication />
+            <RevealOnScroll>
+                <NextJsCommunication />
+            </RevealOnScroll>
 
             {/* Industries Section */}
-            <NextJsIndustries />
+            <RevealOnScroll>
+                <NextJsIndustries />
+            </RevealOnScroll>
 
             {/* Engagement Models Section */}
-            <NextJsEngagement />
+            <RevealOnScroll>
+                <NextJsEngagement />
+            </RevealOnScroll>
 
             {/* FAQ Section */}
-            <NextJsFAQ />
+            <RevealOnScroll>
+                <NextJsFAQ />
+            </RevealOnScroll>
 
             {/* Related Services Section - Updating prop to nextjs if supported or just keeping as related */}
-            <RelatedServices currentService="nextjs" />
+            <RevealOnScroll>
+                <RelatedServices currentService="nextjs" />
+            </RevealOnScroll>
 
             {/* CTA Section */}
-            <NextJsCTA />
+            <RevealOnScroll>
+                <NextJsCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Menu, X, ChevronDown, ChevronUp, LayoutGrid, Database, Cpu, Globe, Users, Layout, Server, Smartphone, Cloud, Bot } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -110,7 +110,7 @@ const navLinks = [
     { name: "Services", href: "/services", hasDropdown: true },
     { name: "Technologies", href: "/technologies", hasDropdown: true },
     // { name: "Case Studies", href: "/case-studies" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Blogs", href: "/blogs-post" },
     { name: "Contact", href: "/contact" },
 ];
 
@@ -160,10 +160,10 @@ export default function Nav() {
                             onMouseEnter={() => setHoveredItem("About")}
                             onMouseLeave={() => setHoveredItem(null)}
                         >
-                            <Link href="/about" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors flex items-center gap-1">
+                            <a href="/about" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors flex items-center gap-1">
                                 About
                                 <ChevronDown className={`w-4 h-4 text-[#2A2A2A] transition-transform duration-200 ${hoveredItem === "About" ? "rotate-180 text-[#6366f1]" : ""}`} />
-                            </Link>
+                            </a>
 
                             {hoveredItem === "About" && (
                                 <div className="fixed left-0 w-full top-20 md:top-24 z-[99]">
@@ -211,12 +211,12 @@ export default function Nav() {
                         {/* <a href="/case-studies" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Case Studies
                         </a> */}
-                        <a href="/blogs" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
+                        <a href="/blogs-post" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Blogs
                         </a>
-                        <Link href="/contact" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
+                        <a href="/contact" className="text-[#2A2A2A] font-bold text-md hover:text-[#6366f1] transition-colors">
                             Contact
-                        </Link>
+                        </a>
                         {/* <a href="/stats" className="text-[#2A2A2A] font-extrabold text-md hover:text-[#6366f1] transition-colors">Stats</a> */}
                     </div>
 

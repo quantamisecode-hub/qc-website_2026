@@ -13,6 +13,7 @@ import MobileIndustries from "@/components/mobile-industries";
 import MobileEngagement from "@/components/mobile-engagement";
 import MobileWhyChooseUs from "@/components/mobile-why-choose-us";
 import MobileBusinessApproach from "@/components/mobile-business-approach";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Mobile App Development Services",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Mobile App Development Services | Quantamise Code",
         description: "Leading Mobile App Development Company specializing in custom iOS, Android, and Cross-Platform applications.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/mobile-app-development",
@@ -164,40 +165,64 @@ export default function MobileDevelopmentPage() {
             <br /><br /><br />
 
             {/* Hero Section */}
-            <MobileHero />
+            <RevealOnScroll>
+                <MobileHero />
+            </RevealOnScroll>
 
             {/* Why Choose Us Section */}
-            <MobileWhyChooseUs />
+            <RevealOnScroll>
+                <MobileWhyChooseUs />
+            </RevealOnScroll>
 
             {/* Business Focused Approach Section */}
-            <MobileBusinessApproach />
+            <RevealOnScroll>
+                <MobileBusinessApproach />
+            </RevealOnScroll>
 
             {/* Tech Stack Section */}
-            <MobileTechStack />
+            <RevealOnScroll>
+                <MobileTechStack />
+            </RevealOnScroll>
 
             {/* Roadmap Section */}
-            <MobileRoadmap />
+            <RevealOnScroll>
+                <MobileRoadmap />
+            </RevealOnScroll>
 
             {/* Security Section */}
-            <MobileSecurity />
+            <RevealOnScroll>
+                <MobileSecurity />
+            </RevealOnScroll>
 
             {/* Communication Section */}
-            <MobileCommunication />
+            <RevealOnScroll>
+                <MobileCommunication />
+            </RevealOnScroll>
 
             {/* Industries Section */}
-            <MobileIndustries />
+            <RevealOnScroll>
+                <MobileIndustries />
+            </RevealOnScroll>
 
             {/* Engagement Models Section */}
-            <MobileEngagement />
+            <RevealOnScroll>
+                <MobileEngagement />
+            </RevealOnScroll>
 
             {/* FAQ Section */}
-            <MobileFAQ />
+            <RevealOnScroll>
+                <MobileFAQ />
+            </RevealOnScroll>
 
             {/* Related Services Section */}
-            <RelatedServices currentService="mobile" />
+            <RevealOnScroll>
+                <RelatedServices currentService="mobile" />
+            </RevealOnScroll>
 
             {/* CTA Section */}
-            <ServicesCTA />
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>

@@ -140,9 +140,9 @@ export default function TechStackInteractive() {
             <div className="lg:w-2/3">
                 <motion.div
                     key={activeTab.id}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
                     transition={{ duration: 0.3 }}
                     className={`p-8 lg:p-12 rounded-lg border border-slate-100 relative overflow-hidden ${activeTab.bg}`}
                 >
@@ -165,7 +165,7 @@ export default function TechStackInteractive() {
                             {activeTab.techs.map((tech, idx) => (
                                 <motion.div
                                     key={tech.name}
-                                    initial={{ opacity: 0, scale: 1 }}
+                                    initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: idx * 0.05 }}
                                     className="bg-white p-4 rounded-lg border border-slate-200/60 shadow-sm flex flex-col items-center justify-center text-center gap-3 font-semibold text-[#3A0F67] hover:border-[#eb56f6]/30 hover:shadow-md transition-all duration-300 group"

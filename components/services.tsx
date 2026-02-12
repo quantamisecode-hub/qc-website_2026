@@ -56,17 +56,17 @@ const containerVariants = {
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.1
+            staggerChildren: 0.05
         }
     }
 };
 
 const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
         opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: "easeOut" as const }
+        scale: 1,
+        transition: { duration: 0.4, ease: "easeOut" as const }
     }
 };
 
@@ -78,10 +78,10 @@ export default function Services() {
                 {/* Header */}
                 <div className="text-center max-w-4xl mx-auto mb-16">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.5 }}
                     >
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3A0F67] mb-6 leading-tight">
                             Our End-to-End <span className="text-[#6366f1]">Software Development Services</span>

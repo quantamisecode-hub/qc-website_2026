@@ -13,6 +13,7 @@ import CloudConsultingIndustries from "@/components/cloud-consulting-industries"
 import CloudConsultingEngagement from "@/components/cloud-consulting-engagement";
 import CloudConsultingWhyChooseUs from "@/components/cloud-consulting-why-choose-us";
 import CloudConsultingBusinessApproach from "@/components/cloud-consulting-business-approach";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Cloud Consulting Services",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Cloud Consulting & Modernization Services",
         description: "Accelerate your cloud journey with our expert guidance.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/cloud-consulting",
@@ -158,18 +159,42 @@ export default function CloudConsultingPage() {
             <Nav />
             <br /><br /><br />
 
-            <CloudConsultingHero />
-            <CloudConsultingWhyChooseUs />
-            <CloudConsultingBusinessApproach />
-            <CloudConsultingTechStack />
-            <CloudConsultingRoadmap />
-            <CloudConsultingSecurity />
-            <CloudConsultingCommunication />
-            <CloudConsultingIndustries />
-            <CloudConsultingEngagement />
-            <CloudConsultingFAQ />
-            <RelatedServices currentService="cloud-consulting" />
-            <ServicesCTA />
+            <RevealOnScroll>
+                <CloudConsultingHero />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <CloudConsultingWhyChooseUs />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <CloudConsultingBusinessApproach />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <CloudConsultingTechStack />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <CloudConsultingRoadmap />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <CloudConsultingSecurity />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <CloudConsultingCommunication />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <CloudConsultingIndustries />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <CloudConsultingEngagement />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <CloudConsultingFAQ />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <RelatedServices currentService="cloud-consulting" />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>

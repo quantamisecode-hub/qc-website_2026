@@ -13,6 +13,7 @@ import FullStackIndustries from "@/components/full-stack-industries";
 import FullStackEngagement from "@/components/full-stack-engagement";
 import FullStackWhyChooseUs from "@/components/full-stack-why-choose-us";
 import FullStackBusinessApproach from "@/components/full-stack-business-approach";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Full Stack Development Team",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Full-Stack Development Services | Quantamise Code",
         description: "Leading Full-Stack Development Company specializing in custom web applications and SaaS.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/full-stack-development",
@@ -165,40 +166,64 @@ export default function FullStackDevelopmentPage() {
             <br /><br /><br />
 
             {/* Hero Section */}
-            <FullStackHero />
+            <RevealOnScroll>
+                <FullStackHero />
+            </RevealOnScroll>
 
             {/* Why Choose Us Section */}
-            <FullStackWhyChooseUs />
+            <RevealOnScroll>
+                <FullStackWhyChooseUs />
+            </RevealOnScroll>
 
             {/* Business Focused Approach Section */}
-            <FullStackBusinessApproach />
+            <RevealOnScroll>
+                <FullStackBusinessApproach />
+            </RevealOnScroll>
 
             {/* Tech Stack Section */}
-            <FullStackTechStack />
+            <RevealOnScroll>
+                <FullStackTechStack />
+            </RevealOnScroll>
 
             {/* Roadmap Section */}
-            <FullStackRoadmap />
+            <RevealOnScroll>
+                <FullStackRoadmap />
+            </RevealOnScroll>
 
             {/* Security Section */}
-            <FullStackSecurity />
+            <RevealOnScroll>
+                <FullStackSecurity />
+            </RevealOnScroll>
 
             {/* Communication Section */}
-            <FullStackCommunication />
+            <RevealOnScroll>
+                <FullStackCommunication />
+            </RevealOnScroll>
 
             {/* Industries Section */}
-            <FullStackIndustries />
+            <RevealOnScroll>
+                <FullStackIndustries />
+            </RevealOnScroll>
 
             {/* Engagement Models Section */}
-            <FullStackEngagement />
+            <RevealOnScroll>
+                <FullStackEngagement />
+            </RevealOnScroll>
 
             {/* FAQ Section */}
-            <FullStackFAQ />
+            <RevealOnScroll>
+                <FullStackFAQ />
+            </RevealOnScroll>
 
             {/* Related Services Section */}
-            <RelatedServices currentService="full-stack" />
+            <RevealOnScroll>
+                <RelatedServices currentService="full-stack" />
+            </RevealOnScroll>
 
             {/* CTA Section */}
-            <ServicesCTA />
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>

@@ -36,13 +36,22 @@ export default function CTAPopup() {
 
     // Scroll Lock
     useEffect(() => {
+        const html = document.documentElement;
+        const body = document.body;
+
         if (isVisible) {
-            document.body.style.overflow = "hidden";
+            html.style.overflow = "hidden";
+            body.style.overflow = "hidden";
+            body.style.overscrollBehavior = "contain";
         } else {
-            document.body.style.overflow = "unset";
+            html.style.overflow = "";
+            body.style.overflow = "";
+            body.style.overscrollBehavior = "";
         }
         return () => {
-            document.body.style.overflow = "unset";
+            html.style.overflow = "";
+            body.style.overflow = "";
+            body.style.overscrollBehavior = "";
         };
     }, [isVisible]);
 
@@ -55,11 +64,11 @@ export default function CTAPopup() {
             {isVisible && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 bg-slate-900/40 backdrop-blur-md">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
                         transition={{ duration: 0.4, ease: "easeOut" }}
-                        className="relative w-full max-w-2xl bg-transparent overflow-hidden max-h-[95vh] overflow-y-auto custom-scrollbar"
+                        className="relative w-full max-w-lg bg-transparent overflow-hidden max-h-[95vh] overflow-y-auto custom-scrollbar"
                     >
                         {/* Close Button - positioned to overlay the form header slightly or stay separate */}
                         <button
@@ -69,7 +78,7 @@ export default function CTAPopup() {
                             <X className="w-5 h-5" />
                         </button>
 
-                        <div className="p-2 sm:p-4">
+                        <div className="p-1 sm:p-4">
                             <RequirementForm
                                 title="Get Free Consultation"
                                 subtitle="Fill out the form and our experts will get back to you within 24 hours."

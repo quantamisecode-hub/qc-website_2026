@@ -54,8 +54,8 @@ export default function MobileAppTechStack() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                         className="text-3xl lg:text-4xl font-extrabold text-[#3A0F67] mb-4"
@@ -63,8 +63,8 @@ export default function MobileAppTechStack() {
                         Mobile <span className="text-[#6366f1]">Stack</span>
                     </motion.h2>
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="text-lg text-slate-600"
@@ -77,8 +77,8 @@ export default function MobileAppTechStack() {
                     {techCategories.map((category, idx) => (
                         <motion.div
                             key={category.title}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
                             className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group"

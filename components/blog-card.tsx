@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar, User } from "lucide-react";
 
@@ -78,13 +77,13 @@ export default function BlogCard({ post }: { post: BlogPost }) {
 
                 {/* Read More Link */}
                 <div className="mt-auto">
-                    <Link
-                        href={`/blogs/${post.slug}`}
+                    <a
+                        href={`/blogs-post/read?slug=${post.slug}`}
                         className="inline-flex items-center gap-2 text-sm font-bold text-[#eb56f6] hover:text-[#d035db] transition-colors"
                     >
                         Read Full Article
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>

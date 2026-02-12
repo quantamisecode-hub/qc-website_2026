@@ -31,7 +31,7 @@ export default function AboutExpertise() {
                     {expertiseItems.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             whileTap={{ scale: 0.98 }}
                             viewport={{ once: true }}

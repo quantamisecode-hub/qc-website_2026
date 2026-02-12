@@ -14,8 +14,8 @@ export default function About() {
                     {/* Left Column: Content */}
                     <div className="w-full lg:w-1/2 relative z-10">
                         <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8 }}
                         >
@@ -104,8 +104,8 @@ export default function About() {
                     {/* Right Column: Image */}
                     <div className="w-full lg:w-1/2 relative">
                         <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8 }}
                             className="relative"

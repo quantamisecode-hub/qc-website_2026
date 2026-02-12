@@ -13,6 +13,7 @@ import DataEngCommunication from "@/components/data-eng-communication";
 import DataEngIndustries from "@/components/data-eng-industries";
 import DataEngEngagement from "@/components/data-eng-engagement";
 import DataEngFAQ from "@/components/data-eng-faq";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Data Engineering Team",
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Data Engineering Services | Quantamise Code",
         description: "Leading Data Engineering Company specializing in cloud pipelines, data lakes, and BI solutions.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/data-engineering-consulting",
@@ -151,40 +152,64 @@ export default function DataEngineeringPage() {
             <br /><br /><br />
 
             {/* Hero Section */}
-            <DataEngHero />
+            <RevealOnScroll>
+                <DataEngHero />
+            </RevealOnScroll>
 
             {/* Why Choose Us Section */}
-            <DataEngWhyChooseUs />
+            <RevealOnScroll>
+                <DataEngWhyChooseUs />
+            </RevealOnScroll>
 
             {/* Business Approach Section */}
-            <DataEngBusinessApproach />
+            <RevealOnScroll>
+                <DataEngBusinessApproach />
+            </RevealOnScroll>
 
             {/* Tech Stack Section */}
-            <DataEngTechStack />
+            <RevealOnScroll>
+                <DataEngTechStack />
+            </RevealOnScroll>
 
             {/* Roadmap Section */}
-            <DataEngRoadmap />
+            <RevealOnScroll>
+                <DataEngRoadmap />
+            </RevealOnScroll>
 
             {/* Security Section */}
-            <DataEngSecurity />
+            <RevealOnScroll>
+                <DataEngSecurity />
+            </RevealOnScroll>
 
             {/* Communication Section */}
-            <DataEngCommunication />
+            <RevealOnScroll>
+                <DataEngCommunication />
+            </RevealOnScroll>
 
             {/* Industries Section */}
-            <DataEngIndustries />
+            <RevealOnScroll>
+                <DataEngIndustries />
+            </RevealOnScroll>
 
             {/* Engagement Models */}
-            <DataEngEngagement />
+            <RevealOnScroll>
+                <DataEngEngagement />
+            </RevealOnScroll>
 
             {/* FAQ Section */}
-            <DataEngFAQ />
+            <RevealOnScroll>
+                <DataEngFAQ />
+            </RevealOnScroll>
 
             {/* Related Services Section */}
-            <LinkedServices currentService="data-engineering" />
+            <RevealOnScroll>
+                <LinkedServices currentService="data-engineering" />
+            </RevealOnScroll>
 
             {/* CTA Section */}
-            <ServicesCTA />
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>

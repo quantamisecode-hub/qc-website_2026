@@ -15,32 +15,32 @@ import toyotaLogo from "@/public/Clients-Logos/ToyotaLogoImage.png";
  * Adjust individually until visually balanced
  */
 const clients = [
-    { name: "Toyota", logo: toyotaLogo, size: "90px" },
-    { name: "Tata Advanced Systems", logo: tataLogo, size: "90px" },
-    { name: "Mumbai Monorail", logo: mumbaiMonorailLogo, size: "180px" },
-    { name: "BECIL", logo: becilLogo, size: "110px" },
-    { name: "ACR", logo: acrLogo, size: "85px" },
-    { name: "Freya", logo: freyaLogo, size: "70px" },
-    { name: "Lavendel Consulting", logo: lavendelLogo, size: "2000px" },
+    { name: "Toyota", logo: toyotaLogo, size: "60px" },
+    { name: "Tata Advanced Systems", logo: tataLogo, size: "60px" },
+    { name: "Mumbai Monorail", logo: mumbaiMonorailLogo, size: "80px" },
+    { name: "BECIL", logo: becilLogo, size: "70px" },
+    { name: "ACR", logo: acrLogo, size: "65px" },
+    { name: "Freya", logo: freyaLogo, size: "55px" },
+    { name: "Lavendel Consulting", logo: lavendelLogo, size: "75px" },
 ];
 
 export default function TrustedBy() {
     return (
-        <section className="pb-10 pt-0 bg-[#6267f1] h-[250px] overflow-hidden">
+        <section className="pt-0 bg-[#6267f1] h-[140px] overflow-hidden">
             <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10 pt-12">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-1 pt-3">
                     <p className="text-white/80 text-sm font-semibold tracking-wider uppercase">
                         Trusted by Startups & Enterprises
                     </p>
                 </div>
 
                 <div className="relative w-full">
-                    <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
+                    <div className="flex w-max pt-2 animate-marquee items-center hover:[animation-play-state:paused]">
 
                         {/* First Set */}
                         <div className="flex shrink-0 items-center gap-6 sm:gap-10 pr-6 sm:pr-10">

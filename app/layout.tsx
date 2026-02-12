@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import CTAPopup from "@/components/cta-popup";
+import CookieConsent from "@/components/cookie-consent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.quantamisecode.com"),
+  metadataBase: new URL("https://www.quantamisecode.com/"),
   title: {
     default: "Quantamise Code | AI & Software Development Company",
     template: "%s | Quantamise Code",
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Quantamise Code",
     images: [
       {
-        url: "https://www.quantamisecode.com/logo.png",
+        url: "/OG/og-image.png",
         width: 1200,
         height: 630,
         alt: "Quantamise Code - AI & Software Development",
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quantamise Code | AI & Software Development",
     description: "Building secure, scalable, and future-ready digital solutions.",
-    images: ["https://www.quantamisecode.com/logo.png"],
+    images: ["/OG/og-image.png"],
   },
   robots: {
     index: true,
@@ -66,9 +68,6 @@ export const metadata: Metadata = {
   },
 };
 
-import CTAPopup from "@/components/cta-popup";
-import CookieConsent from "@/components/cookie-consent";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -76,12 +75,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Explicit favicon links for better browser compatibility */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -95,20 +91,14 @@ export default function RootLayout({
                 "https://www.linkedin.com/company/quantamise-code",
                 "https://instagram.com/quantamise"
               ],
-              description:
-                "AI-powered software development company specializing in web, mobile, and enterprise solutions."
+              description: "AI-powered software development company specializing in web, mobile, and enterprise solutions."
             }),
           }}
         />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
         <CTAPopup />
         <CookieConsent />
         {children}
       </body>
-
     </html>
   );
 }

@@ -12,6 +12,7 @@ import UiUxIndustries from "@/components/ui-ux-industries";
 import UiUxEngagement from "@/components/ui-ux-engagement";
 import UiUxWhyChooseUs from "@/components/ui-ux-why-choose-us";
 import UiUxBusinessApproach from "@/components/ui-ux-business-approach";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "UX/UI Design Team",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "UX/UI Design Services | Quantamise Code",
         description: "Leading UX/UI Design Agency specializing in custom web applications and SaaS.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/ui-ux-design",

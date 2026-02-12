@@ -67,9 +67,10 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-white">Company</h3>
                         <ul className="space-y-4">
+                            <li><a href="/cookie-policy" className="hover:text-[#eb56f6] transition-colors">Cookie Policy</a></li>
                             <li><a href="/about" className="hover:text-[#eb56f6] transition-colors">About Us</a></li>
                             {/* <li><a href="/case-studies" className="hover:text-[#eb56f6] transition-colors">Case Studies</a></li> */}
-                            <li><a href="/blogs" className="hover:text-[#eb56f6] transition-colors">Blogs</a></li>
+                            <li><a href="/blogs-post" className="hover:text-[#eb56f6] transition-colors">Blogs</a></li>
                             <li><a href="/contact" className="hover:text-[#eb56f6] transition-colors">Contact Us</a></li>
                         </ul>
                     </div>
@@ -99,7 +100,7 @@ export default function Footer() {
 
                 <div className="border-t border-white/10 pt-8 mt-12 mb-8">
                     <p className="text-slate-500 text-xs leading-relaxed max-w-full mb-6">
-                        We use cookies and similar technologies to improve your experience on our website and services, including when you contact us through chat. These help us analyze website traffic, personalize content, and support our marketing activities. By continuing to browse or use our website, you consent to the use of cookies and similar technologies by us and our trusted partners. You can manage or disable cookies anytime through your browser settings. For more details, please review our <a href="#" className="underline hover:text-[#eb56f6] transition-colors">Cookie Policy</a> and <a href="#" className="underline hover:text-[#eb56f6] transition-colors">Privacy Policy</a>.
+                        We use cookies and similar technologies to improve your experience on our website and services, including when you contact us through chat. These help us analyze website traffic, personalize content, and support our marketing activities. By continuing to browse or use our website, you consent to the use of cookies and similar technologies by us and our trusted partners. You can manage or disable cookies anytime through your browser settings. For more details, please review our <a href="/cookie-policy" className="underline hover:text-[#eb56f6] transition-colors">Cookie Policy</a>, <a href="/privacy-policy" className="underline hover:text-[#eb56f6] transition-colors">Privacy Policy</a> and <a href="/terms-conditions" className="underline hover:text-[#eb56f6] transition-colors">Terms & Conditions</a>.
                     </p>
                     <p className="text-slate-500 text-sm">&copy; {new Date().getFullYear()} Quantamise Code. All rights reserved.</p>
                 </div>

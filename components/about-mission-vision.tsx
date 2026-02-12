@@ -17,8 +17,8 @@ export default function AboutMissionVision() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Mission Card */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                         className="group p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-gray-100 hover:border-[#6366f1]/30 relative overflow-hidden"
@@ -37,8 +37,8 @@ export default function AboutMissionVision() {
 
                     {/* Vision Card */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="group p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-gray-100 hover:border-[#eb56f6]/30 relative overflow-hidden"

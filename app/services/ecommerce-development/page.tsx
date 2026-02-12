@@ -13,6 +13,7 @@ import EcommerceIndustries from "@/components/ecommerce-industries";
 import EcommerceEngagement from "@/components/ecommerce-engagement";
 import EcommerceFAQ from "@/components/ecommerce-faq";
 import { Metadata } from "next";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 
 export const metadata: Metadata = {
     title: "E-commerce Development Services | Custom Online Stores & Marketplaces",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Quantamise - E-Commerce Development",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "E-Commerce Development | Scalable Online Store Solutions",
         description: "Launch and grow your online business with Quantamise's expert E-Commerce development services using Shopify, WooCommerce, and custom solutions.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/ecommerce-development",
@@ -144,21 +145,43 @@ export default function EcommerceDevelopmentPage() {
             <Nav />
             <br /><br /><br />
 
-            <EcommerceHero />
-            <EcommerceWhyChooseUs />
-            <EcommerceBusinessApproach />
-            <EcommerceTechStack />
-            <EcommerceSecurity />
-            <EcommerceRoadmap />
-            <EcommerceCommunication />
+            <RevealOnScroll>
+                <EcommerceHero />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <EcommerceWhyChooseUs />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <EcommerceBusinessApproach />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <EcommerceTechStack />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <EcommerceSecurity />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <EcommerceRoadmap />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <EcommerceCommunication />
+            </RevealOnScroll>
             {/* <EcommerceIndustries /> */}
-            <EcommerceEngagement />
-            <EcommerceFAQ />
+            <RevealOnScroll>
+                <EcommerceEngagement />
+            </RevealOnScroll>
+            <RevealOnScroll>
+                <EcommerceFAQ />
+            </RevealOnScroll>
             {/* Related Services Section */}
-            <RelatedServices currentService="ecommerce" />
+            <RevealOnScroll>
+                <RelatedServices currentService="ecommerce" />
+            </RevealOnScroll>
 
             {/* CTA Section */}
-            <ServicesCTA />
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>

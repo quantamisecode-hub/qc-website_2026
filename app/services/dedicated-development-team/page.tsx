@@ -13,6 +13,7 @@ import DedicatedTeamIndustries from "@/components/dedicated-team-industries";
 import DedicatedTeamEngagement from "@/components/dedicated-team-engagement";
 import DedicatedTeamWhyChooseUs from "@/components/dedicated-team-why-choose-us";
 import DedicatedTeamBusinessApproach from "@/components/dedicated-team-business-approach";
+import RevealOnScroll from "@/components/reveal-on-scroll";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
         siteName: "Quantamise Code",
         images: [
             {
-                url: "/assets/logo.png",
+                url: "/OG/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Dedicated Development Team",
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Dedicated Development Teams for Scalable, High-Performance Digital Products",
         description: "Build your extended engineering team with pre-vetted, full-time developers, architects, and AI specialists.",
-        images: ["/assets/logo.png"],
+        images: ["/OG/og-image.png"],
     },
     alternates: {
         canonical: "https://www.quantamisecode.com/services/dedicated-development-team",
@@ -160,40 +161,64 @@ export default function DedicatedTeamPage() {
             <br /><br /><br />
 
             {/* Hero Section */}
-            <DedicatedTeamHero />
+            <RevealOnScroll>
+                <DedicatedTeamHero />
+            </RevealOnScroll>
 
             {/* Why Choose Us Section */}
-            <DedicatedTeamWhyChooseUs />
+            <RevealOnScroll>
+                <DedicatedTeamWhyChooseUs />
+            </RevealOnScroll>
 
             {/* Business Focused Approach Section */}
-            <DedicatedTeamBusinessApproach />
+            <RevealOnScroll>
+                <DedicatedTeamBusinessApproach />
+            </RevealOnScroll>
 
             {/* Tech Stack Section */}
-            <DedicatedTeamTechStack />
+            <RevealOnScroll>
+                <DedicatedTeamTechStack />
+            </RevealOnScroll>
 
             {/* Roadmap Section */}
-            <DedicatedTeamRoadmap />
+            <RevealOnScroll>
+                <DedicatedTeamRoadmap />
+            </RevealOnScroll>
 
             {/* Security Section */}
-            <DedicatedTeamSecurity />
+            <RevealOnScroll>
+                <DedicatedTeamSecurity />
+            </RevealOnScroll>
 
             {/* Communication Section */}
-            <DedicatedTeamCommunication />
+            <RevealOnScroll>
+                <DedicatedTeamCommunication />
+            </RevealOnScroll>
 
             {/* Industries Section */}
-            <DedicatedTeamIndustries />
+            <RevealOnScroll>
+                <DedicatedTeamIndustries />
+            </RevealOnScroll>
 
             {/* Engagement Models Section */}
-            <DedicatedTeamEngagement />
+            <RevealOnScroll>
+                <DedicatedTeamEngagement />
+            </RevealOnScroll>
 
             {/* FAQ Section */}
-            <DedicatedTeamFAQ />
+            <RevealOnScroll>
+                <DedicatedTeamFAQ />
+            </RevealOnScroll>
 
             {/* Related Services Section */}
-            <RelatedServices currentService="dedicated-team" />
+            <RevealOnScroll>
+                <RelatedServices currentService="dedicated-team" />
+            </RevealOnScroll>
 
             {/* CTA Section */}
-            <ServicesCTA />
+            <RevealOnScroll>
+                <ServicesCTA />
+            </RevealOnScroll>
 
             <Footer />
         </main>
