@@ -75,7 +75,7 @@ export default function CloudConsultingEngagement() {
                         {engagementModels.map((model, index) => (
                             <div
                                 key={model.id}
-                                className="group relative p-10 md:p-12 bg-white transition-all duration-300 hover:bg-slate-50"
+                                className="group relative p-10 md:p-12 bg-white transition-all duration-300 hover:bg-slate-50 cursor-pointer"
                             >
                                 <div className="mb-6 inline-block">
                                     <model.icon size={40} className={`${model.color} mb-2 transition-transform duration-300 group-hover:scale-110`} strokeWidth={1.5} />

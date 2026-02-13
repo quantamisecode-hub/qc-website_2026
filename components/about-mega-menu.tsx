@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-// import Link from "next/link"; // Removed
 import { ArrowRight, Users, Trophy, Briefcase, Star } from "lucide-react";
 
 import navAboutImg from "@/public/assets/navAboutImg.jpeg";

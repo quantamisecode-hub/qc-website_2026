@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ChevronDown, Globe, Layers, ShoppingCart, Palette, Smartphone, Cpu, BrainCircuit, ShieldCheck, Gamepad2, Blocks, LineChart, Megaphone, Terminal, FileCode, Server, Zap, Users, Brain, Database, Cloud, Activity } from "lucide-react";
 
 export const servicesData = [

@@ -72,7 +72,7 @@ export default function DedicatedTeamCommunication() {
                 {/* Open Grid - No Card Backgrounds */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
                     {communicationFeatures.map((feature) => (
-                        <div key={feature.id} className="flex flex-col items-start group border border-slate-200 rounded-3xl p-8 bg-white hover:border-indigo-100 transition-colors duration-300">
+                        <div key={feature.id} className="flex flex-col items-start group border border-slate-200 rounded-3xl p-8 bg-white hover:border-indigo-100 transition-colors duration-300 cursor-pointer select-none">
                             {/* Icon Box - Distinct & Elevated */}
                             <div className={`w-16 h-16 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center mb-6 transition-all duration-300 group-hover:shadow-md group-hover:scale-105 group-hover:border-indigo-100`}>
                                 <feature.icon size={28} className={`${feature.color} opacity-90`} strokeWidth={1.5} />

@@ -46,7 +46,7 @@ function BlogContent() {
             try {
                 // Add timestamp to prevent caching
                 const timestamp = new Date().getTime();
-                const API_URL = `https://quantamisecode.com/blogs/wp-json/wp/v2/posts?slug=${slug}&_embed&t=${timestamp}`;
+                const API_URL = `https://www.quantamisecode.com/blogs/wp-json/wp/v2/posts?slug=${slug}&_embed&t=${timestamp}`;
 
                 const res = await fetch(API_URL, {
                     cache: "no-store",

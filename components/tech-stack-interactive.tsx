@@ -122,7 +122,7 @@ export default function TechStackInteractive() {
                     <button
                         key={category.id}
                         onClick={() => setActiveTab(category)}
-                        className={`flex items-center gap-2 sm:gap-4 p-2 sm:p-4 rounded-lg transition-all duration-300 text-left w-full ${activeTab.id === category.id
+                        className={`flex items-center gap-2 sm:gap-4 p-2 sm:p-4 rounded-lg transition-all duration-300 text-left w-full cursor-pointer ${activeTab.id === category.id
                             ? "bg-[#3A0F67] text-white shadow-xl lg:scale-105"
                             : "bg-white text-slate-500 hover:bg-slate-50 border border-slate-100"
                             }`}
@@ -168,7 +168,7 @@ export default function TechStackInteractive() {
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: idx * 0.05 }}
-                                    className="bg-white p-4 rounded-lg border border-slate-200/60 shadow-sm flex flex-col items-center justify-center text-center gap-3 font-semibold text-[#3A0F67] hover:border-[#eb56f6]/30 hover:shadow-md transition-all duration-300 group"
+                                    className="bg-white p-4 rounded-lg border border-slate-200/60 shadow-sm flex flex-col items-center justify-center text-center gap-3 font-semibold text-[#3A0F67] hover:border-[#eb56f6]/30 hover:shadow-md transition-all duration-300 group cursor-pointer"
                                 >
                                     <tech.icon className="w-8 h-8 text-slate-400 group-hover:text-[#eb56f6] transition-colors duration-300" />
                                     <span>{tech.name}</span>

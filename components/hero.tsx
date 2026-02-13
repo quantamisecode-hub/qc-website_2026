@@ -1,5 +1,4 @@
 import { ArrowRight, Download } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 
@@ -38,14 +37,14 @@ export default function Hero() {
                         className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
                     >
                         <div className="flex items-center gap-2">
-                            <Link
+                            <a
                                 href="/contact"
                                 className="group rounded-md px-8 py-4 bg-[#eb56f6] text-white font-extrabold flex items-center gap-2 hover:bg-[#d035db] transition-colors duration-300">
                                 Get Free Consultation
                                 <ArrowRight
                                     className="w-5 h-5 transition-transform duration-200 ease-in-out group-hover:rotate-0 rotate-[-45deg] "
                                 />
-                            </Link>
+                            </a>
                         </div>
                     </motion.div>
 

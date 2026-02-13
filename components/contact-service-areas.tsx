@@ -34,7 +34,7 @@ export default function ContactServiceAreas() {
 
             <div className="flex flex-wrap gap-3">
                 {areas.map((area, index) => (
-                    <span key={index} className="px-4 py-2 bg-gray-50 rounded-lg text-sm font-semibold text-gray-700 border border-gray-200 hover:border-[#6366f1] hover:text-[#6366f1] transition-colors cursor-default">
+                    <span key={index} className="px-4 py-2 bg-gray-50 rounded-lg text-sm font-semibold text-gray-700 border border-gray-200 hover:border-[#6366f1] hover:text-[#6366f1] transition-colors cursor-pointer">
                         {area}
                     </span>
                 ))}

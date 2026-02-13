@@ -1,6 +1,5 @@
 "use client";
 
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -38,13 +37,13 @@ export default function ContactCta() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link
+                        <a
                             href="#contact-form"
                             className="group px-8 py-4 bg-white text-[#3A0F67] rounded-xl font-bold text-lg hover:bg-[#eb56f6] hover:text-white transition-all transform hover:-translate-y-1 hover:shadow-lg flex items-center gap-2"
                         >
                             Contact Our Experts Now
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        </a>
                     </div>
                 </motion.div>
             </div>

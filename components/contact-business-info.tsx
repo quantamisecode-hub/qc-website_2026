@@ -76,7 +76,7 @@ export default function ContactBusinessInfo() {
                         <span className='bg-green-50 text-green-600 inline-block px-2 py-1 rounded-lg'>Bengaluru, India</span><br />
                         A-207, KSSIDC Complex, Phase 1, Electronics City,<br />
                         Bengaluru, Karnataka - 560100  <br /><br />
-                        {/* <p className='bg-green-50 text-green-600 inline-block'>Gorkey Sadan, Kolkata </p> */}
+                        <span className='text-sm text-slate-500 font-semibold uppercase tracking-wider'>Branch</span><br />
                         <span className='bg-green-50 text-green-600 inline-block px-2 py-1 rounded-lg'>Kolkata, India</span><br />
                         Ground Floor, #5, Victoria Terrace, Gorkey Sadan, Kolkata - 7000 20 <br />
                         <span className="text-sm font-medium text-slate-500">Serving clients worldwide via remote-first model.</span>

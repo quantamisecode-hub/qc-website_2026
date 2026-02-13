@@ -14,36 +14,10 @@ interface WpPost {
     _embedded?: any;
 }
 
-interface WpCategory {
-    id: number;
-    name: string;
-    count: number;
-    slug: string;
-}
-
 export default function BlogList() {
     const [posts, setPosts] = useState<WpPost[]>([]);
-    const [categories, setCategories] = useState<WpCategory[]>([]);
-    const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-
-    // Fetch Categories
-    useEffect(() => {
-        const fetchCategories = async () => {
-            try {
-                const res = await fetch("https://quantamisecode.com/blogs/wp-json/wp/v2/categories?per_page=100");
-                if (!res.ok) throw new Error("Failed to fetch categories");
-                const data = await res.json();
-                const filteredCategories = data.filter((cat: WpCategory) => cat.count > 0);
-                setCategories(filteredCategories);
-            } catch (err) {
-                console.error("Error fetching categories:", err);
-            }
-        };
-
-        fetchCategories();
-    }, []);
 
     // Fetch Posts
     useEffect(() => {
@@ -53,11 +27,7 @@ export default function BlogList() {
             try {
                 // Add a timestamp to prevent caching
                 const timestamp = new Date().getTime();
-                let API_URL = `https://quantamisecode.com/blogs/wp-json/wp/v2/posts?_embed&per_page=12&t=${timestamp}`;
-
-                if (selectedCategory) {
-                    API_URL += `&categories=${selectedCategory}`;
-                }
+                const API_URL = `https://www.quantamisecode.com/blogs/wp-json/wp/v2/posts?_embed&per_page=12&t=${timestamp}`;
 
                 const res = await fetch(API_URL, {
                     method: "GET",
@@ -87,40 +57,10 @@ export default function BlogList() {
         };
 
         fetchPosts();
-    }, [selectedCategory]);
-
-    const handleCategoryClick = (categoryId: number | null) => {
-        setSelectedCategory(categoryId);
-    };
+    }, []);
 
     return (
         <section id="latest-posts" className="py-20 px-6 sm:px-12 lg:px-20 max-w-[1400px] mx-auto w-full min-h-[400px]">
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-3 mb-12 justify-center">
-                <button
-                    onClick={() => handleCategoryClick(null)}
-                    className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${selectedCategory === null
-                        ? "bg-indigo-600 text-white shadow-md shadow-indigo-200"
-                        : "bg-white text-slate-600 border border-slate-200 hover:border-indigo-300 hover:text-indigo-600"
-                        }`}
-                >
-                    All
-                </button>
-                {categories.map((category) => (
-                    <button
-                        key={category.id}
-                        onClick={() => handleCategoryClick(category.id)}
-                        className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${selectedCategory === category.id
-                            ? "bg-indigo-600 text-white shadow-md shadow-indigo-200"
-                            : "bg-white text-slate-600 border border-slate-200 hover:border-indigo-300 hover:text-indigo-600"
-                            }`}
-                    >
-                        {category.name}
-                    </button>
-                ))}
-            </div>
-
             {isLoading ? (
                 <div className="flex justify-center items-center py-20 min-h-[400px]">
                     <Loader2 className="w-10 h-10 text-indigo-600 animate-spin" />
@@ -150,13 +90,7 @@ export default function BlogList() {
                 </div>
             ) : (
                 <div className="text-center py-20 bg-slate-50 rounded-2xl">
-                    <p className="text-slate-500 font-medium">No articles found in this category.</p>
-                    <button
-                        onClick={() => setSelectedCategory(null)}
-                        className="mt-4 text-indigo-600 font-medium hover:underline"
-                    >
-                        View all articles
-                    </button>
+                    <p className="text-slate-500 font-medium">No articles found.</p>
                 </div>
             )}
         </section>

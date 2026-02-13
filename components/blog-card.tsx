@@ -31,7 +31,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
     const authorName = post._embedded?.author?.[0]?.name || "Quantamise Code";
 
     return (
-        <div className="group flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 h-full">
+        <div className="group flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 h-full cursor-pointer">
             {/* Image Section */}
             <div className="relative h-52 w-full overflow-hidden bg-slate-100">
                 <Image

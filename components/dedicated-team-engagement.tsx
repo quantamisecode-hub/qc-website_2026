@@ -64,7 +64,7 @@ export default function DedicatedTeamEngagement() {
                             <div
                                 key={model.id}
                                 className={`
-                                    group relative p-10 md:p-12 transition-all duration-300 hover:bg-slate-50
+                                    group relative p-10 md:p-12 transition-all duration-300 hover:bg-slate-50 cursor-pointer
                                     ${index % 2 === 0 ? 'md:border-r border-slate-100' : ''}
                                     ${index < engagementModels.length - 2 ? 'md:border-b border-slate-100' : ''}
                                 `}

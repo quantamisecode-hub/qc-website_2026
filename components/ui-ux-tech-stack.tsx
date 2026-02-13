@@ -73,7 +73,7 @@ export default function UiUxTechStack() {
                                 {category.tools.map((tool) => (
                                     <div
                                         key={tool.name}
-                                        className="flex items-center gap-3 bg-white px-5 py-3 rounded-full border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-100 hover:bg-slate-50 transition-all duration-300 group cursor-default"
+                                        className="flex items-center gap-3 bg-white px-5 py-3 rounded-full border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-100 hover:bg-slate-50 transition-all duration-300 group cursor-pointer"
                                     >
                                         <tool.icon
                                             className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"

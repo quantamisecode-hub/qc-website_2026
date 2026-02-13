@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { X } from "lucide-react";
 
 export default function CookieConsent() {
@@ -40,13 +39,17 @@ export default function CookieConsent() {
                     <h3 className="text-white font-bold text-lg mb-2">We value your privacy</h3>
                     <p className="text-slate-400 text-sm leading-relaxed max-w-3xl">
                         We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our{" "}
-                        <Link href="#" className="text-[#eb56f6] hover:underline transition-colors">
+                        <a href="/cookie-policy" className="text-[#eb56f6] hover:underline transition-colors">
                             Cookie Policy
-                        </Link>{" "}
-                        and{" "}
-                        <Link href="#" className="text-[#eb56f6] hover:underline transition-colors">
+                        </a>
+                        ,{" "}
+                        <a href="/privacy-policy" className="text-[#eb56f6] hover:underline transition-colors">
                             Privacy Policy
-                        </Link>.
+                        </a>{" "}
+                        and{" "}
+                        <a href="/terms-conditions" className="text-[#eb56f6] hover:underline transition-colors">
+                            Terms & conditions
+                        </a>.
                     </p>
                 </div>
 

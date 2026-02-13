@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import WhyChooseUsGrid from "./why-choose-us-grid";
 import whyChooseUsImg from "../public/assets/whyChooseUsImg.jpeg";

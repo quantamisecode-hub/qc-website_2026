@@ -2,7 +2,6 @@
 
 import * as motion from "framer-motion/client";
 import { ArrowRight, Database, Server, Cloud } from "lucide-react";
-import Link from "next/link";
 import { BsMicrosoft } from "react-icons/bs";
 import {
     SiAmazon, SiGooglecloud, SiSnowflake,
@@ -72,13 +71,13 @@ export default function DataEngHero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link
+                        <a
                             href="/contact"
                             className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#eb56f6] text-white font-bold text-base hover:bg-[#d035db] transition-all flex items-center justify-center gap-2"
                         >
                             Get a Free Data Strategy Consultation
                             <ArrowRight className="w-5 h-5" />
-                        </Link>
+                        </a>
                     </div>
                 </motion.div>
             </div>

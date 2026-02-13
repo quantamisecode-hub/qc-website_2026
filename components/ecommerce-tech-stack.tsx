@@ -110,7 +110,7 @@ export default function EcommerceTechStack() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
                         {architectureFeatures.map((feature, idx) => (
-                            <div key={idx} className="flex flex-col items-center text-center p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <div key={idx} className="flex flex-col items-center text-center p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow cursor-pointer">
                                 <div className={`w-12 h-12 rounded-full flex items-center justify-center ${feature.bg} ${feature.color} mb-4`}>
                                     <feature.icon size={24} />
                                 </div>
@@ -156,7 +156,7 @@ export default function EcommerceTechStack() {
                                 {category.techs.map((tech) => (
                                     <div
                                         key={tech.name}
-                                        className="flex items-center gap-3 bg-white px-5 py-3 rounded-full border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-100 hover:bg-slate-50 transition-all duration-300 group cursor-default"
+                                        className="flex items-center gap-3 bg-white px-5 py-3 rounded-full border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-100 hover:bg-slate-50 transition-all duration-300 group cursor-pointer"
                                     >
                                         <tech.icon
                                             className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"

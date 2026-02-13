@@ -43,13 +43,13 @@ const FAQItem = ({ faq, index, activeIndex, toggleFAQ }: any) => {
         <motion.div
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
-            className={`rounded-xl p-5 shadow-sm border transition-all duration-300 h-fit ${isActive ? "bg-white border-[#6366f1]/30 shadow-md" : "bg-white border-slate-100 hover:shadow-md"}`}
+            className={`rounded-xl p-5 shadow-sm border transition-all duration-300 h-fit group cursor-pointer ${isActive ? "bg-white border-[#6366f1]/30 shadow-md" : "bg-white border-slate-100 hover:shadow-md"}`}
         >
-            <button onClick={() => toggleFAQ(index)} className="flex items-center justify-between w-full text-left group gap-4">
-                <span className={`text-base sm:text-lg font-medium transition-colors duration-300 ${isActive ? "text-[#6366f1]" : "text-[#3A0F67] group-hover:text-[#6366f1]"}`}>
+            <button onClick={() => toggleFAQ(index)} className="flex items-center justify-between w-full text-left gap-4 cursor-pointer">
+                <span className={`text-base sm:text-lg font-medium transition-colors duration-300 cursor-pointer select-none ${isActive ? "text-[#6366f1]" : "text-[#3A0F67] group-hover:text-[#6366f1]"}`}>
                     {faq.question}
                 </span>
-                <motion.div animate={{ rotate: isActive ? 180 : 0 }} className={`shrink-0 ${isActive ? "text-[#6366f1]" : "text-slate-400"}`}>
+                <motion.div animate={{ rotate: isActive ? 180 : 0 }} className={`shrink-0 ${isActive ? "text-[#6366f1]" : "text-slate-400 group-hover:text-[#6366f1]"}`}>
                     <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6" />
                 </motion.div>
             </button>

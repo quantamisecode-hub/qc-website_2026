@@ -22,7 +22,7 @@ export default function Blogs() {
         const fetchLatestPosts = async () => {
             // Add a timestamp to prevent caching
             const timestamp = new Date().getTime();
-            const API_URL = `https://quantamisecode.com/blogs/wp-json/wp/v2/posts?_embed&per_page=3&t=${timestamp}`;
+            const API_URL = `https://www.quantamisecode.com/blogs/wp-json/wp/v2/posts?_embed&per_page=3&t=${timestamp}`;
 
             try {
                 const res = await fetch(API_URL, {

@@ -1,6 +1,5 @@
 import { ArrowRight, ArrowUpRight, Clover } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import * as motion from "framer-motion/client";
 import { Counter } from "./counter";
 import aboutImg from "../public/assets/aboutImg.jpeg";
@@ -52,7 +51,7 @@ export default function About() {
                             </div>
 
                             <div className="relative inline-block group">
-                                <Link
+                                <a
                                     href="/contact"
                                     className="relative z-10 w-65 rounded-md px-8 py-4 bg-[#eb56f6] text-white font-extrabold flex items-center gap-2 hover:bg-[#d035db] transition-colors duration-300"
                                 >
@@ -60,7 +59,7 @@ export default function About() {
                                     <ArrowRight
                                         className="w-5 h-5 transition-transform duration-200 ease-in-out group-hover:rotate-0 rotate-[-45deg]"
                                     />
-                                </Link>
+                                </a>
 
                                 {/* Fun Curly Arrow SVG */}
                                 <motion.div

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import Link from "next/link";
 
 export default function AboutHero() {
     return (

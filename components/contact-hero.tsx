@@ -2,7 +2,6 @@
 
 import * as motion from "framer-motion/client";
 import { ArrowRight, MessageSquare, Phone } from "lucide-react";
-import Link from "next/link";
 import { SiGooglemaps, SiGmail, SiWhatsapp, SiTelegram } from "react-icons/si";
 
 export default function ContactHero() {
@@ -37,7 +36,7 @@ export default function ContactHero() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <button
                             onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#eb56f6] text-white font-bold text-base hover:bg-[#d035db] transition-all flex items-center justify-center gap-2"
+                            className="w-full cursor-pointer sm:w-auto px-8 py-3.5 rounded-lg bg-[#eb56f6] text-white font-bold text-base hover:bg-[#d035db] transition-all flex items-center justify-center gap-2"
                         >
                             Start a Conversation
                             <ArrowRight className="w-5 h-5" />

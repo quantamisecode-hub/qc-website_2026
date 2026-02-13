@@ -1,5 +1,3 @@
-
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function NextJsCTA() {
@@ -22,13 +20,13 @@ export default function NextJsCTA() {
                     </p>
 
                     <div className="flex flex-col items-center gap-4">
-                        <Link
+                        <a
                             href="/contact"
                             className="group inline-flex items-center justify-center gap-2 bg-[#5D5CDE] hover:bg-[#4B4AC0] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(93,92,222,0.3)] hover:shadow-[0_0_30px_rgba(93,92,222,0.5)]"
                         >
                             Book a free technical consultation today
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>

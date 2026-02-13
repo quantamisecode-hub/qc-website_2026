@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import Link from "next/link"; // Removed
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
@@ -67,11 +66,12 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-white">Company</h3>
                         <ul className="space-y-4">
-                            <li><a href="/cookie-policy" className="hover:text-[#eb56f6] transition-colors">Cookie Policy</a></li>
                             <li><a href="/about" className="hover:text-[#eb56f6] transition-colors">About Us</a></li>
-                            {/* <li><a href="/case-studies" className="hover:text-[#eb56f6] transition-colors">Case Studies</a></li> */}
                             <li><a href="/blogs-post" className="hover:text-[#eb56f6] transition-colors">Blogs</a></li>
                             <li><a href="/contact" className="hover:text-[#eb56f6] transition-colors">Contact Us</a></li>
+                            <li><a href="/cookie-policy" className="hover:text-[#eb56f6] transition-colors">Cookie Policy</a></li>
+                            <li><a href="/privacy-policy" className="hover:text-[#eb56f6] transition-colors">Privacy Policy</a></li>
+                            <li><a href="/terms-conditions" className="hover:text-[#eb56f6] transition-colors">Terms & conditions</a></li>
                         </ul>
                     </div>
 

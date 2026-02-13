@@ -57,7 +57,7 @@ export default function AboutIndustries() {
                             key={index}
                             variants={cardVariants}
                             whileTap={{ scale: 0.98 }}
-                            className="bg-white rounded-[1.5rem] border border-gray-100 p-6 hover:shadow-xl hover:shadow-[#6366f1]/10 transition-all duration-300 hover:-translate-y-1 group cursor-pointer"
+                            className="bg-white rounded-[1.5rem] border border-gray-100 p-6 hover:shadow-xl hover:shadow-[#6366f1]/10 transition-all duration-300 hover:-translate-y-1 group cursor-pointer select-none"
                         >
                             <div className="w-12 h-12 rounded-2xl bg-[#ede9fe] text-[#6366f1] flex items-center justify-center mb-5 group-hover:bg-[#6366f1] group-hover:text-white transition-colors duration-300">
                                 <industry.icon className="w-6 h-6" />

@@ -73,16 +73,16 @@ const FAQItem = ({
         <motion.div
             variants={itemVariants}
             whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 1)" }}
-            className={`rounded-xl p-5 shadow-sm border transition-all duration-300 h-fit ${isActive
+            className={`rounded-xl p-5 shadow-sm border transition-all duration-300 h-fit group cursor-pointer ${isActive
                 ? "bg-white border-[#6366f1]/30 shadow-md"
                 : "bg-white border-slate-100 hover:shadow-md hover:border-[#6366f1]/20"
                 }`}
         >
             <button
                 onClick={() => toggleFAQ(index)}
-                className="flex items-center justify-between w-full text-left group gap-4"
+                className="flex items-center justify-between w-full text-left gap-4 cursor-pointer"
             >
-                <span className={`text-base sm:text-lg font-medium transition-colors duration-300 ${isActive ? "text-[#6366f1]" : "text-[#3A0F67] group-hover:text-[#6366f1]"
+                <span className={`text-base sm:text-lg font-medium transition-colors duration-300 cursor-pointer select-none ${isActive ? "text-[#6366f1]" : "text-[#3A0F67] group-hover:text-[#6366f1]"
                     }`}>
                     {faq.question}
                 </span>

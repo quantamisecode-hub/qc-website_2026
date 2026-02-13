@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-// import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Menu, X, ChevronDown, ChevronUp, LayoutGrid, Database, Cpu, Globe, Users, Layout, Server, Smartphone, Cloud, Bot } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";

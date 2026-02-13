@@ -3,7 +3,6 @@
 import React from "react";
 import * as motion from "framer-motion/client";
 import { ArrowRight, ShoppingBag } from "lucide-react";
-import Link from "next/link";
 import {
     SiShopify, SiWoocommerce, SiMagento, SiBigcommerce,
     SiStripe, SiPaypal, SiReact, SiNextdotjs, SiNodedotjs
@@ -66,13 +65,13 @@ export default function EcommerceHero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link
+                        <a
                             href="/contact"
                             className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#6366f1] text-white font-bold text-base hover:bg-[#4f46e5] transition-all flex items-center justify-center gap-2"
                         >
                             Launch Your Store
                             <ArrowRight className="w-5 h-5" />
-                        </Link>
+                        </a>
 
                     </div>
                 </motion.div>
